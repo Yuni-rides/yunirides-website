@@ -1,138 +1,364 @@
-import Link from 'next/link'
-import { Phone, Mail } from 'lucide-react'
+"use client";
+
+import Link from "next/link";
+import Image from "next/image";
+
+const socialIconStyle: React.CSSProperties = {
+  width: 44,
+  height: 44,
+  borderRadius: "10px",
+  background: "rgba(255,255,255,0.15)",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  textDecoration: "none",
+  transition: "background 0.2s",
+};
 
 export default function Footer() {
   return (
-    <footer className="w-full px-4 md:px-6 pb-6 mt-20">
-      <div className="max-w-7xl mx-auto relative">
-        
-        {/* ── 1. Floating Banner ── */}
-        <div className="w-full bg-[#EAEFFF] rounded-[24px] px-6 md:px-12 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 relative z-10 translation-y-1/2 shadow-sm">
-          <p className="text-base md:text-lg font-bold text-[#1E2657] text-center sm:text-left">
-            Sign up today and start earning additional income.
-          </p>
-          <Link 
-            href="/become-a-driver" 
-            className="bg-[#822C89] text-white px-8 py-3.5 rounded-xl font-bold text-sm shadow-md hover:bg-[#6D2473] transition-all flex-shrink-0"
+    <footer
+      style={{
+        backgroundColor: "#F7F5F0",
+        padding: "0 37px 40px 37px",
+      }}
+    >
+      {/* ── CTA bar above footer ── */}
+      <div
+        style={{
+          backgroundColor: "#EAF0FB",
+          borderRadius: "16px 16px 0 0",
+          padding: "22px 48px",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+        }}
+      >
+        <p
+          style={{
+            margin: 0,
+            fontSize: "16px",
+            fontFamily: "'Helvetica Neue', Arial, sans-serif",
+            color: "#333",
+            fontWeight: 400,
+          }}
+        >
+          Sign up today and start earning additional income.
+        </p>
+        <button
+          style={{
+            background: "linear-gradient(135deg, #6B2FA0 0%, #822C89 100%)",
+            color: "white",
+            border: "none",
+            borderRadius: "10px",
+            padding: "13px 32px",
+            fontSize: "15px",
+            fontFamily: "'Helvetica Neue', Arial, sans-serif",
+            fontWeight: 600,
+            cursor: "pointer",
+            boxShadow: "0 4px 14px rgba(130,44,137,0.35)",
+          }}
+        >
+          Join Us
+        </button>
+      </div>
+
+      {/* ── Main footer body ── */}
+      <div
+        style={{
+          width: "100%",
+          maxWidth: "1368px",
+          margin: "0 auto",
+          backgroundColor: "#822C89",
+          borderRadius: "0 0 40px 40px",
+          padding: "56px 64px 36px 64px",
+          boxSizing: "border-box",
+        }}
+      >
+        {/* ── Newsletter row ── */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            backgroundColor: "rgba(255,255,255,0.12)",
+            borderRadius: "14px",
+            padding: "22px 32px",
+            marginBottom: "56px",
+            gap: "24px",
+          }}
+        >
+          <span
+            style={{
+              color: "white",
+              fontSize: "18px",
+              fontFamily: "'Helvetica Neue', Arial, sans-serif",
+              fontWeight: 400,
+              whiteSpace: "nowrap",
+            }}
           >
-            Join Us
-          </Link>
+            Subscribe to our newsletter
+          </span>
+          <div style={{ display: "flex", gap: "12px", flex: 1, maxWidth: "540px" }}>
+            <input
+              type="email"
+              placeholder="Email"
+              style={{
+                flex: 1,
+                padding: "14px 20px",
+                borderRadius: "10px",
+                border: "1.5px solid rgba(255,255,255,0.4)",
+                background: "rgba(255,255,255,0.08)",
+                color: "white",
+                fontSize: "14px",
+                fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                outline: "none",
+              }}
+            />
+            <button
+              style={{
+                padding: "14px 36px",
+                borderRadius: "10px",
+                border: "none",
+                background: "#F5F0E8",
+                color: "#3D1566",
+                fontSize: "14.5px",
+                fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                fontWeight: 600,
+                cursor: "pointer",
+                whiteSpace: "nowrap",
+              }}
+            >
+              Submit
+            </button>
+          </div>
         </div>
 
-        {/* ── 2. Main High-Radius Purple Box ── */}
-        <div className="bg-[#822C89] rounded-[40px] px-6 md:px-12 pb-8 pt-24 -mt-8 w-full shadow-lg">
-          
-          {/* Newsletter Segment */}
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-white/10 rounded-2xl p-4 md:p-6 mb-12 border border-white/10">
-            <h4 className="text-white text-base font-semibold">Subscribe to our newsletter</h4>
-            <div className="flex items-center gap-3 w-full md:w-auto">
-              <input
-                type="email"
-                placeholder="Email"
-                className="w-full md:w-64 bg-white/10 border border-white/20 text-white placeholder-white/50 px-4 py-2.5 rounded-xl text-sm outline-none focus:border-white/40"
-              />
-              <button className="bg-white text-[#822C89] font-bold text-sm px-6 py-2.5 rounded-xl hover:bg-white/90 transition-colors flex-shrink-0">
-                Submit
-              </button>
+        {/* ── Middle row: 3 columns ── */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "1fr 1fr 1fr",
+            gap: "40px",
+            marginBottom: "48px",
+            alignItems: "start",
+          }}
+        >
+          {/* ── Column 1: Logo + Tagline ── */}
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <Image
+              src="/images/logowhite.png"
+              alt="Yuni Rides"
+              width={180}
+              height={72}
+              style={{
+                objectFit: "contain",
+                objectPosition: "left",
+                filter: "brightness(0) invert(1)",
+              }}
+            />
+            <p
+              style={{
+                fontFamily: "'Arial Black', 'Helvetica Neue', sans-serif",
+                fontWeight: 900,
+                fontSize: "38px",
+                color: "white",
+                lineHeight: 1.15,
+                margin: "48px 0 0 0",
+                textTransform: "uppercase",
+                letterSpacing: "0.01em",
+              }}
+            >
+              SAFE AND
+              <br />
+              RELIABLE SCHOOL
+              <br />
+              TRANSPORTATION
+            </p>
+          </div>
+
+          {/* ── Column 2: Nav links ── */}
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "1fr 1fr 1fr",
+              borderLeft: "1px solid rgba(255,255,255,0.25)",
+              borderRight: "1px solid rgba(255,255,255,0.25)",
+              padding: "0 32px",
+            }}
+          >
+            {/* Nav col 1 */}
+            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+              {["Home", "Services", "About"].map((item, i) => (
+                <Link
+                  key={item}
+                  href={`/${item.toLowerCase()}`}
+                  style={{
+                    color: i === 0 ? "white" : "rgba(255,255,255,0.65)",
+                    fontSize: "15px",
+                    fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                    fontWeight: i === 0 ? 600 : 400,
+                    textDecoration: "none",
+                  }}
+                >
+                  {item}
+                </Link>
+              ))}
+            </div>
+
+            {/* Nav col 2 */}
+            <div
+              style={{
+                borderLeft: "1px solid rgba(255,255,255,0.25)",
+                paddingLeft: "24px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "24px",
+              }}
+            >
+              {["Become A Driver", "Careers", "Blog"].map((item) => (
+                <Link
+                  key={item}
+                  href="#"
+                  style={{
+                    color: "rgba(255,255,255,0.65)",
+                    fontSize: "15px",
+                    fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                    fontWeight: 400,
+                    textDecoration: "none",
+                  }}
+                >
+                  {item}
+                </Link>
+              ))}
+            </div>
+
+            {/* Nav col 3 */}
+            <div
+              style={{
+                borderLeft: "1px solid rgba(255,255,255,0.25)",
+                paddingLeft: "24px",
+                display: "flex",
+                flexDirection: "column",
+                gap: "24px",
+              }}
+            >
+              <Link
+                href="/contact"
+                style={{
+                  color: "rgba(255,255,255,0.65)",
+                  fontSize: "15px",
+                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                  fontWeight: 400,
+                  textDecoration: "none",
+                }}
+              >
+                Contact
+              </Link>
             </div>
           </div>
 
-          {/* Core Info & Column Alignment */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-8 mb-12">
-            
-            {/* Branding Column */}
-            <div className="md:col-span-5 space-y-6">
-              <div className="flex items-center gap-3">
-                <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center text-xl font-black text-[#822C89]">
-                  Y
-                </div>
-                <h3 className="text-2xl font-black tracking-tight leading-none text-white">
-                  YUNI<br />RIDES
-                </h3>
-              </div>
-              <h2 className="text-2xl md:text-3xl font-black tracking-tight text-white/95 max-w-sm leading-tight">
-                SAFE AND<br />RELIABLE SCHOOL<br />TRANSPORTATION
-              </h2>
+          {/* ── Column 3: Contact ── */}
+          <div style={{ paddingLeft: "16px" }}>
+            <p
+              style={{
+                color: "white",
+                fontSize: "18px",
+                fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                fontWeight: 600,
+                margin: "0 0 24px 0",
+              }}
+            >
+              Contact Us:
+            </p>
+
+            <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "36px" }}>
+              <a
+                href="tel:4155352155"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "14px",
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "15px",
+                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+                </svg>
+                415-535-2155
+              </a>
+
+              <a
+                href="mailto:info@yunirides.com"
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "14px",
+                  color: "white",
+                  textDecoration: "none",
+                  fontSize: "15px",
+                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
+                }}
+              >
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+                </svg>
+                info@yunirides.com
+              </a>
             </div>
 
-            {/* Links Group A */}
-            <div className="md:col-span-2 md:pl-4">
-              <ul className="space-y-3">
-                {['Home', 'Services', 'About'].map((link) => (
-                  <li key={link}>
-                    <Link href={link === 'Home' ? '/' : `/${link.toLowerCase()}`} className="text-white/80 hover:text-white text-sm font-semibold transition-colors">
-                      {link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+            {/* Social icons */}
+            <div style={{ display: "flex", gap: "16px" }}>
+              <a href="#" aria-label="Facebook" style={socialIconStyle}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                </svg>
+              </a>
+              <a href="#" aria-label="Instagram" style={socialIconStyle}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                  <circle cx="12" cy="12" r="4" />
+                  <circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none" />
+                </svg>
+              </a>
+              <a href="#" aria-label="LinkedIn" style={socialIconStyle}>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
+              </a>
+              <a href="#" aria-label="X" style={socialIconStyle}>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
             </div>
-
-            {/* Links Group B */}
-            <div className="md:col-span-2">
-              <ul className="space-y-3">
-                {[
-                  { n: 'Become A Driver', h: '/become-a-driver' },
-                  { n: 'Careers', h: '/careers' },
-                  { n: 'Blog', h: '/blog' }
-                ].map((link) => (
-                  <li key={link.n}>
-                    <Link href={link.h} className="text-white/80 hover:text-white text-sm font-semibold transition-colors whitespace-nowrap">
-                      {link.n}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Contact Box */}
-            <div className="md:col-span-3 space-y-5">
-              <div>
-                <span className="text-white/70 text-xs font-bold block mb-2 uppercase tracking-wider">Contact Us:</span>
-                <ul className="space-y-2 text-white/95 text-sm font-medium">
-                  <li>
-                    <a href="tel:+14155352155" className="flex items-center gap-2 hover:text-white transition-colors">
-                      <Phone size={14} /> 415-535-2155
-                    </a>
-                  </li>
-                  <li>
-                    <a href="mailto:info@yunirides.com" className="flex items-center gap-2 hover:text-white transition-colors break-all">
-                      <Mail size={14} /> info@yunirides.com
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-              {/* Explicit Size Capped Social Icons */}
-              <div className="flex items-center gap-4 pt-1 text-white/80">
-                {/* Facebook */}
-                <a href="#" className="hover:text-white transition-colors" aria-label="Facebook">
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" /></svg>
-                </a>
-                {/* Instagram */}
-                <a href="#" className="hover:text-white transition-colors" aria-label="Instagram">
-                  <svg className="w-5 h-5 stroke-current fill-none stroke-2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" /></svg>
-                </a>
-                {/* LinkedIn */}
-                <a href="#" className="hover:text-white transition-colors" aria-label="LinkedIn">
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.779-1.75-1.75s.784-1.75 1.75-1.75 1.75.779 1.75 1.75-.784 1.75-1.75 1.75zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-                </a>
-                {/* X */}
-                <a href="#" className="hover:text-white transition-colors" aria-label="X">
-                  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" /></svg>
-                </a>
-              </div>
-            </div>
-
           </div>
+        </div>
 
-          {/* Copyright Divider */}
-          <div className="pt-6 border-t border-white/10 text-center text-[11px] text-white/50 tracking-wide">
+        {/* ── Copyright ── */}
+        <div
+          style={{
+            borderTop: "1px solid rgba(255,255,255,0.2)",
+            paddingTop: "24px",
+            textAlign: "center",
+          }}
+        >
+          <p
+            style={{
+              color: "rgba(255,255,255,0.6)",
+              fontSize: "13px",
+              fontFamily: "'Helvetica Neue', Arial, sans-serif",
+              margin: 0,
+            }}
+          >
             Yunirides® is a registered trademark | © 2025 Yunirides | All rights reserved
-          </div>
-
+          </p>
         </div>
       </div>
     </footer>
-  )
+  );
 }

@@ -1,8 +1,8 @@
-import type { Metadata } from 'next'
-import { Plus_Jakarta_Sans, DM_Sans } from 'next/font/google'
-import '@/app/globals.css'
-import Navbar from '@/components/layout/Navbar'
-import Footer from '@/components/layout/Footer'
+import type { Metadata } from 'next';
+import { Plus_Jakarta_Sans, DM_Sans } from 'next/font/google';
+import '@/app/globals.css';
+import Navbar from '@/components/layout/Navbar';
+import Footer from '@/components/layout/Footer';
 
 const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
