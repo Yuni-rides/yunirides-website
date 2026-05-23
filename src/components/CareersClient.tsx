@@ -98,12 +98,8 @@ export default function CareersClient() {
 
   return (
     <main className="w-full min-h-screen bg-[#FAF8F0] overflow-x-hidden" style={{ fontFamily: "var(--font-body)" }}>
-
-      {/* ── HERO — full width, no side margins, exact Figma ──────────────── */}
       <section className="relative w-full bg-[#2C3979] overflow-hidden">
-
-        
-        <div className="hidden md:flex items-center">
+          <div className="hidden md:flex items-center">
           
           <div className="flex flex-col justify-center px-8 lg:px-16 xl:px-24 py-12 w-[55%] relative z-10">
             <h1
