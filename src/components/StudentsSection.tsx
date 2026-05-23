@@ -1,138 +1,122 @@
-"use client";
-
-import Image from "next/image";
+import Image from 'next/image'
 
 const students = [
   {
-    label: "Mckinney-Vento &\nFoster Youth",
-    image: "/images/students/foster.png",
+    label: 'Mckinney-Vento &\nFoster Youth',
+    image: '/images/service1.png',
     purple: true,
   },
   {
-    label: "Youth with special\nneeds",
-    image: "/images/students/special.png",
+    label: 'Youth with special\nneeds',
+    image: '/images/service2.png',
     purple: false,
   },
   {
-    label: "Continuing\ntechnical education",
-    image: "/images/students/technical.png",
+    label: 'Continuing\ntechnical education',
+    image: '/images/service3.png',
     purple: true,
   },
   {
-    label: "General\neducation",
-    image: "/images/students/general.png",
+    label: 'General\neducation',
+    image: '/images/service4.png',
     purple: false,
   },
-];
+]
 
 export default function StudentsSection() {
   return (
-    <section
-      style={{
-        backgroundColor: "#F7F5F0",
-        padding: "60px 86px 80px 86px",
-      }}
-    >
-      {/* ── Outer container: 1282×545, light lavender bg ── */}
-      <div
-        style={{
-          maxWidth: "1282px",
-          margin: "0 auto",
-          backgroundColor: "#EEF0FA",
-          borderRadius: "32px",
-          border: "1.5px solid #D6D9F0",
-          padding: "40px 48px 52px 48px",
-          boxSizing: "border-box",
-        }}
-      >
-        {/* ── Heading ── */}
-        <h2
-          style={{
-            textAlign: "center",
-            fontSize: "28px",
-            fontFamily: "'Georgia', 'Times New Roman', serif",
-            fontWeight: 600,
-            color: "#2D0F54",
-            margin: "0 0 52px 0",
-            lineHeight: 1.4,
-          }}
-        >
-          We get all students
-          <br />
-          where they need to go.
-        </h2>
+    <section style={{
+      backgroundColor: '#FAF8F0',
+      padding: '60px 40px 80px',
+    }}>
+      <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
-        {/* ── 4 Cards row ── */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gap: "20px",
-            alignItems: "end",
-          }}
-        >
-          {students.map((item, index) => (
-            <div
-              key={index}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              {/* Illustration — sits above card, overlapping top */}
-              <div
-                style={{
-                  width: "180px",
-                  height: "190px",
-                  position: "relative",
-                  zIndex: 2,
-                  marginBottom: "-32px", // overlap into the card
-                  flexShrink: 0,
-                }}
-              >
+        {/* Heading in lavender pill box */}
+        <div style={{
+          backgroundColor: '#E5EAFF',
+          borderRadius: '16px',
+          padding: '20px 40px',
+          textAlign: 'center',
+          maxWidth: '580px',
+          margin: '0 auto 52px',
+        }}>
+          <h2 style={{
+            fontFamily: 'var(--font-heading)',
+            fontWeight: 700,
+            fontSize: 'clamp(1.3rem, 2.5vw, 1.75rem)',
+            color: '#2C3979',
+            margin: 0,
+            lineHeight: 1.4,
+          }}>
+            We get all students<br />where they need to go.
+          </h2>
+        </div>
+
+        {/* 4 separate cards */}
+        <div style={{
+          display: 'grid',
+          gridTemplateColumns: 'repeat(4, 300px)',
+          gap: '20px',
+          justifyContent: 'center',
+        }}>
+          {students.map((item, i) => (
+            <div key={i} style={{
+              width: '300px',
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}>
+              {/* Illustration — overflows card top */}
+              <div style={{
+                width: '190px',
+                height: '195px',
+                position: 'relative',
+                zIndex: 2,
+                marginBottom: '-55px',
+                flexShrink: 0,
+              }}>
                 <Image
                   src={item.image}
                   alt={item.label}
                   fill
-                  style={{ objectFit: "contain", objectPosition: "bottom" }}
+                  style={{ objectFit: 'contain', objectPosition: 'bottom' }}
                 />
               </div>
 
-              {/* Card */}
-              <div
-                style={{
-                  width: "100%",
-                  backgroundColor: item.purple ? "#7B35B0" : "#EEEDF5",
-                  borderRadius: "20px",
-                  paddingTop: "48px", // space for image overlap
-                  paddingBottom: "28px",
-                  paddingLeft: "16px",
-                  paddingRight: "16px",
-                  textAlign: "center",
-                  boxSizing: "border-box",
-                  position: "relative",
-                  zIndex: 1,
-                }}
-              >
-                <p
-                  style={{
-                    fontSize: "15px",
-                    fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                    fontWeight: 500,
-                    color: item.purple ? "white" : "#6B2FA0",
-                    margin: 0,
-                    lineHeight: 1.5,
-                    whiteSpace: "pre-line",
-                  }}
-                >
+              {/* Card — 300x325 Figma size */}
+              <div style={{
+                width: '300px',
+                height: '210px',
+                backgroundColor: item.purple ? '#822C89' : '#E5EAFF',
+                borderRadius: '20px',
+                display: 'flex',
+                alignItems: 'flex-end',
+                justifyContent: 'center',
+                paddingBottom: '36px',
+                paddingLeft: '20px',
+                paddingRight: '20px',
+                position: 'relative',
+                zIndex: 1,
+                boxSizing: 'border-box',
+              }}>
+                <p style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontWeight: 600,
+                  fontSize: '15px',
+                  color: item.purple ? 'white' : '#2C3979',
+                  margin: 0,
+                  textAlign: 'center',
+                  lineHeight: 1.5,
+                  whiteSpace: 'pre-line',
+                }}>
                   {item.label}
                 </p>
               </div>
             </div>
           ))}
         </div>
+
       </div>
     </section>
-  );
+  )
 }

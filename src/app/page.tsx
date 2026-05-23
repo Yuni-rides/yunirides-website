@@ -5,8 +5,12 @@ import CoreValues from "@/components/CoreValues";
 import MapSection from '@/components/MapSection';
 import BecomeCustomer from '@/components/BecomeCustomer';
 import WhyYuniRides from "@/components/WhyYuniRides";
-import WhyChoosing from "@/components/Whychoosing";
+import WhyChoosing from "@/components/WhyChoosing";
 import StudentsSection from "@/components/StudentsSection";
+import TestimonialsSection from '@/components/TestimonialsSection';
+import BlogSection from '@/components/BlogSection';
+import VideoSection from '@/components/VideoSection';
+
 
 
 export default function HomePage() {
@@ -175,6 +179,9 @@ export default function HomePage() {
        <WhyYuniRides />
        <WhyChoosing />
        <StudentsSection />
+       <TestimonialsSection />
+       <BlogSection />
+    <VideoSection />  
     </main>
   );
 }

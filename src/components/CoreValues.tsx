@@ -30,7 +30,7 @@ const coreValues = [
   {
     title: 'Integrity',
     description: 'We conduct our business with honesty and transparency. From our drivers to our operational staff, every member of Yuni Rides is committed to upholding the highest ethical standards.',
-    image: '/images/care.png',
+    image: '/images/integrity.png',
     purple: false,
   },
   {
@@ -39,7 +39,7 @@ const coreValues = [
     image: '/images/professionalism.png',
     purple: true,
   },
-] 
+]
 
 interface CoreValueItem {
   title: string
@@ -48,19 +48,18 @@ interface CoreValueItem {
   purple: boolean
 }
 
-// ODD: White card LEFT + Image RIGHT (slightly overlapping card)
+// ODD: Card LEFT side, image RIGHT overlapping
 function TextLeftRow({ item }: { item: CoreValueItem }) {
   return (
     <div style={{
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-start', // LEFT aligned
       gap: '0px',
       width: '100%',
-      maxWidth: '780px',
-      margin: '0 auto',
+      paddingLeft: '60px',
     }}>
-      {/* White card */}
+      {/* White card — LEFT */}
       <div style={{
         background: 'white',
         borderRadius: '20px',
@@ -102,7 +101,7 @@ function TextLeftRow({ item }: { item: CoreValueItem }) {
         }}>See More</button>
       </div>
 
-      {/* Image — shifts left by 40px to overlap card edge */}
+      {/* Image — RIGHT, overlaps card */}
       <div style={{
         width: '280px',
         height: '260px',
@@ -120,19 +119,18 @@ function TextLeftRow({ item }: { item: CoreValueItem }) {
   )
 }
 
-// EVEN: Image LEFT + Purple card RIGHT (image slightly overlaps card)
+// EVEN: Image LEFT overlapping, Purple card RIGHT
 function ImageLeftRow({ item }: { item: CoreValueItem }) {
   return (
     <div style={{
       display: 'flex',
       alignItems: 'center',
-      justifyContent: 'center',
+      justifyContent: 'flex-end', // RIGHT aligned
       gap: '0px',
       width: '100%',
-      maxWidth: '780px',
-      margin: '0 auto',
+      paddingRight: '60px',
     }}>
-      {/* Image */}
+      {/* Image — LEFT, overlaps card */}
       <div style={{
         width: '300px',
         height: '270px',
@@ -147,7 +145,7 @@ function ImageLeftRow({ item }: { item: CoreValueItem }) {
         <Image src={item.image} alt={item.title} fill style={{ objectFit: 'cover' }} />
       </div>
 
-      {/* Purple card — image overlaps from left */}
+      {/* Purple card — RIGHT */}
       <div style={{
         background: 'var(--yuni-purple)',
         borderRadius: '20px',
@@ -201,13 +199,14 @@ export default function CoreValues() {
       position: 'relative',
       overflow: 'hidden',
     }}>
-      {/* Diagonal zig-zag backgrounds */}
-      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '500px', zIndex: 0, background: '#FFFCF2', clipPath: 'polygon(0 0, 100% 0, 100% 78%, 0 100%)' }} />
-      <div style={{ position: 'absolute', top: '370px', left: 0, right: 0, height: '500px', zIndex: 0, background: '#EFF2FF', clipPath: 'polygon(0 0, 100% 8%, 100% 92%, 0 100%)' }} />
-      <div style={{ position: 'absolute', top: '750px', left: 0, right: 0, height: '500px', zIndex: 0, background: '#FFFCF2', clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 92%)' }} />
-      <div style={{ position: 'absolute', top: '1130px', left: 0, right: 0, height: '500px', zIndex: 0, background: '#EFF2FF', clipPath: 'polygon(0 0, 100% 8%, 100% 92%, 0 100%)' }} />
-      <div style={{ position: 'absolute', top: '1510px', left: 0, right: 0, height: '500px', zIndex: 0, background: '#FFFCF2', clipPath: 'polygon(0 8%, 100% 0, 100% 100%, 0 92%)' }} />
-      <div style={{ position: 'absolute', top: '1890px', left: 0, right: 0, height: '500px', zIndex: 0, background: '#EFF2FF', clipPath: 'polygon(0 0, 100% 8%, 100% 100%, 0 92%)' }} />
+
+      {/* Clean alternating diagonal bands — cream & lavender */}
+      <div style={{ position: 'absolute', top: 0, left: 0, right: 0, height: '420px', zIndex: 0, background: '#FFFCF2', clipPath: 'polygon(0 0, 100% 0, 100% 88%, 0 100%)' }} />
+      <div style={{ position: 'absolute', top: '360px', left: 0, right: 0, height: '420px', zIndex: 0, background: '#EFF2FF', clipPath: 'polygon(0 6%, 100% 0, 100% 94%, 0 100%)' }} />
+      <div style={{ position: 'absolute', top: '720px', left: 0, right: 0, height: '420px', zIndex: 0, background: '#FFFCF2', clipPath: 'polygon(0 0, 100% 6%, 100% 100%, 0 94%)' }} />
+      <div style={{ position: 'absolute', top: '1080px', left: 0, right: 0, height: '420px', zIndex: 0, background: '#EFF2FF', clipPath: 'polygon(0 6%, 100% 0, 100% 94%, 0 100%)' }} />
+      <div style={{ position: 'absolute', top: '1440px', left: 0, right: 0, height: '420px', zIndex: 0, background: '#FFFCF2', clipPath: 'polygon(0 0, 100% 6%, 100% 100%, 0 94%)' }} />
+      <div style={{ position: 'absolute', top: '1800px', left: 0, right: 0, height: '420px', zIndex: 0, background: '#EFF2FF', clipPath: 'polygon(0 6%, 100% 0, 100% 100%, 0 94%)' }} />
 
       {/* Content */}
       <div style={{ position: 'relative', zIndex: 2 }}>
@@ -245,13 +244,12 @@ export default function CoreValues() {
           </p>
         </div>
 
-        {/* Rows */}
+        {/* Rows — alternating left/right */}
         <div style={{
           display: 'flex',
           flexDirection: 'column',
-          gap: '70px',
-          padding: '0 40px',
-          maxWidth: '1000px',
+          gap: '80px',
+          maxWidth: '1200px',
           margin: '0 auto',
         }}>
           {coreValues.map((item, i) =>

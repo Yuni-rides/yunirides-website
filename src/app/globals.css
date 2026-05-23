@@ -348,3 +348,120 @@ img {
   outline-offset: 2px;
   border-radius: 4px;
 }
+/* PASTE THIS AT BOTTOM OF globals.css */
+
+/* ============================================
+   RESPONSIVE BREAKPOINTS — GLOBAL
+   ============================================ */
+
+/* ── TABLET (768px - 1023px) ── */
+@media (max-width: 1023px) {
+  /* 2 col grids */
+  .grid-4-col { grid-template-columns: repeat(2, 1fr) !important; }
+  .grid-3-col { grid-template-columns: repeat(2, 1fr) !important; }
+}
+
+/* ── MOBILE (max 767px) ── */
+@media (max-width: 767px) {
+
+  /* Typography */
+  h1 { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
+  h2 { font-size: clamp(1.2rem, 5vw, 1.6rem) !important; }
+
+  /* Section spacing */
+  .section-padding {
+    padding-top: 2.5rem !important;
+    padding-bottom: 2.5rem !important;
+  }
+
+  /* All grids stack */
+  .grid-2-col,
+  .grid-3-col,
+  .grid-4-col {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Hero sections */
+  .hero-rounded {
+    border-radius: 16px !important;
+    min-height: 320px !important;
+  }
+
+  /* Forms */
+  .form-row-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Cards full width */
+  .card-fixed-width {
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* FAQ scattered layout — stack on mobile */
+  .faq-scatter {
+    position: static !important;
+    width: 100% !important;
+  }
+  .faq-scatter-wrap {
+    position: static !important;
+    height: auto !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  .faq-illustration-wrap {
+    display: none !important;
+  }
+
+  /* Testimonials */
+  .testimonial-side-card { display: none !important; }
+  .testimonial-active-only {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Blog */
+  .blog-bottom-strip { display: none !important; }
+
+  /* Footer */
+  .footer-grid-4 {
+    grid-template-columns: 1fr 1fr !important;
+  }
+  .footer-newsletter-row {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+}
+
+/* ── SMALL MOBILE (max 479px) ── */
+@media (max-width: 479px) {
+  /* Students section */
+  .students-4-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .student-card-wrap {
+    width: 100% !important;
+  }
+
+  /* Footer */
+  .footer-grid-4 {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Buttons */
+  .btn-primary, .btn-secondary, .btn-outline {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+/* ── IPAD PRO / LARGE TABLET (1024px) ── */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .grid-4-col {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .max-content-width {
+    max-width: 960px !important;
+  }
+}
