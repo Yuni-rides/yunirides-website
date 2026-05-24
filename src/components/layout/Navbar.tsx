@@ -13,7 +13,7 @@ const NAV_LINKS = [
   { label: 'Become A Driver', href: '/become-a-driver' },
   { label: 'Careers',         href: '/careers' },
   { label: 'Blog',            href: '/blog' },
-  { label: 'Contact Us',      href: '/contact' },
+  { label: 'Contact Us',      href: '/contact-us' },
 ]
 
 export default function Navbar() {

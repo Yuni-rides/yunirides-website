@@ -1,13 +1,31 @@
 import type { Metadata } from "next";
+import ContactClient from "@/app/features/ContactClient";
 
 export const metadata: Metadata = {
   title: "Contact Us | Yunirides",
+  description:
+    "Get in touch with Yunirides. Reach out anytime and our friendly team will make sure you get the help and answers you need.",
+  keywords: ["contact Yunirides", "Yunirides support", "ride service contact", "415-535-2155"],
+  openGraph: {
+    title: "Contact Us | Yunirides",
+    description:
+      "At Yuni Rides, communication matters. Reach out anytime and our friendly team will make sure you get the help and answers you need.",
+    url: "https://yunirides.com/contact-us",
+    siteName: "Yunirides",
+    images: [{ url: "/images/og-contact.jpg", width: 1200, height: 630, alt: "Contact Yunirides" }],
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Us | Yunirides",
+    description: "Get in touch with Yunirides. We're here to help anytime.",
+    images: ["/images/og-contact.jpg"],
+  },
+  alternates: { canonical: "https://yunirides.com/contact-us" },
+  robots: { index: true, follow: true },
 };
 
 export default function ContactPage() {
-  return (
-    <main>
-      <h1>Contact Us</h1>
-    </main>
-  );
+  return <ContactClient />;
 }

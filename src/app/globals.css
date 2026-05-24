@@ -1,9 +1,30 @@
 @import "tailwindcss";
-/* ============================================
-   YUNIRIDES — GLOBAL CSS
-   Exact Figma colors + shadcn/ui CSS variables
-   ============================================ */
 
+/* ============================================
+   TAILWIND V4 THEME — Brand Colors
+   ============================================ */
+@theme {
+  --color-yuni-navy:         #2C3979;
+  --color-yuni-purple:       #822C89;
+  --color-yuni-cream:        #FAF8F0;
+  --color-yuni-lavender:     #EFF2FF;
+  --color-yuni-card:         #E5EAFF;
+  --color-yuni-white:        #FFFFFF;
+  --color-yuni-text-dark:    #1A1A2E;
+  --color-yuni-text-mid:     #4A4A6A;
+  --color-yuni-text-light:   #8888AA;
+  --color-yuni-border:       #DDE2FF;
+  --color-yuni-purple-light: #F3E8F5;
+  --color-yuni-olive:        #7B8C5A;
+  --color-yuni-olive-bg:     #C8D4A8;
+  --color-white:             #FFFFFF;
+  --font-heading: 'Plus Jakarta Sans', sans-serif; 
+  --font-body: 'DM Sans', sans-serif; 
+}
+
+/* ============================================
+   CSS VARIABLES — Root
+   ============================================ */
 :root {
   /* ── Yunirides Brand Colors ── */
   --yuni-purple:       #822C89;
@@ -61,7 +82,7 @@ html {
 
 body {
   background-color: var(--yuni-bg);
-  color: var(--yuni-text-dark);
+
   font-family: var(--font-body);
   line-height: 1.6;
   overflow-x: hidden;
@@ -71,7 +92,7 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
   font-weight: 700;
   line-height: 1.2;
-  color: var(--yuni-text-dark);
+ 
 }
 
 h1 { font-size: clamp(2rem, 5vw, 3.5rem); }
@@ -345,7 +366,6 @@ img {
   outline-offset: 2px;
   border-radius: 4px;
 }
-/* PASTE THIS AT BOTTOM OF globals.css */
 
 /* ============================================
    RESPONSIVE BREAKPOINTS — GLOBAL
@@ -353,25 +373,20 @@ img {
 
 /* ── TABLET (768px - 1023px) ── */
 @media (max-width: 1023px) {
-  /* 2 col grids */
   .grid-4-col { grid-template-columns: repeat(2, 1fr) !important; }
   .grid-3-col { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
 /* ── MOBILE (max 767px) ── */
 @media (max-width: 767px) {
-
-  /* Typography */
   h1 { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
   h2 { font-size: clamp(1.2rem, 5vw, 1.6rem) !important; }
 
-  /* Section spacing */
   .section-padding {
     padding-top: 2.5rem !important;
     padding-bottom: 2.5rem !important;
   }
 
-  /* All grids stack */
   .grid-2-col,
   .grid-3-col,
   .grid-4-col {
@@ -379,28 +394,25 @@ img {
     gap: 16px !important;
   }
 
-  /* Hero sections */
   .hero-rounded {
     border-radius: 16px !important;
     min-height: 320px !important;
   }
 
-  /* Forms */
   .form-row-2 {
     grid-template-columns: 1fr !important;
   }
 
-  /* Cards full width */
   .card-fixed-width {
     width: 100% !important;
     height: auto !important;
   }
 
-  /* FAQ scattered layout — stack on mobile */
   .faq-scatter {
     position: static !important;
     width: 100% !important;
   }
+
   .faq-scatter-wrap {
     position: static !important;
     height: auto !important;
@@ -408,23 +420,23 @@ img {
     flex-direction: column !important;
     gap: 12px !important;
   }
+
   .faq-illustration-wrap {
     display: none !important;
   }
 
-  /* Testimonials */
   .testimonial-side-card { display: none !important; }
+
   .testimonial-active-only {
     grid-template-columns: 1fr !important;
   }
 
-  /* Blog */
   .blog-bottom-strip { display: none !important; }
 
-  /* Footer */
   .footer-grid-4 {
     grid-template-columns: 1fr 1fr !important;
   }
+
   .footer-newsletter-row {
     flex-direction: column !important;
     align-items: stretch !important;
@@ -433,20 +445,18 @@ img {
 
 /* ── SMALL MOBILE (max 479px) ── */
 @media (max-width: 479px) {
-  /* Students section */
   .students-4-grid {
     grid-template-columns: repeat(2, 1fr) !important;
   }
+
   .student-card-wrap {
     width: 100% !important;
   }
 
-  /* Footer */
   .footer-grid-4 {
     grid-template-columns: 1fr !important;
   }
 
-  /* Buttons */
   .btn-primary, .btn-secondary, .btn-outline {
     padding: 0.5rem 1rem !important;
     font-size: 0.8rem !important;
@@ -458,6 +468,7 @@ img {
   .grid-4-col {
     grid-template-columns: repeat(4, 1fr) !important;
   }
+
   .max-content-width {
     max-width: 960px !important;
   }

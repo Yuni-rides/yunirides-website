@@ -127,7 +127,7 @@ export default function CareersClient() {
               className="object-cover object-left"
               priority
             />
-            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-[#2C3979] to-transparent" />
+            <div className="absolute inset-y-0 left-0 w-32  from-[#2C3979] to-transparent" />
           </div>
         </div>
 
@@ -141,7 +141,7 @@ export default function CareersClient() {
               className="object-cover object-center"
               priority
             />
-            <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-[#2C3979] to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-16  from-[#2C3979] to-transparent" />
           </div>
           <div className="px-5 pt-4 pb-8">
             <h1
