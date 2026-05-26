@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CareersClient from "@/components/CareersClient";
+import CareersClient from "@/app/features/careers/components/CareersClient";
 
 export const metadata: Metadata = {
   title: "Careers | Yunirides – Drive Your Future Forward",

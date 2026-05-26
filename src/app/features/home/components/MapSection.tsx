@@ -21,9 +21,7 @@ const stateData: Record<string, { cities: string[] }> = {
   },
 }
 
-// ─── CALIBRATED PATHS ──────────────────────────────────────────────────────────
-// viewBox="0 0 415 380" — verified pixel-by-pixel against us-map.png
-// Each polygon was overlaid on the actual PNG and confirmed visually
+
 const statePaths: Record<string, string> = {
   Washington: "M 18,18 L 80,15 L 85,22 L 82,28 L 85,45 L 68,52 L 45,55 L 20,57 L 12,50 L 15,35 Z",
   California:  "M 5,125 L 52,118 L 58,135 L 55,180 L 45,210 L 28,228 L 8,232 L 0,218 L 2,175 L 0,140 Z",
@@ -47,7 +45,7 @@ export default function MapSection() {
     <section className="bg-yuni-cream py-20">
       <div className="max-w-[1100px] mx-auto px-4 md:px-8">
 
-        {/* Header */}
+      
         <div className="text-center mb-12">
           <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-[28px] rounded-full text-[14px] font-medium mb-4 font-body">
             Our Services
@@ -60,10 +58,10 @@ export default function MapSection() {
           </p>
         </div>
 
-        {/* Main container */}
+
         <div className="grid grid-cols-1 md:grid-cols-[380px_1fr] bg-yuni-lavender rounded-[24px] overflow-hidden min-h-[380px]">
 
-          {/* LEFT */}
+
           <div className="p-[32px_28px] flex flex-col justify-between">
             <div>
               <div className="flex items-center gap-4 mb-5">
@@ -93,12 +91,10 @@ export default function MapSection() {
               </div>
             </div>
 
-            <button className="border-[1.5px] border-[#C0C8E8] bg-white rounded-[10px] py-[10px] px-[28px] text-[13px] cursor-pointer w-fit hover:border-yuni-purple hover:text-yuni-purple transition-all duration-200">
-              See More
-            </button>
+         <button className="btn-outline">See More</button>
           </div>
 
-          {/* RIGHT — PNG + SVG overlay */}
+          
           <div className="relative min-h-[380px]">
             <Image
               src="/images/us-map.png"

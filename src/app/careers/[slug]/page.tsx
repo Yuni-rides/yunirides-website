@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import CareerDetailClient from "@/components/CareersDetailClient";
+import CareerDetailClient from "@/app/features/careers/components/CareersDetailClient";
 
 // ─── Static Job Data ───────────────────────────────────────────────────────────
 const JOBS: Record<string, {

@@ -1,14 +1,13 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import StudentsSection from '@/components/StudentsSection';
-import BecomeCustomer from '@/components/BecomeCustomer';
-import FAQSection from '@/components/FaqSection';
+import StudentsSection from '@/components/shared/StudentsSection';
+import BecomeCustomer from '@/components/shared/BecomeCustomer';
+import FAQSection from '@/components/shared/FaqSection';
 
 export const metadata: Metadata = {
   title: 'Our Services — Yunirides | Rides for Every Need',
-  description:
-    'Explore Yunirides services: school transportation, special needs rides, medical appointments, and more. Safe, reliable, and caring across the U.S.',
+  description: 'Explore Yunirides services: school transportation, special needs rides, medical appointments, and more. Safe, reliable, and caring across the U.S.',
   alternates: { canonical: 'https://yunirides.com/services' },
   openGraph: {
     title: 'Yunirides Services — Transportation Designed Around Care, Safety & Trust',
@@ -74,98 +73,98 @@ export default function ServicesPage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
-      {/* ══════════ 1. HERO ══════════ */}
-      <section style={{ backgroundColor: 'var(--yuni-bg)', padding: '2rem 1.5rem' }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
-          <div style={{
-            position: 'relative', borderRadius: '40px',
-            overflow: 'hidden', height: '500px',
-          }}>
-            <Image src="/images/services-hero.png" alt="Yunirides driver with children" fill style={{ objectFit: 'cover' }} priority />
-            <div style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.4) 100%)' }} />
-            <div style={{ position: 'absolute', top: '50%', left: '48px', transform: 'translateY(-60%)', zIndex: 2, maxWidth: '520px' }}>
-              <h1 style={{
-                fontFamily: 'var(--font-heading)', fontWeight: 800,
-                fontSize: 'clamp(2rem, 4vw, 3rem)', color: 'white',
-                lineHeight: 1.15, margin: 0, textShadow: '0 2px 8px rgba(0,0,0,0.3)',
-              }}>
+      {/* ── 1. HERO ── */}
+      <section className="bg-[#FAF8F0] px-4 sm:px-6 py-8">
+        <div className="max-w-[1200px] mx-auto">
+          <div className="relative rounded-[40px] overflow-hidden h-[400px] md:h-[500px]">
+            <Image src="/images/services-hero.png" alt="Yunirides driver with children" fill className="object-cover" priority />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40" />
+
+            {/* Heading */}
+            <div className="absolute top-1/2 left-6 md:left-12 -translate-y-[60%] z-[2] max-w-[520px]">
+              <h1 className="font-heading font-extrabold text-[clamp(1.8rem,4vw,3rem)] text-white leading-[1.15] m-0 [text-shadow:0_2px_8px_rgba(0,0,0,0.3)]">
                 Transportation<br />Designed Around Care,<br />Safety &amp; Trust
               </h1>
             </div>
-            <div style={{
-              position: 'absolute', bottom: '28px', left: '28px', right: '28px', zIndex: 2,
-              backgroundColor: 'white', borderRadius: '16px', padding: '20px 28px',
-              display: 'flex', alignItems: 'center', justifyContent: 'space-between',
-              gap: '20px', flexWrap: 'wrap', boxShadow: '0 4px 24px rgba(0,0,0,0.15)',
-            }}>
-              <p style={{ fontSize: '13.5px', color: '#4A4A6A', lineHeight: 1.7, fontFamily: 'var(--font-body)', margin: 0, maxWidth: '400px' }}>
+
+            {/* Bottom white bar */}
+            <div className="absolute bottom-4 md:bottom-7 left-4 md:left-7 right-4 md:right-7 z-[2] bg-white rounded-[16px] px-5 md:px-7 py-4 md:py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-[0_4px_24px_rgba(0,0,0,0.15)]">
+              <p className="text-[13.5px] text-[#4A4A6A] leading-[1.7] font-body m-0 max-w-[400px]">
                 Reliable, technology-powered transportation services built to support children, families, schools, and healthcare communities.
               </p>
-              <div style={{ display: 'flex', gap: '12px', flexShrink: 0 }}>
-                <Link href="#become-customer" style={{ display: 'inline-block', backgroundColor: 'transparent', color: '#822C89', border: '1.5px solid #822C89', borderRadius: '10px', padding: '10px 22px', fontSize: '13px', fontWeight: 600, fontFamily: 'var(--font-body)', textDecoration: 'none' }}>Request a Ride</Link>
-                <Link href="#become-customer" style={{ display: 'inline-block', backgroundColor: '#2C3979', color: 'white', border: 'none', borderRadius: '10px', padding: '10px 22px', fontSize: '13px', fontWeight: 600, fontFamily: 'var(--font-body)', textDecoration: 'none' }}>Get Started</Link>
+              <div className="flex gap-3 shrink-0 flex-wrap">
+                <Link href="#become-customer" className="btn-outline text-sm">Request a Ride</Link>
+                <Link href="#become-customer" className="btn-secondary text-sm">Get Started</Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* ══════════ 2. TRANSPORTATION SERVICES CARDS ══════════ */}
-      <section style={{ backgroundColor: 'var(--yuni-bg)', padding: '5rem 1.5rem', position: 'relative', overflow: 'hidden' }}>
-        {/* Purple blob background */}
-        <div style={{
-          position: 'absolute', top: '50%', left: '50%',
-          transform: 'translate(-50%, -50%)',
-          width: '700px', height: '500px', borderRadius: '50%',
-          background: 'radial-gradient(ellipse, rgba(130,44,137,0.08) 0%, transparent 70%)',
-          pointerEvents: 'none', zIndex: 0,
-        }} />
+      {/* ── 2. SERVICES CARDS ── */}
+      <section className="bg-[#FAF8F0] px-4 sm:px-6 py-[5rem] relative overflow-hidden">
+        {/* Purple blob */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-[50%] pointer-events-none z-0"
+          style={{ background: 'radial-gradient(ellipse, rgba(130,44,137,0.08) 0%, transparent 70%)' }} />
 
-        <div style={{ maxWidth: '1200px', margin: '0 auto', position: 'relative', zIndex: 1 }}>
-          <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <span style={{
-              display: 'inline-block', background: '#E5EAFF', color: '#4A4A6A',
-              padding: '7px 28px', borderRadius: '9999px', fontSize: '14px',
-              fontWeight: 500, fontFamily: 'var(--font-body)', marginBottom: '16px',
-            }}>Our Transportation Services</span>
-            <p style={{ fontSize: '15px', color: '#4A4A6A', fontFamily: 'var(--font-body)', margin: 0 }}>
+        <div className="max-w-[1200px] mx-auto relative z-[1]">
+
+          {/* Header */}
+          <div className="text-center mb-12">
+            <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body mb-4">
+              Our Transportation Services
+            </span>
+            <p className="text-[15px] text-[#4A4A6A] font-body m-0">
               From daily school rides to specialized care transportation...
             </p>
           </div>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 411px)', gap: '24px', justifyContent: 'center' }}>
+          {/* Cards grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {services.map((service) => (
-              <div key={service.title} style={{
-                width: '411px', height: '479px',
-                backgroundColor: 'white', borderRadius: '15px',
-                overflow: 'hidden', display: 'flex', flexDirection: 'column',
-                boxShadow: service.active ? '0 0 0 2px #2C3979, 0 8px 32px rgba(44,57,121,0.15)' : '0 4px 20px rgba(44,57,121,0.08)',
-                border: service.active ? '2px solid #2C3979' : '1px solid #EEF0FF',
-                boxSizing: 'border-box',
-              }}>
-                <div style={{ position: 'relative', height: '200px', flexShrink: 0 }}>
-                  <Image src={service.image} alt={service.title} fill style={{ objectFit: 'cover' }} />
+              <div
+                key={service.title}
+                className={`w-full max-w-[411px] rounded-[15px] overflow-hidden flex flex-col bg-white transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_12px_36px_rgba(44,57,121,0.15)] group ${
+                  service.active
+                    ? 'shadow-[0_0_0_2px_#2C3979,0_8px_32px_rgba(44,57,121,0.15)] border-2 border-[#2C3979]'
+                    : 'shadow-[0_4px_20px_rgba(44,57,121,0.08)] border border-[#EEF0FF]'
+                }`}
+              >
+                {/* Image */}
+                <div className="relative h-[200px] shrink-0 overflow-hidden">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+                  />
                 </div>
-                <div style={{ padding: '20px 22px', display: 'flex', flexDirection: 'column', flex: 1, justifyContent: 'space-between' }}>
+
+                {/* Content */}
+                <div className="p-[20px_22px] flex flex-col flex-1 justify-between">
                   <div>
-                    <h3 style={{ fontFamily: 'var(--font-heading)', fontWeight: 700, fontSize: '16px', color: '#1A1A2E', marginBottom: '12px' }}>{service.title}</h3>
-                    <ul style={{ listStyle: 'none', padding: 0, margin: '0 0 16px' }}>
+                    <h3 className="font-heading font-bold text-[16px] text-[#1A1A2E] mb-3">
+                      {service.title}
+                    </h3>
+                    <ul className="list-none p-0 m-0 mb-4">
                       {service.features.map((f) => (
-                        <li key={f} style={{ display: 'flex', alignItems: 'flex-start', gap: '8px', fontSize: '12.5px', color: '#4A4A6A', fontFamily: 'var(--font-body)', marginBottom: '6px', lineHeight: 1.5 }}>
-                          <span style={{ color: '#822C89', fontWeight: 700, fontSize: '13px', flexShrink: 0 }}>✓</span>{f}
+                        <li key={f} className="flex items-start gap-2 text-[12.5px] text-[#4A4A6A] font-body mb-[6px] leading-[1.5]">
+                          <span className="text-[#822C89] font-bold text-[13px] shrink-0">✓</span>
+                          {f}
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <Link href="#become-customer" style={{
-                    display: 'block',
-                    backgroundColor: service.active ? '#2C3979' : 'transparent',
-                    color: service.active ? 'white' : '#4A4A6A',
-                    border: service.active ? 'none' : '1.5px solid #DDE2FF',
-                    borderRadius: '10px', padding: '11px', fontSize: '13px',
-                    fontWeight: 600, fontFamily: 'var(--font-body)',
-                    textDecoration: 'none', textAlign: 'center',
-                  }}>Get Started</Link>
+                  <Link
+                    href="#become-customer"
+                    className={`block rounded-[10px] py-[11px] text-[13px] font-semibold font-body no-underline text-center transition-all duration-200 hover:-translate-y-0.5 active:scale-95 ${
+                      service.active
+                        ? 'bg-[#2C3979] text-white hover:bg-[#223070]'
+                        : 'bg-transparent text-[#4A4A6A] border-[1.5px] border-[#DDE2FF] hover:border-[#822C89] hover:text-[#822C89]'
+                    }`}
+                  >
+                    Get Started
+                  </Link>
                 </div>
               </div>
             ))}
@@ -173,15 +172,15 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ══════════ 3. STUDENTS SECTION ══════════ */}
-<StudentsSection />
+     
+      <StudentsSection />
 
-      {/* ══════════ 3. BECOME CUSTOMER FORM ══════════ */}
+     
       <div id="become-customer">
         <BecomeCustomer />
       </div>
+
       <FAQSection />
     </>
-    
   )
 }

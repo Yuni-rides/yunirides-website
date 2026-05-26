@@ -60,7 +60,7 @@ export default function DriverForm() {
     }}>
       <div style={{ maxWidth: '900px', margin: '0 auto' }}>
 
-        {/* Section label */}
+    
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <span style={{
             display: 'inline-block',
@@ -74,7 +74,7 @@ export default function DriverForm() {
           }}>Become Rider</span>
         </div>
 
-        {/* Outer card — white */}
+   
         <div style={{
           background: 'white',
           borderRadius: '24px',
@@ -82,7 +82,7 @@ export default function DriverForm() {
           boxShadow: '0 4px 32px rgba(44,57,121,0.08)',
         }}>
 
-          {/* TOP — Illustration LEFT + Text RIGHT */}
+        
           <div style={{
             display: 'grid',
             gridTemplateColumns: '1fr 1fr',
@@ -91,7 +91,7 @@ export default function DriverForm() {
             gap: '2rem',
             borderBottom: '1px solid #EEF0FF',
           }}>
-            {/* Illustration — LARGE */}
+           
             <div style={{
               position: 'relative',
               height: '300px',
@@ -104,7 +104,7 @@ export default function DriverForm() {
               />
             </div>
 
-            {/* Text RIGHT */}
+           
             <div>
               <h2 style={{
                 fontFamily: 'var(--font-heading)',
@@ -129,7 +129,7 @@ export default function DriverForm() {
             </div>
           </div>
 
-          {/* BOTTOM — Form */}
+    
           <div style={{ padding: '2rem 2.5rem 2.5rem' }}>
             <h3 style={{
               fontFamily: 'var(--font-heading)',
@@ -150,7 +150,7 @@ export default function DriverForm() {
             </p>
 
             <form onSubmit={handleSubmit}>
-              {/* Row 1 */}
+       
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                 <div style={{ position: 'relative' }}>
                   <label style={labelStyle}>Full Name</label>
@@ -162,7 +162,7 @@ export default function DriverForm() {
                 </div>
               </div>
 
-              {/* Row 2 */}
+     
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1rem' }}>
                 <div style={{ position: 'relative' }}>
                   <label style={labelStyle}>Contact Number</label>
@@ -174,7 +174,6 @@ export default function DriverForm() {
                 </div>
               </div>
 
-              {/* Row 3 — Driver specific */}
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '1.5rem' }}>
                 <div style={{ position: 'relative' }}>
                   <label style={labelStyle}>What type of vehicle do you have?</label>
@@ -186,7 +185,7 @@ export default function DriverForm() {
                 </div>
               </div>
 
-              {/* Checkboxes */}
+              
               <div style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(3, 1fr)',
@@ -224,19 +223,9 @@ export default function DriverForm() {
                 </div>
               </div>
 
-              {/* Submit */}
+           
               <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
-                <button type="submit" style={{
-                  backgroundColor: '#2C3979',
-                  color: 'white',
-                  border: 'none',
-                  borderRadius: '10px',
-                  padding: '12px 40px',
-                  fontSize: '14px',
-                  fontWeight: 600,
-                  cursor: 'pointer',
-                  fontFamily: 'var(--font-body)',
-                }}>Submit</button>
+          <button type="submit" className="btn-secondary">Submit</button>
               </div>
             </form>
           </div>

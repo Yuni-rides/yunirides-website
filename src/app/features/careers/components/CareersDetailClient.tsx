@@ -58,7 +58,7 @@ export default function CareerDetailClient({ job, slug }: Props) {
   return (
     <main className="w-full min-h-screen bg-yuni-cream overflow-x-hidden font-body">
 
-      {/* ── HERO ─────────────────────────────────────────────────────────── */}
+    
       <section className="mx-4 mt-4 bg-yuni-navy rounded-3xl text-center px-6 py-16 lg:py-20">
         <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold !text-white mb-3 font-heading">
           {job.title}
@@ -68,15 +68,15 @@ export default function CareerDetailClient({ job, slug }: Props) {
           <span className="font-semibold text-white/80">Job Type:</span>{" "}
           {job.jobType}
         </p>
-        <button
-          onClick={() => document.getElementById("apply-form")?.scrollIntoView({ behavior: "smooth", block: "start" })}
-          className="bg-yuni-purple hover:bg-[#6e2474] text-white font-semibold text-sm px-10 py-3.5 rounded-lg transition-all duration-200 hover:shadow-lg hover:-translate-y-0.5"
-        >
-          Apply
-        </button>
+      <button
+  onClick={() => document.getElementById("apply-form")?.scrollIntoView({ behavior: "smooth", block: "start" })}
+  className="btn-primary"
+>
+  Apply
+</button>
       </section>
 
-      {/* ── JOB DETAILS CARD ─────────────────────────────────────────────── */}
+
       <section className="w-full px-6 md:px-16 lg:px-24 py-6">
         <div className="w-full bg-yuni-lavender rounded-2xl px-6 md:px-10 py-8">
 
@@ -95,7 +95,7 @@ export default function CareerDetailClient({ job, slug }: Props) {
         </div>
       </section>
 
-{/* ── HOW TO APPLY ─────────────────────────────────────────────────── */}
+
       <section id="apply-form" className="w-full px-6 md:px-16 lg:px-24 pb-16">
         <div className="w-full bg-yuni-lavender rounded-2xl px-6 md:px-10 py-10">
 
@@ -108,7 +108,6 @@ export default function CareerDetailClient({ job, slug }: Props) {
 
           <form className="space-y-6">
 
-            {/* Row 1: Full Name + Email */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="relative">
                 <label className="absolute -top-2.5 left-0 text-xs text-yuni-text-mid bg-yuni-lavender px-1 z-10">Full Name</label>
@@ -120,7 +119,7 @@ export default function CareerDetailClient({ job, slug }: Props) {
               </div>
             </div>
 
-            {/* Row 2: Contact Number + City */}
+       
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="relative">
                 <label className="absolute -top-2.5 left-0 text-xs text-yuni-text-mid bg-yuni-lavender px-1 z-10">Contact Number</label>
@@ -132,7 +131,7 @@ export default function CareerDetailClient({ job, slug }: Props) {
               </div>
             </div>
 
-            {/* Row 3: Vehicle + Experience */}
+       
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               <div className="relative">
                 <label className="absolute -top-2.5 left-0 text-xs text-yuni-text-mid bg-yuni-lavender px-1 z-10">What type of vehicle do you have?</label>
@@ -144,7 +143,6 @@ export default function CareerDetailClient({ job, slug }: Props) {
               </div>
             </div>
 
-            {/* Row 4: Checkboxes */}
             <div className="flex flex-wrap gap-10 pt-2">
               <div className="flex flex-col gap-3">
                 <span className="text-xs text-yuni-text-mid">Do you have SSN or ITN ?</span>
@@ -183,11 +181,11 @@ export default function CareerDetailClient({ job, slug }: Props) {
               </div>
             </div>
 
-            {/* Submit */}
+
             <div className="flex justify-end pt-2">
-              <button type="submit" className="bg-yuni-navy hover:bg-[#232e63] text-white font-semibold text-sm px-10 py-3 rounded-lg transition-all duration-200">
-                Submit
-              </button>
+              <button type="submit" className="btn-secondary">
+               Submit
+            </button>
             </div>
 
           </form>

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import BlogFilters from '@/components/BlogFilters';
+import BlogFilters from '@/app/features/blog/components/BlogFilters';
 
 
 export const metadata: Metadata = {
@@ -43,7 +43,7 @@ const featuredLeft = {
 export default function BlogPage() {
   return (
     <>
-      {/* ══════════ HERO ══════════ */}
+
       <section style={{ backgroundColor: '#FAF8F0', padding: '2rem 3rem' }}>
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
@@ -144,17 +144,7 @@ export default function BlogPage() {
                   outline: 'none',
                 }}
               />
-              <button style={{
-                backgroundColor: '#2C3979',
-                color: 'white',
-                border: 'none',
-                borderRadius: '8px',
-                padding: '10px 20px',
-                fontSize: '13px',
-                fontWeight: 600,
-                cursor: 'pointer',
-                fontFamily: 'var(--font-body)',
-              }}>Submit</button>
+            <button className="btn-outline">See More</button>
             </div>
           </div>
         </div>

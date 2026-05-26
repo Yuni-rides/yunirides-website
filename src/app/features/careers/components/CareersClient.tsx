@@ -3,8 +3,8 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import DriverCoreValues from "@/components/DriverCoreValues";
-import DriverForm from "@/components/DriverForm";
+import DriverCoreValues from "@/app/features/driver/components/DriverCoreValues";
+import DriverForm from "@/components/shared/DriverForm";
 
 interface Job {
   id: number;
@@ -111,12 +111,9 @@ export default function CareersClient() {
             <p className="text-white/75 text-sm lg:text-base leading-relaxed mb-6 max-w-sm">
               Turn every mile into opportunity. Join a driver-first platform designed to give you freedom, fair earnings, and the respect you deserve.
             </p>
-            <button
-              onClick={scrollToJobs}
-              className="w-fit bg-[#822C89] hover:bg-[#6e2474] text-white font-semibold text-sm px-6 py-3 rounded-lg transition-all hover:shadow-lg hover:shadow-[#822C89]/30"
-            >
-              See Open Position
-            </button>
+          <button onClick={scrollToJobs} className="btn-primary">
+           See Open Position
+          </button>
           </div>
          
           <div className="max-w-5xl mx-auto">
@@ -131,7 +128,7 @@ export default function CareersClient() {
           </div>
         </div>
 
-        {/* Mobile */}
+
         <div className="flex md:hidden flex-col">
           <div className="relative w-full h-48">
             <Image
@@ -153,19 +150,15 @@ export default function CareersClient() {
             <p className="text-white/70 text-sm leading-relaxed mb-5">
               Turn every mile into opportunity. Join a driver-first platform designed to give you freedom, fair earnings, and the respect you deserve.
             </p>
-            <button
-              onClick={scrollToJobs}
-              className="bg-[#822C89] hover:bg-[#6e2474] text-white font-semibold text-sm px-5 py-2.5 rounded-lg transition-all"
-            >
-              See Open Position
-            </button>
+          <button onClick={scrollToJobs} className="btn-primary">
+           See Open Position
+           </button>
           </div>
         </div>
       </section>
 
-      {/* ── SEARCH BAR — full width white strip below hero ───────────────── */}
       <section className="w-full bg-white shadow-sm">
-        {/* Desktop: single inline row */}
+     
         <div className="hidden md:flex items-center gap-3 px-8 lg:px-16 xl:px-24 py-4">
           <span
             className="text-[#2C3979] font-semibold text-sm whitespace-nowrap shrink-0"
@@ -192,12 +185,10 @@ export default function CareersClient() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </div>
-          <button className="bg-[#2C3979] hover:bg-[#232e63] text-white font-semibold text-sm px-7 py-2 rounded-lg transition-all whitespace-nowrap">
-            Search
-          </button>
+        <button className="btn-secondary">Search</button>
         </div>
 
-        {/* Mobile: stacked */}
+  
         <div className="flex md:hidden flex-col gap-2 px-4 py-4">
           <span className="text-[#2C3979] font-semibold text-sm" style={{ fontFamily: "var(--font-heading)" }}>
             Explore Open Positions
@@ -221,16 +212,14 @@ export default function CareersClient() {
               <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
             </svg>
           </div>
-          <button className="w-full bg-[#2C3979] hover:bg-[#232e63] text-white font-semibold text-sm py-2.5 rounded-lg transition-all">
-            Search
-          </button>
+        <button className="btn-secondary w-full">Search</button>
         </div>
       </section>
 
-      {/* ── JOB LISTINGS — full width, flat list ─────────────────────────── */}
+   
       <section id="job-listings" className="w-full bg-[#FAF8F0] pt-6 pb-10">
 
-        {/* Header: count + sort */}
+
         <div className="flex items-center justify-between gap-2 mb-3 px-4 md:px-8 lg:px-16 xl:px-24 flex-wrap">
           <p
             className="text-xs font-bold text-[#2C3979] uppercase tracking-wide"
@@ -264,7 +253,6 @@ export default function CareersClient() {
           </div>
         </div>
 
-        {/* Job rows — white bg container, flat list */}
         {filteredJobs.length > 0 ? (
           <div className="w-full bg-white px-4 md:px-8 lg:px-16 xl:px-24 py-2">
             {filteredJobs.map((job, index) => (
@@ -283,11 +271,7 @@ export default function CareersClient() {
           </div>
         )}
       </section>
-
-      {/* ── DRIVER CORE VALUES ────────────────────────────────────────────── */}
       <DriverCoreValues />
-
-      {/* ── DRIVER FORM ───────────────────────────────────────────────────── */}
       <DriverForm />
 
     </main>

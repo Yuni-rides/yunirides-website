@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import DriverForm from '@/components/DriverForm';
-import DriverCoreValues from '@/components/DriverCoreValues';
-import VideoSection from '@/components/VideoSection';
-import DriverRequirements from '@/components/DriverRequirements';
-import TestimonialsSection from '@/components/TestimonialsSection';
-import FAQSection from '@/components/FaqSection';
+import DriverForm from '@/components/shared/DriverForm';
+import DriverCoreValues from '@/app/features/driver/components/DriverCoreValues';
+import VideoSection from '@/components/shared/VideoSection';
+import DriverRequirements from '@/app/features/driver/components/DriverRequirements';
+import TestimonialsSection from '@/components/shared/TestimonialsSection';
+import FAQSection from '@/components/shared/FaqSection';
 
 
 export const metadata: Metadata = {

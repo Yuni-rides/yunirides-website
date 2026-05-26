@@ -31,7 +31,7 @@ export default function DriverRequirements() {
     }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
 
-        {/* Purple heading bar */}
+   
         <div style={{
           backgroundColor: '#822C89',
           borderRadius: '16px',
@@ -51,7 +51,7 @@ export default function DriverRequirements() {
           </h2>
         </div>
 
-        {/* 4 separate white cards */}
+
         <div style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(4, 1fr)',
@@ -69,7 +69,7 @@ export default function DriverRequirements() {
               textAlign: 'center',
               boxShadow: '0 2px 12px rgba(44,57,121,0.07)',
             }}>
-              {/* Icon */}
+          
               <div style={{ position: 'relative', width: '140px', height: '140px' }}>
                 <Image src={item.image} alt={item.text} fill style={{ objectFit: 'contain' }} />
                 {item.icon2 && (
@@ -83,7 +83,7 @@ export default function DriverRequirements() {
                 )}
               </div>
 
-              {/* Text */}
+       
               <p style={{
                 fontSize: '14px',
                 fontWeight: 600,

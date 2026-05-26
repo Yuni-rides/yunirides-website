@@ -1,8 +1,6 @@
 @import "tailwindcss";
 
-/* ============================================
-   TAILWIND V4 THEME — Brand Colors
-   ============================================ */
+
 @theme {
   --color-yuni-navy:         #2C3979;
   --color-yuni-purple:       #822C89;
@@ -22,11 +20,9 @@
   --font-body:               'DM Sans';
 }
 
-/* ============================================
-   CSS VARIABLES — Root
-   ============================================ */
+
 :root {
-  /* ── Yunirides Brand Colors ── */
+
   --yuni-purple:       #822C89;
   --yuni-navy:         #2C3979;
   --yuni-bg:           #FAF8F0;
@@ -41,7 +37,6 @@
   --yuni-olive:        #7B8C5A;
   --yuni-olive-bg:     #C8D4A8;
 
-  /* ── shadcn/ui CSS Variables ── */
   --background:             0 0% 98%;
   --foreground:             240 15% 12%;
   --card:                   240 60% 97%;
@@ -63,12 +58,11 @@
   --ring:                   291 52% 35%;
   --radius:                 0.75rem;
 
-  /* ── Fonts ── */
+
   --font-heading:         'Nunito', sans-serif;
   --font-body:            'DM Sans', sans-serif;
 }
 
-/* ── Base Resets ── */
 *, *::before, *::after {
   box-sizing: border-box;
   border-color: hsl(var(--border));
@@ -109,11 +103,6 @@ img {
   height: auto;
 }
 
-/* ============================================
-   YUNIRIDES CUSTOM CLASSES
-   ============================================ */
-
-/* ── Backgrounds ── */
 .bg-yuni-page {
   background-color: var(--yuni-bg);
   background-image:
@@ -160,52 +149,97 @@ img {
   pointer-events: none;
   z-index: 0;
 }
-
-/* ── Buttons ── */
+/* ── Button styles ── */
 .btn-primary {
-  background-color: var(--yuni-purple);
-  color: var(--yuni-white);
+  background: linear-gradient(135deg, #822C89 0%, #6B2272 100%);
+  color: white;
   padding: 0.625rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 600;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: white;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .btn-primary:hover {
-  background-color: #6B2272;
+  color: #822C89;
+  border-color: #822C89;
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(130,44,137,0.35);
 }
 
+.btn-primary:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-primary:active {
+  transform: scale(0.95);
+}
+
 .btn-secondary {
-  background-color: var(--yuni-navy);
-  color: var(--yuni-white);
+  background: linear-gradient(135deg, #2C3979 0%, #223070 100%);
+  color: white;
   padding: 0.625rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 600;
   font-family: var(--font-body);
   font-size: 0.9rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  border: none;
+  border: 2px solid transparent;
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-secondary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: white;
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .btn-secondary:hover {
-  background-color: #223070;
+  color: #2C3979;
+  border-color: #2C3979;
   transform: translateY(-1px);
   box-shadow: 0 4px 16px rgba(44,57,121,0.35);
+}
+
+.btn-secondary:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-secondary:active {
+  transform: scale(0.95);
 }
 
 .btn-outline {
@@ -217,20 +251,45 @@ img {
   font-family: var(--font-body);
   font-size: 0.875rem;
   border: 1.5px solid var(--yuni-border);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.btn-outline::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #822C89 0%, #6B2272 100%);
+  z-index: -1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
 .btn-outline:hover {
-  border-color: var(--yuni-purple);
-  color: var(--yuni-purple);
+  color: white;
+  border-color: #822C89;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(130,44,137,0.25);
 }
 
-/* ── Section Label Pill ── */
+.btn-outline:hover::before {
+  transform: scaleX(1);
+}
+
+.btn-outline:active {
+  transform: scale(0.95);
+}
+
+
+
 .section-label {
   display: inline-flex;
   align-items: center;
@@ -244,7 +303,7 @@ img {
   margin-bottom: 0.75rem;
 }
 
-/* ── Cards ── */
+
 .card-yuni {
   background-color: var(--yuni-white);
   border-radius: 1rem;
@@ -272,7 +331,6 @@ img {
   padding: 1.5rem;
 }
 
-/* ── Section Spacing ── */
 .section-padding {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -292,7 +350,6 @@ img {
   }
 }
 
-/* ── Typography Helpers ── */
 .text-yuni-purple { color: var(--yuni-purple); }
 .text-yuni-navy   { color: var(--yuni-navy); }
 .text-yuni-mid    { color: var(--yuni-text-mid); }
@@ -312,7 +369,6 @@ img {
   width: 100%;
 }
 
-/* ── Navbar ── */
 .navbar-pill {
   background-color: var(--yuni-white);
   border-radius: 9999px;
@@ -320,14 +376,12 @@ img {
   box-shadow: 0 2px 8px rgba(44,57,121,0.1);
 }
 
-/* ── Footer ── */
 .footer-yuni {
   background-color: var(--yuni-purple);
   color: var(--yuni-white);
   border-radius: 1.5rem 1.5rem 0 0;
 }
 
-/* ── Testimonials ── */
 .testimonial-active {
   background: linear-gradient(135deg, var(--yuni-purple) 0%, #6B2272 100%);
   color: white;
@@ -342,7 +396,7 @@ img {
   opacity: 0.85;
 }
 
-/* ── Service Cards ── */
+
 .service-card-active {
   background-color: var(--yuni-purple);
   color: var(--yuni-white);
@@ -355,29 +409,23 @@ img {
   border-radius: 1rem;
 }
 
-/* ── Scrollbar ── */
 ::-webkit-scrollbar       { width: 6px; }
 ::-webkit-scrollbar-track { background: var(--yuni-lavender-bg); }
 ::-webkit-scrollbar-thumb { background: var(--yuni-purple); border-radius: 9999px; }
 
-/* ── Focus ── */
 :focus-visible {
   outline: 2px solid var(--yuni-purple);
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* ============================================
-   RESPONSIVE BREAKPOINTS — GLOBAL
-   ============================================ */
 
-/* ── TABLET (768px - 1023px) ── */
 @media (max-width: 1023px) {
   .grid-4-col { grid-template-columns: repeat(2, 1fr) !important; }
   .grid-3-col { grid-template-columns: repeat(2, 1fr) !important; }
 }
 
-/* ── MOBILE (max 767px) ── */
+
 @media (max-width: 767px) {
   h1 { font-size: clamp(1.5rem, 6vw, 2rem) !important; }
   h2 { font-size: clamp(1.2rem, 5vw, 1.6rem) !important; }
@@ -441,35 +489,30 @@ img {
     flex-direction: column !important;
     align-items: stretch !important;
   }
+  * {
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-/* ── SMALL MOBILE (max 479px) ── */
-@media (max-width: 479px) {
-  .students-4-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-  }
-
-  .student-card-wrap {
-    width: 100% !important;
-  }
-
-  .footer-grid-4 {
-    grid-template-columns: 1fr !important;
-  }
-
-  .btn-primary, .btn-secondary, .btn-outline {
-    padding: 0.5rem 1rem !important;
-    font-size: 0.8rem !important;
+img {
+  max-width: 100%;
+  height: auto;
+}
+@media (hover: none) {
+  .active\:scale-95:active {
+    transform: scale(0.95);
   }
 }
 
-/* ── IPAD PRO / LARGE TABLET (1024px) ── */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .grid-4-col {
-    grid-template-columns: repeat(4, 1fr) !important;
+@media (hover: none) and (pointer: coarse) {
+  .active\:scale-95:active {
+    transform: scale(0.95) !important;
+    transition: transform 0.1s ease !important;
   }
-
-  .max-content-width {
-    max-width: 960px !important;
+  button:active,
+  a:active {
+    opacity: 0.75;
+    transition: opacity 0.1s ease;
   }
+}
 }

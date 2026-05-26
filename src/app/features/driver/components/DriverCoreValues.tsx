@@ -32,7 +32,7 @@ export default function DriverCoreValues() {
       overflow: 'hidden',
     }}>
 
-      {/* Lavender blob background */}
+ 
       <div style={{
         position: 'absolute',
         top: 0, right: 0,
@@ -55,7 +55,7 @@ export default function DriverCoreValues() {
         zIndex: 1,
       }}>
 
-        {/* Section label */}
+       
         <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
           <span style={{
             display: 'inline-block',
@@ -69,7 +69,6 @@ export default function DriverCoreValues() {
           }}>Our Core Values</span>
         </div>
 
-        {/* 2x2 Grid */}
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
@@ -85,13 +84,13 @@ export default function DriverCoreValues() {
               gap: '1.5rem',
               boxShadow: '0 2px 16px rgba(44,57,121,0.07)',
             }}>
-             {/* Icons */}
+       
 <div style={{ position: 'relative', flexShrink: 0 }}>
-  {/* Main icon */}
+
   <div style={{ position: 'relative', width: '70px', height: '70px' }}>
     <Image src={item.icons[0]} alt={item.title} fill style={{ objectFit: 'contain' }} />
   </div>
-  {/* Second icon — small, bottom right corner */}
+
   {item.icons[1] && (
     <div style={{
       position: 'absolute',
@@ -103,7 +102,6 @@ export default function DriverCoreValues() {
   )}
 </div>
 
-              {/* Text */}
               <div>
                 <h3 style={{
                   fontFamily: 'var(--font-heading)',

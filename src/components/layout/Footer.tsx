@@ -3,306 +3,105 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const socialIconStyle: React.CSSProperties = {
-  width: 44,
-  height: 44,
-  borderRadius: "10px",
-  background: "rgba(255,255,255,0.15)",
-  display: "flex",
-  alignItems: "center",
-  justifyContent: "center",
-  textDecoration: "none",
-  transition: "background 0.2s",
-};
-
 export default function Footer() {
   return (
-    <footer
-      style={{
-        backgroundColor: "#F7F5F0",
-        padding: "0 37px 40px 37px",
-      }}
-    >
-      {/* ── CTA bar above footer ── */}
-      <div
-        style={{
-          backgroundColor: "#EAF0FB",
-          borderRadius: "16px 16px 0 0",
-          padding: "22px 48px",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <p
-          style={{
-            margin: 0,
-            fontSize: "16px",
-            fontFamily: "'Helvetica Neue', Arial, sans-serif",
-            color: "#333",
-            fontWeight: 400,
-          }}
-        >
+    <footer className="bg-[#F7F5F0] px-4 sm:px-[37px] pb-[40px]">
+
+ 
+      <div className="bg-[#EAF0FB] rounded-[16px_16px_0_0] px-6 sm:px-[48px] py-[22px] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+        <p className="m-0 text-[16px] text-[#333]" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
           Sign up today and start earning additional income.
         </p>
-        <button
-          style={{
-            background: "linear-gradient(135deg, #6B2FA0 0%, #822C89 100%)",
-            color: "white",
-            border: "none",
-            borderRadius: "10px",
-            padding: "13px 32px",
-            fontSize: "15px",
-            fontFamily: "'Helvetica Neue', Arial, sans-serif",
-            fontWeight: 600,
-            cursor: "pointer",
-            boxShadow: "0 4px 14px rgba(130,44,137,0.35)",
-          }}
-        >
-          Join Us
-        </button>
+        <button className="btn-primary">Join Us</button>
       </div>
 
-      {/* ── Main footer body ── */}
-      <div
-        style={{
-          width: "100%",
-          maxWidth: "1368px",
-          margin: "0 auto",
-          backgroundColor: "#822C89",
-          borderRadius: "0 0 40px 40px",
-          padding: "56px 64px 36px 64px",
-          boxSizing: "border-box",
-        }}
-      >
-        {/* ── Newsletter row ── */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "space-between",
-            backgroundColor: "rgba(255,255,255,0.12)",
-            borderRadius: "14px",
-            padding: "22px 32px",
-            marginBottom: "56px",
-            gap: "24px",
-          }}
-        >
-          <span
-            style={{
-              color: "white",
-              fontSize: "18px",
-              fontFamily: "'Helvetica Neue', Arial, sans-serif",
-              fontWeight: 400,
-              whiteSpace: "nowrap",
-            }}
-          >
+      <div className="w-full max-w-[1368px] mx-auto bg-[#822C89] rounded-[0_0_40px_40px] px-6 sm:px-[64px] pt-[56px] pb-[36px] box-border">
+
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white/[0.12] rounded-[14px] px-6 sm:px-[32px] py-[22px] mb-[56px] gap-4">
+          <span className="text-white text-[18px] whitespace-nowrap" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
             Subscribe to our newsletter
           </span>
-          <div style={{ display: "flex", gap: "12px", flex: 1, maxWidth: "540px" }}>
+          <div className="flex gap-3 w-full sm:flex-1 sm:max-w-[540px]">
             <input
               type="email"
               placeholder="Email"
-              style={{
-                flex: 1,
-                padding: "14px 20px",
-                borderRadius: "10px",
-                border: "1.5px solid rgba(255,255,255,0.4)",
-                background: "rgba(255,255,255,0.08)",
-                color: "white",
-                fontSize: "14px",
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                outline: "none",
-              }}
+              className="flex-1 px-5 py-[14px] rounded-[10px] border-[1.5px] border-white/40 bg-white/[0.08] text-white text-[14px] outline-none placeholder:text-white/50"
+              style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}
             />
-            <button
-              style={{
-                padding: "14px 36px",
-                borderRadius: "10px",
-                border: "none",
-                background: "#F5F0E8",
-                color: "#3D1566",
-                fontSize: "14.5px",
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                fontWeight: 600,
-                cursor: "pointer",
-                whiteSpace: "nowrap",
-              }}
-            >
+            <button className="px-6 sm:px-9 py-[14px] rounded-[10px] border-none bg-[#F5F0E8] text-[#3D1566] text-[14.5px] font-semibold cursor-pointer whitespace-nowrap transition-all duration-200 hover:bg-white active:scale-95"
+              style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
               Submit
             </button>
           </div>
         </div>
 
-        {/* ── Middle row: 3 columns ── */}
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "1fr 1fr 1fr",
-            gap: "40px",
-            marginBottom: "48px",
-            alignItems: "start",
-          }}
-        >
-          {/* ── Column 1: Logo + Tagline ── */}
-          <div style={{ display: "flex", flexDirection: "column" }}>
+        
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 items-start">
+
+          <div className="flex flex-col">
             <Image
               src="/images/logowhite.png"
               alt="Yuni Rides"
               width={180}
               height={72}
-              style={{
-                objectFit: "contain",
-                objectPosition: "left",
-                filter: "brightness(0) invert(1)",
-              }}
+              className="object-contain object-left"
+              style={{ filter: "brightness(0) invert(1)" }}
             />
-            <p
-              style={{
-                fontFamily: "'Arial Black', 'Helvetica Neue', sans-serif",
-                fontWeight: 900,
-                fontSize: "38px",
-                color: "white",
-                lineHeight: 1.15,
-                margin: "48px 0 0 0",
-                textTransform: "uppercase",
-                letterSpacing: "0.01em",
-              }}
-            >
-              SAFE AND
-              <br />
-              RELIABLE SCHOOL
-              <br />
-              TRANSPORTATION
+            <p className="font-black text-[28px] sm:text-[38px] text-white leading-[1.15] mt-8 sm:mt-[48px] m-0 uppercase tracking-[0.01em]"
+              style={{ fontFamily: "'Arial Black', 'Helvetica Neue', sans-serif" }}>
+              SAFE AND<br />RELIABLE SCHOOL<br />TRANSPORTATION
             </p>
           </div>
 
-          {/* ── Column 2: Nav links ── */}
-          <div
-            style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr 1fr",
-              borderLeft: "1px solid rgba(255,255,255,0.25)",
-              borderRight: "1px solid rgba(255,255,255,0.25)",
-              padding: "0 32px",
-            }}
-          >
+         
+          <div className="grid grid-cols-3 border-l border-white/[0.25] border-r border-white/[0.25] px-4 sm:px-[32px]">
             {/* Nav col 1 */}
-            <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
+            <div className="flex flex-col gap-6">
               {["Home", "Services", "About"].map((item, i) => (
-                <Link
-                  key={item}
-                  href={`/${item.toLowerCase()}`}
-                  style={{
-                    color: i === 0 ? "white" : "rgba(255,255,255,0.65)",
-                    fontSize: "15px",
-                    fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                    fontWeight: i === 0 ? 600 : 400,
-                    textDecoration: "none",
-                  }}
-                >
+                <Link key={item} href={`/${item.toLowerCase()}`}
+                  className={`text-[15px] no-underline transition-all duration-200 ${i === 0 ? 'text-white font-semibold' : 'text-white/[0.65] font-normal'} hover:text-white`}
+                  style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
                   {item}
                 </Link>
               ))}
             </div>
-
-            {/* Nav col 2 */}
-            <div
-              style={{
-                borderLeft: "1px solid rgba(255,255,255,0.25)",
-                paddingLeft: "24px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "24px",
-              }}
-            >
+         
+            <div className="flex flex-col gap-6 border-l border-white/[0.25] pl-4 sm:pl-6">
               {["Become A Driver", "Careers", "Blog"].map((item) => (
-                <Link
-                  key={item}
-                  href="#"
-                  style={{
-                    color: "rgba(255,255,255,0.65)",
-                    fontSize: "15px",
-                    fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                    fontWeight: 400,
-                    textDecoration: "none",
-                  }}
-                >
+                <Link key={item} href="#"
+                  className="text-white/[0.65] text-[15px] no-underline font-normal transition-all duration-200 hover:text-white"
+                  style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
                   {item}
                 </Link>
               ))}
             </div>
-
-            {/* Nav col 3 */}
-            <div
-              style={{
-                borderLeft: "1px solid rgba(255,255,255,0.25)",
-                paddingLeft: "24px",
-                display: "flex",
-                flexDirection: "column",
-                gap: "24px",
-              }}
-            >
-              <Link
-                href="/contact"
-                style={{
-                  color: "rgba(255,255,255,0.65)",
-                  fontSize: "15px",
-                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                  fontWeight: 400,
-                  textDecoration: "none",
-                }}
-              >
+            
+            <div className="flex flex-col gap-6 border-l border-white/[0.25] pl-4 sm:pl-6">
+              <Link href="/contact"
+                className="text-white/[0.65] text-[15px] no-underline font-normal transition-all duration-200 hover:text-white"
+                style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
                 Contact
               </Link>
             </div>
           </div>
 
-          {/* ── Column 3: Contact ── */}
-          <div style={{ paddingLeft: "16px" }}>
-            <p
-              style={{
-                color: "white",
-                fontSize: "18px",
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                fontWeight: 600,
-                margin: "0 0 24px 0",
-              }}
-            >
+     
+          <div className="md:pl-4">
+            <p className="text-white text-[18px] font-semibold m-0 mb-6" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
               Contact Us:
             </p>
-
-            <div style={{ display: "flex", flexDirection: "column", gap: "16px", marginBottom: "36px" }}>
-              <a
-                href="tel:4155352155"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "14px",
-                  color: "white",
-                  textDecoration: "none",
-                  fontSize: "15px",
-                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                }}
-              >
+            <div className="flex flex-col gap-4 mb-9">
+              <a href="tel:4155352155"
+                className="flex items-center gap-[14px] text-white no-underline text-[15px] transition-all duration-200 hover:text-white/80"
+                style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
                 </svg>
                 415-535-2155
               </a>
-
-              <a
-                href="mailto:info@yunirides.com"
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "14px",
-                  color: "white",
-                  textDecoration: "none",
-                  fontSize: "15px",
-                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                }}
-              >
+              <a href="mailto:info@yunirides.com"
+                className="flex items-center gap-[14px] text-white no-underline text-[15px] transition-all duration-200 hover:text-white/80"
+                style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
                   <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
                 </svg>
@@ -310,51 +109,33 @@ export default function Footer() {
               </a>
             </div>
 
-            {/* Social icons */}
-            <div style={{ display: "flex", gap: "16px" }}>
-              <a href="#" aria-label="Facebook" style={socialIconStyle}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-                </svg>
-              </a>
-              <a href="#" aria-label="Instagram" style={socialIconStyle}>
+      
+            <div className="flex gap-4">
+              {[
+                { label: "Facebook", path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z", stroke: false },
+                { label: "LinkedIn", path: "M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z", stroke: false },
+                { label: "X", path: "M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z", stroke: false },
+              ].map((s) => (
+                <a key={s.label} href="#" aria-label={s.label}
+                  className="w-[44px] h-[44px] rounded-[10px] bg-white/15 flex items-center justify-center no-underline transition-all duration-200 hover:bg-white/30 hover:scale-110 active:scale-95">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d={s.path} /></svg>
+                </a>
+              ))}
+              <a href="#" aria-label="Instagram"
+                className="w-[44px] h-[44px] rounded-[10px] bg-white/15 flex items-center justify-center no-underline transition-all duration-200 hover:bg-white/30 hover:scale-110 active:scale-95">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2">
                   <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
                   <circle cx="12" cy="12" r="4" />
                   <circle cx="17.5" cy="6.5" r="1.5" fill="white" stroke="none" />
                 </svg>
               </a>
-              <a href="#" aria-label="LinkedIn" style={socialIconStyle}>
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
-                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z" />
-                  <circle cx="4" cy="4" r="2" />
-                </svg>
-              </a>
-              <a href="#" aria-label="X" style={socialIconStyle}>
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
-                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                </svg>
-              </a>
             </div>
           </div>
         </div>
 
-        {/* ── Copyright ── */}
-        <div
-          style={{
-            borderTop: "1px solid rgba(255,255,255,0.2)",
-            paddingTop: "24px",
-            textAlign: "center",
-          }}
-        >
-          <p
-            style={{
-              color: "rgba(255,255,255,0.6)",
-              fontSize: "13px",
-              fontFamily: "'Helvetica Neue', Arial, sans-serif",
-              margin: 0,
-            }}
-          >
+    
+        <div className="border-t border-white/[0.20] pt-6 text-center">
+          <p className="text-white/[0.60] text-[13px] m-0" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
             Yunirides® is a registered trademark | © 2025 Yunirides | All rights reserved
           </p>
         </div>

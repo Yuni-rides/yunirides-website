@@ -61,7 +61,7 @@ export default function Navbar() {
         backgroundColor: 'transparent',
         backdropFilter: 'blur(8px)',
       }}>
-        {/* Main navbar row */}
+      
         <div
           className="yuni-header-inner"
           style={{
@@ -75,7 +75,7 @@ export default function Navbar() {
           }}
         >
 
-          {/* Logo */}
+   
           <Link href="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
             <Image
               src="/images/logo.png"
@@ -87,7 +87,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop Nav pill */}
           <nav
             className="yuni-nav-desktop"
             style={{
@@ -132,37 +131,25 @@ export default function Navbar() {
             })}
           </nav>
 
-          {/* Right side — Phone CTA + Hamburger */}
+       
           <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
 
-            {/* Phone CTA */}
+        
             <a
-              href="tel:4155352155"
-              className="yuni-phone-cta"
-              style={{
-                display: 'flex',
-                alignItems: 'center',
-                gap: '9px',
-                background: '#1B2F5E',
-                color: 'white',
-                padding: '13px 22px',
-                borderRadius: '12px',
-                fontSize: '14.5px',
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                fontWeight: 600,
-                textDecoration: 'none',
-                whiteSpace: 'nowrap',
-                boxShadow: '0 4px 16px rgba(27,47,94,0.30)',
-                transition: 'transform 0.15s, box-shadow 0.15s',
-              }}
-            >
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
-                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-              </svg>
-              <span className="yuni-phone-text">415-535-2155</span>
-            </a>
+            href="tel:4155352155"
+  className="yuni-phone-cta group flex items-center gap-2.5 bg-[#2C3979]] text-#FFFFFF px-5.5 py-3.25 rounded-xl text-[14.5px] font-semibold no-underline whitespace-nowrap shadow-[0_4px_16px_rgba(27,47,94,0.30)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(27,47,94,0.45)] hover:bg-[#223070] active:scale-95"
+  style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}
+>
+  <svg
+    width="15" height="15" viewBox="0 0 24 24" fill="white"
+    className="transition-transform duration-200 group-hover:rotate-12"
+  >
+    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+  </svg>
+  <span className="yuni-phone-text">415-535-2155</span>
+</a>
 
-            {/* Hamburger — mobile only */}
+           
             <button
               className="yuni-hamburger"
               onClick={() => setMobileOpen(!mobileOpen)}
@@ -185,7 +172,6 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* Mobile dropdown menu */}
         {mobileOpen && (
           <div style={{
             backgroundColor: 'white',
@@ -218,7 +204,7 @@ export default function Navbar() {
                   </Link>
                 )
               })}
-              {/* Phone in mobile menu */}
+             
               <a
                 href="tel:4155352155"
                 style={{

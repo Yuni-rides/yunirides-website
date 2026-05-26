@@ -42,20 +42,17 @@ export default function BecomeCustomer() {
     <section className="py-20" style={{ backgroundColor: 'var(--yuni-lavender-bg)' }}>
       <div className="max-w-[780px] mx-auto px-6">
 
-        {/* Section label */}
         <div className="text-center mb-8">
           <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body">
             Become A Customer
           </span>
         </div>
 
-        {/* Outer white card */}
         <div className="bg-white rounded-[24px] overflow-hidden shadow-[0_4px_32px_rgba(44,57,121,0.08)]">
 
-          {/* TOP — Illustration + Text */}
           <div className="grid grid-cols-2 items-center p-[2.5rem_2.5rem_2rem] gap-8 border-b border-[#EEF0FF]">
 
-            {/* Illustration */}
+       
             <div className="relative h-[220px]">
               <Image
                 src="/images/driver-illustration.png"
@@ -65,7 +62,6 @@ export default function BecomeCustomer() {
               />
             </div>
 
-            {/* Text */}
             <div>
               <h2 className="font-heading font-extrabold text-[clamp(1.2rem,2.5vw,1.5rem)] text-[#2C3979] leading-[1.35] mb-4">
                 Technology meets care - We transport the future
@@ -76,10 +72,10 @@ export default function BecomeCustomer() {
             </div>
           </div>
 
-          {/* BOTTOM — Form */}
+        
           <div className="p-[2rem_2.5rem_2.5rem]">
 
-            {/* Form header */}
+      
             <div className="flex justify-between items-start mb-6 gap-4 flex-wrap">
               <div>
                 <h3 className="font-heading font-bold text-[1.2rem] text-[#2C3979] mb-1">
@@ -96,7 +92,7 @@ export default function BecomeCustomer() {
 
             <form onSubmit={handleSubmit}>
 
-              {/* Row 1 — Full Name + Email */}
+      
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <FloatLabel label="Full Name">
                   <input name="fullName" type="text" value={form.fullName} onChange={handleChange} className={inputClass} />
@@ -106,7 +102,7 @@ export default function BecomeCustomer() {
                 </FloatLabel>
               </div>
 
-              {/* Row 2 — Contact + City */}
+          
               <div className="grid grid-cols-2 gap-4 mb-6">
                 <FloatLabel label="Contact Number">
                   <input name="contactNumber" type="tel" value={form.contactNumber} onChange={handleChange} className={inputClass} />
@@ -116,7 +112,7 @@ export default function BecomeCustomer() {
                 </FloatLabel>
               </div>
 
-              {/* Child Information heading with line */}
+           
               <div className="flex items-center gap-3 mb-4">
                 <p className="text-[14px] font-semibold text-[#2C3979] font-heading m-0 whitespace-nowrap">
                   Child Information
@@ -124,7 +120,6 @@ export default function BecomeCustomer() {
                 <div className="flex-1" style={{ height: '1px', background: '#E5EAFF' }} />
               </div>
 
-              {/* Row 3 — Child name + Age */}
               <div className="grid grid-cols-2 gap-4 mb-4">
                 <FloatLabel label="Child's First Name">
                   <input name="childFirstName" type="text" value={form.childFirstName} onChange={handleChange} className={inputClass} />
@@ -134,14 +129,14 @@ export default function BecomeCustomer() {
                 </FloatLabel>
               </div>
 
-              {/* Row 4 — Number of children (half width) */}
+     
               <div className="w-1/2 mb-4">
                 <FloatLabel label="Number of Children Needing Transport">
                   <input name="numberOfChildren" type="number" value={form.numberOfChildren} onChange={handleChange} className={inputClass} />
                 </FloatLabel>
               </div>
 
-              {/* Row 5 — Special needs textarea */}
+         
               <div className="mb-6">
                 <FloatLabel label="Special Needs or Care Requirements (Optional)">
                   <textarea
@@ -154,14 +149,11 @@ export default function BecomeCustomer() {
                 </FloatLabel>
               </div>
 
-              {/* Submit */}
+      
               <div className="flex justify-end">
-                <button
-                  type="submit"
-                  className="bg-[#2C3979] hover:bg-[#1B2B6B] active:scale-95 transition-all duration-200 text-white border-none rounded-[10px] py-3 px-9 text-[14px] font-semibold font-body cursor-pointer"
-                >
-                  Submit
-                </button>
+           <button type="submit" className="btn-secondary">
+            Submit
+            </button>
               </div>
 
             </form>

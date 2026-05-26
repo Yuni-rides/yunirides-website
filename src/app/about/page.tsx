@@ -1,9 +1,9 @@
 import type { Metadata } from 'next'
-import AboutHero from '@/components/AboutHero';
-import AboutWhyTrusted from '@/components/AboutWhyTrusted';
-import AboutCoreValuesSection from '@/components/Aboutcorevaluesection';
-import AboutMissionCards from '@/components/AboutMissionCards';
-import FAQSection from '@/components/FaqSection';
+import AboutHero from '@/app/features/about/components/AboutHero';
+import AboutWhyTrusted from '@/app/features/about/components/AboutWhyTrusted';
+import AboutCoreValuesSection from '@/app/features/about/components/Aboutcorevaluesection';
+import AboutMissionCards from '@/app/features/about/components/AboutMissionCards';
+import FAQSection from '@/components/shared/FaqSection';
 
 export const metadata: Metadata = {
   title: 'About Yunirides — Our Story, Mission & Team',

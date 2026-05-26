@@ -55,7 +55,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${plusJakarta.variable} ${dmSans.variable}`}>
-      <body className="bg-yuni-page antialiased">
+      <body className="bg-yuni-page antialiased overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
         <Footer />

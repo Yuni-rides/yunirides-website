@@ -9,7 +9,7 @@ export default function AboutMissionCards() {
       overflow: 'hidden',
     }}>
 
-      {/* Light blue blob top right */}
+     
       <div style={{
         position: 'absolute',
         top: 0, right: 0,
@@ -29,7 +29,7 @@ export default function AboutMissionCards() {
         alignItems: 'start',
       }}>
 
-        {/* LEFT card */}
+  
         <div style={{
           backgroundColor: '#EFF2FF',
           borderRadius: '20px',
@@ -40,7 +40,7 @@ export default function AboutMissionCards() {
           gap: '1.5rem',
           boxSizing: 'border-box',
         }}>
-          {/* Image box — white background */}
+          
           <div style={{
             backgroundColor: 'white',
             borderRadius: '14px',
@@ -86,7 +86,7 @@ export default function AboutMissionCards() {
           </p>
         </div>
 
-        {/* RIGHT card */}
+  
         <div style={{
           backgroundColor: '#EFF2FF',
           borderRadius: '20px',
@@ -97,7 +97,7 @@ export default function AboutMissionCards() {
           gap: '1.5rem',
           boxSizing: 'border-box',
         }}>
-          {/* Image box — white background with heart overlay */}
+         
           <div style={{
             backgroundColor: 'white',
             borderRadius: '14px',
@@ -109,7 +109,7 @@ export default function AboutMissionCards() {
             justifyContent: 'center',
             position: 'relative',
           }}>
-            {/* Family illustration */}
+         
             <div style={{ position: 'relative', width: '100%', height: '100%' }}>
               <Image
                 src="/images/about-family.png"
@@ -119,7 +119,6 @@ export default function AboutMissionCards() {
               />
             </div>
 
-            {/* Heart overlay — center */}
             <div style={{
               position: 'absolute',
               top: '50%',

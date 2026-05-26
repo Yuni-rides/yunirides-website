@@ -10,7 +10,7 @@ export default function AboutWhyTrusted() {
       overflow: 'hidden',
     }}>
 
-      {/* Left lavender blob */}
+
       <div style={{
         position: 'absolute',
         top: 0, left: 0,
@@ -32,7 +32,7 @@ export default function AboutWhyTrusted() {
         gap: '3rem',
       }}>
 
-        {/* TOP — heading left, text right */}
+     
         <div style={{
           display: 'grid',
           gridTemplateColumns: '1fr 1fr',
@@ -40,9 +40,8 @@ export default function AboutWhyTrusted() {
           alignItems: 'flex-start',
         }}>
 
-          {/* Left — heading box + buttons */}
           <div>
-            {/* Heading box — 444x160, border-radius 30px */}
+      
             <div style={{
               backgroundColor: '#EFF2FF',
               width: '444px',
@@ -65,7 +64,7 @@ export default function AboutWhyTrusted() {
               </h2>
             </div>
 
-            {/* Buttons — 201x70 each */}
+     
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
               <Link href="/contact" style={{
                 width: '201px',
@@ -106,7 +105,6 @@ export default function AboutWhyTrusted() {
             </div>
           </div>
 
-          {/* Right — description text */}
           <p style={{
             fontSize: '13.5px',
             color: '#4A4A6A',
@@ -119,7 +117,7 @@ export default function AboutWhyTrusted() {
           </p>
         </div>
 
-        {/* BOTTOM — image 1357x778, border-radius 37px */}
+      
         <div style={{
           position: 'relative',
           width: '100%',

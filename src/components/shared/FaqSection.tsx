@@ -27,9 +27,9 @@ export default function FAQSection() {
         alignItems: 'start',
       }}>
 
-        {/* LEFT — Illustration */}
+     
         <div style={{ position: 'relative', paddingTop: '20px' }}>
-          {/* ? bubble */}
+
           <div style={{
             position: 'absolute', top: 0, left: '70px',
             width: '54px', height: '54px', borderRadius: '50%',
@@ -37,12 +37,12 @@ export default function FAQSection() {
             display: 'flex', alignItems: 'center', justifyContent: 'center',
             fontSize: '26px', color: '#822C89', fontWeight: 700,
           }}>?</div>
-          {/* small ? */}
+   
           <div style={{
             position: 'absolute', top: '62px', left: '48px',
             fontSize: '16px', color: '#822C89', fontWeight: 700, opacity: 0.5,
           }}>?</div>
-          {/* FAQ pill */}
+     
           <div style={{
             position: 'absolute', top: '82px', left: '80px',
             backgroundColor: 'white', borderRadius: '20px',
@@ -51,7 +51,6 @@ export default function FAQSection() {
             boxShadow: '0 2px 8px rgba(44,57,121,0.1)',
           }}>FAQ</div>
 
-          {/* Boy illustration — LARGE */}
           <div style={{
             position: 'relative',
            width: '440px',
@@ -68,9 +67,9 @@ export default function FAQSection() {
           </div>
         </div>
 
-        {/* RIGHT — FAQ cards */}
+   
         <div style={{ paddingTop: '20px' }}>
-          {/* Row 1 — Q1 left, Q2 right */}
+    
           <div style={{ display: 'flex', gap: '20px', marginBottom: '16px' }}>
             <FAQCard faq={faqs[0]} index={0} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
             <div style={{ marginLeft: '30px' }}>
@@ -78,12 +77,11 @@ export default function FAQSection() {
             </div>
           </div>
 
-          {/* Row 2 — Q3 center */}
           <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', paddingLeft: '60px' }}>
             <FAQCard faq={faqs[2]} index={2} openIndex={openIndex} setOpenIndex={setOpenIndex} width="220px" />
           </div>
 
-          {/* Row 3 — Q4 left, Q5 right */}
+        
           <div style={{ display: 'flex', gap: '20px', marginBottom: '16px' }}>
             <FAQCard faq={faqs[3]} index={3} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
             <div style={{ marginLeft: '20px' }}>
@@ -91,7 +89,7 @@ export default function FAQSection() {
             </div>
           </div>
 
-          {/* Row 4 — Q6 center */}
+    
           <div style={{ display: 'flex', justifyContent: 'center', paddingLeft: '30px' }}>
             <FAQCard faq={faqs[5]} index={5} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
           </div>
