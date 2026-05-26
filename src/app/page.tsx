@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import React from 'react';
 import CoreValues from "@/components/CoreValues";
 import MapSection from '@/components/MapSection';
 import BecomeCustomer from '@/components/BecomeCustomer';
@@ -11,177 +10,62 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import BlogSection from '@/components/BlogSection';
 import VideoSection from '@/components/VideoSection';
 
-
-
 export default function HomePage() {
-  // Main bounding box container for the entire Hero row layout area
-  const heroWrapperStyle: React.CSSProperties = {
-    width: "100%",
-    maxWidth: "1274px",
-    margin: "0 auto",
-    position: "relative",
-    minHeight: "552px", // Base structural height for content placement
-    display: "flex",
-    alignItems: "center",
-  };
-
-  // LEFT — Floating text block container
-  const leftPanelStyle: React.CSSProperties = {
-    background: "linear-gradient(145deg, #EDE9F5 0%, #F0EBF8 60%, #E8E4F2 100%)",
-    padding: "52px 48px 48px 52px",
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    position: "relative",
-    zIndex: 1,
-    width: "1274px", // Fits the design structure on the left side
-    borderRadius: "40px",
-    boxShadow: "0 8px 48px rgba(61,21,102,0.06)",
-  };
-
   return (
-    <main style={{ overflow: "hidden" }}>
-      {/* Structural section to handle the overflow sizing without page breaking */}
-      <section style={{ padding: "100px 0", position: "relative" }}>
-        
-        <div style={heroWrapperStyle}>
-          
-          {/* LEFT — Text panel container block */}
-          <div style={leftPanelStyle}>
-          
-            <h1
-              style={{
-                fontSize: "42px",
-                fontFamily: "'Georgia', 'Times New Roman', serif",
-                fontWeight: 700,
-                color: "#2D0F54",
-                lineHeight: 1.22,
-                margin: "0 0 18px 0",
-                maxWidth: "380px",
-              }}
-            >
-              Technology meets care –{" "}
-              <span style={{ color: "#6B2FA0" }}>We transport the future</span>
-            </h1>
-              <p
-              style={{
-                fontSize: "15px",
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                color: "#555",
-                lineHeight: 1.6,
-                margin: "0 0 36px 0",
-                maxWidth: "320px",
-              }}
-            >
-              Technology-driven, caring transportation service trusted by families across the U.S.
-            </p>
+    <main className="overflow-x-hidden">
 
-            {/* CTA row */}
-            <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
-              <button
-                style={{
-                  background: "linear-gradient(135deg, #6B2FA0 0%, #8B44C4 100%)",
-                  color: "white",
-                  border: "none",
-                  borderRadius: "10px",
-                  padding: "14px 28px",
-                  fontSize: "15px",
-                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                  fontWeight: 600,
-                  cursor: "pointer",
-                  boxShadow: "0 6px 20px rgba(107,47,160,0.40)",
-                  transition: "transform 0.15s, box-shadow 0.15s",
-                  letterSpacing: "0.01em",
-                }}
-                onMouseEnter={(e) => {
-                  (e.target as HTMLButtonElement).style.transform = "translateY(-2px)";
-                  (e.target as HTMLButtonElement).style.boxShadow = "0 10px 28px rgba(107,47,160,0.50)";
-                }}
-                onMouseLeave={(e) => {
-                  (e.target as HTMLButtonElement).style.transform = "translateY(0)";
-                  (e.target as HTMLButtonElement).style.boxShadow = "0 6px 20px rgba(107,47,160,0.40)";
-                }}
-              >
-                Become A Driver
-              </button>
+      <section className="relative w-full min-h-[713px] overflow-hidden">
 
-              {/* Avatar circle */}
+        {/* LEFT — Text panel */}
+        <div className="bg-[linear-gradient(145deg,#EDE9F5_0%,#F0EBF8_60%,#E8E4F2_100%)] p-[52px_48px_48px_52px] flex flex-col justify-center relative z-[1] w-[1274px] min-h-[552px] rounded-[40px] shadow-[0_8px_48px_rgba(61,21,102,0.06)] ml-[86px] mt-[16px]">
+
+          <h1 className="text-[42px] font-bold text-[#2a377a] leading-[1.22] mb-[18px] max-w-[380px] font-heading">
+            Technology meets care -{" "}
+            <span className="text-[#2a377a]">We transport the future</span>
+          </h1>
+
+          <p className="text-[15px] text-[#555] leading-[1.6] mb-[36px] max-w-[320px] font-body">
+            Technology-driven, caring transportation service trusted by families across the U.S.
+          </p>
+
+          <div className="flex items-center gap-[16px]">
+            <button className="bg-[linear-gradient(135deg,#6B2FA0_0%,#8B44C4_100%)] text-white border-none rounded-[10px] px-[28px] py-[14px] text-[15px] font-semibold cursor-pointer shadow-[0_6px_20px_rgba(107,47,160,0.40)] tracking-[0.01em] hover:-translate-y-[2px] hover:shadow-[0_10px_28px_rgba(107,47,160,0.50)] transition-all duration-150 font-body">
+              Become A Driver
+            </button>
+          </div>
+
+          <div className="flex gap-[8px] mt-[32px]">
+            {[true, false, false, false].map((active, i) => (
               <div
-                style={{
-                  width: 46,
-                  height: 46,
-                  borderRadius: "50%",
-                  background: "linear-gradient(135deg, #5A9BD4 0%, #4A8AC4 100%)",
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  color: "white",
-                  fontWeight: 700,
-                  fontSize: "17px",
-                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                  flexShrink: 0,
-                  boxShadow: "0 2px 8px rgba(90,155,212,0.35)",
-                }}
-              >
-                Y
-              </div>
-            </div>
-
-            {/* Slider dots */}
-            <div style={{ display: "flex", gap: "8px", marginTop: "32px" }}>
-              {[true, false, false, false].map((active, i) => (
-                <div
-                  key={i}
-                  style={{
-                    width: active ? 28 : 10,
-                    height: 10,
-                    borderRadius: "5px",
-                    background: active ? "#6B2FA0" : "#C9B8DC",
-                    transition: "all 0.3s",
-                    cursor: "pointer",
-                  }}
-                />
-              ))}
-            </div>
+                key={i}
+                className={`h-[10px] rounded-[5px] transition-all cursor-pointer ${active ? 'w-[28px] bg-[#6B2FA0]' : 'w-[10px] bg-[#C9B8DC]'}`}
+              />
+            ))}
           </div>
-
-          {/* RIGHT — Exact Figma Image Box Configuration */}
-          <div 
-            style={{ 
-              position: "absolute", 
-              width: "795px",       // Taken directly from your Layout sidebar
-              height: "713px",     // Taken directly from your Layout sidebar
-              top: "-7px",        // Negative placement offset from your sidebar
-              left: "670px",       // Explicit positioning alignment from your sidebar
-              overflow: "hidden",
-              borderRadius: "40px",
-              zIndex: 2,
-            }}
-          >
-            <Image
-              src="/images/hero.png"
-              alt="Yuni Rides driver assisting elderly passenger"
-              fill
-              style={{
-                objectFit: "cover",
-                objectPosition: "center top",
-              }}
-              priority
-            />
-          </div>
-
         </div>
-         
+
+        {/* RIGHT — Image */}
+        <div className="absolute w-[795px] h-[713px] top-0 right-0 overflow-hidden rounded-[40px] z-[2]">
+          <Image
+            src="/images/hero.png"
+            alt="Yuni Rides driver assisting elderly passenger"
+            fill
+            className="object-cover object-top"
+            priority
+          />
+        </div>
+
       </section>
-       <CoreValues />
-       <MapSection />
-       <BecomeCustomer />
-       <WhyYuniRides />
-       <WhyChoosing />
-       <StudentsSection />
-       <TestimonialsSection />
-       <BlogSection />
-    <VideoSection />  
+
+      <CoreValues />
+      <MapSection />
+      <BecomeCustomer />
+      <WhyYuniRides />
+      <WhyChoosing />
+      <StudentsSection />
+      <TestimonialsSection />
+      <BlogSection />
+      <VideoSection />
     </main>
   );
 }

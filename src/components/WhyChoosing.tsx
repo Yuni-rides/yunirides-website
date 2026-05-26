@@ -4,112 +4,35 @@ import Image from "next/image";
 
 export default function WhyChoosing() {
   return (
-    <section
-      style={{
-        backgroundColor: "#F7F5F0",
-        padding: "60px 0 80px 0",
-      }}
-    >
+    <section className="bg-[#F7F5F0] py-[60px] pb-[80px]">
+
       {/* ── Heading ── */}
-      <div style={{ textAlign: "center", marginBottom: "48px" }}>
-        <h2
-          style={{
-            fontSize: "26px",
-            fontFamily: "'Georgia', 'Times New Roman', serif",
-            fontWeight: 700,
-            color: "#2D0F54",
-            margin: 0,
-          }}
-        >
+      <div className="text-center mb-[48px]">
+        <h2 className="text-[26px] font-bold text-[#2D0F54] m-0" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
           Why choosing{" "}
-          <span
-            style={{
-              borderBottom: "2px solid #6B2FA0",
-              paddingBottom: "2px",
-              color: "#2D0F54",
-            }}
-          >
+          <span className="border-b-2 border-[#6B2FA0] pb-[2px] text-[#2D0F54]">
             Yuni Rides
           </span>
         </h2>
       </div>
 
-      {/* ── All 3 rows inside a fixed-width container matching Figma canvas ── */}
-      {/* Figma total width = 79 + 302 + (405-302-79 gap) + 954 = ~1360px area */}
-      <div
-        style={{
-          maxWidth: "1360px",
-          margin: "0 auto",
-          padding: "0 79px",
-          display: "flex",
-          flexDirection: "column",
-          gap: "22px", // Figma row gaps: 8900-8643=257px, 9157-8900=257px minus 235 height = 22px gap
-        }}
-      >
+      {/* ── Container ── */}
+      <div className="max-w-[1360px] mx-auto px-[79px] flex flex-col gap-[22px]">
 
-        {/* ── ROW 1: Image LEFT (302×235) · Green card RIGHT (954×235) ── */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "stretch",
-            gap: "24px",
-          }}
-        >
+        {/* ── ROW 1: Image LEFT · Green card RIGHT ── */}
+        <div className="flex items-stretch gap-6">
+
           {/* Image */}
-          <div
-            style={{
-              width: "302px",
-              height: "235px",
-              borderRadius: "40px",
-              overflow: "hidden",
-              flexShrink: 0,
-              position: "relative",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
-            }}
-          >
-            <Image
-              src="/images/school.png"
-              alt="School Districts"
-              fill
-              style={{ objectFit: "cover" }}
-            />
+          <div className="w-[302px] h-[235px] rounded-[40px] overflow-hidden shrink-0 relative shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(0,0,0,0.18)]">
+            <Image src="/images/school.png" alt="School Districts" fill style={{ objectFit: "cover" }} />
           </div>
 
-          {/* Green card — 954px wide but flex-1 to fill remaining space */}
-          <div
-            style={{
-              flex: 1,
-              height: "235px",
-              borderRadius: "40px",
-              background: "#8B9B6A",
-              padding: "28px 36px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              boxSizing: "border-box",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "20px",
-                fontFamily: "'Georgia', 'Times New Roman', serif",
-                fontWeight: 700,
-                color: "#1a1a1a",
-                margin: "0 0 10px 0",
-              }}
-            >
+          {/* Green card */}
+          <div className="flex-1 h-[235px] rounded-[40px] bg-[#8B9B6A] p-[28px_36px] flex flex-col justify-center box-border transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
+            <h3 className="text-[20px] font-bold text-[#1a1a1a] m-0 mb-[10px]" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               School Districts:
             </h3>
-            <p
-              style={{
-                fontSize: "12.5px",
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                color: "#1a1a1a",
-                lineHeight: 1.75,
-                margin: 0,
-                textAlign: "justify",
-              }}
-            >
+            <p className="text-[12.5px] text-[#1a1a1a] leading-[1.75] m-0 text-justify" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
               School districts trust <strong>Yuni Rides</strong> for consistent,
               dependable transportation solutions that put student safety and well-being
               first. Our streamlined operations, transparent reporting, and strong
@@ -120,49 +43,15 @@ export default function WhyChoosing() {
           </div>
         </div>
 
-        {/* ── ROW 2: Green card LEFT (954×235) · Image RIGHT (302×235) ── */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "stretch",
-            gap: "24px",
-          }}
-        >
+        {/* ── ROW 2: Green card LEFT · Image RIGHT ── */}
+        <div className="flex items-stretch gap-6">
+
           {/* Green card */}
-          <div
-            style={{
-              flex: 1,
-              height: "235px",
-              borderRadius: "40px",
-              background: "#8B9B6A",
-              padding: "28px 36px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              boxSizing: "border-box",
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "20px",
-                fontFamily: "'Georgia', 'Times New Roman', serif",
-                fontWeight: 700,
-                color: "#1a1a1a",
-                margin: "0 0 10px 0",
-              }}
-            >
+          <div className="flex-1 h-[235px] rounded-[40px] bg-[#8B9B6A] p-[28px_36px] flex flex-col justify-center box-border transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
+            <h3 className="text-[20px] font-bold text-[#1a1a1a] m-0 mb-[10px]" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               Hospitals &amp; Healthcare Facilities:
             </h3>
-            <p
-              style={{
-                fontSize: "12.5px",
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                color: "#1a1a1a",
-                lineHeight: 1.75,
-                margin: 0,
-                textAlign: "justify",
-              }}
-            >
+            <p className="text-[12.5px] text-[#1a1a1a] leading-[1.75] m-0 text-justify" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
               Hospitals and healthcare facilities trust <strong>Yuni Rides</strong> to
               provide safe, reliable, and compassionate transportation for patients and
               families. We support medical appointments, therapy sessions, and specialized
@@ -173,134 +62,38 @@ export default function WhyChoosing() {
           </div>
 
           {/* Image */}
-          <div
-            style={{
-              width: "302px",
-              height: "235px",
-              borderRadius: "40px",
-              overflow: "hidden",
-              flexShrink: 0,
-              position: "relative",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
-            }}
-          >
-            <Image
-              src="/images/hospital.png"
-              alt="Hospitals & Healthcare"
-              fill
-              style={{ objectFit: "cover" }}
-            />
+          <div className="w-[302px] h-[235px] rounded-[40px] overflow-hidden shrink-0 relative shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(0,0,0,0.18)]">
+            <Image src="/images/hospital.png" alt="Hospitals & Healthcare" fill style={{ objectFit: "cover" }} />
           </div>
         </div>
 
-        {/* ── ROW 3: Image LEFT (302×235) · Green card (628×235) · CTA block (302px) ── */}
-        <div
-          style={{
-            display: "flex",
-            alignItems: "flex-start",
-            gap: "24px",
-          }}
-        >
+        {/* ── ROW 3: Image LEFT · Green card · CTA block ── */}
+        <div className="flex items-start gap-6">
+
           {/* Image */}
-          <div
-            style={{
-              width: "302px",
-              height: "235px",
-              borderRadius: "40px",
-              overflow: "hidden",
-              flexShrink: 0,
-              position: "relative",
-              boxShadow: "0 4px 20px rgba(0,0,0,0.12)",
-            }}
-          >
-            <Image
-              src="/images/parents.png"
-              alt="Parents, Students & Guardians"
-              fill
-              style={{ objectFit: "cover" }}
-            />
+          <div className="w-[302px] h-[235px] rounded-[40px] overflow-hidden shrink-0 relative shadow-[0_4px_20px_rgba(0,0,0,0.12)] transition-all duration-300 hover:scale-[1.03] hover:shadow-[0_8px_32px_rgba(0,0,0,0.18)]">
+            <Image src="/images/parents.png" alt="Parents, Students & Guardians" fill style={{ objectFit: "cover" }} />
           </div>
 
           {/* Green card — 628px */}
-          <div
-            style={{
-              width: "628px",
-              height: "235px",
-              borderRadius: "40px",
-              background: "#8B9B6A",
-              padding: "28px 32px",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              boxSizing: "border-box",
-              flexShrink: 0,
-            }}
-          >
-            <h3
-              style={{
-                fontSize: "20px",
-                fontFamily: "'Georgia', 'Times New Roman', serif",
-                fontWeight: 700,
-                color: "#1a1a1a",
-                margin: "0 0 10px 0",
-              }}
-            >
+          <div className="w-[628px] h-[235px] rounded-[40px] bg-[#8B9B6A] p-[28px_32px] flex flex-col justify-center box-border shrink-0 transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_8px_32px_rgba(0,0,0,0.12)]">
+            <h3 className="text-[20px] font-bold text-[#1a1a1a] m-0 mb-[10px]" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               Parents, Students &amp; Guardians.
             </h3>
-            <p
-              style={{
-                fontSize: "12.5px",
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                color: "#1a1a1a",
-                lineHeight: 1.75,
-                margin: 0,
-                textAlign: "justify",
-              }}
-            >
+            <p className="text-[12.5px] text-[#1a1a1a] leading-[1.75] m-0 text-justify" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>
               <strong>Yuni Rides</strong> gives parents and guardians confidence through
               safe, transparent, and child-focused transportation—every ride, every day.
             </p>
           </div>
 
-          {/* CTA block — 302px wide, text + button (302×70) */}
-          <div
-            style={{
-              width: "302px",
-              flexShrink: 0,
-              display: "flex",
-              flexDirection: "column",
-              gap: "14px",
-              paddingTop: "46px", // vertically offset to align button at bottom like Figma (top:9318 - top:9157 = 161px offset)
-            }}
-          >
-            <p
-              style={{
-                fontSize: "20px",
-                fontFamily: "'Georgia', 'Times New Roman', serif",
-                fontWeight: 700,
-                color: "#2D0F54",
-                margin: 0,
-                lineHeight: 1.3,
-              }}
-            >
+          {/* CTA block */}
+          <div className="w-[302px] shrink-0 flex flex-col gap-[14px] pt-[46px]">
+            <p className="text-[20px] font-bold text-[#2D0F54] m-0 leading-[1.3]" style={{ fontFamily: "'Georgia', 'Times New Roman', serif" }}>
               What are you thinking of?
             </p>
-            {/* Button: 302×70, border-radius: 10px */}
             <button
-              style={{
-                width: "302px",
-                height: "70px",
-                borderRadius: "10px",
-                background: "linear-gradient(135deg, #6B2FA0 0%, #822C89 100%)",
-                color: "white",
-                border: "none",
-                fontSize: "15px",
-                fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                fontWeight: 600,
-                cursor: "pointer",
-                boxShadow: "0 4px 14px rgba(107,47,160,0.35)",
-                letterSpacing: "0.01em",
-              }}
+              className="w-[302px] h-[70px] rounded-[10px] text-white border-none text-[15px] font-semibold cursor-pointer shadow-[0_4px_14px_rgba(107,47,160,0.35)] tracking-[0.01em] transition-all duration-200 hover:-translate-y-1 hover:shadow-[0_8px_24px_rgba(107,47,160,0.45)] active:scale-95"
+              style={{ background: "linear-gradient(135deg, #6B2FA0 0%, #822C89 100%)", fontFamily: "'Helvetica Neue', Arial, sans-serif" }}
             >
               Discuss with Us
             </button>

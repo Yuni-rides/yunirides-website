@@ -29,10 +29,10 @@ export const metadata: Metadata = {
   applicationName: 'Yunirides',
   keywords: ['school transportation', 'safe rides', 'child transport', 'Yunirides'],
   authors: [{ name: 'Yunirides Team', url: 'https://yunirides.com' }],
-  icons: {
-    icon: '/favicon.ico',
-    apple: '/apple-touch-icon.png',
-  },
+icons: {
+  icon: '/images/logo.png',
+  apple: '/images/logo.png',
+},
   openGraph: {
     siteName: 'Yunirides',
     locale: 'en_US',

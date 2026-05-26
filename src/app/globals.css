@@ -18,8 +18,8 @@
   --color-yuni-olive:        #7B8C5A;
   --color-yuni-olive-bg:     #C8D4A8;
   --color-white:             #FFFFFF;
-  --font-heading: 'Plus Jakarta Sans', sans-serif; 
-  --font-body: 'DM Sans', sans-serif; 
+  --font-heading:            'Nunito';
+  --font-body:               'DM Sans';
 }
 
 /* ============================================
@@ -64,8 +64,8 @@
   --radius:                 0.75rem;
 
   /* ── Fonts ── */
-  --font-heading: 'Plus Jakarta Sans', sans-serif;
-  --font-body:    'DM Sans', sans-serif;
+  --font-heading:         'Nunito', sans-serif;
+  --font-body:            'DM Sans', sans-serif;
 }
 
 /* ── Base Resets ── */

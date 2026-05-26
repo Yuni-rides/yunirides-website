@@ -54,11 +54,11 @@ export default function Navbar() {
       `}</style>
 
       <header style={{
-        position: 'sticky',
+        position:'sticky',
         top: 0,
-        zIndex: 50,
+        zIndex: 100,
         width: '100%',
-        backgroundColor: '#FFFCF2',
+        backgroundColor: 'transparent',
         backdropFilter: 'blur(8px)',
       }}>
         {/* Main navbar row */}
