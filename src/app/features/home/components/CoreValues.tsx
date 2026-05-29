@@ -101,13 +101,13 @@ export default function CoreValues() {
         <div className="text-center mb-[60px] px-4">
           <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-[24px] rounded-full text-[14px] font-medium mb-[16px] font-body">About us</span>
           <h2 className="font-heading font-bold text-[clamp(1.6rem,3vw,2.2rem)] text-[#2C3979] mb-[12px] block">About Our Core Values</h2>
-          <p className="text-[#4A4A6A] text-[14px] max-w-[400px] mx-auto leading-[1.7] font-body">
+          <p className="text-[#4A4A6A] text-[14px] max-w-7xl mx-auto leading-[1.7] font-body">
             The principles that guide every journey, every child, and every family we serve.
           </p>
         </div>
 
   
-        <div className="flex flex-col gap-[80px] max-w-[1200px] mx-auto">
+        <div className="flex flex-col gap-[80px] max-w-7xl mx-auto">
           {coreValues.map((item, i) =>
             i % 2 === 0
               ? <TextLeftRow key={item.title} item={item} />

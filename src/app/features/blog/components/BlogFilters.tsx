@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { motion } from 'framer-motion'
 
 const tabs = ['All', 'Press Release', 'Events', 'Technology', 'Marketing']
 
@@ -8,26 +9,20 @@ export default function BlogFilters() {
   const [active, setActive] = useState('All')
 
   return (
-    <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+    <div className="flex gap-2 flex-wrap">
       {tabs.map((tab) => (
-        <button
+        <motion.button
           key={tab}
           onClick={() => setActive(tab)}
-          style={{
-            padding: '8px 20px',
-            borderRadius: '9999px',
-            border: 'none',
-            cursor: 'pointer',
-            fontSize: '13px',
-            fontWeight: active === tab ? 600 : 400,
-            fontFamily: 'var(--font-body)',
-            backgroundColor: active === tab ? '#E5EAFF' : 'transparent',
-            color: active === tab ? '#2C3979' : '#6A6A8A',
-            transition: 'all 0.2s ease',
-          }}
+          whileTap={{ scale: 0.95 }}
+          className={`px-5 py-2 rounded-full border-none cursor-pointer text-[13px] font-body transition-all duration-200 ${
+            active === tab
+              ? 'bg-[#E5EAFF] text-[#2C3979] font-semibold'
+              : 'bg-transparent text-[#6A6A8A] font-normal hover:text-[#2C3979] hover:bg-[#E5EAFF]/50'
+          }`}
         >
           {tab}
-        </button>
+        </motion.button>
       ))}
     </div>
   )

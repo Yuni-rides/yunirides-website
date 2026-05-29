@@ -70,12 +70,10 @@ export default function HomePage() {
   const current = slides[active]
 
   return (
-    <main className="overflow-x-hidden w-full">
-
-   
-      <section
-        className="relative w-full overflow-hidden bg-yuni-cream"
-        onMouseEnter={() => setPaused(true)}
+    <main className="overflow-x-hidden">
+    <section
+        className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 overflow-hidden bg-yuni-cream"
+        onMouseEnter={() => setPaused(false)}
         onMouseLeave={() => setPaused(false)}
       >
 

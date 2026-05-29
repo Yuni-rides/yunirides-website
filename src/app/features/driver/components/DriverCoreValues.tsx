@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import { motion } from 'framer-motion'
 
 const values = [
   {
@@ -25,101 +28,63 @@ const values = [
 
 export default function DriverCoreValues() {
   return (
-    <section style={{
-      backgroundColor: '#FAF8F0',
-      padding: '5rem 3rem',
-      position: 'relative',
-      overflow: 'hidden',
-    }}>
+    <section className="bg-[#FAF8F0] px-4 sm:px-12 py-20 relative overflow-hidden">
 
- 
-      <div style={{
-        position: 'absolute',
-        top: 0, right: 0,
-        width: '60%', height: '100%',
-        background: 'radial-gradient(ellipse 700px 500px at 80% 50%, #EFF2FF 0%, transparent 65%)',
-        pointerEvents: 'none', zIndex: 0,
-      }} />
-      <div style={{
-        position: 'absolute',
-        bottom: 0, left: 0,
-        width: '40%', height: '50%',
-        background: 'radial-gradient(ellipse 400px 300px at 20% 80%, #EFF2FF 0%, transparent 70%)',
-        pointerEvents: 'none', zIndex: 0,
-      }} />
+      {/* Blobs */}
+      <div className="absolute top-0 right-0 w-[60%] h-full pointer-events-none z-0"
+        style={{ background: 'radial-gradient(ellipse 700px 500px at 80% 50%, #EFF2FF 0%, transparent 65%)' }} />
+      <div className="absolute bottom-0 left-0 w-[40%] h-[50%] pointer-events-none z-0"
+        style={{ background: 'radial-gradient(ellipse 400px 300px at 20% 80%, #EFF2FF 0%, transparent 70%)' }} />
 
-      <div style={{
-        maxWidth: '1100px',
-        margin: '0 auto',
-        position: 'relative',
-        zIndex: 1,
-      }}>
+      <div className="max-w-7xl mx-auto relative z-[1]">
 
-       
-        <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-          <span style={{
-            display: 'inline-block',
-            background: '#E5EAFF',
-            color: '#4A4A6A',
-            padding: '7px 28px',
-            borderRadius: '9999px',
-            fontSize: '14px',
-            fontWeight: 500,
-            fontFamily: 'var(--font-body)',
-          }}>Our Core Values</span>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="text-center mb-12"
+        >
+          <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body">
+            Our Core Values
+          </span>
+        </motion.div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '16px',
-        }}>
+     
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {values.map((item, i) => (
-            <div key={i} style={{
-              backgroundColor: 'white',
-              borderRadius: '16px',
-              padding: '1.75rem 2rem',
-              display: 'flex',
-              alignItems: 'center',
-              gap: '1.5rem',
-              boxShadow: '0 2px 16px rgba(44,57,121,0.07)',
-            }}>
-       
-<div style={{ position: 'relative', flexShrink: 0 }}>
-
-  <div style={{ position: 'relative', width: '70px', height: '70px' }}>
-    <Image src={item.icons[0]} alt={item.title} fill style={{ objectFit: 'contain' }} />
-  </div>
-
-  {item.icons[1] && (
-    <div style={{
-      position: 'absolute',
-      bottom: '-8px', right: '-12px',
-      width: '32px', height: '32px',
-    }}>
-      <Image src={item.icons[1]} alt="" fill style={{ objectFit: 'contain' }} />
-    </div>
-  )}
-</div>
-
-              <div>
-                <h3 style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontWeight: 700,
-                  fontSize: '16px',
-                  color: '#1A1A2E',
-                  marginBottom: '8px',
-                  lineHeight: 1.3,
-                }}>{item.title}</h3>
-                <p style={{
-                  fontSize: '13px',
-                  color: '#4A4A6A',
-                  lineHeight: 1.7,
-                  fontFamily: 'var(--font-body)',
-                  margin: 0,
-                }}>{item.description}</p>
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.1 }}
+              whileHover={{ y: -4, boxShadow: '0 8px 32px rgba(44,57,121,0.13)' }}
+              whileTap={{ scale: 0.98 }}
+              className="bg-white rounded-[16px] px-8 py-7 flex items-center gap-6 shadow-[0_2px_16px_rgba(44,57,121,0.07)] cursor-pointer"
+            >
+             
+              <div className="relative shrink-0">
+                <div className="relative w-[70px] h-[70px]">
+                  <Image src={item.icons[0]} alt={item.title} fill className="object-contain" />
+                </div>
+                {item.icons[1] && (
+                  <div className="absolute -bottom-2 -right-3 w-[32px] h-[32px]">
+                    <Image src={item.icons[1]} alt="" fill className="object-contain" />
+                  </div>
+                )}
               </div>
-            </div>
+
+      
+              <div>
+                <h3 className="font-heading font-bold text-[16px] text-[#1A1A2E] mb-2 leading-[1.3]">
+                  {item.title}
+                </h3>
+                <p className="text-[13px] text-[#4A4A6A] leading-[1.7] font-body m-0">
+                  {item.description}
+                </p>
+              </div>
+            </motion.div>
           ))}
         </div>
 

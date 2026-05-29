@@ -3,6 +3,7 @@
 import Image from 'next/image'
 import { useState } from 'react'
 import { Plus, Minus } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
 
 const faqs = [
   { question: '1. What states does Yuni Rides operate in?', answer: 'Yuni Rides currently operates in Washington state including cities like Seattle, Tacoma, Bellevue, Renton, and more. We are expanding rapidly across the U.S.' },
@@ -13,93 +14,6 @@ const faqs = [
   { question: '6. What type of vehicles do you use?', answer: 'We use clean, well-maintained sedans, SUVs, and accessible vans equipped to accommodate children including those with special needs.' },
 ]
 
-export default function FAQSection() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
-
-  return (
-    <section style={{ backgroundColor: '#FAF8F0', padding: '60px 40px 80px' }}>
-      <div style={{
-        maxWidth: '1100px',
-        margin: '0 auto',
-        display: 'grid',
-        gridTemplateColumns: '460px 1fr',
-        gap: '40px',
-        alignItems: 'start',
-      }}>
-
-     
-        <div style={{ position: 'relative', paddingTop: '20px' }}>
-
-          <div style={{
-            position: 'absolute', top: 0, left: '70px',
-            width: '54px', height: '54px', borderRadius: '50%',
-            backgroundColor: '#E5EAFF',
-            display: 'flex', alignItems: 'center', justifyContent: 'center',
-            fontSize: '26px', color: '#822C89', fontWeight: 700,
-          }}>?</div>
-   
-          <div style={{
-            position: 'absolute', top: '62px', left: '48px',
-            fontSize: '16px', color: '#822C89', fontWeight: 700, opacity: 0.5,
-          }}>?</div>
-     
-          <div style={{
-            position: 'absolute', top: '82px', left: '80px',
-            backgroundColor: 'white', borderRadius: '20px',
-            padding: '6px 18px', fontSize: '14px', fontWeight: 600,
-            color: '#2C3979', fontFamily: 'var(--font-heading)',
-            boxShadow: '0 2px 8px rgba(44,57,121,0.1)',
-          }}>FAQ</div>
-
-          <div style={{
-            position: 'relative',
-           width: '440px',
-           height: '500px',
-           marginTop: '80px',
-           marginLeft: '-20px',
-          }}>
-            <Image
-              src="/images/faq-illustration.png"
-              alt="FAQ"
-              fill
-              style={{ objectFit: 'contain', objectPosition: 'bottom' }}
-            />
-          </div>
-        </div>
-
-   
-        <div style={{ paddingTop: '20px' }}>
-    
-          <div style={{ display: 'flex', gap: '20px', marginBottom: '16px' }}>
-            <FAQCard faq={faqs[0]} index={0} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
-            <div style={{ marginLeft: '30px' }}>
-              <FAQCard faq={faqs[1]} index={1} openIndex={openIndex} setOpenIndex={setOpenIndex} width="230px" />
-            </div>
-          </div>
-
-          <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '16px', paddingLeft: '60px' }}>
-            <FAQCard faq={faqs[2]} index={2} openIndex={openIndex} setOpenIndex={setOpenIndex} width="220px" />
-          </div>
-
-        
-          <div style={{ display: 'flex', gap: '20px', marginBottom: '16px' }}>
-            <FAQCard faq={faqs[3]} index={3} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
-            <div style={{ marginLeft: '20px' }}>
-              <FAQCard faq={faqs[4]} index={4} openIndex={openIndex} setOpenIndex={setOpenIndex} width="220px" />
-            </div>
-          </div>
-
-    
-          <div style={{ display: 'flex', justifyContent: 'center', paddingLeft: '30px' }}>
-            <FAQCard faq={faqs[5]} index={5} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
-          </div>
-        </div>
-
-      </div>
-    </section>
-  )
-}
-
 function FAQCard({ faq, index, openIndex, setOpenIndex, width }: {
   faq: { question: string; answer: string }
   index: number
@@ -109,47 +23,125 @@ function FAQCard({ faq, index, openIndex, setOpenIndex, width }: {
 }) {
   const isOpen = openIndex === index
   return (
-    <div style={{ width }}>
-      <button
+    <motion.div
+      style={{ width }}
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.4, delay: index * 0.08 }}
+    >
+      <motion.button
         onClick={() => setOpenIndex(isOpen ? null : index)}
-        style={{
-          width: '100%',
-          backgroundColor: isOpen ? '#2C3979' : 'white',
-          borderRadius: isOpen ? '14px 14px 0 0' : '14px',
-          padding: '12px 14px',
-          border: 'none', cursor: 'pointer',
-          display: 'flex', alignItems: 'center',
-          justifyContent: 'space-between', gap: '8px',
-          textAlign: 'left',
-          boxShadow: '0 2px 10px rgba(44,57,121,0.09)',
-        }}
+        whileTap={{ scale: 0.98 }}
+        className={`w-full border-none cursor-pointer flex items-center justify-between gap-2 px-[14px] py-3 text-left shadow-[0_2px_10px_rgba(44,57,121,0.09)] ${
+          isOpen ? 'bg-[#2C3979] rounded-[14px_14px_0_0]' : 'bg-white rounded-[14px]'
+        }`}
       >
-        <span style={{
-          fontFamily: 'var(--font-heading)', fontWeight: 600,
-          fontSize: '12px', color: isOpen ? 'white' : '#2C3979',
-          flex: 1, lineHeight: 1.4,
-        }}>{faq.question}</span>
-        <div style={{
-          width: '20px', height: '20px', borderRadius: '50%',
-          backgroundColor: isOpen ? 'rgba(255,255,255,0.2)' : '#EFF2FF',
-          display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-        }}>
+        <span className={`font-heading font-semibold text-[12px] flex-1 leading-[1.4] ${isOpen ? 'text-white' : 'text-[#2C3979]'}`}>
+          {faq.question}
+        </span>
+        <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 ${isOpen ? 'bg-white/20' : 'bg-[#EFF2FF]'}`}>
           {isOpen ? <Minus size={10} color="white" /> : <Plus size={10} color="#2C3979" />}
         </div>
-      </button>
-      {isOpen && (
-        <div style={{
-          backgroundColor: '#2C3979',
-          borderRadius: '0 0 14px 14px',
-          padding: '6px 14px 12px',
-        }}>
-          <p style={{
-            fontSize: '11px', color: 'rgba(255,255,255,0.9)',
-            lineHeight: 1.75, fontFamily: 'var(--font-body)',
-            margin: 0, textAlign: 'justify',
-          }}>{faq.answer}</p>
-        </div>
-      )}
-    </div>
+      </motion.button>
+
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25 }}
+            className="bg-[#2C3979] rounded-[0_0_14px_14px] px-[14px] pt-[6px] pb-3 overflow-hidden"
+          >
+            <p className="text-[11px] text-white/90 leading-[1.75] font-body m-0 text-justify">
+              {faq.answer}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </motion.div>
+  )
+}
+
+export default function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null)
+
+  return (
+    <section className="bg-[#FAF8F0] px-4 md:px-[40px] lg:px-[79px] pt-[60px] pb-[80px]">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[460px_1fr] gap-[40px] items-start">
+
+        {/* LEFT — illustration */}
+        <motion.div
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="relative pt-5 hidden md:block"
+        >
+          {/* ? bubble big */}
+          <div className="absolute top-0 left-[70px] w-[54px] h-[54px] rounded-full bg-[#E5EAFF] flex items-center justify-center text-[26px] text-[#822C89] font-bold z-10">
+            ?
+          </div>
+          {/* ? small */}
+          <div className="absolute top-[62px] left-[48px] text-[16px] text-[#822C89] font-bold opacity-50">
+            ?
+          </div>
+          {/* FAQ pill */}
+          <div className="absolute top-[82px] left-[80px] bg-white rounded-[20px] px-[18px] py-[6px] text-[14px] font-semibold text-[#2C3979] font-heading shadow-[0_2px_8px_rgba(44,57,121,0.1)] z-10">
+            FAQ
+          </div>
+
+          {/* Illustration */}
+          <div className="relative w-[440px] h-[500px] mt-[80px] -ml-5">
+            <Image
+              src="/images/faq-illustration.png"
+              alt="FAQ"
+              fill
+              className="object-contain object-bottom"
+            />
+          </div>
+        </motion.div>
+
+        {/* RIGHT — FAQ cards */}
+        <motion.div
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="pt-5"
+        >
+          {/* DESKTOP — scattered layout */}
+          <div className="hidden md:block">
+            <div className="flex gap-5 mb-4">
+              <FAQCard faq={faqs[0]} index={0} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
+              <div className="ml-[30px]">
+                <FAQCard faq={faqs[1]} index={1} openIndex={openIndex} setOpenIndex={setOpenIndex} width="230px" />
+              </div>
+            </div>
+            <div className="flex justify-center mb-4 pl-[60px]">
+              <FAQCard faq={faqs[2]} index={2} openIndex={openIndex} setOpenIndex={setOpenIndex} width="220px" />
+            </div>
+            <div className="flex gap-5 mb-4">
+              <FAQCard faq={faqs[3]} index={3} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
+              <div className="ml-5">
+                <FAQCard faq={faqs[4]} index={4} openIndex={openIndex} setOpenIndex={setOpenIndex} width="220px" />
+              </div>
+            </div>
+            <div className="flex justify-center pl-[30px]">
+              <FAQCard faq={faqs[5]} index={5} openIndex={openIndex} setOpenIndex={setOpenIndex} width="210px" />
+            </div>
+          </div>
+
+          {/* MOBILE — stack */}
+          <div className="flex md:hidden flex-col gap-3">
+            {faqs.map((faq, i) => (
+              <FAQCard key={i} faq={faq} index={i} openIndex={openIndex} setOpenIndex={setOpenIndex} width="100%" />
+            ))}
+          </div>
+        </motion.div>
+
+      </div>
+    </section>
   )
 }

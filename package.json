@@ -28,6 +28,7 @@
     "@tanstack/react-query-devtools": "^5.100.11",
     "@types/react-dom": "^19.2.3",
     "clsx": "^2.1.1",
+    "framer-motion": "^12.40.0",
     "gray-matter": "^4.0.3",
     "lucide-react": "^1.16.0",
     "next": "^16.2.6",

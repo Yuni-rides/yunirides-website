@@ -15,7 +15,7 @@ export default function Footer() {
         <button className="btn-primary">Join Us</button>
       </div>
 
-      <div className="w-full max-w-[1368px] mx-auto bg-[#822C89] rounded-[0_0_40px_40px] px-6 sm:px-[64px] pt-[56px] pb-[36px] box-border">
+      <div className="w-full max-w-7xl mx-auto bg-[#822C89] rounded-[0_0_40px_40px] px-6 sm:px-[64px] pt-[56px] pb-[36px] box-border">
 
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-white/[0.12] rounded-[14px] px-6 sm:px-[32px] py-[22px] mb-[56px] gap-4">
           <span className="text-white text-[18px] whitespace-nowrap" style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}>

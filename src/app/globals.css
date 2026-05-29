@@ -72,7 +72,7 @@ html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100%;
+   width: 100%;
 
   overflow-x: hidden;
 }
@@ -355,6 +355,20 @@ img {
     padding-bottom: 6rem;
   }
 }
+/* ── Global layout wrapper ── */
+.layout {
+  max-width: 7xl;
+  margin: 0 auto;
+  padding: 0 79px;
+}
+
+@media (max-width: 1024px) {
+  .layout { padding: 0 40px; }
+}
+
+@media (max-width: 768px) {
+  .layout { padding: 0 16px; }
+}
 
 .text-yuni-purple { color: var(--yuni-purple); }
 .text-yuni-navy   { color: var(--yuni-navy); }
@@ -367,6 +381,64 @@ img {
   color: var(--yuni-navy);
   text-align: center;
   margin-bottom: 0.75rem;
+}
+/* ── Global Typography Classes ── */
+.heading-hero {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0;
+  color: white;
+}
+
+.heading-xl {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.heading-lg {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  line-height: 1.25;
+}
+
+.heading-md {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+  line-height: 1.3;
+}
+
+.body-lg {
+  font-family: var(--font-body);
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.body-md {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+.body-sm {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .heading-hero {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
 }
 
 .img-rounded {
@@ -495,10 +567,7 @@ img {
     flex-direction: column !important;
     align-items: stretch !important;
   }
-  * {
-  max-width: 100%;
-  box-sizing: border-box;
-}
+
 
 img {
   max-width: 100%;

@@ -1,20 +1,20 @@
 import type { Metadata } from 'next';
-import { Plus_Jakarta_Sans, DM_Sans } from 'next/font/google';
-import './globals.css';  // ← bas yeh
+import { Nunito, DM_Sans } from 'next/font/google';
+import './globals.css'; 
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 
-const plusJakarta = Plus_Jakarta_Sans({
+const plusJakarta = Nunito({
   subsets: ['latin'],
   variable: '--font-heading',
-  weight: ['400', '500', '600', '700', '800'],
+  weight: ['400', '500', '600', '700', '800' , '300'],
   display: 'swap',
 })
 
 const dmSans = DM_Sans({
   subsets: ['latin'],
   variable: '--font-body',
-  weight: ['400', '500', '600', '700'],
+  weight: ['400', '500', '600', '700', '300'],
   display: 'swap',
 })
 

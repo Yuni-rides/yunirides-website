@@ -75,7 +75,7 @@ export default function ServicesPage() {
 
       {/* ── 1. HERO ── */}
       <section className="bg-[#FAF8F0] px-4 sm:px-6 py-8">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[40px] overflow-hidden h-[400px] md:h-[500px]">
             <Image src="/images/services-hero.png" alt="Yunirides driver with children" fill className="object-cover" priority />
             <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40" />
@@ -107,7 +107,7 @@ export default function ServicesPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-[50%] pointer-events-none z-0"
           style={{ background: 'radial-gradient(ellipse, rgba(130,44,137,0.08) 0%, transparent 70%)' }} />
 
-        <div className="max-w-[1200px] mx-auto relative z-[1]">
+        <div className="max-w-7xl mx-auto relative z-[1]">
 
           {/* Header */}
           <div className="text-center mb-12">

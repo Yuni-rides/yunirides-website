@@ -9,8 +9,8 @@ const sideVideos = [
 
 export default function VideoSection({ label = 'Serving others with Safety' }: { label?: string }) {
   return (
-    <section className="bg-[#FAF8F0] px-4 sm:px-[40px] pt-[60px] pb-[80px]">
-      <div className="max-w-[1280px] mx-auto">
+    <section className="bg-[#FAF8F0] px-4 md:px-[40px] lg:px-[79px] pt-[60px] pb-[80px]">
+      <div className="max-w-7xl mx-auto">
 
         {/* Header */}
         <div className="text-center mb-8">

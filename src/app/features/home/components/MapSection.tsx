@@ -43,7 +43,7 @@ export default function MapSection() {
 
   return (
     <section className="bg-yuni-cream py-20">
-      <div className="max-w-[1100px] mx-auto px-4 md:px-8">
+      <div className="max-w-7xl mx-auto px-4 md:px-8">
 
       
         <div className="text-center mb-12">
@@ -53,7 +53,7 @@ export default function MapSection() {
           <h2 className="font-heading font-bold text-[clamp(1.6rem,3vw,2.2rem)] text-[#2C3979] mb-4">
             Areas we Serve in
           </h2>
-          <p className="text-[#4A4A6A] text-[15px] max-w-[500px] mx-auto leading-[1.7] font-body">
+          <p className="text-[#4A4A6A] text-[15px] max-w-7xl mx-auto leading-[1.7] font-body">
             From fleet maintenance and routing logistics to onboard bus technologies that keep everyone safe.
           </p>
         </div>
