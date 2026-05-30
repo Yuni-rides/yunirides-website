@@ -30,7 +30,7 @@ const blogPosts = [
 
 export default function BlogSection() {
   return (
-    <section className="bg-[#FAF8F0] pt-[60px] pb-[80px]">
+    <section className="bg-[#FAF8F0] pt-15 pb-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Header */}
@@ -41,7 +41,7 @@ export default function BlogSection() {
           transition={{ duration: 0.5 }}
           className="text-center mb-8"
         >
-          <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body mb-[14px]">
+          <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-1.75 px-7 rounded-full text-[14px] font-medium font-body mb-[14px]">
             Blog
           </span>
           <h2 className="font-heading font-bold text-[clamp(1.5rem,3vw,2rem)] text-[#2C3979] m-0">
@@ -71,19 +71,19 @@ export default function BlogSection() {
                 className="bg-white rounded-[20px] overflow-hidden flex flex-col shadow-[0_4px_16px_rgba(0,0,0,0.1)] group cursor-pointer"
               >
                 <div className="p-[20px_20px_16px]">
-                  <p className="font-heading font-bold text-[18px] md:text-[20px] text-[#353637] leading-[27px] m-0 mb-[10px]">
+                  <p className="font-heading font-bold text-[18px] md:text-[20px] text-[#353637] leading-6.75 m-0 mb-2.5">
                     {post.title}
                   </p>
-                  <div className="inline-flex items-center gap-[6px] bg-[#E5EAFF] rounded-[6px] px-[10px] py-[4px] mb-[10px]">
+                  <div className="inline-flex items-center gap-1.5 bg-[#E5EAFF] rounded-md px-2.5 py-1 mb-2.5">
                     <span className="text-[11px]">📅</span>
                     <span className="text-[12px] text-[#4A4A6A] font-body font-medium">{post.date}</span>
                   </div>
-                  <p className="text-[15px] md:text-[17px] text-[#353637] leading-[24px] font-body m-0 text-justify">
+                  <p className="text-[15px] md:text-[17px] text-[#353637] leading-6 font-body m-0 text-justify">
                     {post.excerpt}
                   </p>
                 </div>
 
-                <div className="relative h-[200px] md:h-[227px] shrink-0 overflow-hidden">
+                <div className="relative h-50 md:h-56.75 shrink-0 overflow-hidden">
                   <Image
                     src={post.image}
                     alt={post.title}
@@ -92,7 +92,7 @@ export default function BlogSection() {
                   />
                   <Link
                     href={`/blog/${post.slug}`}
-                    className="absolute top-4 left-4 z-[2] inline-block bg-[#822C89] hover:bg-[#6B2272] text-white rounded-[10px] px-[22px] py-[10px] text-[13px] font-semibold font-body no-underline shadow-[0_2px_8px_rgba(0,0,0,0.3)] whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 active:scale-95"
+                    className="absolute top-4 left-4 z-2 inline-block bg-[#822C89] hover:bg-[#6B2272] text-white rounded-[10px] px-[22px] py-[10px] text-[13px] font-semibold font-body no-underline shadow-[0_2px_8px_rgba(0,0,0,0.3)] whitespace-nowrap transition-all duration-200 hover:-translate-y-0.5 active:scale-95"
                   >
                     Read Article
                   </Link>
@@ -110,7 +110,7 @@ export default function BlogSection() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: i * 0.08 }}
-                className="bg-white/[0.12] rounded-[12px] px-4 py-3"
+                className="bg-white/12 rounded-xl px-4 py-3"
               >
                 <p className="text-white text-[12.5px] font-semibold font-body m-0 leading-[1.4]">
                   {post.title}
@@ -118,24 +118,14 @@ export default function BlogSection() {
               </motion.div>
             ))}
 
-            {/* See more button — centered */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-[2]">
-              <motion.div whileHover={{ y: -2, scale: 1.03 }} whileTap={{ scale: 0.95 }}>
-                <Link
-                  href="/blog"
-                  className="inline-block bg-[#5C1F6B] hover:bg-[#4a1857] text-white rounded-full px-[30px] py-[11px] text-[13px] font-semibold font-body no-underline whitespace-nowrap shadow-[0_4px_16px_rgba(0,0,0,0.25)] transition-all duration-200"
-                >
-                  See more Articles
-                </Link>
-              </motion.div>
-            </div>
+          
           </div>
 
           {/* See more — mobile only */}
           <div className="sm:hidden flex justify-center mt-4">
             <Link
               href="/blog"
-              className="inline-block bg-[#5C1F6B] text-white rounded-full px-[30px] py-[11px] text-[13px] font-semibold font-body no-underline"
+              className="inline-block bg-[#5C1F6B] text-white rounded-full px-7.5 py-2.75 text-[13px] font-semibold font-body no-underline"
             >
               See more Articles
             </Link>

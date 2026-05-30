@@ -7,7 +7,7 @@ export default {
   ],
   theme: {
     extend: {
-     colors: {
+      colors: {
         'yuni-purple':       '#822C89',
         'yuni-navy':         '#2C3979',
         'yuni-lavender':     '#EFF2FF',
@@ -21,6 +21,10 @@ export default {
         'yuni-purple-light': '#F3E8F5',
         'yuni-olive':        '#7B8C5A',
         'yuni-olive-bg':     '#C8D4A8',
+      },
+      fontFamily: {
+        heading: ['Nunito'],
+        body:    ['DM Sans'],
       },
     },
   },

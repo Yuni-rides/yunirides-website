@@ -1,10 +1,14 @@
 'use client'
 
+
 import Link from 'next/link'
 import Image from 'next/image'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useState, useEffect} from 'react'
 import { Menu, X } from 'lucide-react'
+
+
+
 
 const NAV_LINKS = [
   { label: 'Home',            href: '/' },
@@ -19,219 +23,195 @@ const NAV_LINKS = [
 export default function Navbar() {
   const pathname = usePathname()
   const [mobileOpen, setMobileOpen] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+useEffect(() => {
+  const onScroll = () => setScrolled(window.scrollY > 20)
+  window.addEventListener('scroll', onScroll)
+  return () => window.removeEventListener('scroll', onScroll)
+}, [])
 
   return (
-    <>
-      <style>{`
-        .yuni-nav-desktop { display: flex; }
-        .yuni-phone-text { display: inline; }
-        .yuni-hamburger { display: none; }
+    <header className={`sticky top-0 z-50 w-full transition-all duration-300 ${
+  scrolled
+    ? 'bg-yuni-cream/95 backdrop-blur-md shadow-[0_2px_20px_rgba(0,0,0,0.06)]'
+    : 'bg-transparent'
+}`}>
+      <div className="
+        flex items-center justify-between
+        h-[80px]
+        px-[86px]
+        max-w-[1600px] mx-auto
+        max-[639px]:px-4
+      ">
 
-        @media (max-width: 1023px) {
-          .yuni-nav-desktop { display: none !important; }
-          .yuni-hamburger { display: flex !important; }
-        }
+        <Link href="/" className="flex-shrink-0 no-underline">
+          <Image
+            src="/images/logo.png"
+            alt="Yuni Rides"
+            width={120}
+            height={52}
+            className="object-contain"
+            priority
+          />
+        </Link>
 
-        @media (max-width: 639px) {
-          .yuni-phone-text { display: none; }
-          .yuni-phone-cta { padding: 10px 12px !important; }
-          .yuni-header-inner { padding: 0 16px !important; }
-        }
+        <nav className="
+          hidden lg:flex items-center
+          w-[701px] h-[52px]
+          bg-white/85 backdrop-blur-sm
+          rounded-full
+          border border-[#6B2FA0]/15
+          px-[10px] gap-[2px]
+          shadow-[0_2px_12px_rgba(107,47,160,0.08)]
+        ">
+          {NAV_LINKS.map((link) => {
+            const isActive = pathname === link.href
+            return (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`
+                  flex items-center h-[36px] px-[14px]
+                  rounded-full
+                  text-[13.5px] whitespace-nowrap no-underline
+                  transition-all duration-200
+                  font-[Helvetica_Neue,Arial,sans-serif]
+                  hover:bg-[#6B2FA0]/[0.06] hover:text-[#6B2FA0]
+                  ${isActive
+                    ? 'font-semibold text-[#6B2FA0] bg-[#6B2FA0]/10'
+                    : 'font-normal text-[#444444] bg-transparent'
+                  }
+                `}
+              >
+                {link.label}
+              </Link>
+            )
+          })}
+        </nav>
 
-        .yuni-nav-link:hover {
-          background: rgba(107,47,160,0.06) !important;
-          color: #6B2FA0 !important;
-        }
+        <div className="flex items-center gap-3 flex-shrink-0">
 
-        .yuni-mobile-link:hover {
-          background: rgba(107,47,160,0.06) !important;
-        }
-
-        .yuni-phone-cta:hover {
-          transform: translateY(-1px);
-          box-shadow: 0 8px 22px rgba(27,47,94,0.38) !important;
-        }
-      `}</style>
-
-      <header style={{
-        position:'sticky',
-        top: 0,
-        zIndex: 100,
-        width: '100%',
-        backgroundColor: 'transparent',
-        backdropFilter: 'blur(8px)',
-      }}>
-      
-        <div
-          className="yuni-header-inner"
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            padding: '0 86px',
-            height: '80px',
-            maxWidth: '1600px',
-            margin: '0 auto',
-          }}
-        >
-
-   
-          <Link href="/" style={{ textDecoration: 'none', flexShrink: 0 }}>
-            <Image
-              src="/images/logo.png"
-              alt="Yuni Rides"
-              width={120}
-              height={52}
-              style={{ objectFit: 'contain' }}
-              priority
-            />
-          </Link>
-
-          <nav
-            className="yuni-nav-desktop"
-            style={{
-              alignItems: 'center',
-              width: '701px',
-              height: '52px',
-              background: 'rgba(255,255,255,0.85)',
-              borderRadius: '50px',
-              border: '1px solid rgba(107,47,160,0.15)',
-              padding: '0 10px',
-              gap: '2px',
-              backdropFilter: 'blur(8px)',
-              boxShadow: '0 2px 12px rgba(107,47,160,0.08)',
-            }}
+          {/* Phone CTA — sweep hover animation via pseudo-element trick */}
+          <a
+            href="tel:4155352155"
+            className="
+              group
+              relative overflow-hidden
+              flex items-center gap-2.5
+              bg-[#2C3979] !text-white
+              px-[22px] py-[13px]
+              rounded-xl
+              text-[14.5px] font-semibold no-underline whitespace-nowrap
+              shadow-[0_4px_16px_rgba(27,47,94,0.30)]
+              transition-all duration-300
+              hover:-translate-y-0.5
+              hover:shadow-[0_8px_24px_rgba(27,47,94,0.45)]
+              active:scale-95
+              max-[639px]:px-3
+              [&>span.sweep]:absolute
+              [&>span.sweep]:inset-0
+              [&>span.sweep]:bg-[#6B2FA0]
+              [&>span.sweep]:-translate-x-full
+              [&>span.sweep]:transition-transform
+              [&>span.sweep]:duration-300
+              [&>span.sweep]:ease-in-out
+              hover:[&>span.sweep]:translate-x-0
+            "
           >
+            {/* Sweep layer — slides in from left on hover */}
+            <span className="sweep" aria-hidden="true" />
+
+            <svg
+              width="15" height="15" viewBox="0 0 24 24" fill="white"
+              className="relative z-10 transition-transform duration-200 group-hover:rotate-12 flex-shrink-0"
+            >
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+            </svg>
+            <span className="relative z-10 max-[639px]:hidden !text-white">415-535-2155</span>
+          </a>
+
+          {/* Hamburger */}
+          <button
+            className="
+              flex lg:hidden items-center justify-center
+              w-[44px] h-[44px]
+              rounded-[10px]
+              border border-[#6B2FA0]/15
+              bg-white
+              cursor-pointer
+              text-[#1B2F5E]
+              transition-colors duration-200
+              hover:bg-[#6B2FA0]/[0.06]
+            "
+            onClick={() => setMobileOpen(!mobileOpen)}
+            aria-label="Toggle menu"
+          >
+            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+
+        </div>
+      </div>
+
+      {/* Mobile dropdown */}
+      {mobileOpen && (
+        <div className="
+          lg:hidden
+          bg-white
+          border-t border-[#6B2FA0]/10
+          px-5 pt-[12px] pb-5
+          shadow-[0_8px_24px_rgba(0,0,0,0.08)]
+          relative z-50
+        ">
+          <nav className="flex flex-col gap-1">
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="yuni-nav-link"
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    height: '36px',
-                    padding: '0 14px',
-                    borderRadius: '50px',
-                    fontSize: '13.5px',
-                    fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                    fontWeight: isActive ? 600 : 400,
-                    color: isActive ? '#6B2FA0' : '#444444',
-                    background: isActive ? 'rgba(107,47,160,0.10)' : 'transparent',
-                    textDecoration: 'none',
-                    whiteSpace: 'nowrap',
-                    transition: 'background 0.2s, color 0.2s',
-                  }}
+                  onClick={() => setMobileOpen(false)}
+                  className={`
+                    px-4 py-[13px]
+                    rounded-[10px]
+                    text-[15px] no-underline
+                    font-[Helvetica_Neue,Arial,sans-serif]
+                    transition-colors duration-150
+                    hover:bg-[#6B2FA0]/[0.06]
+                    ${isActive
+                      ? 'font-semibold !text-white bg-[#6B2FA0]'
+                      : 'font-normal text-[#333333]'
+                    }
+                  `}
                 >
                   {link.label}
                 </Link>
               )
             })}
-          </nav>
 
-       
-          <div style={{ display: 'flex', alignItems: 'center', gap: '12px', flexShrink: 0 }}>
-
-        
             <a
-            href="tel:4155352155"
-  className="yuni-phone-cta group flex items-center gap-2.5 bg-[#2C3979]] text-#FFFFFF px-5.5 py-3.25 rounded-xl text-[14.5px] font-semibold no-underline whitespace-nowrap shadow-[0_4px_16px_rgba(27,47,94,0.30)] transition-all duration-200 hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(27,47,94,0.45)] hover:bg-[#223070] active:scale-95"
-  style={{ fontFamily: "'Helvetica Neue', Arial, sans-serif" }}
->
-  <svg
-    width="15" height="15" viewBox="0 0 24 24" fill="white"
-    className="transition-transform duration-200 group-hover:rotate-12"
-  >
-    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-  </svg>
-  <span className="yuni-phone-text">415-535-2155</span>
-</a>
-
-           
-            <button
-              className="yuni-hamburger"
-              onClick={() => setMobileOpen(!mobileOpen)}
-              aria-label="Toggle menu"
-              style={{
-                display: 'none',
-                alignItems: 'center',
-                justifyContent: 'center',
-                width: '44px',
-                height: '44px',
-                borderRadius: '10px',
-                border: '1px solid rgba(107,47,160,0.15)',
-                backgroundColor: 'white',
-                cursor: 'pointer',
-                color: '#1B2F5E',
-              }}
+              href="tel:4155352155"
+              className="
+                flex items-center justify-center gap-2
+                mt-[10px]
+                bg-[#1B2F5E] !text-white
+                rounded-[10px]
+                py-[14px]
+                text-[15px] font-semibold no-underline
+                font-[Helvetica_Neue,Arial,sans-serif]
+                transition-colors duration-200
+                hover:bg-[#223070]
+              "
             >
-              {mobileOpen ? <X size={22} /> : <Menu size={22} />}
-            </button>
-          </div>
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
+                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
+              </svg>
+              415-535-2155
+            </a>
+          </nav>
         </div>
+      )}
 
-        {mobileOpen && (
-          <div style={{
-            backgroundColor: 'white',
-            borderTop: '1px solid rgba(107,47,160,0.1)',
-            padding: '12px 20px 20px',
-            boxShadow: '0 8px 24px rgba(0,0,0,0.08)',
-          }}>
-            <nav style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
-              {NAV_LINKS.map((link) => {
-                const isActive = pathname === link.href
-                return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="yuni-mobile-link"
-                    onClick={() => setMobileOpen(false)}
-                    style={{
-                      padding: '13px 16px',
-                      borderRadius: '10px',
-                      fontSize: '15px',
-                      fontWeight: isActive ? 600 : 400,
-                      fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                      textDecoration: 'none',
-                      color: isActive ? 'white' : '#333',
-                      backgroundColor: isActive ? '#6B2FA0' : 'transparent',
-                      transition: 'background 0.15s',
-                    }}
-                  >
-                    {link.label}
-                  </Link>
-                )
-              })}
-             
-              <a
-                href="tel:4155352155"
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  gap: '8px',
-                  marginTop: '10px',
-                  backgroundColor: '#1B2F5E',
-                  color: 'white',
-                  borderRadius: '10px',
-                  padding: '14px',
-                  fontSize: '15px',
-                  fontWeight: 600,
-                  fontFamily: "'Helvetica Neue', Arial, sans-serif",
-                  textDecoration: 'none',
-                }}
-              >
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="white">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-                415-535-2155
-              </a>
-            </nav>
-          </div>
-        )}
-      </header>
-    </>
+    </header>
   )
 }

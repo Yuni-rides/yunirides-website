@@ -6,8 +6,8 @@ import { motion } from 'framer-motion'
 const students = [
   { label: 'Mckinney-Vento &\nFoster Youth',   image: '/images/service1.png', purple: true  },
   { label: 'Youth with special\nneeds',         image: '/images/service2.png', purple: false },
-  { label: 'Continuing\ntechnical education',   image: '/images/service3.png', purple: true  },
-  { label: 'General\neducation',                image: '/images/service4.png', purple: false },
+  { label: 'Continuing\ntechnical education',   image: '/images/Checklist.png', purple: true  },
+  { label: 'General\neducation',                image: '/images/service3.png', purple: false },
 ]
 
 export default function StudentsSection() {
@@ -61,7 +61,7 @@ export default function StudentsSection() {
                 transition={{ duration: 0.2 }}
                 className={`w-full h-[210px] rounded-[20px] flex items-end justify-center pb-[36px] px-[20px] relative z-[1] box-border ${item.purple ? 'bg-[#822C89]' : 'bg-[#E5EAFF]'}`}
               >
-                <p className={`font-heading font-semibold text-[15px] m-0 text-center leading-[1.5] whitespace-pre-line ${item.purple ? 'text-white' : 'text-[#2C3979]'}`}>
+                <p className={`font-heading font-semibold text-[20px] m-0 text-center leading-[1.5] whitespace-pre-line ${item.purple ? 'text-white' : 'text-[#2C3979]'}`}>
                   {item.label}
                 </p>
               </motion.div>

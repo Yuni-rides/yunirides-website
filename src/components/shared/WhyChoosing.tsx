@@ -108,9 +108,9 @@ export default function WhyChoosing() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: 0.2 }}
-            className="w-full md:w-[302px] shrink-0 flex flex-col gap-[14px] md:pt-[46px]"
+            className="w-full md:w-[302px] shrink-0 flex flex-col gap-[24px] md:pt-[78px]"
           >
-            <p className="font-heading text-[20px] font-bold text-[#2D0F54] m-0 leading-[1.3]">What are you thinking of?</p>
+            <p className="font-heading text-[25px] font-bold text-[#2D0F54] m-0 leading-[1.3]">What are you thinking of?</p>
             <motion.button
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.97 }}
