@@ -1,14 +1,14 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { motion } from 'framer-motion'
+import Image from "next/image";
+import { motion } from "framer-motion";
+import Button from "./Button";
+import Link from "next/link";
 
 export default function WhyYuniRides() {
   return (
     <section className="overflow-hidden bg-[#F7F5F0]">
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -22,8 +22,13 @@ export default function WhyYuniRides() {
               Why <strong>Yuni Rides</strong>
             </span>
           </div>
-          <p className="text-[15px] text-[#444] leading-[1.75] max-w-7xl mx-auto text-center px-4 font-body">
-            Choosing Yuni Rides means choosing a service that is built on the value of safety, trust, and care. We understand the importance of reliable transportation for children and take our role seriously. Every driver is carefully vetted, trained, and committed to delivering the highest standard of service. With Yuni Rides, you can have peace of mind knowing that your child is in good hands.
+          <p className="text-[15px] text-[#000000] leading-[1.75] md:max-w-3xl md:mx-auto text-center px-4 font-body">
+            Choosing Yuni Rides means choosing a service that is built on the
+            value of safety, trust, and care. We understand the importance of
+            reliable transportation for children and take our role seriously.
+            Every driver is carefully vetted, trained, and committed to
+            delivering the highest standard of service. With Yuni Rides, you can
+            have peace of mind knowing that your child is in good hands.
           </p>
         </motion.div>
 
@@ -34,7 +39,9 @@ export default function WhyYuniRides() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
           className="relative flex flex-col md:flex-row items-center overflow-visible rounded-[40px] max-w-7xl mx-auto min-h-[360px]"
-          style={{ background: 'linear-gradient(135deg, #B3359F 0%, #822C89 100%)' }}
+          style={{
+            background: "linear-gradient(135deg, #B3359F 0%, #822C89 100%)",
+          }}
         >
           {/* Image */}
           <motion.div
@@ -65,15 +72,31 @@ export default function WhyYuniRides() {
               We taking pride to be helping hand with the love and care
             </h2>
             <p className="font-body text-[13.5px] text-white/[0.88] leading-[1.8] mb-8 text-justify">
-              At Yuni Rides, we take great pride in being a helping hand to our communities, offering transportation services with the love and care that every child deserves. Our mission goes beyond just getting children from one place to another — we are committed to making each journey a safe comfortable and compassionate.
+              At Yuni Rides, we take great pride in being a helping hand to our
+              communities, offering transportation services with the love and
+              care that every child deserves. Our mission goes beyond just
+              getting children from one place to another — we are committed to
+              making each journey a safe comfortable and compassionate.
             </p>
-            <motion.div whileHover={{ y: -2 }} whileTap={{ scale: 0.97 }} className="w-fit">
-              <button className="btn-primary">Join Us</button>
+            <motion.div
+              whileHover={{ y: -2 }}
+              whileTap={{ scale: 0.97 }}
+              className="w-fit"
+            >
+              <Link href={"/contact-us"}>
+                <Button
+                  label="Join Us"
+                  bgColor="bg-yuni-purple"
+                  textColor="text-white"
+                  borderColor="border-yuni-purple"
+                  hoverBgValue="white"
+                  hoverTextValue="yuni-purple"
+                />
+              </Link>
             </motion.div>
           </motion.div>
         </motion.div>
-
       </div>
     </section>
-  )
+  );
 }

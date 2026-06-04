@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 
 const slides = [
   {
-    image: "/images/hero.png",
+    image: "/images/homeBanner2.png",
     alt: "Yuni Rides driver assisting elderly passenger",
     heading: "Technology meets care - We transport the future",
     subtext:
@@ -16,13 +16,13 @@ const slides = [
     link: "/become-a-driver", 
   },
   {
-    image: "/images/blog1.png",
+    image: "/images/hero.png",
     alt: "Safe rides for every child",
     heading: "Safe Rides for Every Child, Every Day",
     subtext:
       "Reliable, on-time transportation that parents trust and children feel comfortable with.",
     button: "Our Services",
-    link: "/services", // Exact map kiya
+    link: "/services", 
   },
   {
     image: "/images/blog2.png",
@@ -31,16 +31,16 @@ const slides = [
     subtext:
       "From school runs to medical appointments — we handle every journey with compassion.",
     button: "Learn More",
-    link: "/about", // Exact map kiya
+    link: "/about", 
   },
   {
-    image: "/images/blog3.png",
+    image: "/images/services-hero.png",
     alt: "Safety first always",
     heading: "Safety First, Always",
     subtext:
       "Every driver is vetted, trained, and committed to the highest standards of safety.",
     button: "Join Us",
-    link: "/contact", // Standard footer route ke mutabiq /contact rakha hai (ya aap /contact-us bhi kar sakte hain)
+    link: "/contact", 
   },
 ];
 
