@@ -74,7 +74,7 @@ export default function ServicesPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       {/* ── 1. HERO ── */}
-      <section className="bg-[#FAF8F0] px-4 sm:px-6 py-8">
+      <section className="bg-[#FAF8F0] px-4 sm:px-6 pb-8 mt-26">
         <div className="max-w-7xl mx-auto">
           <div className="relative rounded-[40px] overflow-hidden h-[400px] md:h-[500px]">
             <Image src="/images/services-hero.png" alt="Yunirides driver with children" fill className="object-cover" priority />

@@ -14,7 +14,7 @@ const featuredPost = {
 
 export default function BlogBanner() {
   return (
-    <section className="bg-[#FAF8F0] px-4 sm:px-6 lg:px-8 py-8">
+    <section className="bg-[#FAF8F0] px-4 sm:px-6 lg:px-8 pb-8 mt-26">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}

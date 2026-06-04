@@ -10,12 +10,12 @@ export default function CareerBanner() {
 
   return (
     <section
-      className="relative w-full bg-[#2C3979] overflow-hidden rounded-[40px]"
-      style={{ height: '717px', maxWidth: '1438px', margin: '0 auto' }}
+      className="relative w-full bg-[#2C3979] overflow-hidden rounded-[40px] mt-26 mx-auto"
+      style={{ height: '717px', maxWidth: '1438px'}}
     >
 
       {/* DESKTOP */}
-      <div className="hidden md:block relative w-full h-full">
+      <div className="hidden md:block relative w-full h-full pb-8 ">
 
         {/* Right image — full height, right half */}
         <motion.div

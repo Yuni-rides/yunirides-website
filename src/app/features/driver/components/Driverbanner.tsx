@@ -6,7 +6,7 @@ import { motion } from 'framer-motion'
 
 export default function DriverBanner() {
   return (
-    <section className="bg-[#FAF8F0] px-4 sm:px-12 py-16 relative overflow-hidden min-h-[480px]">
+    <section className="bg-[#FAF8F0] px-4 sm:px-12 pb-10 mt-26 relative overflow-hidden min-h-[480px]">
 
       {/* Lavender blob right */}
       <div className="absolute top-0 right-0 w-[60%] h-full pointer-events-none z-0"

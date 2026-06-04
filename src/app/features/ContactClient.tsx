@@ -20,7 +20,7 @@ export default function ContactClient() {
   }
 
   return (
-    <main className="w-full min-h-screen bg-yuni-cream overflow-x-hidden font-body">
+    <main className="w-full min-h-screen bg-yuni-cream overflow-x-hidden font-body mt-26">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 pb-10">
 
         {/* Navy card */}

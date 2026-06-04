@@ -26,7 +26,7 @@ export default function AboutHero() {
   }, [paused])
 
   return (
-    <section className="bg-[#FAF8F0] px-4 sm:px-12 pt-12 pb-16 relative overflow-hidden">
+    <section className="bg-[#FAF8F0] px-4 sm:px-12 mt-26 pb-16 relative overflow-hidden">
 
       {/* Lavender blob */}
       <div className="absolute inset-0 pointer-events-none z-0"

@@ -323,6 +323,10 @@ img {
   padding: 1.5rem;
 }
 
+@utility para-hero {
+  @apply font-body font-light text-[25px] leading-none tracking-normal;
+}
+
 /* ── Layout ──────────────────────────────────────────────── */
 
 @utility section-padding {

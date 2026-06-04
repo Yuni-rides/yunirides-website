@@ -3,6 +3,7 @@ import { Nunito, DM_Sans } from 'next/font/google';
 import './globals.css'; 
 import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
+import TawkToChat from '@/components/TawkToChat';
 
 const plusJakarta = Nunito({
   subsets: ['latin'],
@@ -29,10 +30,6 @@ export const metadata: Metadata = {
   applicationName: 'Yunirides',
   keywords: ['school transportation', 'safe rides', 'child transport', 'Yunirides'],
   authors: [{ name: 'Yunirides Team', url: 'https://yunirides.com' }],
-icons: {
-  icon: '/images/logo.png',
-  apple: '/images/logo.png',
-},
   openGraph: {
     siteName: 'Yunirides',
     locale: 'en_US',
@@ -58,6 +55,7 @@ export default function RootLayout({
       <body className="bg-yuni-page antialiased overflow-x-hidden">
         <Navbar />
         <main>{children}</main>
+        <TawkToChat />
         <Footer />
       </body>
     </html>
