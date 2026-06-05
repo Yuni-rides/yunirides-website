@@ -143,6 +143,17 @@ export default function HomeBanner() {
 
       {/* ─── MOBILE VIEW ────────────────────────────────────────── */}
       <div className="flex flex-col md:hidden w-full px-4 pb-6 pt-24 gap-4">
+         <div className="relative w-full h-[240px] rounded-[24px] overflow-hidden">
+          <Image
+            src={current.image}
+            alt={current.alt}
+            fill
+            className={`object-cover object-center transition-opacity duration-300 ${
+              animating ? "opacity-0" : "opacity-100"
+            }`}
+            priority
+          />
+        </div>
         <div className="bg-[#EDEBF7] rounded-[24px] p-6 flex flex-col">
           <div
             className={`transition-all duration-300 ${
@@ -182,17 +193,7 @@ export default function HomeBanner() {
           </div>
         </div>
 
-        <div className="relative w-full h-[240px] rounded-[24px] overflow-hidden">
-          <Image
-            src={current.image}
-            alt={current.alt}
-            fill
-            className={`object-cover object-center transition-opacity duration-300 ${
-              animating ? "opacity-0" : "opacity-100"
-            }`}
-            priority
-          />
-        </div>
+       
       </div>
       {/* ─── END MOBILE ────────────────────────────────────────── */}
     </div>

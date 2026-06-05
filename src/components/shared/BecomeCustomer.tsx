@@ -68,8 +68,8 @@ export default function BecomeCustomer() {
   };
 
   return (
-    <section className="py-20 bg-[#FAF8F0]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="md:py-20 py-12 bg-[#FAF8F0]">
+      <div className="md:max-w-7xl mx-auto px-1 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function BecomeCustomer() {
           className="bg-[#EFF2FF] rounded-[40px] px-6 md:px-12 py-12"
         >
           {/* Label */}
-          <div className="text-center mb-8">
+          <div className="text-center md:mb-8 mb-4">
             <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body">
               Become A Customer
             </span>

@@ -33,7 +33,6 @@ export default function Footer() {
               placeholder="Email"
               className="flex-1 px-5 py-3.5 rounded-xl border border-white/30 bg-white/10 text-white text-[14px] outline-none placeholder:text-white/50 focus:border-white/60 transition-colors font-body"
             />
-         
 
             <Button
               label="Submit"

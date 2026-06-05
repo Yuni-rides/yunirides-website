@@ -11,7 +11,7 @@ const videos = [
     image: "/images/video-thumb.png",
   },
   {
-    id: "8-kLpMxyL4U",
+    id: "exKP6yaxu-c",
     label: "Real Families. Real Care.",
     image: "/images/video2.png",
   },
@@ -21,7 +21,7 @@ const videos = [
     image: "/images/video3.png",
   },
   {
-    id: "tBKLxMTdVQE",
+    id: "QT91AHiOdLo",
     label: "Stories That Build Trust",
     image: "/images/video4.png",
   },
@@ -140,13 +140,16 @@ export default function VideoSection({
         }
       `}</style>
 
-      <section className="bg-[#FAF8F0] px-4 md:px-[40px] lg:px-[79px] pt-[60px] pb-[80px]">
+      <section className="bg-[#FAF8F0] px-4 md:px-[40px] lg:px-[79px] md:pt-16  md:pb-20 pb-12">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-8">
-            <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body">
+            <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body mb-6">
               {label}
             </span>
+            <h2 className="font-heading font-bold text-[clamp(1.5rem,3vw,2rem)] text-[#2C3979] m-0">
+              Your Safety Is Our Driving Force
+            </h2>
           </div>
 
           <div className="w-full rounded-[20px] overflow-hidden border-[6px] border-[#822C89] box-border flex flex-col md:grid md:grid-cols-[1fr_415px] md:h-[645px]">

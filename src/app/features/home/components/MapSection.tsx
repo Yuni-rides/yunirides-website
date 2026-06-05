@@ -76,7 +76,7 @@ const stateHitAreas: Record<
 > = {
   Washington: { cx: 95, cy: 55, rx: 55, ry: 32 },
   California: { cx: 72, cy: 228, rx: 42, ry: 88 },
-  Arizona: { cx: 165, cy: 320, rx: 45, ry: 48 }, 
+  Arizona: { cx: 165, cy: 320, rx: 45, ry: 48 },
   Texas: { cx: 278, cy: 368, rx: 78, ry: 55 },
   Illinois: { cx: 468, cy: 192, rx: 18, ry: 42 },
 };
@@ -120,10 +120,10 @@ export default function MapSection() {
   );
 
   return (
-    <section className="bg-[#FAF8F0] py-24 overflow-hidden">
+    <section className="bg-[#FAF8F0] md:pt-24 md:pb-10 pt-12 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
-        <div className="text-center mb-24">
+        <div className="text-center md:mb-24 mb-10">
           <span className="inline-block bg-[#EFF2FF] text-[#4A4A6A] py-[8px] px-8 rounded-full text-[14px] font-medium mb-4 font-body shadow-sm">
             Our Services
           </span>
@@ -191,17 +191,15 @@ export default function MapSection() {
                 </div>
               </div>
 
-       
-
               <Button
-              label="See More"
-              bgColor="white"
-              textColor="text-[#3D1566]"
-              borderColor="border-transparent"
-              hoverBgValue="yuni-purple"
-              hoverTextValue="white"
-              className=""
-            />
+                label="See More"
+                bgColor="white"
+                textColor="text-[#3D1566]"
+                borderColor="border-transparent"
+                hoverBgValue="yuni-purple"
+                hoverTextValue="white"
+                className=""
+              />
             </div>
           </div>
 
@@ -248,8 +246,6 @@ export default function MapSection() {
                 </div>
               ))}
             </div>
-
-          
 
             <Button
               label="See More"

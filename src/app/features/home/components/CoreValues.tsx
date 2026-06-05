@@ -2,6 +2,9 @@
 
 import Image from "next/image";
 import { useEffect, useRef } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import Autoplay from "embla-carousel-autoplay";
+import Link from "next/link";
 
 const coreValues = [
   {
@@ -86,19 +89,17 @@ const ROW_H = CARD_H + FLOAT;
 function TextLeftRow({ item }: { item: CoreValueItem }) {
   const ref = useScrollReveal();
   return (
-    <>
-      {/* DESKTOP */}
+    <div
+      ref={ref}
+      className="
+        hidden md:flex items-start relative
+        opacity-0 -translate-x-10
+        transition-all duration-700 ease-out
+        [&.revealed]:opacity-100 [&.revealed]:translate-x-0
+      "
+    >
       <div
-        ref={ref}
         className="
-          hidden md:flex items-start relative
-          opacity-0 -translate-x-10
-          transition-all duration-700 ease-out
-          [&.revealed]:opacity-100 [&.revealed]:translate-x-0
-        "
-      >
-        <div
-          className="
           relative z-10
           bg-yuni-white rounded-[40px]
           w-[380px] min-h-[300px] shrink-0
@@ -106,157 +107,121 @@ function TextLeftRow({ item }: { item: CoreValueItem }) {
           px-[44px] py-[36px]
           mt-[38px]
         "
-        >
-          <h3 className="font-heading font-semibold text-[25px] leading-[32px] text-yuni-navy mb-[10px]">
-            {item.title}
-          </h3>
-          <p className="font-body font-light text-[15px] leading-[24px] text-justify text-yuni-text-mid mb-[20px]">
-            {item.description}
-          </p>
+      >
+        <h3 className="font-heading font-semibold text-[25px] leading-[32px] text-yuni-navy mb-[10px]">
+          {item.title}
+        </h3>
+        <p className="font-body font-light text-[15px] leading-[24px] text-justify text-yuni-text-mid mb-[20px]">
+          {item.description}
+        </p>
+        <Link href={"/about"}>
           <button className="btn-primary">See More</button>
-        </div>
+        </Link>
+      </div>
 
-        {/* Image — exact same size w-[380px] h-[300px], floats up, overlaps card */}
-        <div
-          className="
+      <div
+        className="
           relative z-20
           w-[380px] min-h-[300px] shrink-0
           rounded-[40px] overflow-hidden
           -ml-[40px] mt-[0px]
           transition-transform duration-300 hover:scale-[1.02]
         "
-        >
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            className="object-cover"
-          />
-        </div>
+      >
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className="object-cover"
+        />
       </div>
-
-      {/* MOBILE */}
-      <div className="flex md:hidden flex-col gap-4">
-        <div className="relative w-full h-[220px] rounded-[28px] overflow-hidden">
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="bg-yuni-white rounded-[28px] px-[28px] py-[24px] flex flex-col">
-          <h3 className="font-heading font-semibold text-[18px] leading-snug text-yuni-navy mb-[8px]">
-            {item.title}
-          </h3>
-          <p className="font-body font-light text-[14px] leading-[22px] text-justify text-yuni-text-mid mb-[18px]">
-            {item.description}
-          </p>
-          <button className="btn-primary">See More</button>
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
+
 function ImageLeftRow({ item }: { item: CoreValueItem }) {
   const ref = useScrollReveal();
-  const pairW = IMG_W + CARD_W - OVERLAP;
 
   return (
-    <>
-      {/* DESKTOP */}
+    <div
+      ref={ref}
+      className="
+        hidden md:block relative overflow-hidden
+        opacity-0 translate-x-[40px]
+        transition-all duration-700 ease-out
+        [&.revealed]:opacity-100 [&.revealed]:translate-x-0
+      "
+      style={{ height: `${ROW_H}px` }}
+    >
+      <div className="inset-x-8 -top-10 -bottom-10 pointer-events-none z-0">
+        <div className="inset-0 bg-yuni-lavender [clip-path:polygon(0_25%,100%_0%,100%_75%,0%_100%)]" />
+      </div>
+
       <div
-        ref={ref}
-        className="
-          hidden md:block relative overflow-hidden
-          opacity-0 translate-x-[40px]
-          transition-all duration-700 ease-out
-          [&.revealed]:opacity-100 [&.revealed]:translate-x-0
-        "
-        style={{ height: `${ROW_H}px` }}
+        className="absolute z-20 rounded-[40px] overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
+        style={{
+          width: `${IMG_W}px`,
+          height: `${IMG_H}px`,
+          right: `${CARD_W - OVERLAP}px`,
+          top: "0px",
+        }}
       >
-        <div className="inset-x-8 -top-10 -bottom-10 pointer-events-none z-0">
-          <div className="inset-0 bg-yuni-lavender [clip-path:polygon(0_25%,100%_0%,100%_75%,0%_100%)]" />
-        </div>
-
-        <div
-          className="absolute z-20 rounded-[40px] overflow-hidden transition-transform duration-300 hover:scale-[1.02]"
-          style={{
-            width: `${IMG_W}px`,
-            height: `${IMG_H}px`,
-            right: `${CARD_W - OVERLAP}px`,
-            top: "0px",
-          }}
-        >
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            className="object-cover"
-          />
-        </div>
-
-        <div
-          className="absolute z-10 bg-yuni-purple rounded-[40px] flex flex-col justify-center"
-          style={{
-            width: `${CARD_W}px`,
-            height: `${CARD_H}px`,
-            right: "0px",
-            top: `${FLOAT}px`,
-            padding: "36px 44px 36px 60px",
-          }}
-        >
-          <h3 className="font-heading font-bold text-[18px] text-yuni-white mb-[10px] leading-[24px]">
-            {item.title}
-          </h3>
-          <p
-            className="font-body text-yuni-white/90 mb-[24px] text-justify"
-            style={{ fontWeight: 300, fontSize: "15px", lineHeight: "24px" }}
-          >
-            {item.description}
-          </p>
-          {/* Global btn-card-outline — transparent white border sweeps white */}
-          <div className="flex justify-end">
-            <button className="btn-card-outline">See More</button>
-          </div>
-        </div>
+        <Image
+          src={item.image}
+          alt={item.title}
+          fill
+          className="object-cover"
+        />
       </div>
 
-      {/* MOBILE */}
-      <div className="flex md:hidden flex-col gap-4">
-        <div className="relative w-full h-[220px] rounded-[28px] overflow-hidden">
-          <Image
-            src={item.image}
-            alt={item.title}
-            fill
-            className="object-cover"
-          />
-        </div>
-        <div className="bg-yuni-purple rounded-[28px] px-[28px] py-[24px] flex flex-col">
-          <h3 className="font-heading font-bold text-[17px] text-yuni-white mb-[8px]">
-            {item.title}
-          </h3>
-          <p
-            className="font-body text-yuni-white/90 leading-[1.7] mb-[18px] text-justify"
-            style={{ fontWeight: 300, fontSize: "14px" }}
-          >
-            {item.description}
-          </p>
-          {/* Global btn-card-outline */}
-          <div className="flex justify-end">
-            <button className="btn-card-outline">See More</button>
-          </div>
+      <div
+        className="absolute z-10 bg-yuni-purple rounded-[40px] flex flex-col justify-center"
+        style={{
+          width: `${CARD_W}px`,
+          height: `${CARD_H}px`,
+          right: "0px",
+          top: `${FLOAT}px`,
+          padding: "36px 44px 36px 60px",
+        }}
+      >
+        <h3 className="font-heading font-bold text-[18px] text-yuni-white mb-[10px] leading-[24px]">
+          {item.title}
+        </h3>
+        <p
+          className="font-body text-yuni-white/90 mb-[24px] text-justify"
+          style={{ fontWeight: 300, fontSize: "15px", lineHeight: "24px" }}
+        >
+          {item.description}
+        </p>
+        <div className="flex justify-end">
+          <button className="btn-card-outline">See More</button>
         </div>
       </div>
-    </>
+    </div>
   );
 }
 
 export default function CoreValues() {
+  const [emblaRef] = useEmblaCarousel(
+    {
+      loop: true,
+      align: "start",
+      containScroll: "trimSnaps",
+    },
+    [
+      Autoplay({
+        delay: 3000,
+        stopOnInteraction: false,
+        stopOnMouseEnter: true,
+      }),
+    ],
+  );
+
   return (
-    <section className="py-[80px] pb-[120px] bg-yuni-cream">
+    <section className="md:pt-20 pt-4   bg-yuni-cream">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-[72px]">
+        {/* Header Section */}
+        <div className="text-center md:mb-18 mb-8">
           <span className="inline-block bg-yuni-card text-yuni-text-mid py-[6px] px-[22px] rounded-full text-[13px] font-medium mb-[14px] font-body">
             About us
           </span>
@@ -269,7 +234,8 @@ export default function CoreValues() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-[80px] overflow-hidden">
+        {/* DESKTOP VIEW */}
+        <div className="hidden md:flex flex-col gap-[80px] overflow-hidden">
           {coreValues.map((item, i) =>
             i % 2 === 0 ? (
               <TextLeftRow key={item.title} item={item} />
@@ -277,6 +243,59 @@ export default function CoreValues() {
               <ImageLeftRow key={item.title} item={item} />
             ),
           )}
+        </div>
+
+        <div className="block md:hidden overflow-hidden px-2" ref={emblaRef}>
+          <div className="flex gap-5">
+            {coreValues.map((item) => (
+              <div
+                key={item.title}
+                className="flex-[0_0_88%] min-w-[280px] max-w-[340px] flex flex-col select-none"
+              >
+                {/* Content Box Container */}
+                <div
+                  className={`rounded-[28px] px-[26px] py-[28px] flex flex-col flex-grow shadow-sm min-h-[250px] justify-between ${
+                    item.purple
+                      ? "bg-yuni-purple text-yuni-white"
+                      : "bg-yuni-white"
+                  }`}
+                >
+                  <div>
+                    <h3
+                      className={`font-heading font-bold text-[18px] leading-snug mb-[10px] ${
+                        item.purple ? "text-yuni-white" : "text-yuni-navy"
+                      }`}
+                    >
+                      {item.title}
+                    </h3>
+                    <p
+                      className={`font-body font-light text-[14px] leading-[22px] text-justify ${
+                        item.purple
+                          ? "text-yuni-white/90"
+                          : "text-yuni-text-mid"
+                      }`}
+                    >
+                      {item.description}
+                    </p>
+                  </div>
+
+                  <div
+                    className={`mt-[18px] ${item.purple ? "flex justify-end" : "block"}`}
+                  >
+                    <Link href={"/about"}>
+                      <button
+                        className={
+                          item.purple ? "btn-card-outline" : "btn-primary"
+                        }
+                      >
+                        See More
+                      </button>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
