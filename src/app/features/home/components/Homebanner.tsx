@@ -40,7 +40,7 @@ const slides = [
     subtext:
       "Every driver is vetted, trained, and committed to the highest standards of safety.",
     button: "Join Us",
-    link: "/contact", 
+    link: "/contact-us", 
   },
 ];
 

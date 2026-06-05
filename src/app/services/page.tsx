@@ -93,23 +93,30 @@ export default function ServicesPage() {
       />
 
       {/* ── 1. HERO ── */}
+
       <section className="bg-[#FAF8F0] px-4 sm:px-6 pb-8 mt-26">
         <div className="max-w-7xl mx-auto">
-          {/* Main Banner Container */}
-          <div className="relative rounded-[40px] overflow-hidden h-[400px] md:h-[500px]">
-            <Image
-              src="/images/services-hero.png"
-              alt="Yunirides driver with children"
-              fill
-              className="object-cover"
-              priority
-            />
-            {/* Dark Overlay to make white text pop */}
-            <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/40" />
+          {/* 
+          Mobile par height auto ho jayegi aur components stack honge.
+          Desktop (md) par fixed height aur absolute positioning active ho jayegi.
+        */}
+          <div className="relative rounded-[40px] overflow-hidden bg-[#2D0F54] md:bg-transparent h-auto md:h-[500px] flex flex-col justify-between p-6 pb-4 md:p-0">
+            {/* Background Image Container */}
+            <div className="absolute inset-0 w-full h-full z-0">
+              <Image
+                src="/images/services-hero.png"
+                alt="Yunirides driver with children"
+                fill
+                className="object-cover object-center opacity-90 md:opacity-100"
+                priority
+              />
+              {/* Smooth overlay targeting text contrast */}
+              <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/60 md:to-black/40" />
+            </div>
 
-            {/* Floating Heading */}
-            <div className="absolute top-1/2 left-6 md:left-12 -translate-y-[60%] z-[2] max-w-[520px]">
-              <h1 className="font-heading font-extrabold text-[clamp(1.8rem,4vw,3rem)] text-white leading-[1.15] m-0 [text-shadow:0_2px_8px_rgba(0,0,0,0.3)]">
+            {/* Heading Block */}
+            <div className="relative z-[2] mt-6 mb-12 md:my-0 md:absolute md:top-1/2 md:left-12 md:-translate-y-[60%] max-w-[520px]">
+              <h1 className="font-heading font-extrabold text-[28px] sm:text-[36px] md:text-[clamp(1.8rem,4vw,3rem)] text-white leading-[1.15] m-0 [text-shadow:0_2px_8px_rgba(0,0,0,0.4)]">
                 Transportation
                 <br />
                 Designed Around Care,
@@ -118,20 +125,22 @@ export default function ServicesPage() {
               </h1>
             </div>
 
-            {/* Bottom Floating Info Bar (Matches image_d3b664.png layout) */}
-            <div className="absolute bottom-4 md:bottom-7 left-4 md:left-7 right-4 md:right-7 z-[2] bg-white rounded-[16px] px-5 md:px-7 py-4 md:py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 shadow-[0_4px_24px_rgba(0,0,0,0.15)]">
+            {/* 
+            Bottom White Panel Card 
+            Mobile par naturally niche dynamic layer par position karega without overlapping text.
+          */}
+            <div className="relative z-[2] w-full bg-white rounded-[24px] md:rounded-[16px] px-5 py-6 md:px-7 md:py-5 flex flex-col md:flex-row items-stretch md:items-center justify-between gap-5 md:gap-4 shadow-[0_12px_32px_rgba(0,0,0,0.15)] md:absolute md:bottom-7 md:left-7 md:right-7 md:w-auto">
               {/* Description Text */}
-              <p className="text-[13.5px] text-[#4A4A6A] leading-[1.7] font-body m-0 max-w-[400px]">
+              <p className="text-[14px] md:text-[13.5px] text-[#4A4A6A] leading-[1.65] font-body m-0 max-w-full md:max-w-[400px]">
                 Reliable, technology-powered transportation services built to
                 support children, families, schools, and healthcare communities.
               </p>
 
-              {/* CTA Buttons using your custom Button Style */}
-              <div className="flex gap-3 shrink-0 flex-wrap w-full sm:w-auto">
-                {/* Request a Ride - Outline Style */}
+              {/* Buttons Row */}
+              <div className="flex flex-row gap-3 shrink-0 w-full md:w-auto">
                 <Link
                   href="#become-customer"
-                  className="flex-1 sm:flex-initial"
+                  className="flex-1 md:flex-initial"
                 >
                   <Button
                     label="Request a Ride"
@@ -140,13 +149,13 @@ export default function ServicesPage() {
                     borderColor="border-yuni-purple"
                     hoverBgValue="yuni-purple"
                     hoverTextValue="white"
-                    width="w-full sm:w-auto text-sm px-5 py-2.5"
+                    width="w-full text-sm py-3 md:py-2.5 md:px-5"
                   />
                 </Link>
 
                 <Link
                   href="/become-a-driver"
-                  className="flex-1 sm:flex-initial"
+                  className="flex-1 md:flex-initial"
                 >
                   <Button
                     label="Become a Driver"
@@ -155,7 +164,7 @@ export default function ServicesPage() {
                     borderColor="border-yuni-purple"
                     hoverBgValue="white"
                     hoverTextValue="yuni-purple"
-                    width="w-full sm:w-auto text-sm px-5 py-2.5"
+                    width="w-full text-sm py-3 md:py-2.5 md:px-5"
                   />
                 </Link>
               </div>
@@ -166,7 +175,6 @@ export default function ServicesPage() {
 
       {/* ── 2. SERVICES CARDS ── */}
       <section className="bg-[#FAF8F0] px-4 sm:px-6 py-[5rem] relative overflow-hidden">
-        {/* Purple blob */}
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-[50%] pointer-events-none z-0"
           style={{
@@ -176,7 +184,6 @@ export default function ServicesPage() {
         />
 
         <div className="max-w-7xl mx-auto relative z-[1]">
-          {/* Header */}
           <div className="text-center mb-12">
             <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body mb-4">
               Our Transportation Services
@@ -186,7 +193,6 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          {/* Cards grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center">
             {services.map((service) => (
               <div
@@ -197,23 +203,22 @@ export default function ServicesPage() {
                     : "shadow-[0_4px_20px_rgba(44,57,121,0.08)] border border-[#EEF0FF]"
                 }`}
               >
-                {/* Image */}
                 <div className="relative h-[200px] shrink-0 overflow-hidden">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+                    priority={service.active}
                   />
                 </div>
 
-                {/* Content */}
                 <div className="p-[20px_22px] flex flex-col flex-1 justify-between">
                   <div>
                     <h3 className="font-heading font-bold text-[16px] text-[#1A1A2E] mb-3">
                       {service.title}
                     </h3>
-                    <ul className="list-none p-0 m-0 mb-4">
+                    <ul className="list-none p-0 m-0 mb-6">
                       {service.features.map((f) => (
                         <li
                           key={f}
@@ -227,15 +232,29 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                   </div>
-                  <Link
-                    href="#become-customer"
-                    className={`block rounded-[10px] py-[11px] text-[13px] font-semibold font-body no-underline text-center transition-all duration-200 hover:-translate-y-0.5 active:scale-95 ${
-                      service.active
-                        ? "bg-[#2C3979] text-white hover:bg-[#223070]"
-                        : "bg-transparent text-[#4A4A6A] border-[1.5px] border-[#DDE2FF] hover:border-[#822C89] hover:text-[#822C89]"
-                    }`}
-                  >
-                    Get Started
+
+                  <Link href="/contact-us" className="w-full block">
+                    {service.active ? (
+                      <Button
+                        label="Get Started"
+                        bgColor="bg-yuni-purple"
+                        textColor="text-white"
+                        borderColor="border-yuni-purple"
+                        hoverBgValue="white"
+                        hoverTextValue="yuni-purple"
+                        width="w-full text-[13px] py-2.5 rounded-[10px]"
+                      />
+                    ) : (
+                      <Button
+                        label="Get Started"
+                        bgColor="bg-white"
+                        textColor="text-[#4A4A6A]"
+                        borderColor="border-[#DDE2FF]"
+                        hoverBgValue="yuni-purple"
+                        hoverTextValue="white"
+                        width="w-full text-[13px] py-2.5 rounded-[10px]"
+                      />
+                    )}
                   </Link>
                 </div>
               </div>

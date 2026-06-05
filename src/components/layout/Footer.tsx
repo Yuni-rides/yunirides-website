@@ -12,14 +12,16 @@ export default function Footer() {
           Sign up today and start earning additional income.
         </p>
 
-        <Button
-          label="Join Us"
-          bgColor="bg-yuni-purple"
-          textColor="text-white"
-          borderColor="border-yuni-purple"
-          hoverBgValue="white"
-          hoverTextValue="yuni-purple"
-        />
+        <Link href={"/contact-us"}>
+          <Button
+            label="Join Us"
+            bgColor="bg-yuni-purple"
+            textColor="text-white"
+            borderColor="border-yuni-purple"
+            hoverBgValue="white"
+            hoverTextValue="yuni-purple"
+          />
+        </Link>
       </div>
 
       <div className="bg-yuni-purple px-6 sm:px-16 pt-14 pb-9">
@@ -85,20 +87,22 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col gap-5 flex-1 border-l border-white/20 pl-5">
-              {["Become A Driver", "Careers", "Blog"].map((item) => (
+              {[{ label: "Become A Driver", href: "/become-a-driver" },
+                { label: "Careers", href: "/careers" },
+                { label: "Blog", href: "/blog" },].map((item) => (
                 <Link
-                  key={item}
-                  href="#"
+                  key={item.label}
+                  href={item.href}
                   className="!text-white/60 text-[14px] no-underline font-normal font-body hover:!text-white transition-colors duration-200"
                 >
-                  {item}
+                  {item.label}
                 </Link>
               ))}
             </div>
 
             <div className="flex flex-col gap-5 flex-1 border-l border-white/20 pl-5">
               <Link
-                href="/contact"
+                href="/contact-us"
                 className="!text-white/60 text-[14px] no-underline font-normal font-body hover:!text-white transition-colors duration-200"
               >
                 Contact
