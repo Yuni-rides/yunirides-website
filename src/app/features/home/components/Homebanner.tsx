@@ -13,7 +13,7 @@ const slides = [
     subtext:
       "Technology-driven, caring transportation service trusted by families across the U.S.",
     button: "Become A Driver",
-    link: "/become-a-driver", 
+    link: "/become-a-driver",
   },
   {
     image: "/images/hero.png",
@@ -22,7 +22,7 @@ const slides = [
     subtext:
       "Reliable, on-time transportation that parents trust and children feel comfortable with.",
     button: "Our Services",
-    link: "/services", 
+    link: "/services",
   },
   {
     image: "/images/blog2.png",
@@ -31,7 +31,7 @@ const slides = [
     subtext:
       "From school runs to medical appointments — we handle every journey with compassion.",
     button: "Learn More",
-    link: "/about", 
+    link: "/about",
   },
   {
     image: "/images/services-hero.png",
@@ -40,7 +40,7 @@ const slides = [
     subtext:
       "Every driver is vetted, trained, and committed to the highest standards of safety.",
     button: "Join Us",
-    link: "/contact-us", 
+    link: "/contact-us",
   },
 ];
 
@@ -143,7 +143,7 @@ export default function HomeBanner() {
 
       {/* ─── MOBILE VIEW ────────────────────────────────────────── */}
       <div className="flex flex-col md:hidden w-full px-4 pb-6 pt-24 gap-4">
-         <div className="relative w-full h-[240px] rounded-[24px] overflow-hidden">
+        <div className="relative w-full h-[240px] rounded-[24px] overflow-hidden">
           <Image
             src={current.image}
             alt={current.alt}
@@ -171,14 +171,16 @@ export default function HomeBanner() {
           </div>
 
           {/* Shared Button on Mobile */}
-          <Button
-            label={current.button}
-            bgColor="bg-yuni-purple"
-            textColor="text-white"
-            borderColor="border-yuni-purple"
-            hoverBgValue="white"
-            hoverTextValue="yuni-purple"
-          />
+          <Link href={current.link} className="no-underline">
+            <Button
+              label={current.button}
+              bgColor="bg-yuni-purple"
+              textColor="text-white"
+              borderColor="border-yuni-purple"
+              hoverBgValue="white"
+              hoverTextValue="yuni-purple"
+            />
+          </Link>
 
           <div className="flex gap-1.5 mt-6 justify-center w-full">
             {slides.map((_, i) => (
@@ -192,8 +194,6 @@ export default function HomeBanner() {
             ))}
           </div>
         </div>
-
-       
       </div>
       {/* ─── END MOBILE ────────────────────────────────────────── */}
     </div>

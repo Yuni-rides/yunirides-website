@@ -194,7 +194,13 @@ function ImageLeftRow({ item }: { item: CoreValueItem }) {
           {item.description}
         </p>
         <div className="flex justify-end">
-          <button className="btn-card-outline">See More</button>
+          <Link href={"/about"}>
+            <button
+              className={item.purple ? "btn-card-outline" : "btn-primary"}
+            >
+              See More
+            </button>
+          </Link>
         </div>
       </div>
     </div>

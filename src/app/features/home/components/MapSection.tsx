@@ -191,7 +191,7 @@ export default function MapSection() {
                 </div>
               </div>
 
-              <Button
+              {/* <Button
                 label="See More"
                 bgColor="white"
                 textColor="text-[#3D1566]"
@@ -199,7 +199,7 @@ export default function MapSection() {
                 hoverBgValue="yuni-purple"
                 hoverTextValue="white"
                 className=""
-              />
+              /> */}
             </div>
           </div>
 
@@ -247,14 +247,14 @@ export default function MapSection() {
               ))}
             </div>
 
-            <Button
+            {/* <Button
               label="See More"
               bgColor="white"
               textColor="text-[#3D1566]"
               borderColor="border-transparent"
               hoverBgValue="yuni-purple"
               hoverTextValue="white"
-            />
+            /> */}
           </div>
 
           <div className="relative w-full h-[260px] sm:h-[320px]">
