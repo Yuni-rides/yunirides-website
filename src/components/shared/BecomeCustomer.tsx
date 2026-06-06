@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
-import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Button from "./Button";
 
 function InputField({
@@ -13,6 +13,7 @@ function InputField({
   onChange,
   placeholder,
   optionalText,
+  required = false,
 }: {
   label: string;
   name: string;
@@ -21,6 +22,7 @@ function InputField({
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   placeholder?: string;
   optionalText?: string;
+  required?: boolean;
 }) {
   return (
     <fieldset className="border border-[#DDE2FF] rounded-lg px-3 pb-2 pt-0 focus-within:border-[#822C89] focus-within:ring-1 focus-within:ring-[#822C89]/10 transition-all bg-white w-full">
@@ -38,6 +40,7 @@ function InputField({
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        required={required}
         className="w-full h-[38px] bg-transparent text-[13px] text-[#1A1A2E] placeholder-[#8888AA]/60 font-body outline-none border-none p-0 mt-0.5 focus:ring-0"
       />
     </fieldset>
@@ -45,6 +48,12 @@ function InputField({
 }
 
 export default function BecomeCustomer() {
+  const [loading, setLoading] = useState(false);
+  const [notification, setNotification] = useState<{
+    message: string;
+    type: "success" | "error";
+  } | null>(null);
+
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -56,15 +65,66 @@ export default function BecomeCustomer() {
     specialNeeds: "",
   });
 
+  // 5 seconds dynamic clean handler
+  useEffect(() => {
+    if (notification) {
+      const timer = setTimeout(() => {
+        setNotification(null);
+      }, 5000);
+      return () => clearTimeout(timer);
+    }
+  }, [notification]);
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    alert("Thank you! We will contact you soon.");
+    setLoading(true);
+    setNotification(null);
+
+    try {
+      const response = await fetch("/api/customer-submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setNotification({
+          message: "Thank you! Your request has been dispatched successfully.",
+          type: "success",
+        });
+        setForm({
+          fullName: "",
+          email: "",
+          contactNumber: "",
+          city: "",
+          childFirstName: "",
+          age: "",
+          numberOfChildren: "",
+          specialNeeds: "",
+        });
+      } else {
+        setNotification({
+          message: `Submission failed: ${data.error || "Mail Server Mismatch"}`,
+          type: "error",
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      setNotification({
+        message: "Network Error. Please verify your connection status.",
+        type: "error",
+      });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -151,6 +211,7 @@ export default function BecomeCustomer() {
                     value={form.fullName}
                     onChange={handleChange}
                     placeholder="John Doe"
+                    required
                   />
                   <InputField
                     label="Email"
@@ -159,6 +220,7 @@ export default function BecomeCustomer() {
                     value={form.email}
                     onChange={handleChange}
                     placeholder="example@email.com"
+                    required
                   />
                 </div>
 
@@ -170,6 +232,7 @@ export default function BecomeCustomer() {
                     value={form.contactNumber}
                     onChange={handleChange}
                     placeholder="+1 (555) 000-0000"
+                    required
                   />
                   <InputField
                     label="Enter your city or town name."
@@ -177,6 +240,7 @@ export default function BecomeCustomer() {
                     value={form.city}
                     onChange={handleChange}
                     placeholder="Search city..."
+                    required
                   />
                 </div>
 
@@ -237,17 +301,46 @@ export default function BecomeCustomer() {
                   </fieldset>
                 </div>
 
-                {/* Submit Button aligned to right like image_7a641c.png */}
-                <div className="flex justify-end mt-8">
+                {/* Status Layout and Button Wrapper */}
+                <div className="flex flex-col gap-4 items-end mt-8">
                   <Button
-                    label="Submit"
-                    bgColor="bg-yuni-purple"
+                    label={loading ? "Sending..." : "Submit"}
+                    bgColor={loading ? "bg-gray-400" : "bg-yuni-purple"}
                     textColor="text-white"
-                    borderColor="border-yuni-purple"
-                    hoverBgValue="white"
-                    hoverTextValue="yuni-purple"
+                    borderColor={
+                      loading ? "border-gray-400" : "border-yuni-purple"
+                    }
+                    hoverBgValue={loading ? "bg-gray-400" : "white"}
+                    hoverTextValue={loading ? "text-white" : "yuni-purple"}
                     type="submit"
+                    disabled={loading}
                   />
+
+                  {/* Dynamic Alert Panel with 5s Fading Limit */}
+                  <div className="w-full sm:w-[400px] h-[40px] relative">
+                    <AnimatePresence mode="wait">
+                      {notification && (
+                        <motion.div
+                          initial={{ opacity: 0, y: 8, scale: 0.98 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -4, scale: 0.98 }}
+                          transition={{ duration: 0.2 }}
+                          className={`absolute w-full px-4 py-2.5 rounded-lg border text-[12px] font-body font-medium flex items-center shadow-sm ${
+                            notification.type === "success"
+                              ? "bg-emerald-50 border-emerald-200 text-emerald-700"
+                              : "bg-rose-50 border-rose-200 text-rose-700"
+                          }`}
+                        >
+                          <span className="mr-2 text-[14px]">
+                            {notification.type === "success" ? "✓" : "✕"}
+                          </span>
+                          <span className="truncate">
+                            {notification.message}
+                          </span>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
                 </div>
               </form>
             </div>

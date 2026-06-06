@@ -555,3 +555,14 @@ img {
     transition: opacity 0.1s ease;
   }
 }
+
+fieldset:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+  border-color: #DDE2FF !important;
+}
+
+input:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
