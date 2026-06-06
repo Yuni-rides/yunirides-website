@@ -157,7 +157,7 @@ export default function Footer() {
               ))}
             </div>
 
-            <div className="flex flex-col gap-5 flex-1 border-l border-white/20 pl-5">
+            <div className="flex flex-col gap-5 flex-1 border-l border-white/20 pl-5 pr-2">
               {[
                 { label: "Become A Driver", href: "/become-a-driver" },
                 { label: "Careers", href: "/careers" },
@@ -166,7 +166,7 @@ export default function Footer() {
                 <Link
                   key={item.label}
                   href={item.href}
-                  className="!text-white/60 text-[14px] no-underline font-normal font-body hover:!text-white transition-colors duration-200"
+                  className={`text-[14px] no-underline transition-colors duration-200 font-body !text-white font-normal hover:!text-white/70`}
                 >
                   {item.label}
                 </Link>
@@ -176,7 +176,7 @@ export default function Footer() {
             <div className="flex flex-col gap-5 flex-1 border-l border-white/20 pl-5">
               <Link
                 href="/contact-us"
-                className="!text-white/60 text-[14px] no-underline font-normal font-body hover:!text-white transition-colors duration-200"
+                  className={`text-[14px] no-underline transition-colors duration-200 font-body !text-white font-normal hover:!text-white/70`}
               >
                 Contact
               </Link>

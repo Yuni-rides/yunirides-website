@@ -1,7 +1,8 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/shared/Button";
 import Link from "next/link";
 
@@ -15,6 +16,63 @@ const featuredPost = {
 };
 
 export default function BlogBanner() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  // 5 seconds timer logic to dismiss feedback messages
+  useEffect(() => {
+    if (status.type) {
+      const timer = setTimeout(() => {
+        setStatus({ type: null, message: "" });
+      }, 5000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [status.type]);
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setLoading(true);
+    setStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/newsletter-subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus({
+          type: "success",
+          message: "Thank you for subscribing!",
+        });
+        setEmail("");
+      } else {
+        setStatus({
+          type: "error",
+          message: data.error || "Subscription failed. Please try again.",
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus({
+        type: "error",
+        message: "Network issue. Please check your connection setup.",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <section className="bg-[#FAF8F0] px-4 sm:px-6 lg:px-8 pb-12 pt-6 mt-26">
       <motion.div
@@ -59,7 +117,6 @@ export default function BlogBanner() {
               {featuredPost.excerpt}
             </p>
 
-            {/* Replaced generic <a> Link with your verified core Custom Button wrapper */}
             <div className="mt-2">
               <Link href={"/about"}>
                 <Button
@@ -75,40 +132,70 @@ export default function BlogBanner() {
           </motion.div>
         </div>
 
+        {/* BOTTOM — Newsletter Subscription Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="w-full bg-[#EFF2FF] rounded-[32px] px-6 md:px-10 py-6 md:py-0 md:h-[120px] flex flex-col md:flex-row items-center justify-between gap-6 shadow-[inset_0_1px_2px_rgba(255,255,255,0.6)]"
+          className="w-full bg-[#EFF2FF] rounded-[32px] px-6 md:px-10 py-6 md:py-6 flex flex-col md:flex-row items-center justify-between gap-6 shadow-[inset_0_1px_2px_rgba(255,255,255,0.6)]"
         >
-          <p className="font-heading font-bold text-[20px] sm:text-[24px] md:text-[26px] text-[#2C3979] m-0 tracking-tight text-center md:text-left">
-            Don&apos;t Feed the Algorithm?
-          </p>
+          <div className="flex flex-col items-center md:items-start gap-1">
+            <p className="font-heading font-bold text-[20px] sm:text-[24px] md:text-[26px] text-[#2C3979] m-0 tracking-tight text-center md:text-left">
+              Don&apos;t Feed the Algorithm?
+            </p>
 
-          <div className="flex flex-col sm:flex-row gap-3 w-full md:w-auto md:flex-1 md:max-w-[520px] items-center">
-            {/* Unified Custom Fieldset Border Input wrapper to match BecomeCustomer layout pattern */}
-            <fieldset className="border border-[#DDE2FF] focus-within:border-[#822C89] focus-within:ring-1 focus-within:ring-[#822C89]/10 rounded-xl px-3 pb-1.5 pt-0 bg-white w-full transition-all duration-200 shadow-sm">
+            {/* Status Message Display Container */}
+            <AnimatePresence>
+              {status.type && (
+                <motion.span
+                  initial={{ opacity: 0, y: -5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0 }}
+                  className={`text-[12px] font-body font-semibold mt-0.5 ${
+                    status.type === "success"
+                      ? "text-emerald-600"
+                      : "text-rose-600"
+                  }`}
+                >
+                  {status.message}
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </div>
+
+          <form
+            onSubmit={handleSubscribe}
+            className="flex flex-col sm:flex-row gap-3 w-full md:w-auto md:flex-1 md:max-w-[520px] items-center"
+          >
+            {/* Unified Custom Fieldset Border Input wrapper */}
+            <fieldset className="border border-[#DDE2FF] focus-within:border-[#822C89] focus-within:ring-1 focus-within:ring-[#822C89]/10 rounded-xl px-3 pb-1.5 pt-0 bg-white w-full transition-all duration-200 shadow-sm disabled:opacity-60">
               <legend className="px-1 text-[11px] font-semibold font-body text-[#4A4A6A] leading-none select-none">
                 Email Address
               </legend>
               <input
                 type="email"
+                required
+                disabled={loading}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="example@email.com"
-                className="w-full h-[36px] bg-transparent text-[13px] text-[#1A1A2E] placeholder-[#8888AA]/50 font-body outline-none border-none p-0 mt-0.5 focus:ring-0"
+                className="w-full h-[36px] bg-transparent text-[13px] text-[#1A1A2E] placeholder-[#8888AA]/50 font-body outline-none border-none p-0 mt-0.5 focus:ring-0 disabled:cursor-not-allowed"
               />
             </fieldset>
 
             <div className="w-full sm:w-auto shrink-0">
               <Button
-                label="Submit"
+                label={loading ? "Sending..." : "Submit"}
+                disabled={loading}
                 bgColor="bg-[#2C3979]"
                 textColor="text-white"
                 borderColor="border-[#2C3979]"
                 hoverBgValue="white"
                 hoverTextValue="[#2C3979]"
+                type="submit"
               />
             </div>
-          </div>
+          </form>
         </motion.div>
       </motion.div>
     </section>

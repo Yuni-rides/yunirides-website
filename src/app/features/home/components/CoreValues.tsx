@@ -229,7 +229,7 @@ export default function CoreValues() {
         {/* Header Section */}
         <div className="text-center md:mb-18 mb-8">
           <span className="inline-block bg-yuni-card text-yuni-text-mid py-[6px] px-[22px] rounded-full text-[13px] font-medium mb-[14px] font-body">
-            About us
+            About Us
           </span>
           <h2 className="font-heading font-bold text-[clamp(1.5rem,2.8vw,2rem)] text-yuni-navy mb-[10px] block">
             About Our Core Values

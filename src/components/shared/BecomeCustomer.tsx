@@ -140,7 +140,7 @@ export default function BecomeCustomer() {
           {/* Label */}
           <div className="text-center md:mb-8 mb-4">
             <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body">
-              Become A Customer
+              Do You Want A Ride
             </span>
           </div>
 

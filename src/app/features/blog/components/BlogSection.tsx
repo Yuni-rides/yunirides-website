@@ -40,7 +40,7 @@ export default function BlogSection() {
   }, [emblaApi, onSelect]);
 
   return (
-    <section className="bg-[#FAF8F0] pt-15 pb-20 overflow-hidden">
+    <section className="bg-[#FAF8F0] md:pt-6 pb-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Title */}
         <motion.div
