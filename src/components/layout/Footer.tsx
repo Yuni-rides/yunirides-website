@@ -1,10 +1,57 @@
 "use client";
 
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "../shared/Button";
 
 export default function Footer() {
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [status, setStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  const handleSubscribe = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+
+    setLoading(true);
+    setStatus({ type: null, message: "" });
+
+    try {
+      const response = await fetch("/api/newsletter-subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        setStatus({
+          type: "success",
+          message: "Thank you for subscribing!",
+        });
+        setEmail("");
+      } else {
+        setStatus({
+          type: "error",
+          message: data.error || "Subscription failed. Please try again.",
+        });
+      }
+    } catch (err) {
+      console.error(err);
+      setStatus({
+        type: "error",
+        message: "Network issue. Please check your connection setup.",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <footer className="">
       <div className="bg-[#E5EAFF] rounded-t-2xl px-6 sm:px-12 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -25,26 +72,50 @@ export default function Footer() {
       </div>
 
       <div className="bg-yuni-purple px-6 sm:px-16 pt-14 pb-9">
+        {/* Newsletter Form Container */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between bg-yuni-darkPurple rounded-2xl px-6 sm:px-8 py-5 mb-14 gap-4">
-          <span className="text-white text-[17px] font-semibold font-body whitespace-nowrap">
-            Subscribe to our newsletter
-          </span>
-          <div className="flex gap-3 w-full sm:flex-1 sm:max-w-[520px]">
+          <div className="flex flex-col">
+            <span className="text-white text-[17px] font-semibold font-body whitespace-nowrap">
+              Subscribe to our newsletter
+            </span>
+            {status.type && (
+              <span
+                className={`text-[12px] font-body mt-1 ${
+                  status.type === "success"
+                    ? "text-emerald-400"
+                    : "text-rose-400"
+                }`}
+              >
+                {status.message}
+              </span>
+            )}
+          </div>
+
+          <form
+            onSubmit={handleSubscribe}
+            className="flex gap-3 w-full sm:flex-1 sm:max-w-[520px]"
+          >
             <input
               type="email"
+              required
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
-              className="flex-1 px-5 py-3.5 rounded-xl border border-white/30 bg-white/10 text-white text-[14px] outline-none placeholder:text-white/50 focus:border-white/60 transition-colors font-body"
+              disabled={loading}
+              className="flex-1 px-5 py-3.5 rounded-xl border border-white/30 bg-white/10 text-white text-[14px] outline-none placeholder:text-white/50 focus:border-white/60 transition-colors font-body disabled:opacity-50"
             />
 
             <Button
-              label="Submit"
+              label={loading ? "Sending..." : "Submit"}
+              disabled={loading}
               bgColor="bg-[#F5F0E8]"
               textColor="text-[#3D1566]"
               borderColor="border-transparent"
               hoverBgValue="yuni-purple"
               hoverTextValue="white"
+              type="submit"
             />
-          </div>
+          </form>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mb-12 items-start">
@@ -87,9 +158,11 @@ export default function Footer() {
             </div>
 
             <div className="flex flex-col gap-5 flex-1 border-l border-white/20 pl-5">
-              {[{ label: "Become A Driver", href: "/become-a-driver" },
+              {[
+                { label: "Become A Driver", href: "/become-a-driver" },
                 { label: "Careers", href: "/careers" },
-                { label: "Blog", href: "/blog" },].map((item) => (
+                { label: "Blog", href: "/blog" },
+              ].map((item) => (
                 <Link
                   key={item.label}
                   href={item.href}

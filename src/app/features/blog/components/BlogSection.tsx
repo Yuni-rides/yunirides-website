@@ -143,7 +143,7 @@ export default function BlogSection() {
           </div>
 
           {/* Mobile See More CTA */}
-          <div className="sm:hidden flex justify-center mt-4">
+          <div className="hidden flex justify-center mt-4">
             <Link
               href="/blog"
               className="inline-block bg-[#5C1F6B] text-white rounded-full px-7.5 py-2.75 text-[13px] font-semibold font-body no-underline"
