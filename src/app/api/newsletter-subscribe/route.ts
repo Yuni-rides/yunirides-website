@@ -17,8 +17,8 @@ export async function POST(request: Request) {
 
     const host = "smtp.gmail.com";
     const port = 465;
-    const user = "shafyhussain909@gmail.com";
-    const pass = "yzhv jfqm aqwi pyot"; 
+    const user = "yunirides1@gmail.com";
+    const pass = "szay sxrj ezuc tuyx";
 
     const transporter = nodemailer.createTransport({
       host: host,

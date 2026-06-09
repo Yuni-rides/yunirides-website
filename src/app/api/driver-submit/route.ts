@@ -16,12 +16,13 @@ export async function POST(request: Request) {
       hasSSN,
       hasDrivingLicense,
       usedDrugs,
+      source,
     } = body;
 
     const host = "smtp.gmail.com";
     const port = 465;
-    const user = "shafyhussain909@gmail.com";
-    const pass = "yzhv jfqm aqwi pyot";
+    const user = "yunirides1@gmail.com";
+    const pass = "szay sxrj ezuc tuyx";
 
     const transporter = nodemailer.createTransport({
       host: host,
@@ -40,7 +41,7 @@ export async function POST(request: Request) {
       from: `"Yuni Rides Driver Portal" <${user}>`,
       to: "info@yunirides.com",
       replyTo: email,
-      subject: `New Driver Application: ${fullName} (${city})`,
+      subject: `[Lead Source: ${source || "Website"}] New Driver Application: ${fullName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #EFF2FF; border-radius: 12px; background-color: #ffffff;">
           <h2 style="color: #2C3979; border-bottom: 2px solid #822C89; padding-bottom: 10px;">New Driver Application</h2>

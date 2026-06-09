@@ -2,11 +2,13 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import DriverForm from "@/components/shared/DriverForm";
 import BecomeCustomer from "@/components/shared/BecomeCustomer";
+import Button from "@/components/shared/Button";
 
 export default function VelpBanner() {
+  const [activeForm, setActiveForm] = useState<"driver" | "rider">("driver");
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState<{
     message: string;
@@ -113,12 +115,57 @@ export default function VelpBanner() {
               </span>
             </motion.a>
           </motion.div>
-
-          <DriverForm/>
-          <div className="-mt-24">
-            <BecomeCustomer/>
-          </div>
         </motion.div>
+
+        <div className="flex mt-12 gap-4 justify-center">
+          <Button
+            label="Driver Form"
+            onClick={() => setActiveForm("driver")}
+            bgColor={activeForm === "driver" ? "bg-yuni-purple" : "bg-white"}
+            textColor={activeForm === "driver" ? "text-white" : "text-yuni-purple"}
+            borderColor="border-yuni-purple"
+            hoverBgValue={activeForm === "driver" ? "white" : "yuni-purple"}
+            hoverTextValue={activeForm === "driver" ? "yuni-purple" : "white"}
+          />
+          <Button
+            label="Rider Form"
+            onClick={() => setActiveForm("rider")}
+            bgColor={activeForm === "rider" ? "bg-yuni-purple" : "bg-white"}
+            textColor={activeForm === "rider" ? "text-white" : "text-yuni-purple"}
+            borderColor="border-yuni-purple"
+            hoverBgValue={activeForm === "rider" ? "white" : "yuni-purple"}
+            hoverTextValue={activeForm === "rider" ? "yuni-purple" : "white"}
+          />
+        </div>
+
+        <div className="mt-8">
+          <AnimatePresence mode="wait">
+            {activeForm === "driver" && (
+              <motion.div
+                key="driver-form-pane"
+                initial={{ opacity: 0, x: -15 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 15 }}
+                transition={{ duration: 0.3 }}
+              >
+                <DriverForm source="Velp Page" />
+              </motion.div>
+            )}
+
+            {activeForm === "rider" && (
+              <motion.div
+                key="rider-form-pane"
+                initial={{ opacity: 0, x: 15 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: -15 }}
+                transition={{ duration: 0.3 }}
+                className="-mt-24"
+              >
+                <BecomeCustomer source="Velp Page" />
+              </motion.div>
+            )}
+          </AnimatePresence>
+        </div>
       </div>
     </main>
   );

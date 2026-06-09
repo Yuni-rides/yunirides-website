@@ -6,16 +6,29 @@ export const dynamic = "force-dynamic";
 export async function POST(request: Request) {
   try {
     const body = await request.json();
-    const { fullName, email, contactNumber, city, childFirstName, age, numberOfChildren, specialNeeds } = body;
+    const {
+      fullName,
+      email,
+      contactNumber,
+      city,
+      childFirstName,
+      age,
+      numberOfChildren,
+      specialNeeds,
+      source,
+    } = body;
 
     if (!fullName || !email || !contactNumber || !city) {
-      return NextResponse.json({ success: false, error: "Required fields are missing." }, { status: 400 });
+      return NextResponse.json(
+        { success: false, error: "Required fields are missing." },
+        { status: 400 },
+      );
     }
 
     const host = "smtp.gmail.com";
     const port = 465;
-    const user = "shafyhussain909@gmail.com";
-    const pass = "yzhv jfqm aqwi pyot";
+    const user = "yunirides1@gmail.com";
+    const pass = "szay sxrj ezuc tuyx";
 
     const transporter = nodemailer.createTransport({
       host: host,
@@ -30,9 +43,9 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: `"Yuni Rides Portal" <${user}>`,
-      to: "info@yunirides.com", 
-      replyTo: email, 
-      subject: `New Customer Inquiry: ${fullName} (${city})`,
+      to: "info@yunirides.com",
+      replyTo: email,
+      subject: `[Lead Source: ${source || "Website"}] New Customer Inquiry: ${fullName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #EFF2FF; border-radius: 12px; background-color: #ffffff;">
           <h2 style="color: #2C3979; border-bottom: 2px solid #822C89; padding-bottom: 10px;">New Ride Inquiry Leads</h2>
@@ -58,9 +71,18 @@ export async function POST(request: Request) {
     };
 
     await transporter.sendMail(mailOptions);
-    return NextResponse.json({ success: true, message: "Inquiry forwarded successfully" }, { status: 200 });
+    return NextResponse.json(
+      { success: true, message: "Inquiry forwarded successfully" },
+      { status: 200 },
+    );
   } catch (error: any) {
     console.error("Customer SMTP Error: ", error);
-    return NextResponse.json({ success: false, error: error.message || "Failed to process form dispatch" }, { status: 500 });
+    return NextResponse.json(
+      {
+        success: false,
+        error: error.message || "Failed to process form dispatch",
+      },
+      { status: 500 },
+    );
   }
 }

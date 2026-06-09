@@ -47,7 +47,11 @@ function InputField({
   );
 }
 
-export default function BecomeCustomer() {
+interface BecomeCustomerProps {
+  source?: string;
+}
+
+export default function BecomeCustomer({ source = "General Website" }: BecomeCustomerProps) {
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState<{
     message: string;
@@ -90,7 +94,7 @@ export default function BecomeCustomer() {
       const response = await fetch("/api/customer-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, source }),
       });
 
       const data = await response.json();
