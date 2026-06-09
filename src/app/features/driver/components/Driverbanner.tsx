@@ -54,7 +54,7 @@ export default function DriverBanner() {
           <div className="flex items-center gap-4 flex-wrap">
             <Link href="#become-customer" className="inline-block">
               <Button
-                label="Become a Rider"
+                label="Become a Driver"
                 bgColor="bg-yuni-purple"
                 textColor="text-white"
                 borderColor="border-white"

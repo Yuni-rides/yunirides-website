@@ -117,18 +117,19 @@ export default function VelpBanner() {
           </motion.div>
         </motion.div>
 
-        <div className="flex mt-12 gap-4 justify-center">
+        <div className="flex flex-col md:flex-row mt-12 gap-4 justify-center">
           <Button
-            label="Driver Form"
+            label="Become a Driver"
             onClick={() => setActiveForm("driver")}
             bgColor={activeForm === "driver" ? "bg-yuni-purple" : "bg-white"}
             textColor={activeForm === "driver" ? "text-white" : "text-yuni-purple"}
             borderColor="border-yuni-purple"
             hoverBgValue={activeForm === "driver" ? "white" : "yuni-purple"}
             hoverTextValue={activeForm === "driver" ? "yuni-purple" : "white"}
+            width="sm"
           />
           <Button
-            label="Rider Form"
+            label="Get a Ride"
             onClick={() => setActiveForm("rider")}
             bgColor={activeForm === "rider" ? "bg-yuni-purple" : "bg-white"}
             textColor={activeForm === "rider" ? "text-white" : "text-yuni-purple"}
@@ -147,6 +148,7 @@ export default function VelpBanner() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: 15 }}
                 transition={{ duration: 0.3 }}
+                 className="md:-mt-20 -mt-10"
               >
                 <DriverForm source="Velp Page" />
               </motion.div>
@@ -159,7 +161,7 @@ export default function VelpBanner() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -15 }}
                 transition={{ duration: 0.3 }}
-                className="-mt-24"
+                className="md:-mt-20 -mt-10"
               >
                 <BecomeCustomer source="Velp Page" />
               </motion.div>

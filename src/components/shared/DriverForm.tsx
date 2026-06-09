@@ -191,7 +191,7 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
             className="text-center mb-8"
           >
             <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-7 rounded-full text-[14px] font-medium font-body">
-              Become Driver
+              Become A Driver
             </span>
           </motion.div>
 
