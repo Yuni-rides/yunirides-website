@@ -43,7 +43,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: `"Yuni Rides Portal" <${user}>`,
-      to: "info@yunirides.com",
+      to: "admin@yunirides.com",
       replyTo: email,
       subject: `[Lead Source: ${source || "Website"}] New Customer Inquiry: ${fullName}`,
       html: `

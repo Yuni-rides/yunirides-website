@@ -33,7 +33,7 @@ export async function POST(request: Request) {
 
     const mailOptions = {
       from: `"Yuni Rides Portal" <${user}>`,
-      to: "info@yunirides.com",
+      to: "admin@yunirides.com",
       subject: `New Newsletter Subscription`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; border: 1px solid #EFF2FF; border-radius: 12px;">
