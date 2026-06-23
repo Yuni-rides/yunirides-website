@@ -176,9 +176,21 @@ export default function Footer() {
             <div className="flex flex-col gap-5 flex-1 border-l border-white/20 pl-5">
               <Link
                 href="/contact-us"
-                  className={`text-[14px] no-underline transition-colors duration-200 font-body !text-white font-normal hover:!text-white/70`}
+                className={`text-[14px] no-underline transition-colors duration-200 font-body !text-white font-normal hover:!text-white/70`}
               >
                 Contact
+              </Link>
+              <Link
+                href="/terms-and-conditions"
+                className="text-[14px] no-underline transition-colors duration-200 font-body !text-white font-normal hover:!text-white/70"
+              >
+                Terms & Conditions
+              </Link>
+              <Link
+                href="/privacy-policy"
+                className="text-[14px] no-underline transition-colors duration-200 font-body !text-white font-normal hover:!text-white/70"
+              >
+                Privacy Policy
               </Link>
             </div>
           </div>
