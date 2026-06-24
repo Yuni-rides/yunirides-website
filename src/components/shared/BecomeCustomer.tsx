@@ -161,7 +161,7 @@ export default function BecomeCustomer({ source = "General Website" }: BecomeCus
               >
                 <Image
                   src="/images/driver-illustration.png"
-                  alt="Yunirides driver with child"
+                  alt="Yuni Rides driver safely transporting a child to school"
                   fill
                   className="object-contain object-left-center"
                 />

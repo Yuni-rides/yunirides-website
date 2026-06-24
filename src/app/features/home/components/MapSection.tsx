@@ -1,6 +1,4 @@
 "use client";
-
-import Button from "@/components/shared/Button";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -158,7 +156,6 @@ export default function MapSection() {
                   </div>
                 </div>
 
-                {/* Symmetrical Twin Columns List Layout */}
                 <div className="grid grid-cols-2 gap-x-6 gap-y-2">
                   {/* Left Column */}
                   <div className="flex flex-col gap-2">
@@ -174,7 +171,7 @@ export default function MapSection() {
                       </div>
                     ))}
                   </div>
-                  {/* Right Column */}
+
                   <div className="flex flex-col gap-2">
                     {rightColumnCities.map((city) => (
                       <div
@@ -190,25 +187,14 @@ export default function MapSection() {
                   </div>
                 </div>
               </div>
-
-              {/* <Button
-                label="See More"
-                bgColor="white"
-                textColor="text-[#3D1566]"
-                borderColor="border-transparent"
-                hoverBgValue="yuni-purple"
-                hoverTextValue="white"
-                className=""
-              /> */}
             </div>
           </div>
 
-          {/* Floating Map Structure */}
           <div className="absolute -top-16 right-0 w-[53%] lg:w-[680px] xl:w-[726px] h-[437px] z-30 select-none drop-shadow-[0_4px_24px_rgba(0,0,0,0.02)]">
             <div className="relative w-full h-full">
               <Image
                 src="/images/us-map.png"
-                alt="US Service Map"
+                alt="United States service map showing Yuni Rides operating regions across WA CA AZ TX IL"
                 fill
                 className="object-contain"
                 priority
@@ -218,7 +204,6 @@ export default function MapSection() {
           </div>
         </div>
 
-        {/* Mobile View */}
         <div className="md:hidden flex flex-col gap-6">
           <div className="bg-[#EBF0FF] rounded-[28px] p-6 flex flex-col gap-6">
             <div className="flex items-center gap-4">
@@ -228,7 +213,7 @@ export default function MapSection() {
               <div className="w-[45px] h-[32px] relative">
                 <Image
                   src="/images/washington-state.png"
-                  alt={displayState}
+                  alt="Washington state school districts served by Yuni Rides student transportation"
                   fill
                   className="object-contain"
                 />
@@ -246,21 +231,12 @@ export default function MapSection() {
                 </div>
               ))}
             </div>
-
-            {/* <Button
-              label="See More"
-              bgColor="white"
-              textColor="text-[#3D1566]"
-              borderColor="border-transparent"
-              hoverBgValue="yuni-purple"
-              hoverTextValue="white"
-            /> */}
           </div>
 
           <div className="relative w-full h-[260px] sm:h-[320px]">
             <Image
               src="/images/us-map.png"
-              alt="US Map"
+              alt="United States service map showing Yuni Rides operating regions across WA CA AZ TX IL"
               fill
               className="object-contain"
               priority

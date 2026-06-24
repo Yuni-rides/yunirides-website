@@ -89,9 +89,14 @@ export default function HomeBanner() {
                   : "opacity-100 translate-y-0"
               }`}
             >
-              <h1 className="text-[36px] lg:text-[40px] font-bold text-yuni-navy leading-[1.2] tracking-tight mb-5 font-heading">
-                {current.heading}
+              <h1 className="sr-only">
+                Yuni Rides – Safe, Technology-Driven Transportation for Children
+                & Families
               </h1>
+
+              <h2 className="text-[36px] lg:text-[40px] font-bold text-yuni-navy leading-[1.2] tracking-tight mb-5 font-heading">
+                {current.heading}
+              </h2>
               <p className="para-hero pt-4">{current.subtext}</p>
             </div>
 

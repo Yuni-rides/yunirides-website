@@ -12,6 +12,7 @@ const coreValues = [
     description:
       "The safety of the transport is our highest priority. Every journey is handled with the utmost caution, adhering to strict safety protocols and utilizing the latest technology to ensure that child is in safe hands.",
     image: "/images/safety.png",
+    alt: "Yuni Rides safety-first approach with vetted drivers and daily vehicle inspections",
     purple: false,
   },
   {
@@ -19,6 +20,7 @@ const coreValues = [
     description:
       "We understand the responsibility that comes with transporting children. We strive to build a strong, trusting relationship with families and communities by consistently delivering on our promises of reliability and care.",
     image: "/images/trust.png",
+    alt: "Why families trust Yuni Rides for reliable school transportation services",
     purple: true,
   },
   {
@@ -26,6 +28,7 @@ const coreValues = [
     description:
       "We know that every child is unique, and our drivers and staff are trained to provide transportation with care, understanding, and compassion. Our goal is to create an environment where children feel comfortable, supported, and respected during their rides.",
     image: "/images/care.png",
+    alt: "Yuni Rides care and compassion for students with special transportation needs",
     purple: false,
   },
   {
@@ -33,6 +36,7 @@ const coreValues = [
     description:
       "Families depend on us to be on time, every time. Whether it's for school, appointments, or other commitments, we ensure that our transportation are dependable and seamless.",
     image: "/images/reliability.png",
+    alt: "Reliable on-time school rides with Yuni Rides GPS tracking and route optimization",
     purple: true,
   },
   {
@@ -40,6 +44,7 @@ const coreValues = [
     description:
       "We conduct our business with honesty and transparency. From our drivers to our operational staff, every member of Yuni Rides is committed to upholding the highest ethical standards.",
     image: "/images/integrity.png",
+    alt: "Integrity at Yuni Rides with transparent pricing and background-checked staff",
     purple: false,
   },
   {
@@ -47,6 +52,7 @@ const coreValues = [
     description:
       "Our team of drivers and support staff are highly trained professionals dedicated to providing the best possible service. We believe in a level of professionalism that reflects the trust placed in us by parents, schools, and communities.",
     image: "/images/professionalism.png",
+    alt: "Professional school transportation team at Yuni Rides",
     purple: true,
   },
 ];
@@ -75,6 +81,7 @@ interface CoreValueItem {
   title: string;
   description: string;
   image: string;
+  alt: string;
   purple: boolean;
 }
 
@@ -130,7 +137,7 @@ function TextLeftRow({ item }: { item: CoreValueItem }) {
       >
         <Image
           src={item.image}
-          alt={item.title}
+          alt={item.alt}
           fill
           className="object-cover"
         />
@@ -168,7 +175,7 @@ function ImageLeftRow({ item }: { item: CoreValueItem }) {
       >
         <Image
           src={item.image}
-          alt={item.title}
+          alt={item.alt}
           fill
           className="object-cover"
         />

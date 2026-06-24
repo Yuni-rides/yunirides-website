@@ -7,9 +7,9 @@ import FAQSection from "@/components/shared/FaqSection";
 import Button from "@/components/shared/Button";
 
 export const metadata: Metadata = {
-  title: "Our Services — Yunirides | Rides for Every Need",
+  title: "Our Services — Yunirides | School & Special Needs Transportation",
   description:
-    "Explore Yunirides services: school transportation, special needs rides, medical appointments, and more. Safe, reliable, and caring across the U.S.",
+    "Explore Yunirides services: school district transportation, special needs rides, and McKinney-Vento transport. Safe, reliable, and caring across WA, CA, AZ, TX, IL.",
   alternates: { canonical: "https://yunirides.com/services" },
   openGraph: {
     title:
@@ -92,8 +92,6 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* ── 1. HERO ── */}
-
       <section className="bg-[#FAF8F0] px-4 sm:px-6 pb-8 mt-26">
         <div className="max-w-7xl mx-auto">
           {/* 
@@ -105,7 +103,7 @@ export default function ServicesPage() {
             <div className="absolute inset-0 w-full h-full z-0">
               <Image
                 src="/images/services-hero.png"
-                alt="Yunirides driver with children"
+                alt="Yuni Rides driver safely transporting a child to school"
                 fill
                 className="object-cover object-center opacity-90 md:opacity-100"
                 priority
@@ -173,7 +171,6 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── 2. SERVICES CARDS ── */}
       <section className="bg-[#FAF8F0] px-4 sm:px-6 py-[5rem] relative overflow-hidden">
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-[50%] pointer-events-none z-0"

@@ -44,7 +44,34 @@ export const metadata: Metadata = {
     follow: true,
   },
 };
+const jobPostingSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'JobPosting',
+  title: 'Transportation Driver',
+  description: 'Join Yunirides as a driver. Fair earnings, flexible schedules, driver-first platform.',
+  datePosted: '2026-06-23',
+  validThrough: '2026-12-31',
+  employmentType: 'PART_TIME',
+  hiringOrganization: {
+    '@type': 'Organization',
+    name: 'Yuni Rides',
+    sameAs: 'https://www.yunirides.com',
+    logo: 'https://www.yunirides.com/images/logo.png'
+  },
+  jobLocation: {
+    '@type': 'Place',
+    address: { '@type': 'PostalAddress', addressCountry: 'US' }
+  }
+}
 
 export default function CareersPage() {
-  return <CareersClient />;
+    return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jobPostingSchema) }}
+      />
+      <CareersClient />
+    </>
+  );
 }

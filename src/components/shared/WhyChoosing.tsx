@@ -78,7 +78,7 @@ export default function WhyChoosing() {
           >
             <Image
               src="/images/school.png"
-              alt="School Districts"
+              alt="Yuni Rides partnering with school districts for safe student transportation"
               fill
               className="object-cover"
             />

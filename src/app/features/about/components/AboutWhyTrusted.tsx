@@ -98,7 +98,7 @@ export default function AboutWhyTrusted() {
         >
           <Image
             src="/images/about-why.png"
-            alt="Yunirides driver with child"
+            alt="Yuni Rides driver safely transporting a child to school"
             fill
             className="object-cover object-center"
             priority
