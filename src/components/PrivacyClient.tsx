@@ -4,7 +4,6 @@ import Image from "next/image";
 
 const sections = [
   {
-    number: "1.",
     title: "About Our Services",
     content:
       "Yuni Rides provides student transportation management services, including:",
@@ -22,7 +21,6 @@ const sections = [
       "Our services are provided through Yuni Rides (for students, parents, and guardians), Yuni Rides Driver (for drivers), and the Yuni Rides website and administrative portal.",
   },
   {
-    number: "2.",
     title: "Information We Collect",
     content: null,
     bullets: [],
@@ -107,7 +105,6 @@ const sections = [
     ],
   },
   {
-    number: "3.",
     title: "How We Use Information",
     content: "We use collected information to:",
     bullets: [
@@ -129,7 +126,6 @@ const sections = [
     ],
   },
   {
-    number: "4.",
     title: "Sharing of Information",
     content: "We do not sell personal information.",
     subsections: [
@@ -185,7 +181,6 @@ const sections = [
     ],
   },
   {
-    number: "5.",
     title: "Location Data",
     content:
       "The Yuni Rides Driver application may collect location data while the application is in use and, where permitted by device settings, during active transportation services. Location information is used solely for:",
@@ -200,7 +195,6 @@ const sections = [
       "During an active transportation trip, the driver's real-time location may be visible to authorized users, including parents, students, schools, transportation administrators, and super administrators, for the purpose of monitoring trip progress, improving safety, providing estimated arrival information, and ensuring efficient transportation operations.",
   },
   {
-    number: "6.",
     title: "Video Streaming and Recording",
     content:
       "Yuni Rides may utilize live video streaming and recording technologies, including WebRTC, during active transportation operations. Live video streams and recorded footage may be accessible to authorized users, including:",
@@ -214,7 +208,6 @@ const sections = [
       "Video recordings may include images of drivers, students, vehicle interiors, and surrounding environments. Recorded footage may be retained for safety, security, operational, legal, compliance, or incident investigation purposes and protected using reasonable security measures.",
   },
   {
-    number: "7.",
     title: "Data Security",
     content:
       "We implement reasonable administrative, technical, and organizational safeguards to protect personal information from:",
@@ -229,7 +222,6 @@ const sections = [
       "However, no method of electronic transmission or storage is completely secure, and we cannot guarantee absolute security.",
   },
   {
-    number: "8.",
     title: "Data Retention",
     content: "We retain information only for as long as necessary to:",
     bullets: [
@@ -243,7 +235,6 @@ const sections = [
       "When information is no longer required, it will be securely deleted or anonymized.",
   },
   {
-    number: "9.",
     title: "Children's Privacy",
     content:
       "Our services involve transportation management for students. Student information is collected and processed only for authorized transportation purposes and under the direction of schools, parents, guardians, or authorized administrators.",
@@ -252,7 +243,6 @@ const sections = [
       "Students may use the Yuni Rides application as part of transportation services provided through their school or authorized organization. Information relating to students is collected only as necessary to provide transportation services and is handled with appropriate safeguards designed to protect student privacy and security. We do not knowingly collect personal information directly from children without appropriate authorization.",
   },
   {
-    number: "10.",
     title: "User Rights",
     content: "Depending on applicable laws, users may have the right to:",
     bullets: [
@@ -266,7 +256,6 @@ const sections = [
       "To exercise these rights, please contact us using the information below.",
   },
   {
-    number: "11.",
     title: "Third-Party Services",
     content: "Our applications and website may use third-party services for:",
     bullets: [
@@ -281,19 +270,17 @@ const sections = [
       "These third parties may process information according to their own privacy policies.",
   },
   {
-    number: "12.",
     title: "Changes to This Privacy Policy",
     content:
       'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. Continued use of our services after updates indicates acceptance of the revised Privacy Policy.',
     bullets: [],
   },
   {
-    number: "13.",
     title: "Contact Us",
     content:
       "If you have any questions regarding this Privacy Policy or our data practices, please contact us:",
     bullets: [],
-    footer: "Email: info@yunirides.com | Website: www.yunirides.com",
+    footer: "Email: info@yunirides.com",
   },
 ];
 
@@ -352,9 +339,9 @@ export default function PrivacyClient() {
 
         <div className="space-y-8 md:space-y-10">
           {sections.map((section) => (
-            <div key={section.number}>
+            <div>
               <h3 className="text-base md:text-xl font-bold text-[#2C3979] mb-2 md:mb-3 font-heading">
-                {section.number} {section.title}
+                {section.title}
               </h3>
 
               {section.content && (
@@ -418,7 +405,19 @@ export default function PrivacyClient() {
 
               {section.footer && (
                 <p className="text-[#353637] leading-relaxed mt-2 md:mt-3 text-sm md:text-base">
-                  {section.footer}
+                  {section.footer.includes("Email:") ? (
+                    <>
+                      Email:{" "}
+                      <a
+                        href="mailto:info@yunirides.com"
+                        className="text-[#2C3979] font-medium hover:underline transition-all"
+                      >
+                        info@yunirides.com
+                      </a>
+                    </>
+                  ) : (
+                    section.footer
+                  )}
                 </p>
               )}
             </div>
