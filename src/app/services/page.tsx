@@ -7,45 +7,141 @@ import FAQSection from "@/components/shared/FaqSection";
 import Button from "@/components/shared/Button";
 
 export const metadata: Metadata = {
-  title: "Our Services — Yunirides | School & Special Needs Transportation",
+  title: "Our Services | School & Special Needs Transportation — Yuni Rides",
   description:
-    "Explore Yunirides services: school district transportation, special needs rides, and McKinney-Vento transport. Safe, reliable, and caring across WA, CA, AZ, TX, IL.",
-  alternates: { canonical: "https://yunirides.com/services" },
+    "Yuni Rides offers school district transportation, special needs student rides, McKinney-Vento transport, and IEP-aligned services. Safe, reliable, and technology-driven across WA, CA, AZ, TX, IL.",
+  alternates: { canonical: "https://www.yunirides.com/services" },
   openGraph: {
-    title:
-      "Yunirides Services — Transportation Designed Around Care, Safety & Trust",
+    title: "Student Transportation Services | Yuni Rides",
     description:
-      "Reliable, technology-powered transportation services built to support children, families, schools, and healthcare communities.",
-    url: "https://yunirides.com/services",
+      "Safe, reliable, technology-powered transportation services for school districts, special needs students, and McKinney-Vento youth across 5 states.",
+    url: "https://www.yunirides.com/services",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://www.yunirides.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Yunirides Services",
+        alt: "Yuni Rides Student Transportation Services",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Yunirides Services",
-    description: "Transportation Designed Around Care, Safety & Trust",
+    title: "Student Transportation Services | Yuni Rides",
+    description:
+      "Safe, technology-driven transportation for school districts across WA, CA, AZ, TX, IL.",
   },
 };
 
-const jsonLd = {
+const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
-  name: "Yunirides Transportation Services",
+  serviceType: "Student Transportation Services",
+  name: "Student Transportation Services",
+  description:
+    "Safe, technology-driven student transportation for school districts. Specializing in special needs, McKinney-Vento, IEP-aligned, and general education transport.",
   provider: {
     "@type": "Organization",
-    name: "Yunirides",
-    url: "https://yunirides.com",
+    name: "Yuni Rides",
+    url: "https://www.yunirides.com",
   },
-  description:
-    "Safe, reliable transportation for children, families, schools, and healthcare communities.",
-  areaServed: "United States",
+  areaServed: [
+    { "@type": "State", name: "Washington" },
+    { "@type": "State", name: "California" },
+    { "@type": "State", name: "Arizona" },
+    { "@type": "State", name: "Texas" },
+    { "@type": "State", name: "Illinois" },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "District Transportation Solutions",
+    itemListElement: [
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "IEP Special Education Transportation",
+          description:
+            "IDEA-compliant door-to-door transport for students with IEPs.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "McKinney-Vento Homeless Student Transport",
+          description:
+            "Federal compliant transport ensuring school stability for homeless youth.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Special Needs Student Transportation",
+          description:
+            "Wheelchair-accessible vehicles with trained attendant staff.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "General Education School Bus Alternative",
+          description:
+            "Cost-effective route optimization for district general-ed populations.",
+        },
+      },
+    ],
+  },
+};
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "How does Yuni Rides comply with IDEA and IEP transportation requirements?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yuni Rides provides door-to-door transportation as specified in each student's IEP. Our drivers receive specialized training in behavior management, medical needs, and wheelchair securement. We coordinate directly with district special education directors to ensure full IDEA compliance.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What is McKinney-Vento transportation and how does Yuni Rides support it?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "The McKinney-Vento Act requires districts to transport homeless students to their school of origin. Yuni Rides partners with district liaisons to provide stable, reliable transportation regardless of housing changes, ensuring compliance with federal mandates.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "How do school districts start a contract with Yuni Rides?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Districts can request a quote through our district inquiry form or call 415-535-2155. We conduct a needs assessment, provide a customized routing plan, and finalize a service agreement with transparent per-student or per-route pricing.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What states does Yuni Rides operate in?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Yuni Rides currently provides student transportation services in Washington, California, Arizona, Texas, and Illinois, with plans to expand to additional states.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "What vehicle and safety standards does Yuni Rides maintain?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "All vehicles are ADA-compliant with wheelchair lifts, GPS tracking, and two-way communication. Drivers pass background checks, drug screening, and specialized training in student safety and special-needs care.",
+      },
+    },
+  ],
 };
 
 const services = [
@@ -89,7 +185,11 @@ export default function ServicesPage() {
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
 
       <section className="bg-[#FAF8F0] px-4 sm:px-6 pb-8 mt-26">

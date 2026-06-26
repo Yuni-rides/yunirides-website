@@ -21,29 +21,38 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yunirides.com"),
+  metadataBase: new URL("https://www.yunirides.com"),
   title: {
     default:
       "Yuni Rides | Safe Student Transportation for Special Needs & School Districts",
-    template: "%s — Yunirides",
+    template: "%s | Yuni Rides",
   },
   description:
     "Trusted student transportation for school districts. Safe, reliable rides for special needs students, McKinney-Vento youth, and general education. Serving WA, CA, AZ, TX, IL. Call 415-535-2155.",
-  applicationName: "Yunirides",
+  applicationName: "Yuni Rides",
   keywords: [
     "school transportation",
-    "safe rides",
-    "child transport",
-    "special needs transportation",
-    "Yunirides",
+    "special needs student transportation",
+    "McKinney-Vento transportation",
+    "IEP transportation services",
+    "school district transportation vendor",
+    "student transport Washington",
+    "child transport California",
+    "safe student rides",
+    "Yuni Rides",
   ],
-  authors: [{ name: "Yunirides Team", url: "https://yunirides.com" }],
+  authors: [{ name: "Yuni Rides", url: "https://www.yunirides.com" }],
   openGraph: {
-    siteName: "Yunirides",
+    siteName: "Yuni Rides",
     locale: "en_US",
     type: "website",
     images: [
-      { url: "/og-image.png", width: 1200, height: 630, alt: "Yunirides" },
+      {
+        url: "https://www.yunirides.com/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Yuni Rides - Safe Student Transportation for School Districts",
+      },
     ],
   },
   twitter: {
@@ -52,6 +61,12 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -59,21 +74,41 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Yuni Rides",
+  description:
+    "Safe, technology-driven student transportation for school districts specializing in special needs, McKinney-Vento, and IEP-aligned services across Washington, California, Arizona, Texas, and Illinois.",
   url: "https://www.yunirides.com",
-  logo: "https://www.yunirides.com/images/logo.png",
+  logo: {
+    "@type": "ImageObject",
+    url: "https://www.yunirides.com/images/logo.png",
+  },
+  foundingDate: "2023",
+  areaServed: [
+    { "@type": "State", name: "Washington" },
+    { "@type": "State", name: "California" },
+    { "@type": "State", name: "Arizona" },
+    { "@type": "State", name: "Texas" },
+    { "@type": "State", name: "Illinois" },
+  ],
+  contactPoint: [
+    {
+      "@type": "ContactPoint",
+      telephone: "+1-415-535-2155",
+      contactType: "customer service",
+      areaServed: "US",
+      availableLanguage: ["English", "Spanish"],
+    },
+    {
+      "@type": "ContactPoint",
+      email: "info@yunirides.com",
+      contactType: "customer support",
+    },
+  ],
   sameAs: [
     "https://www.linkedin.com/company/yunirides",
-    "https://www.crunchbase.com/organization/yunirides",
     "https://www.facebook.com/yunirides",
     "https://www.instagram.com/yunirides",
+    "https://www.crunchbase.com/organization/yunirides",
   ],
-  contactPoint: {
-    "@type": "ContactPoint",
-    telephone: "+1-415-535-2155",
-    contactType: "customer service",
-    areaServed: "US",
-    availableLanguage: ["English", "Spanish"],
-  },
 };
 
 export default function RootLayout({

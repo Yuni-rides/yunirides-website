@@ -90,8 +90,7 @@ export default function HomeBanner() {
               }`}
             >
               <h1 className="sr-only">
-                Yuni Rides – Safe, Technology-Driven Transportation for Children
-                & Families
+                School District Transportation Services — Special Needs, IEP & McKinney-Vento Across 5 States
               </h1>
 
               <h2 className="text-[36px] lg:text-[40px] font-bold text-yuni-navy leading-[1.2] tracking-tight mb-5 font-heading">
@@ -204,3 +203,8 @@ export default function HomeBanner() {
     </div>
   );
 }
+
+
+
+
+
