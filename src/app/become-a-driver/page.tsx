@@ -8,14 +8,14 @@ import FAQSection from "@/components/shared/FaqSection";
 import DriverBanner from "../features/driver/components/Driverbanner";
 
 export const metadata: Metadata = {
-  title: "Apply to Drive for Yuni Rides | Earn $35/Hour + $500 Bonus",
+  title: "Drive for Yuni Rides | Mileage-Based Pay $30–$40+ Per Trip",
   description:
-    "Join Yuni Rides as a part-time school driver. Earn $35/hour with predictable weekday schedules. Weekends off. Background check covered. Apply in 2 minutes.",
+    "Join Yuni Rides as a part-time school driver. Mileage-based pay: $30–$40 per trip, plus $1/mile over 20 miles. Weekday mornings & afternoons only. Weekends off. Apply in 2 minutes.",
   alternates: { canonical: "https://www.yunirides.com/become-a-driver" },
   openGraph: {
-    title: "Apply to Drive for Yuni Rides | Earn $35/Hour + $500 Bonus",
+    title: "Drive for Yuni Rides | Mileage-Based Pay $30–$40+ Per Trip",
     description:
-      "Join Yuni Rides as a part-time driver. Earn $35/hour with predictable weekday schedules. Weekends off.",
+      "Mileage-based pay: $30–$40 per trip + $1/mile over 20 miles. Predictable weekday schedules. Weekends off. Background check covered.",
     url: "https://www.yunirides.com/become-a-driver",
     siteName: "Yuni Rides",
     images: [
@@ -23,16 +23,16 @@ export const metadata: Metadata = {
         url: "https://www.yunirides.com/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Drive for Yuni Rides — Earn $35/Hour",
+        alt: "Drive for Yuni Rides — Mileage-Based Pay $30–$40 Per Trip",
       },
     ],
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Apply to Drive for Yuni Rides | Earn $35/Hour + $500 Bonus",
+    title: "Drive for Yuni Rides | Mileage-Based Pay $30–$40+ Per Trip",
     description:
-      "Part-time school driver. $35/hour. Weekends off. Apply in 2 minutes.",
+      "Mileage-based pay: $30–$40 per trip + $1/mile over 20 miles. Weekends off. Apply in 2 minutes.",
   },
 };
 
@@ -41,7 +41,7 @@ const jobPostingSchema = {
   "@type": "JobPosting",
   title: "Part-Time School Transportation Driver",
   description:
-    "Drive with Yuni Rides and earn $35/hour on predictable weekday schedules. Transport students safely to and from school. Weekends off. $500 signup bonus after 50 rides. Background check and safety certification covered by Yuni Rides.",
+    "Drive with Yuni Rides on predictable weekday schedules. Pay is mileage-based: $30 for trips 1–7 miles, $35 for 8–14 miles, $40 for 15–20 miles, and $40 + $1 per additional mile beyond 20 miles. Transport students safely to and from school. Weekends off. Background check and safety certification covered by Yuni Rides.",
   datePosted: "2026-06-23",
   validThrough: "2026-12-31",
   employmentType: "PART_TIME",
@@ -72,12 +72,13 @@ const jobPostingSchema = {
     currency: "USD",
     value: {
       "@type": "QuantitativeValue",
-      value: 35,
-      unitText: "HOUR",
+      minValue: 30,
+      maxValue: 40,
+      unitText: "TRIP",
     },
   },
   jobBenefits:
-    "$500 signup bonus after 50 rides. Background check covered. 8-hour safety certification covered.",
+    "Mileage-based pay: $30 (1–7 mi), $35 (8–14 mi), $40 (15–20 mi), $40 + $1/mi over 20 miles. Signup bonus after 50 rides. Background check covered. 8-hour safety certification covered.",
   qualifications:
     "Valid driver's license. 3+ years driving history. Must pass background check.",
   workHours: "Monday–Friday, mornings and afternoons. Weekends off.",

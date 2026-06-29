@@ -4,7 +4,7 @@ import CareersClient from "@/app/features/careers/components/CareersClient";
 export const metadata: Metadata = {
   title: "Careers at Yuni Rides | School Transportation Driver Jobs",
   description:
-    "Join Yuni Rides as a part-time school transportation driver. Earn $35/hour, weekends off, $500 signup bonus. Positions available in WA, CA, AZ, TX, IL. Apply today.",
+    "Join Yuni Rides as a part-time school transportation driver. Earn $35/hour, weekends off. Positions available in WA, CA, AZ, TX, IL. Apply today.",
   keywords: [
     "school transportation driver jobs",
     "student transport driver hiring",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "School Driver Jobs | Yuni Rides Careers",
     description:
-      "Part-time school driver. $35/hour. Weekends off. $500 bonus. Hiring in WA, CA, AZ, TX, IL.",
+      "Part-time school driver. $35/hour. Weekends off. Hiring in WA, CA, AZ, TX, IL.",
     images: ["https://www.yunirides.com/og-image.png"],
   },
 };
@@ -47,7 +47,7 @@ const jobPostingSchema = {
   "@type": "JobPosting",
   title: "Part-Time School Transportation Driver",
   description:
-    "Drive with Yuni Rides and earn $35/hour transporting students safely to and from school on predictable weekday schedules. $500 signup bonus after 50 rides. Background check and 8-hour safety certification covered by Yuni Rides. Weekends off.",
+    "Drive with Yuni Rides on predictable weekday schedules. Pay is mileage-based: $30 for trips 1–7 miles, $35 for 8–14 miles, $40 for 15–20 miles, and $40 + $1 per additional mile beyond 20 miles. Transport students safely to and from school. Weekends off. Background check and safety certification covered by Yuni Rides.",
   datePosted: "2026-06-23",
   validThrough: "2026-12-31",
   employmentType: "PART_TIME",
@@ -61,8 +61,8 @@ const jobPostingSchema = {
     "@type": "Place",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Seattle",
       addressRegion: "WA",
+      addressLocality: "Seattle",
       addressCountry: "US",
     },
   },
@@ -78,12 +78,13 @@ const jobPostingSchema = {
     currency: "USD",
     value: {
       "@type": "QuantitativeValue",
-      value: 35,
-      unitText: "HOUR",
+      minValue: 30,
+      maxValue: 40,
+      unitText: "TRIP",
     },
   },
   jobBenefits:
-    "$500 signup bonus after 50 rides. Background check covered. 8-hour safety certification covered by employer.",
+    "Mileage-based pay: $30 (1–7 mi), $35 (8–14 mi), $40 (15–20 mi), $40 + $1/mi over 20 miles. Signup bonus after 50 rides. Background check covered. 8-hour safety certification covered.",
   qualifications:
     "Valid driver's license. 3+ years driving history. Must pass background check.",
   workHours: "Monday–Friday, mornings and afternoons. Weekends off.",
@@ -91,7 +92,7 @@ const jobPostingSchema = {
 };
 
 export default function CareersPage() {
-    return (
+  return (
     <>
       <script
         type="application/ld+json"
