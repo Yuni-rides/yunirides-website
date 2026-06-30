@@ -14,7 +14,7 @@ export default function BlogClient() {
   const sidePosts = blogPostsList.slice(1);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 3;
+  const postsPerPage = 4;
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
@@ -68,11 +68,11 @@ export default function BlogClient() {
                 >
                   <Link
                     href={`/blog/${featuredLeft.slug}`}
-                    className="btn-outline"
+                    className="btn-outline hover:!text-white"
                   >
                     Learn more
                   </Link>
-                </motion.div>
+                </motion.div> 
               </motion.div>
             )}
 

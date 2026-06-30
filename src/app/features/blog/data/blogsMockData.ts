@@ -17,6 +17,1278 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "why-safe-student-transportation-changes-everything": {
+    slug: "why-safe-student-transportation-changes-everything",
+    title: "Why Safe Student Transportation Changes Everything for Families of Children With Special Needs",
+    excerpt: "Safe, reliable transportation is not just a logistic for families of special needs students — it is the foundation of their child's daily wellbeing. Yuni Rides shares why we exist and how we are different.",
+    heroImage: "/images/Brand-Storytelling.jpg",
+    date: "Jun 30, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "heading",
+        text: "Why does transportation matter so much for special needs students?",
+      },
+      {
+        type: "paragraph",
+        text: "For students with disabilities or housing instability, transportation is not just a convenience — it is a critical support that enables educational access, daily routine, and emotional stability. Unreliable or inappropriate transportation can cause behavioral dysregulation, missed therapy sessions, and disrupted IEP goals. Safe, consistent, trained transportation directly supports the student's educational outcomes.",
+      },
+      {
+        type: "paragraph",
+        text: "Before a child with autism can learn to read, before a student with cerebral palsy can access their adapted physical education class, before a child experiencing homelessness can sit down in a stable classroom — they have to get there. For most families, the daily journey to school is unremarkable. For families of children with special needs, it can be the most stressful 30 minutes of the day.",
+      },
+      {
+        type: "heading",
+        text: "The Morning Routine: What It Really Looks Like",
+      },
+      {
+        type: "paragraph",
+        text: "For families of children with IEPs, the morning transportation window is often tightly calibrated around the child's sensory and behavioral needs. The wrong driver, the wrong vehicle, or even an unfamiliar face at the pickup door can dysregulate a child before they ever reach their classroom.",
+      },
+      {
+        type: "paragraph",
+        text: "Parents frequently describe common scenarios they want eliminated: substitute drivers who do not know the student's communication style, late pickups that compress the arrival routine, overwhelming vehicle configurations without aides, and zero real-time communication. These are daily realities for many families across Washington, California, Texas, Arizona, and Illinois — and they are the exact reason Yuni Rides was founded.",
+      },
+      {
+        type: "heading",
+        text: "What 'Safe' Actually Means in Special Needs Transportation",
+      },
+      {
+        type: "heading",
+        text: "Predictability & Communication",
+      },
+      {
+        type: "paragraph",
+        text: "When parents of special needs students say they want safe transportation, they mean something deeply aligned with predictability, rich communication, trained presence, and true dignity:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Predictability: Students with autism or sensory processing differences depend heavily on routine. The same driver, the same vehicle, and the same pickup window are therapeutic necessities.",
+          "Communication: Parents need to know exactly where their child is in real time. Proactive updates via live GPS configurations eliminate transit anxiety.",
+          "Trained Presence: A driver trained in special education protocols understands how to manage auditory sensitivities and deploy de-escalation strategies smoothly.",
+          "Dignity: Every student deserves to be treated as an individual with distinct strengths, never as an administrative burden or a difficult log on a route.",
+        ],
+      },
+      {
+        type: "image",
+        src: "/images/Brand-Storytelling.jpg",
+      },
+      {
+        type: "heading",
+        text: "The Connection Between Transportation and Educational Outcomes",
+      },
+      {
+        type: "paragraph",
+        text: "Research in special education consistently shows that transportation quality directly affects educational outcomes. When transportation is unreliable, students arrive dysregulated, chronic lateness compresses therapeutic service windows (like OT, PT, and speech), and attendance gaps disrupt tracking milestones. Conversely, professional and consistent transit acts as a positive anchor for the student's entire day.",
+      },
+      {
+        type: "heading",
+        text: "The McKinney-Vento Dimension: Transportation as Educational Equity",
+      },
+      {
+        type: "paragraph",
+        text: "For students experiencing homelessness or housing instability, transportation is a core educational equity issue. A student who cannot get to their school of origin is effectively denied the structural stability that federal frameworks protect. Yuni Rides coordinates directly with district McKinney-Vento liaisons, bridging multi-district operational bounds and ensuring that housing transitions do not interrupt a child's education.",
+      },
+      {
+        type: "heading",
+        text: "The Yuni Rides Difference",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides was built on a single premise: students with special needs deserve transportation that is as carefully designed as their education. We bring the same level of individualization, documentation, and professional training to the ride to school as IEP teams bring to the classroom.",
+      },
+      {
+        type: "paragraph",
+        text: "Every route features dedicated driver matching, full transparency with parent-facing live tracking apps, specialized behavioral onboarding, and absolute compliance with licensing standards in WA, CA, TX, AZ, and IL. Discover how a consistent journey can transform your child's school day. Contact us at 415-535-2155 or reach out to info@yunirides.com.",
+      },
+    ],
+  },
+  "school-district-transportation-contractor-guide": {
+    slug: "school-district-transportation-contractor-guide",
+    title: "How School Districts Choose Special Needs Transportation Contractors: A District Administrator's Complete Guide",
+    excerpt: "A practical guide for school district transportation directors on evaluating, selecting, and contracting with special needs transportation providers. Compliance, cost, and quality benchmarks.",
+    heroImage: "/images/District-Administrator-Guide.jpg",
+    date: "Jun 30, 2026",
+    readTime: "8 mins read",
+    contentBlocks: [
+      {
+        type: "heading",
+        text: "What criteria do school districts use to select special needs transportation contractors?",
+      },
+      {
+        type: "paragraph",
+        text: "School districts evaluate special needs transportation contractors on: IDEA and state law compliance, driver training standards, vehicle accessibility certification, background check protocols, on-time performance data, communication systems, insurance coverage, and references from other districts. Cost per trip is a factor, but compliance and safety qualifications are always evaluated first for special needs contracts.",
+      },
+      {
+        type: "paragraph",
+        text: "For school district transportation directors, selecting a contractor for special needs and IEP transportation is one of the highest-stakes procurement decisions they face. Unlike general student transportation, special needs routes carry legal obligations, individualized requirements, and potentially severe consequences for service failures.",
+      },
+      {
+        type: "paragraph",
+        text: "This guide is written specifically for district administrators — transportation directors, special education directors, and finance officers — who are evaluating or re-evaluating their special needs transportation contracts.",
+      },
+      {
+        type: "heading",
+        text: "The Legal Baseline: What Your Contract Must Guarantee",
+      },
+      {
+        type: "paragraph",
+        text: "Any special needs transportation contract must ensure the contractor can fulfill your district's IDEA obligations. Before evaluating cost, verify that the contractor can demonstrate IDEA compliance documentation (driver training records, vehicle inspection certificates, liability insurance certificates), state-specific compliance, IEP implementation capability, and incident reporting protocols that meet FERPA requirements.",
+      },
+      {
+        type: "heading",
+        text: "RFP Development: What to Include",
+      },
+      {
+        type: "heading",
+        text: "Driver Qualifications & Vehicle Requirements",
+      },
+      {
+        type: "paragraph",
+        text: "A well-designed RFP for special needs transportation should specify stringent parameters across driver qualifications, vehicle specifications, and operational standards. Ensure the following areas are rigorously detailed:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Minimum background check standard (FBI fingerprint, national sex offender registry, state checks in all states where driver has lived)",
+          "Required special education training hours, CPR/First Aid certification, and annual refresh requirements",
+          "Minimum fleet age, inspection standards, and Wheelchair-Accessible Vehicle (WAV) availability on demand",
+          "GPS tracking capability with real-time data sharing alongside emergency communication equipment",
+          "On-time performance benchmarks, explicit substitute driver notification timelines, and immediate incident reporting systems",
+        ],
+      },
+      {
+        type: "image",
+        src: "/images/District-Administrator-Guide.jpg",
+      },
+      {
+        type: "heading",
+        text: "Red Flags When Evaluating Contractors",
+      },
+      {
+        type: "paragraph",
+        text: "During the procurement process, administrators should watch out for severe warning signs that indicate low compliance or operational risk:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Inability to produce detailed driver training records on demand during the evaluation window",
+          "Background check standards that rely solely on employment verification without FBI fingerprints",
+          "No dedicated special needs experience (e.g., general taxi or rideshare operators serving students on the side)",
+          "Unavailable on-time performance history or references that refuse to verify service claims",
+          "Informal or unstructured communication frameworks with families, such as relying entirely on personal cell phones",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Contract Monitoring: How to Ensure Ongoing Compliance",
+      },
+      {
+        type: "paragraph",
+        text: "Awarding the contract is not the end of oversight — it is the beginning. Effective contract monitoring includes monthly on-time performance reports from the contractor, annual driver background check re-verification, random vehicle inspections by district staff, quarterly parent satisfaction surveys, and sampling 10% of IEP transportation plans quarterly to verify compliance.",
+      },
+      {
+        type: "heading",
+        text: "Why Specialized Providers Outperform General Contractors",
+      },
+      {
+        type: "paragraph",
+        text: "Many districts initially award transportation contracts to the lowest bidder — often a general transportation company that supplements its school contract with taxi, delivery, or charter work. These providers frequently struggle because general dispatch systems are not designed around IEP specifications, driver pools lack behavioral de-escalation training, and incident response lacks the proper special education documentation framework.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides exists specifically in the specialized student transportation space. Every process we have built — driver training, dispatch, communication, documentation — is designed around the requirements of students with IEPs, special needs, and McKinney-Vento status across WA, CA, TX, AZ, and IL.",
+      },
+      {
+        type: "heading",
+        text: "Request a District Consultation",
+      },
+      {
+        type: "paragraph",
+        text: "If your district is preparing an RFP or needs a specialized contractor to resolve current compliance gaps, Yuni Rides provides the structure, tech infrastructure, and vetting required. Contact our specialized administrator support desk at 415-535-2155 or via info@yunirides.com.",
+      },
+    ],
+  },
+  "ultimate-guide-special-needs-student-transportation": {
+    slug: "ultimate-guide-special-needs-student-transportation",
+    title: "The Ultimate Guide to Special Needs Student Transportation (2026)",
+    excerpt: "The complete guide to special needs student transportation: IEP rights, McKinney-Vento, vehicle standards, choosing a provider, and what parents and districts need to know in 2026.",
+    heroImage: "/images/Ultimate-Transportation-Guide.jpg",
+    date: "Jun 30, 2026",
+    readTime: "10 mins read",
+    contentBlocks: [
+      {
+        type: "heading",
+        text: "What is special needs student transportation?",
+      },
+      {
+        type: "paragraph",
+        text: "Special needs student transportation refers to individualized, legally mandated transportation services for students with disabilities or housing instability. Under IDEA, students with IEPs are entitled to free transportation when needed. Under McKinney-Vento, homeless students receive free transport to their school of origin. These services use specialized vehicles, trained drivers, and individualized accommodations — distinct from regular school bus service.",
+      },
+      {
+        type: "paragraph",
+        text: "This comprehensive guide covers every aspect of special needs student transportation — from federal law requirements to practical tips for parents and school administrators. Whether you are a parent navigating your child's first IEP, a district transportation director evaluating providers, or a school counselor helping a family in crisis, this guide gives you everything you need.",
+      },
+      {
+        type: "heading",
+        text: "Part 1: The Legal Framework",
+      },
+      {
+        type: "heading",
+        text: "IDEA and IEP Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "The Individuals with Disabilities Education Act (IDEA) is the federal law that guarantees free appropriate public education (FAPE) for students with disabilities ages 3–21. Under IDEA (34 CFR 300.34), transportation is explicitly listed as a 'related service' — meaning it must be provided at no cost when it is necessary for the student to access their education.",
+      },
+      {
+        type: "paragraph",
+        text: "Key IDEA transportation provisions: districts must provide transportation when the IEP team determines it is necessary; transportation must be provided to the school where the student is placed; the district bears all costs; transportation services must be described specifically in the IEP document.",
+      },
+      {
+        type: "heading",
+        text: "Section 504 and Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Students with 504 plans (disability accommodations that do not require special education) may also qualify for transportation accommodations. While 504 does not mandate the same level of individualized transportation as IEP, districts must provide equal access to transportation and reasonable accommodations.",
+      },
+      {
+        type: "heading",
+        text: "McKinney-Vento and Housing-Insecure Students",
+      },
+      {
+        type: "paragraph",
+        text: "The McKinney-Vento Homeless Assistance Act requires free transportation for students experiencing homelessness to their school of origin. This applies regardless of whether the student has an IEP — it is a separate protection for housing instability.",
+      },
+      {
+        type: "heading",
+        text: "Part 2: Types of Special Needs Transportation Services",
+      },
+      {
+        type: "heading",
+        text: "Door-to-Door Service",
+      },
+      {
+        type: "paragraph",
+        text: "Door-to-door transportation picks the student up at their home address and drops them off at the school entrance (or specific designated location). This is the most common IEP transportation arrangement for students who cannot safely wait at a bus stop or navigate independently.",
+      },
+      {
+        type: "heading",
+        text: "Curb-to-Curb Service",
+      },
+      {
+        type: "paragraph",
+        text: "Similar to door-to-door but picks up at the curb of the home address rather than the door. Appropriate for students who can walk to the curb but cannot walk to a standard bus stop.",
+      },
+      {
+        type: "heading",
+        text: "Wheelchair-Accessible Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Vehicles equipped with certified wheelchair lifts or ramps, proper tie-down systems, and trained staff to assist students using wheelchairs, scooters, or other mobility devices.",
+      },
+      {
+        type: "heading",
+        text: "Aide-Accompanied Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "A trained aide rides with the student when the IEP specifies one-on-one support during transport. Aides may assist with behavioral management, medical monitoring, or physical assistance.",
+      },
+      {
+        type: "heading",
+        text: "Medical Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "For students with medically fragile conditions, transportation may require a driver trained in specific medical protocols and a vehicle equipped with emergency equipment.",
+      },
+      {
+        type: "heading",
+        text: "Part 3: The IEP Transportation Planning Process",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation should be discussed at every IEP meeting if it is a current or potential need. The IEP transportation section should specify:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Whether transportation is a related service (Yes/No)",
+          "Type of transportation and vehicle requirements",
+          "Pickup and drop-off location (exact address)",
+          "Pickup window (e.g., 7:05–7:15 AM)",
+          "Whether an aide is required",
+          "Behavioral supports or protocols for the driver",
+          "Communication method between driver and family",
+          "What to do in case of emergency or behavioral incident",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Part 4: Common Problems and How to Solve Them",
+      },
+      {
+        type: "heading",
+        text: "Chronic Lateness",
+      },
+      {
+        type: "paragraph",
+        text: "Document every late pickup with date, time, and how late. After three incidents, send a written complaint to the special education director. If lateness continues, file a state complaint — chronic failures to implement IEP transportation are procedural violations.",
+      },
+      {
+        type: "heading",
+        text: "Driver Changes Without Notice",
+      },
+      {
+        type: "paragraph",
+        text: "Students with autism in particular can be severely disrupted by unexpected driver changes. The IEP should specify the notification requirement (e.g., 24-hour advance notice of driver substitutions with photo identification).",
+      },
+      {
+        type: "heading",
+        text: "Behavioral Incidents on the Vehicle",
+      },
+      {
+        type: "paragraph",
+        text: "Any behavioral incident during transport should be documented in writing and shared with parents the same day. The district may need to review the transportation plan and add de-escalation supports if incidents are recurring.",
+      },
+      {
+        type: "heading",
+        text: "District Refuses to Provide Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "If an IEP team denies transportation, the district must issue Prior Written Notice (PWN) explaining the refusal. Parents can then file a state complaint or request due process. Under IDEA's pendency provision, previously provided services continue during disputes.",
+      },
+      {
+        type: "heading",
+        text: "Part 5: Vehicle and Driver Standards",
+      },
+      {
+        type: "paragraph",
+        text: "Quality special needs transportation providers maintain standards that exceed general commercial transportation:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Multi-state fingerprint background checks renewed annually",
+          "Special education-specific driver training (not just CDL)",
+          "CPR/First Aid certification for all drivers",
+          "De-escalation and crisis intervention training",
+          "Vehicle inspections exceeding state minimum requirements",
+          "Child safety restraint systems certified by CPS technicians",
+          "Real-time GPS and parent communication systems",
+        ],
+      },
+      {
+        type: "image",
+        src: "/images/Ultimate-Transportation-Guide.jpg",
+      },
+      {
+        type: "heading",
+        text: "Part 6: What to Ask When Evaluating a Provider",
+      },
+      {
+        type: "paragraph",
+        text: "When a school district or family is selecting a special needs transportation provider, these are the non-negotiable questions:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What specific special education training do all drivers complete?",
+          "How often are background checks renewed?",
+          "What is your on-time delivery rate with existing school district clients?",
+          "Can you provide references from current district contracts?",
+          "How are parents notified of delays, substitutions, or incidents?",
+          "Can your vehicles accommodate the specific disability needs in our student's IEP?",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Part 7: How Yuni Rides Serves Special Needs Students Across 5 States",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides is a specialized student transportation provider operating exclusively in the IEP, special needs, and McKinney-Vento space. We are not a rideshare app. We are not a general taxi service. We exist specifically to transport vulnerable students safely, and we do this across Washington, California, Texas, Arizona, and Illinois.",
+      },
+      {
+        type: "paragraph",
+        text: "Our approach: every student receives a dedicated driver assignment, a communication plan for their family, and a transportation profile that the driver reviews before their first route. We coordinate directly with school special education departments and McKinney-Vento liaisons, not just families.",
+      },
+      {
+        type: "heading",
+        text: "Yuni Rides: The Specialized Transportation Team Built for Students Like Yours",
+      },
+      {
+        type: "paragraph",
+        text: "Whether you need to scale up your district's logistics solution or establish personal routing clarity for an IEP program, our team offers unmatched, legally compliant support. Reach out to Yuni Rides today at 415-535-2155 or connect with us at info@yunirides.com.",
+      },
+    ],
+  },
+  "special-needs-transportation-texas": {
+    slug: "special-needs-transportation-texas",
+    title: "Special Needs Transportation in Texas: A Complete Guide for Houston, Dallas, and Beyond",
+    excerpt: "Expert IEP and special needs student transportation in Houston, Dallas, and across Texas. Yuni Rides meets TEA standards, IDEA requirements, and provides door-to-door service for students with disabilities.",
+    heroImage: "/images/Special-Needs-Transportation-in-Texas-Houston- Dallas-&-Beyond.jpg",
+    date: "Jun 30, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "heading",
+        text: "What are the IEP transportation requirements in Texas?",
+      },
+      {
+        type: "paragraph",
+        text: "Texas Education Agency (TEA) requires school districts to provide free transportation for students with IEPs when the ARD (Admission, Review, and Dismissal) committee determines it is a necessary related service. Texas follows federal IDEA requirements and adds state-specific standards through the Texas Education Code (TEC) Section 29.001 and 19 TAC Chapter 89.",
+      },
+      {
+        type: "paragraph",
+        text: "Texas is home to some of the largest school districts in the country — Houston ISD, Dallas ISD, and Fort Worth ISD each serve hundreds of thousands of students, including tens of thousands with IEPs and special needs. Coordinating specialized transportation at this scale requires experienced, licensed providers who understand both federal IDEA requirements and Texas-specific ARD processes.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides brings specialized expertise to Texas families and school districts, with services in Houston, Dallas, and surrounding areas.",
+      },
+      {
+        type: "heading",
+        text: "Texas Law: What the ARD Committee Decides About Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "In Texas, transportation is discussed at the ARD (Admission, Review, and Dismissal) committee meeting, which is the Texas equivalent of the IEP team meeting. The ARD committee determines:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Whether transportation is a necessary related service for the student",
+          "The type of transportation (vehicle requirements, aide needs, route specifications)",
+          "Whether the student can safely use regular school transportation with accommodations",
+          "Any specialized services required — door-to-door pickup, specific timing windows, communication protocols",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Texas Education Code Section 29.001 requires districts to provide transportation when it is 'necessary to provide a free appropriate public education (FAPE).' This is the same standard as federal IDEA, but Texas adds specific procedural requirements through the ARD process.",
+      },
+      {
+        type: "heading",
+        text: "Houston ISD Special Needs Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Houston ISD is the largest school district in Texas and among the largest in the nation. The district serves more than 12,000 students with IEPs requiring specialized transportation — a figure that strains district-operated fleets. Many families and districts supplement HISD transportation with contracted providers like Yuni Rides for:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Students whose IEPs require door-to-door service that fixed routes cannot provide",
+          "Students in out-of-district specialized programs (e.g., at non-HISD campuses)",
+          "McKinney-Vento students who have moved between Houston-area districts",
+          "After-hours and ESY (Extended School Year) transportation that district fleets do not cover",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Dallas ISD and DFW Area Special Needs Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Dallas ISD, Frisco ISD, Plano ISD, and surrounding districts in the DFW metroplex face rapid enrollment growth that compounds transportation challenges. Key issues include long distances between home and specialized program campuses across the sprawling DFW metro, high rates of McKinney-Vento identification in Dallas County, and demand for transportation to both public and private specialized placement facilities.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides operates in the DFW area with drivers trained in Dallas ISD's specific IEP documentation requirements and familiar with the district's Transportation Department coordination protocols.",
+      },
+      {
+        type: "image",
+        src: "/images/Special-Needs-Transportation-in-Texas-Houston- Dallas-&-Beyond.jpg",
+      },
+      {
+        type: "heading",
+        text: "Texas Driver and Vehicle Requirements for Special Needs Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Texas has specific requirements for drivers transporting students with disabilities:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Texas CDL with school bus or passenger endorsement (where vehicle size requires)",
+          "Fingerprint-based criminal history check through TEA",
+          "Completion of TEA's required driver training program for special needs transportation",
+          "CPR/First Aid certification",
+          "Vehicle inspection by Texas DPS for school vehicles",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides maintains full compliance with all TEA requirements. Documentation is available to contracting school districts upon request.",
+      },
+      {
+        type: "heading",
+        text: "Common Texas Transportation Challenges for IEP Families",
+      },
+      {
+        type: "heading",
+        text: "Large District, Long Waits",
+      },
+      {
+        type: "paragraph",
+        text: "In large districts like Houston and Dallas, families sometimes experience inconsistent pickup windows, driver substitutions without notice, or route changes that disrupt students' routines. Yuni Rides maintains dedicated driver assignments to minimize disruption.",
+      },
+      {
+        type: "heading",
+        text: "Private School Placements",
+      },
+      {
+        type: "paragraph",
+        text: "When a student's ARD committee places them in a private school to meet FAPE requirements, transportation must be provided. Yuni Rides works directly with ARD coordinators and private placement facilities to establish compliant transportation plans.",
+      },
+      {
+        type: "heading",
+        text: "ESY Transportation Gaps",
+      },
+      {
+        type: "paragraph",
+        text: "Many Texas districts struggle to provide transportation during Extended School Year. Yuni Rides fills these gaps directly, coordinating with ESY program staff at the school site.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions: Texas IEP Transportation",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What is the difference between IEP transportation and regular school bus service in Texas? \nA: Regular school bus service follows fixed routes with standard stops. IEP transportation under a Texas ARD plan is individualized — door-to-door service, specific timing, trained personnel, and vehicle accommodations determined by the student's specific needs. It is free under IDEA and cannot be conditioned on fees.",
+          "Can Texas parents request a private provider for their IEP child's transportation? \nA: Parents can advocate during the ARD meeting for specific transportation requirements, and if the district cannot meet those requirements internally, they may contract with approved providers. Contact your district's special education transportation coordinator to understand the approval process.",
+          "Who handles McKinney-Vento transportation in Texas school districts? \nA: Each Texas district that receives Title I funds must have a McKinney-Vento liaison. In large districts like Houston ISD and Dallas ISD, there are dedicated homeless education departments. Contact your district's homeless education coordinator to initiate transportation arrangements.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Yuni Rides Serves Houston, Dallas, and Texas School Districts",
+      },
+      {
+        type: "paragraph",
+        text: "If you are looking for a trusted partner to navigate TEA and ARD requirements across Houston, Dallas, or Fort Worth, Yuni Rides offers the scalability and compliance your district needs. Reach out to our Texas operations team at 415-535-2155 or email info@yunirides.com.",
+      },
+    ],
+  },
+  "special-needs-transportation-washington-state": {
+    slug: "special-needs-transportation-washington-state",
+    title: "Special Needs Transportation in Washington State: A Complete 2026 Guide",
+    excerpt: "Comprehensive guide to special needs and IEP student transportation in Washington State. Serving Seattle, Everett, Tacoma and surrounding districts. Yuni Rides — licensed WA provider.",
+    heroImage: "/images/Special-Needs-Transportation-in-Washington-State.jpg",
+    date: "Jun 30, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "heading",
+        text: "What special needs transportation services are available in Washington State?",
+      },
+      {
+        type: "paragraph",
+        text: "Washington State school districts are required under both federal IDEA law and state Special Education law (RCW 28A.155.220) to provide free transportation for students with IEPs when transportation is a listed related service. Providers serving WA must hold a valid motor carrier permit, pass OSPI compliance standards, and follow district-specific IEP transportation protocols.",
+      },
+      {
+        type: "paragraph",
+        text: "Washington State has some of the most comprehensive protections for students with disabilities in the country. Under both federal IDEA requirements and Washington's own special education statutes, school districts must ensure students with IEPs have safe, reliable, and appropriate transportation. This guide covers what families and district administrators need to know — and how Yuni Rides supports these students in the Puget Sound region and beyond.",
+      },
+      {
+        type: "heading",
+        text: "Washington State Law on Special Needs Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Washington State law (RCW 28A.155.220) requires that students with disabilities receive transportation 'when necessary for the student to benefit from special education.' This mirrors IDEA's language but Washington's OSPI (Office of Superintendent of Public Instruction) has issued detailed guidance that goes further:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Transportation plans must be developed as part of the IEP process, not separately",
+          "Districts must coordinate with county transportation authorities for inter-district routes",
+          "Drivers transporting students under an IEP must meet additional training requirements beyond standard CDL licensing",
+          "Vehicles used for special education transportation must meet WAC 392-145 safety standards",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Cities and Districts We Serve in Washington",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides currently serves school districts and families across the greater Puget Sound area and expanding statewide:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Seattle (Seattle Public Schools, one of the largest McKinney-Vento populations in the Northwest)",
+          "Everett (Everett Public Schools, Mukilteo School District)",
+          "Tacoma (Tacoma Public Schools, Federal Way Public Schools)",
+          "Bellevue and Eastside Districts (Lake Washington School District, Bellevue School District)",
+          "Shoreline, Lynnwood, Renton, and surrounding Snohomish County districts",
+        ],
+      },
+      {
+        type: "heading",
+        text: "What Makes Washington IEP Transportation Unique?",
+      },
+      {
+        type: "heading",
+        text: "High McKinney-Vento Enrollment",
+      },
+      {
+        type: "paragraph",
+        text: "Washington state consistently ranks among the top states nationally for McKinney-Vento student identification. King County and Pierce County shelter networks create significant inter-district transportation coordination demands that many standard providers cannot handle.",
+      },
+      {
+        type: "heading",
+        text: "Specialized Programs Across District Lines",
+      },
+      {
+        type: "paragraph",
+        text: "Washington operates numerous specialized education programs — autism centers, behavioral support programs, medically fragile programs — that draw students from multiple districts. Transportation to out-of-district placements requires cross-district billing coordination that Yuni Rides manages directly with district staff.",
+      },
+      {
+        type: "heading",
+        text: "Geography and Traffic",
+      },
+      {
+        type: "paragraph",
+        text: "The Puget Sound's geography — bodies of water, bridges, and traffic congestion — creates real challenges for on-time performance. Yuni Rides drivers know these routes and plan accordingly, with real-time traffic monitoring built into dispatch.",
+      },
+      {
+        type: "image",
+        src: "/images/Special-Needs-Transportation-in-Washington-State.jpg",
+      },
+      {
+        type: "heading",
+        text: "How Yuni Rides Serves Washington IEP Students",
+      },
+      {
+        type: "paragraph",
+        text: "We provide comprehensive operational solutions tailored to the Pacific Northwest region:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Door-to-door pickup and drop-off at the address specified in the IEP",
+          "Real-time GPS tracking with parent notification",
+          "Wheelchair-accessible vehicles with certified lift systems",
+          "Trained aides available when required by the student's IEP",
+          "Multi-district billing and coordination with OSPI-compliant documentation",
+          "Direct McKinney-Vento liaison coordination for housing-insecure students",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Washington Transportation Safety Standards",
+      },
+      {
+        type: "paragraph",
+        text: "All Yuni Rides vehicles operating in Washington meet or exceed WAC 392-145 requirements:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Annual vehicle inspections through Washington State Patrol",
+          "First aid equipment and emergency communication devices on every vehicle",
+          "Child safety restraints certified for student weight and disability type",
+          "Drivers hold valid Washington CDL (Class B or passenger endorsement) where required",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions: WA Special Needs Transportation",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Can Washington parents choose their own transportation provider for IEP students? \nA: In most cases, the school district selects and contracts with providers. Parents can advocate for specific requirements within the IEP. If a parent believes the district's provider cannot meet their child's needs, they can raise this at an IEP meeting and request documentation of provider qualifications.",
+          "Who do I contact if my child's IEP transportation is not being provided correctly in WA? \nA: Contact your district's special education director first. If unresolved, file a citizen complaint with OSPI's Special Education department. OSPI is required to investigate and respond within 35 calendar days. Washington also has a free Special Education Ombuds who can help families navigate complaints.",
+          "Does Washington require driver training beyond a CDL for special needs routes? \nA: Yes. WAC 392-145-035 requires drivers transporting special education students to complete additional training in student needs, emergency procedures, and IEP-specific protocols. Yuni Rides drivers complete this training and maintain records available to contracting districts.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Serving Seattle, Everett, Tacoma & All of Western Washington",
+      },
+      {
+        type: "paragraph",
+        text: "If you need an OSPI-compliant partner for special education or McKinney-Vento routing across Western Washington, Yuni Rides is ready to support your fleet requirements. Get in touch with our team today at 415-535-2155 or via email at info@yunirides.com.",
+      },
+    ],
+  },
+  "how-to-choose-special-needs-transportation-provider": {
+    slug: "how-to-choose-special-needs-transportation-provider",
+    title: "How to Choose a Special Needs Student Transportation Provider: 12 Questions Every District and Parent Must Ask",
+    excerpt: "Choosing the right transportation for your child with special needs is a critical safety decision. Here are 12 essential questions every parent and school district administrator should ask before signing a contract.",
+    heroImage: "/images/How-to-Choose-a-Provider.jpg",
+    date: "Jun 30, 2026",
+    readTime: "8 mins read",
+    contentBlocks: [
+      {
+        type: "heading",
+        text: "What should I look for when choosing a special needs transportation provider?",
+      },
+      {
+        type: "paragraph",
+        text: "The most important factors are driver training in special education protocols, vehicle accessibility features, background check standards, communication systems for parents, and experience with IEP/504 compliance. Always ask for references from school districts, proof of insurance, and documentation of driver training programs before selecting any provider.",
+      },
+      {
+        type: "paragraph",
+        text: "When a child with a disability or special need boards a vehicle for school, everything — their safety, their anxiety level, their ability to arrive ready to learn — depends on the quality of the transportation provider. This is not a commodity purchase. It is one of the most consequential decisions a school district transportation director or parent advocate can make.",
+      },
+      {
+        type: "paragraph",
+        text: "After years of working with districts across Washington, California, Texas, Arizona, and Illinois, the Yuni Rides team has compiled the 12 questions that separate exceptional providers from risky ones.",
+      },
+      {
+        type: "heading",
+        text: "1. How Are Drivers Trained for Special Needs Students?",
+      },
+      {
+        type: "paragraph",
+        text: "General commercial driver training is not sufficient for transporting students with autism, behavioral challenges, medical conditions, or mobility impairments. Ask any provider:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What specific special education training does every driver complete before their first route?",
+          "Are drivers trained in non-violent crisis intervention (e.g., CPI certification)?",
+          "Do drivers receive training on specific disabilities — autism, cerebral palsy, Down syndrome?",
+          "Is training ongoing (annual refreshers) or one-time only?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "At Yuni Rides, every driver completes a specialized onboarding program that includes student-specific briefings before they ever drive a route.",
+      },
+      {
+        type: "heading",
+        text: "2. What Background Checks Do Drivers Undergo?",
+      },
+      {
+        type: "paragraph",
+        text: "Background check standards vary enormously. A thorough provider should run:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "FBI fingerprint check through the Department of Justice",
+          "National sex offender registry check",
+          "State criminal background check (in every state where the driver has lived)",
+          "Motor vehicle record (MVR) check",
+          "Reference checks from previous employers",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Ask whether background checks are repeated annually or only at hire. Annual checks are the standard for providers serving vulnerable populations.",
+      },
+      {
+        type: "heading",
+        text: "3. What Vehicles Are in the Fleet and How Are They Maintained?",
+      },
+      {
+        type: "paragraph",
+        text: "The vehicle is the student's environment for 20–60 minutes each day. Key questions to consider:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Are vehicles wheelchair-accessible (WAV) with properly certified lifts?",
+          "Are child safety restraints (CSRS) available and properly installed by certified technicians?",
+          "What is the vehicle inspection schedule? Are inspection records available?",
+          "Are vehicles equipped with climate control, working seatbelts, and emergency exits?",
+          "How old is the fleet on average?",
+        ],
+      },
+      {
+        type: "heading",
+        text: "4. What Is the Driver-to-Student Ratio and Is an Aide Available?",
+      },
+      {
+        type: "paragraph",
+        text: "Some students require a dedicated aide on the vehicle — not just a driver. This is often specified in an IEP. Always confirm if the provider can supply trained transportation aides when required, understand what the aide's qualifications are, and verify the maximum number of students per vehicle for special needs routes.",
+      },
+      {
+        type: "heading",
+        text: "5. How Do You Communicate With Parents in Real Time?",
+      },
+      {
+        type: "heading",
+        text: "Do special needs transportation providers offer real-time tracking?",
+      },
+      {
+        type: "paragraph",
+        text: "Quality providers offer real-time GPS tracking accessible to parents via a mobile app or text updates. Some also provide automated arrival/departure notifications and direct driver communication. Real-time transparency is especially important for parents of children with autism or anxiety who cannot self-report transportation issues.",
+      },
+      {
+        type: "paragraph",
+        text: "Make sure to ask: Is there a parent-facing app with real-time vehicle location? Do parents receive an automated text/email when the driver is 5 minutes away? Can parents contact the driver directly during an emergency? How are delays or route substitutions communicated?",
+      },
+      {
+        type: "image",
+        src: "/images/How-to-Choose-a-Provider.jpg",
+      },
+      {
+        type: "heading",
+        text: "6. How Do You Handle Behavioral Incidents on the Vehicle?",
+      },
+      {
+        type: "paragraph",
+        text: "Students with emotional disturbance, autism, or trauma histories may have behavioral challenges during transport. Ensure you check if drivers have specific de-escalation training, how incidents are documented, and what the protocol is if a student's behavior becomes unsafe for the rest of the vehicle.",
+      },
+      {
+        type: "heading",
+        text: "7. How Do You Handle Medical Emergencies?",
+      },
+      {
+        type: "paragraph",
+        text: "Some students have conditions requiring trained response — epilepsy, severe allergies, diabetes, or cardiac conditions. Confirm that drivers are trained in basic first aid and CPR, and make sure there is a system to follow student-specific medical action plans directly from the IEP/504 guidelines.",
+      },
+      {
+        type: "heading",
+        text: "8. What Is Your On-Time Performance Record?",
+      },
+      {
+        type: "paragraph",
+        text: "Consistency matters enormously for students with sensory processing differences or anxiety. Late pickups disrupt routines and can cause significant behavioral dysregulation. Ask for on-time rate data from current contracts and discover what backup systems are deployed when a driver calls out sick.",
+      },
+      {
+        type: "heading",
+        text: "9. Are You Fully Licensed and Insured in Our State?",
+      },
+      {
+        type: "paragraph",
+        text: "Requirements vary significantly by state. Verify that the provider holds a valid motor carrier permit or school transportation license in your state, commercial auto insurance with appropriate liability limits (typically $1M+ per occurrence), and full workers' compensation coverage.",
+      },
+      {
+        type: "heading",
+        text: "10. How Do You Handle Substitutions and Route Changes?",
+      },
+      {
+        type: "paragraph",
+        text: "Student consistency is critical, especially for children with autism. Sudden driver changes can cause significant distress. Find out what the process is for notifying families when a substitute driver is needed and if substitute drivers are held to the exact same training benchmarks.",
+      },
+      {
+        type: "heading",
+        text: "11. Can You Accommodate Our Specific IEP Requirements?",
+      },
+      {
+        type: "paragraph",
+        text: "Every student's IEP may specify different requirements. A quality provider will seamlessly accommodate specific pickup and drop-off locations (e.g., front door or handover to a specific staff member), vehicle specifications, and behavioral support plans specified by the district.",
+      },
+      {
+        type: "heading",
+        text: "12. What Do Your Current School District Clients Say?",
+      },
+      {
+        type: "paragraph",
+        text: "References are non-negotiable. Ask for the names of at least three current school district clients. When you call them, ask about on-time performance over the past 12 months, how promptly the provider handles complaints, and whether they plan to renew their current contract.",
+      },
+      {
+        type: "heading",
+        text: "Why Yuni Rides Passes All 12 Tests",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides was built from the ground up to serve the most complex transportation needs in student transportation. We specialize in IEP, special needs, and McKinney-Vento students across WA, CA, TX, AZ, and IL. Every driver is vetted with multi-state background checks, trained in special education protocols, and matched to routes based on student needs.",
+      },
+      {
+        type: "paragraph",
+        text: "Call us at 415-535-2155 or email info@yunirides.com to discuss your district's or family's needs. We will walk you through every qualification above and connect you with active district references to give you complete confidence.",
+      },
+    ],
+  },
+  "mckinney-vento-transportation-rights": {
+    slug: "mckinney-vento-transportation-rights",
+    title: "McKinney-Vento Transportation Rights: What Schools Must Provide in 2026",
+    excerpt: "Understand the McKinney-Vento Act's transportation requirements for homeless and housing-insecure students. Learn what school districts must provide, who qualifies, and how Yuni Rides helps.",
+    heroImage: "/images/McKinney-Vento-Rights.jpg",
+    date: "Jun 30, 2026",
+    readTime: "8 mins read",
+    contentBlocks: [
+      {
+        type: "heading",
+        text: "What does the McKinney-Vento Act require for student transportation?",
+      },
+      {
+        type: "paragraph",
+        text: "The McKinney-Vento Homeless Assistance Act requires school districts to provide free transportation to homeless and housing-insecure students to their school of origin — even if the student moves out of the district. Districts must provide transportation immediately upon enrollment, at no cost to the family, for the entire school year including when the student moves.",
+      },
+      {
+        type: "paragraph",
+        text: "Every year, more than 1.3 million students in the United States experience homelessness or housing instability. For these children, consistent school attendance is one of the most important stabilizing forces in their lives — but getting to school can be an enormous barrier when a family moves frequently, lives in a shelter, or stays doubled-up in someone else's home.",
+      },
+      {
+        type: "paragraph",
+        text: "The McKinney-Vento Homeless Assistance Act, reauthorized under the Every Student Succeeds Act (ESSA) in 2015, specifically addresses this barrier with strong transportation protections. This guide breaks down exactly what schools must do and what families can expect.",
+      },
+      {
+        type: "heading",
+        text: "Who Qualifies Under McKinney-Vento?",
+      },
+      {
+        type: "paragraph",
+        text: "A student qualifies for McKinney-Vento protections if they lack a 'fixed, regular, and adequate nighttime residence.' This includes students who are:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Living in emergency or transitional shelters",
+          "Sharing housing with other families due to loss of housing or economic hardship (doubled-up)",
+          "Living in motels, hotels, or campgrounds due to lack of adequate housing",
+          "Living in cars, parks, public spaces, abandoned buildings, or bus/train stations",
+          "Abandoned in hospitals",
+          "Awaiting foster care placement",
+          "Unaccompanied youth (living independently without a parent or guardian)",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "McKinney-Vento protections apply to students in preschool through grade 12. Importantly, families do not need to prove homelessness with documentation — self-certification is sufficient for initial enrollment and services.",
+      },
+      {
+        type: "heading",
+        text: "What Transportation Must School Districts Provide?",
+      },
+      {
+        type: "heading",
+        text: "What transportation are homeless students entitled to under McKinney-Vento?",
+      },
+      {
+        type: "paragraph",
+        text: "Under McKinney-Vento, school districts must transport a homeless student to their school of origin at no cost, even if the student now lives outside the district boundaries. This includes transportation from shelters, motels, doubled-up housing, or any other temporary location. Districts must also provide transportation for extracurricular activities if other students receive that service.",
+      },
+      {
+        type: "paragraph",
+        text: "The law is specific about what districts must do:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Transport students to their school of origin even when they move to a different district",
+          "Coordinate and share transportation costs with the district where the student currently lives",
+          "Provide transportation immediately — students cannot be denied school access while transportation is arranged",
+          "Ensure transportation is comparable to what other students receive (same quality, same access)",
+          "Continue providing transportation for the remainder of the school year if the student moves back into permanent housing",
+        ],
+      },
+      {
+        type: "heading",
+        text: "School of Origin: What It Means and Why It Matters",
+      },
+      {
+        type: "paragraph",
+        text: "Under McKinney-Vento, the 'school of origin' is the school the student attended when they were last permanently housed, or the school in which the student was last enrolled. Districts must transport students to this school rather than requiring them to transfer to a new school simply because they moved.",
+      },
+      {
+        type: "paragraph",
+        text: "This is one of the most powerful protections in McKinney-Vento. Research consistently shows that school stability — maintaining relationships with teachers, counselors, and peers — is one of the most critical factors in educational outcomes for students experiencing homelessness. Parents and guardians may choose to enroll the student in a school near their new temporary location instead, but the choice belongs to the family, not the district.",
+      },
+      {
+        type: "heading",
+        text: "When Must Transportation Begin?",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation must begin immediately — ideally the same day the family requests it. The McKinney-Vento Act includes an 'immediate enrollment' provision that means students cannot be barred from school while transportation is being arranged. Districts must:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Immediately enroll the student in school even without records, proof of residency, or immunization records",
+          "Contact the McKinney-Vento liaison to arrange transportation within 24 hours of enrollment",
+          "Provide interim transportation arrangements while a formal plan is developed",
+        ],
+      },
+      {
+        type: "heading",
+        text: "What Is a McKinney-Vento Liaison and How Do They Help?",
+      },
+      {
+        type: "heading",
+        text: "What does a McKinney-Vento school liaison do?",
+      },
+      {
+        type: "paragraph",
+        text: "Every school district that receives federal Title I funds must designate a McKinney-Vento liaison. This person is responsible for identifying homeless students, ensuring immediate enrollment, coordinating transportation, connecting families to services, and advocating for the student within the school system.",
+      },
+      {
+        type: "paragraph",
+        text: "If your child is experiencing housing instability and you are not sure where to start, contact the district's McKinney-Vento liaison directly. They are required by law to assist you. Ask for their name and contact information at the school office or district main line.",
+      },
+      {
+        type: "image",
+        src: "/images/McKinney-Vento-Rights.jpg",      },
+      {
+        type: "heading",
+        text: "What Happens When a Student Moves to a Different School District?",
+      },
+      {
+        type: "paragraph",
+        text: "Inter-district transportation is one of the most complex aspects of McKinney-Vento compliance. When a student moves to a different district but wants to remain at their school of origin:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "The two districts must share transportation costs proportionally",
+          "If they cannot agree, the state education agency mediates and provides funding",
+          "The student continues attending school while the districts resolve the logistics",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Many districts struggle with inter-district McKinney-Vento transportation precisely because it requires coordination across administrative boundaries. This is where specialized providers like Yuni Rides become essential — we have experience navigating multi-district routes and working directly with McKinney-Vento liaisons.",
+      },
+      {
+        type: "heading",
+        text: "McKinney-Vento Transportation Requirements by State: WA, CA, TX, AZ, IL",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides operates across multiple states to ensure seamless compliance with local regulations:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Washington (WA): OSPI provides dedicated coordinators. Districts like Seattle, Everett, and Tacoma actively manage high shelter-based transport programs.",
+          "California (CA): Leads the nation in enrollment. Districts coordinate with County Offices of Education (COEs), backed by extra protections from AB 491.",
+          "Texas (TX): Administered through Title IV funds by the TEA. High counts in Houston ISD and Dallas ISD require experienced routing coordination.",
+          "Arizona (AZ): Funded via the Homeless Education Program, offering extra per-pupil funding for Maricopa County and Phoenix-area logistics.",
+          "Illinois (IL): Mandates origin school transport for the entire duration of homelessness. Chicago Public Schools features a dedicated McKinney-Vento transport team.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions: McKinney-Vento Transportation",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Do students in motels qualify for McKinney-Vento transportation? \nA: Yes. Students living in motels or hotels due to lack of adequate housing are specifically included in the McKinney-Vento definition of homelessness and are entitled to the same transportation rights as students in emergency shelters.",
+          "Can a district require proof of homelessness before providing transportation? \nA: No. McKinney-Vento requires immediate enrollment and services without documentation. While districts may gather information for their records, they cannot delay services while waiting for proof.",
+          "What if a family prefers the new school near their temporary housing? \nA: The choice of school belongs to the parent or guardian. If they prefer enrollment in a school near their current location rather than the school of origin, the district must honor that choice. The family can change their preference at any time.",
+          "Is summer school transportation covered under McKinney-Vento? \nA: If the student qualifies for summer programs and transportation would otherwise be provided for other students, McKinney-Vento requires comparable transportation access. Contact the McKinney-Vento liaison for specific summer program arrangements.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Yuni Rides Coordinates McKinney-Vento Transportation Across WA, CA, TX, AZ, and IL",
+      },
+      {
+        type: "paragraph",
+        text: "If your family or district needs compliant, dependable McKinney-Vento transportation solutions, Yuni Rides is here to bridge the gap. We work directly with school administration and liaisons to keep routines consistent for the students who need it most. Reach out to us today at 415-535-2155 or via info@yunirides.com.",
+      },
+    ],
+  },
+  "what-is-iep-transportation": {
+    slug: "what-is-iep-transportation",
+    title: "What Is IEP Transportation? A Complete Parent's Guide (2026)",
+    excerpt: "Learn exactly what IEP transportation means, what your child is entitled to under IDEA, and how to request it. Expert guide from Yuni Rides — specialists in special needs student transportation.",
+    heroImage: "/images/IEP-Transportation-Guide.jpg",
+    date: "Jun 30, 2026",
+    readTime: "8 mins read",
+    contentBlocks: [
+      {
+        type: "heading",
+        text: "What is IEP transportation?",
+      },
+      {
+        type: "paragraph",
+        text: "IEP transportation is a free, legally mandated related service under the Individuals with Disabilities Education Act (IDEA) that school districts must provide to students with disabilities when transportation is listed in their Individualized Education Program (IEP). It covers specialized vehicles, trained aides, door-to-door service, and any accommodations needed for the student to access their education safely.",
+      },
+      {
+        type: "paragraph",
+        text: "If your child has an Individualized Education Program (IEP), they may be entitled to free specialized transportation to and from school — and most parents never know they can request it. Under federal law, transportation is classified as a 'related service,' meaning it must be provided at no cost to your family when it is necessary for your child to receive their education.",
+      },
+      {
+        type: "paragraph",
+        text: "This guide explains everything you need to know about IEP transportation: what it covers, how to request it, what the school district is required to provide, and what to do when the system fails your child.",
+      },
+      {
+        type: "heading",
+        text: "What Does IEP Transportation Cover?",
+      },
+      {
+        type: "paragraph",
+        text: "IEP transportation is far more than a bus ride. Under IDEA (34 CFR 300.34), transportation as a related service includes:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Travel to and from school (home to school and school to home)",
+          "Travel between schools (for students attending multiple programs)",
+          "Specialized equipment: wheelchair lifts, harnesses, safety vests, car seats",
+          "An aide or paraprofessional on the vehicle when required by the IEP",
+          "Door-to-door service when the student cannot safely wait at a bus stop",
+          "Extended school year (ESY) transportation during summer programs",
+          "Transportation to private schools, if the IEP places the student there",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The critical point: transportation must be listed as a related service in the IEP document for the district to be legally obligated to provide it. If it is not written in, the district is not required to arrange it — even if your child clearly needs it.",
+      },
+      {
+        type: "heading",
+        text: "Who Qualifies for IEP Transportation?",
+      },
+      {
+        type: "heading",
+        text: "Does every student with an IEP get free transportation?",
+      },
+      {
+        type: "paragraph",
+        text: "Not automatically. A student with an IEP qualifies for free transportation only when the IEP team determines that transportation is necessary for the student to access their education. The team — which includes parents — makes this determination case by case. Parents can and should request transportation be added to the IEP if their child needs it.",
+      },
+      {
+        type: "paragraph",
+        text: "Any student between ages 3 and 21 who qualifies for special education under one of IDEA's 13 disability categories may be eligible for IEP transportation. Qualifying disabilities include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Autism Spectrum Disorder (ASD)",
+          "Intellectual disabilities",
+          "Specific learning disabilities",
+          "Emotional disturbance or behavioral challenges",
+          "Physical disabilities or orthopedic impairments",
+          "Traumatic brain injury (TBI)",
+          "Speech or language impairments",
+          "Visual or hearing impairments",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Eligibility is not based solely on diagnosis. The IEP team evaluates whether the disability makes it impossible or unsafe for the student to use regular transportation. A student with autism who cannot wait at a bus stop independently, for instance, may qualify even if they do not have a physical disability.",
+      },
+      {
+        type: "heading",
+        text: "How to Request IEP Transportation for Your Child",
+      },
+      {
+        type: "paragraph",
+        text: "If transportation is not already listed in your child's IEP, you can request it at any time. Here is the step-by-step process:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Step 1: Submit a written request to the special education coordinator at your child's school. Written requests create a paper trail and trigger timelines.",
+          "Step 2: Request an IEP meeting specifically to discuss transportation. You have the right to call an IEP meeting at any time.",
+          "Step 3: At the meeting, present documentation of why your child needs specialized transportation — medical evaluations, therapist letters, or behavioral incident reports.",
+          "Step 4: Negotiate specific transportation services in the IEP document — vehicle type, aide requirements, pickup window, route details.",
+          "Step 5: If denied, request the district's written explanation (Prior Written Notice) and consider filing a complaint with your state department of education.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "What Must the IEP Say About Transportation?",
+      },
+      {
+        type: "paragraph",
+        text: "A well-written IEP transportation section should specify:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Whether transportation is a related service (yes or no)",
+          "Type of vehicle (standard bus, minivan, wheelchair-accessible van)",
+          "Whether an aide is required and what their role is",
+          "Pickup and drop-off location (home address, specific door)",
+          "Pickup window (e.g., 7:00–7:15 AM)",
+          "Behavioral or medical protocols the driver must follow",
+          "Communication method between driver and parent (app, text, phone)",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Vague transportation language like 'student will receive transportation' is insufficient. Advocate for specific, measurable terms so there is no ambiguity about what the district must provide.",
+      },
+      {
+        type: "heading",
+        text: "What Is the Difference Between IEP Transportation and a Regular School Bus?",
+      },
+      {
+        type: "heading",
+        text: "How is IEP transportation different from a regular school bus?",
+      },
+      {
+        type: "paragraph",
+        text: "IEP transportation is legally mandated, individualized, and free. It uses smaller vehicles with specialized equipment, trained drivers, and sometimes a dedicated aide. Regular school buses are not required to have specialized equipment, door-to-door service, or aides. IEP transportation is tailored to the student's disability-related needs.",
+      },
+      {
+        type: "paragraph",
+        text: "Regular school buses operate fixed routes with standard stop locations. IEP transportation, by contrast, is individualized. The route, vehicle, pickup time, and staff qualifications are all determined by the student's IEP.",
+      },
+      {
+        type: "image",
+        src: "/images/IEP-Transportation-Guide.jpg",
+      },
+      {
+        type: "heading",
+        text: "What Happens If the School District Refuses?",
+      },
+      {
+        type: "paragraph",
+        text: "Districts cannot legally deny IEP transportation if the student's disability requires it. If you face a refusal:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Request Prior Written Notice (PWN) — the district must document their refusal and reasoning in writing",
+          "File a State Complaint with your state education agency (response required within 60 days)",
+          "Request a Due Process Hearing for formal dispute resolution",
+          "Contact your Parent Training and Information (PTI) Center for free advocacy support",
+          "Involve a special education attorney if the district continues to deny legally required services",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Under IDEA's 'pendency' (stay-put) provision, your child is entitled to continue receiving transportation services that were previously in their IEP while any dispute is being resolved.",
+      },
+      {
+        type: "heading",
+        text: "How Yuni Rides Supports IEP Students Across 5 States",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides specializes exclusively in transportation for students with IEPs, special needs, and McKinney-Vento status. Unlike rideshare apps or general transportation services, every Yuni Rides driver is trained in special education protocols and student safety. We serve school districts and families across Washington, California, Texas, Arizona, and Illinois.",
+      },
+      {
+        type: "paragraph",
+        text: "Services we provide for IEP students include: door-to-door pickup and drop-off, wheelchair-accessible vehicles, trained aides upon request, real-time GPS tracking, direct parent communication, and full compliance with district IEP specifications.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions About IEP Transportation",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Can parents choose the transportation provider for their IEP child? \nA: In most cases, the school district selects the transportation provider. However, parents can advocate during the IEP meeting for specific requirements — vehicle type, driver training, aide presence — and districts must meet those requirements. Some districts allow parent-preferred providers when the district cannot meet IEP specifications internally.",
+          "Does IEP transportation apply during summer school? \nA: Yes. If a student's IEP includes Extended School Year (ESY) services, transportation to ESY must also be provided at no cost if transportation is listed as a related service in the IEP.",
+          "Can a student be removed from IEP transportation as a disciplinary measure? \nA: No. Under IDEA, transportation is a related service, not a privilege. Disciplinary removal from transportation must follow IDEA's specific disciplinary procedures and cannot simply replace education-related services.",
+          "What if my child's IEP transportation is consistently late? \nA: Chronic lateness may constitute a failure to implement the IEP, which is a procedural violation. Document every late pickup, contact the district transportation coordinator in writing, and if the pattern continues, file a state complaint.",
+          "Does IEP transportation cover students placed in private schools? \nA: Yes, if the district has placed the student in a private school to meet their IEP needs, the district must also provide transportation to that placement. If parents choose a private school independently, the district's obligation is more limited but transportation services may still apply.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Need IEP Transportation in WA, CA, TX, AZ, or IL? Yuni Rides Can Help.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides partners with FirstAlt and participating districts throughout California and Illinois to provide trained drivers, consistent assignments, and real-time communication for families who need more than a bus stop. If you're evaluating options in your area, we'd welcome the conversation. Call 415-535-2155 or email info@yunirides.com to get started.",
+      },
+    ],
+  },
   "best-school-kids-transportation-california-illinois": {
     slug: "best-school-kids-transportation-california-illinois",
     title:
