@@ -68,6 +68,9 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
+  other: {
+    "apple-itunes-app": "app-id=6759739662",
+  },
 };
 
 const organizationSchema = {
