@@ -1,39 +1,84 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import Link from 'next/link'
-import { motion, AnimatePresence } from 'framer-motion'
-import CareerBanner from '@/app/features/careers/components/Careerbanner'
-import DriverCoreValues from '@/app/features/driver/components/DriverCoreValues'
-import DriverForm from '@/components/shared/DriverForm'
+import { useState } from "react";
+import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
+import CareerBanner from "@/app/features/careers/components/Careerbanner";
+import DriverCoreValues from "@/app/features/driver/components/DriverCoreValues";
+import DriverForm from "@/components/shared/DriverForm";
 
 interface Job {
-  id: number
-  title: string
-  type: string
-  location: string
-  state: string
-  description: string
-  slug: string
+  id: number;
+  title: string;
+  type: string;
+  location: string;
+  stateSlug?: string;
+  description: string;
+  slug: string;
 }
 
 const ALL_JOBS: Job[] = [
-  { id: 1, title: 'Driver Partner – Flexible Schedule', type: 'Full-Time / Part-Time / Flexible', location: 'Arizona', state: 'Arizona', description: 'Flexible working hours (You choose when to drive). Competitive and transparent earnings. Weekly payout system.', slug: 'driver-partner' },
-  { id: 2, title: 'Full-Time Driver Partner', type: 'Full-Time / Part-Time / Flexible', location: 'California', state: 'California', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-  { id: 3, title: 'City Driver – Immediate Openings', type: 'Full-Time / Part-Time / Flexible', location: 'Texas', state: 'Texas', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-  { id: 4, title: 'City Driver – Immediate Openings', type: 'Full-Time / Part-Time / Flexible', location: 'Illinois', state: 'Illinois', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-  { id: 5, title: 'City Driver – Immediate Openings', type: 'Full-Time / Part-Time / Flexible', location: 'Texas', state: 'Texas', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-  { id: 6, title: 'City Driver – Immediate Openings', type: 'Full-Time / Part-Time / Flexible', location: 'Illinois', state: 'Illinois', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-  { id: 7, title: 'City Driver – Immediate Openings', type: 'Full-Time / Part-Time / Flexible', location: 'Illinois', state: 'Illinois', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-  { id: 8, title: 'City Driver – Immediate Openings', type: 'Full-Time / Part-Time / Flexible', location: 'Texas', state: 'Texas', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-  { id: 9, title: 'City Driver – Immediate Openings', type: 'Full-Time / Part-Time / Flexible', location: 'Illinois', state: 'Illinois', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-  { id: 10, title: 'City Driver – Immediate Openings', type: 'Full-Time / Part-Time / Flexible', location: 'Illinois', state: 'Illinois', description: 'Flexible working hours (You choose when to drive).', slug: 'driver-partner' },
-]
+  {
+    id: 1,
+    title: "City Driver – Immediate Openings",
+    type: "Full-Time / Part-Time / Flexible",
+    location: "Washington",
+    description: "Flexible working hours (You choose when to drive).",
+    slug: "washington",
+  },
+  {
+    id: 2,
+    title: "City Driver – Immediate Openings",
+    type: "Full-Time / Part-Time / Flexible",
+    location: "California",
+    description: "Flexible working hours (You choose when to drive).",
+    slug: "california",
+  },
+  {
+    id: 3,
+    title: "City Driver – Immediate Openings",
+    type: "Full-Time / Part-Time / Flexible",
+    location: "Arizona",
+    description: "Flexible working hours (You choose when to drive).",
+    slug: "arizona",
+  },
+  {
+    id: 4,
+    title: "City Driver – Immediate Openings",
+    type: "Full-Time / Part-Time / Flexible",
+    location: "Texas",
+    description: "Flexible working hours (You choose when to drive).",
+    slug: "texas",
+  },
+  {
+    id: 5,
+    title: "City Driver – Immediate Openings",
+    type: "Full-Time / Part-Time / Flexible",
+    location: "Illinois",
+    description: "Flexible working hours (You choose when to drive).",
+    slug: "illinois",
+  },
+];
 
-const US_STATES = ['All States', 'Arizona', 'California', 'Texas', 'Illinois', 'New York', 'Remote']
-const SORT_OPTIONS = ['A–Z', 'Z–A', 'Newest', 'Oldest']
+const US_STATES = [
+  "All States",
+  "Washington",
+  "California",
+  "Arizona",
+  "Texas",
+  "Illinois",
+];
+const SORT_OPTIONS = ["A–Z", "Z–A", "Newest", "Oldest"];
 
-function JobRow({ job, isFirst, index }: { job: Job; isFirst: boolean; index: number }) {
+function JobRow({
+  job,
+  isFirst,
+  index,
+}: {
+  job: Job;
+  isFirst: boolean;
+  index: number;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, x: -20 }}
@@ -44,57 +89,86 @@ function JobRow({ job, isFirst, index }: { job: Job; isFirst: boolean; index: nu
       <Link
         href={`/careers/${job.slug}`}
         className={`flex items-center justify-between w-full px-6 py-[10px] group transition-all duration-150 ${
-          isFirst ? 'bg-[#2C3979] rounded-[20px] mb-0' : 'bg-white border-b border-gray-100 hover:bg-gray-50'
+          isFirst
+            ? "bg-[#2C3979] rounded-[20px] mb-0"
+            : "bg-white border-b border-gray-100 hover:bg-gray-50"
         }`}
       >
         <div className="flex-1 min-w-0 pr-3">
           <div className="flex flex-wrap items-center gap-x-2 gap-y-0.5 mb-0.5">
-            <span className={`font-heading font-semibold text-sm ${isFirst ? 'text-white' : 'text-[#2C3979]'}`}>
+            <span
+              className={`font-heading font-semibold text-sm ${isFirst ? "text-white" : "text-[#2C3979]"}`}
+            >
               {job.title}
             </span>
-            <span className={`text-xs ${isFirst ? 'text-white/30' : 'text-gray-300'}`}>|</span>
-            <span className={`text-xs ${isFirst ? 'text-white/70' : 'text-gray-500'}`}>
-              <span className={`font-medium ${isFirst ? 'text-white/90' : 'text-gray-700'}`}>Job Type:</span>{' '}
+            <span
+              className={`text-xs ${isFirst ? "text-white/30" : "text-gray-300"}`}
+            >
+              |
+            </span>
+            <span
+              className={`text-xs ${isFirst ? "text-white/70" : "text-gray-500"}`}
+            >
+              <span
+                className={`font-medium ${isFirst ? "text-white/90" : "text-gray-700"}`}
+              >
+                Job Type:
+              </span>{" "}
               {job.type}
             </span>
           </div>
-          <p className={`text-xs line-clamp-1 ${isFirst ? 'text-white/50' : 'text-gray-400'}`}>
+          <p
+            className={`text-xs line-clamp-1 ${isFirst ? "text-white/50" : "text-gray-400"}`}
+          >
             {job.description}
           </p>
         </div>
         <div className="flex items-center gap-1.5 shrink-0">
-          <span className={`text-xs font-medium whitespace-nowrap ${isFirst ? 'text-white' : 'text-gray-600'}`}>
+          <span
+            className={`text-xs font-medium whitespace-nowrap ${isFirst ? "text-white" : "text-gray-600"}`}
+          >
             {job.location}
           </span>
-          <svg className={`w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform ${isFirst ? 'text-white/70' : 'text-gray-400'}`}
-            fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          <svg
+            className={`w-3.5 h-3.5 shrink-0 group-hover:translate-x-0.5 transition-transform ${isFirst ? "text-white/70" : "text-gray-400"}`}
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M9 5l7 7-7 7"
+            />
           </svg>
         </div>
       </Link>
     </motion.div>
-  )
+  );
 }
 
 export default function CareersClient() {
-  const [searchQuery, setSearchQuery] = useState('')
-  const [selectedState, setSelectedState] = useState('All States')
-  const [sortBy, setSortBy] = useState('A–Z')
-  const [sortOpen, setSortOpen] = useState(false)
+  const [searchQuery, setSearchQuery] = useState("");
+  const [selectedState, setSelectedState] = useState("All States");
+  const [sortBy, setSortBy] = useState("A–Z");
+  const [sortOpen, setSortOpen] = useState(false);
 
   const filteredJobs = ALL_JOBS.filter((job) => {
-    const matchesSearch = searchQuery === '' || job.title.toLowerCase().includes(searchQuery.toLowerCase())
-    const matchesState = selectedState === 'All States' || job.state === selectedState
-    return matchesSearch && matchesState
+    const matchesSearch =
+      searchQuery === "" ||
+      job.title.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesState =
+      selectedState === "All States" || job.location === selectedState;
+    return matchesSearch && matchesState;
   }).sort((a, b) => {
-    if (sortBy === 'A–Z') return a.title.localeCompare(b.title)
-    if (sortBy === 'Z–A') return b.title.localeCompare(a.title)
-    return 0
-  })
+    if (sortBy === "A–Z") return a.location.localeCompare(b.location);
+    if (sortBy === "Z–A") return b.location.localeCompare(a.location);
+    return 0;
+  });
 
   return (
     <main className="w-full min-h-screen bg-yuni-cream overflow-x-hidden font-body">
-
       {/* ── BANNER ── */}
       <CareerBanner />
 
@@ -125,10 +199,24 @@ export default function CareersClient() {
                 onChange={(e) => setSelectedState(e.target.value)}
                 className="w-full appearance-none border border-gray-200 rounded-lg px-3 py-2 text-sm text-gray-700 outline-none focus:border-[#822C89] bg-white cursor-pointer"
               >
-                {US_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+                {US_STATES.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
               </select>
-              <svg className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              <svg
+                className="absolute right-2.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </div>
             <button className="btn-secondary shrink-0">Search</button>
@@ -136,7 +224,9 @@ export default function CareersClient() {
 
           {/* Mobile */}
           <div className="flex md:hidden flex-col gap-3 px-4 py-4">
-            <span className="font-heading text-[#2C3979] font-semibold text-sm">Explore Open Positions</span>
+            <span className="font-heading text-[#2C3979] font-semibold text-sm">
+              Explore Open Positions
+            </span>
             <input
               type="text"
               placeholder="Search job"
@@ -150,10 +240,24 @@ export default function CareersClient() {
                 onChange={(e) => setSelectedState(e.target.value)}
                 className="w-full appearance-none border border-gray-200 rounded-lg px-3 py-2.5 text-sm text-gray-700 outline-none bg-white cursor-pointer"
               >
-                {US_STATES.map((s) => <option key={s} value={s}>{s}</option>)}
+                {US_STATES.map((s) => (
+                  <option key={s} value={s}>
+                    {s}
+                  </option>
+                ))}
               </select>
-              <svg className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              <svg
+                className="absolute right-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 pointer-events-none"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </div>
             <button className="btn-secondary w-full">Search</button>
@@ -163,11 +267,10 @@ export default function CareersClient() {
 
       {/* ── JOB LISTINGS ── */}
       <section id="job-listings" className="w-full bg-yuni-cream pt-4 pb-10">
-
-        {/* Header */}
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 mb-3 px-4 md:px-[79px] flex-wrap">
           <p className="font-heading font-bold text-[30px] leading-[53px] text-[#2C3979]">
-            SHOWING 1–{filteredJobs.length} OUT TOTAL {ALL_JOBS.length} JOBS OPEN.
+            SHOWING 1–{filteredJobs.length} OUT TOTAL {ALL_JOBS.length} JOBS
+            OPEN.
           </p>
           <div className="relative shrink-0">
             <button
@@ -175,8 +278,18 @@ export default function CareersClient() {
               className="flex items-center gap-1.5 border border-gray-200 rounded-lg px-3 py-1.5 text-xs text-gray-600 bg-white hover:border-[#822C89]/30 transition-all whitespace-nowrap"
             >
               Sort by ({sortBy})
-              <svg className={`w-3 h-3 text-gray-400 transition-transform ${sortOpen ? 'rotate-180' : ''}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+              <svg
+                className={`w-3 h-3 text-gray-400 transition-transform ${sortOpen ? "rotate-180" : ""}`}
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M19 9l-7 7-7-7"
+                />
               </svg>
             </button>
             <AnimatePresence>
@@ -189,8 +302,14 @@ export default function CareersClient() {
                   className="absolute right-0 top-full mt-1 w-32 bg-white border border-gray-100 rounded-xl shadow-lg z-30 overflow-hidden"
                 >
                   {SORT_OPTIONS.map((opt) => (
-                    <button key={opt} onClick={() => { setSortBy(opt); setSortOpen(false) }}
-                      className={`w-full text-left px-3 py-2 text-xs transition-colors ${sortBy === opt ? 'text-[#822C89] bg-[#822C89]/5 font-semibold' : 'text-gray-600 hover:bg-gray-50'}`}>
+                    <button
+                      key={opt}
+                      onClick={() => {
+                        setSortBy(opt);
+                        setSortOpen(false);
+                      }}
+                      className={`w-full text-left px-3 py-2 text-xs transition-colors ${sortBy === opt ? "text-[#822C89] bg-[#822C89]/5 font-semibold" : "text-gray-600 hover:bg-gray-50"}`}
+                    >
                       {opt}
                     </button>
                   ))}
@@ -200,12 +319,16 @@ export default function CareersClient() {
           </div>
         </div>
 
-        {/* Jobs */}
         {filteredJobs.length > 0 ? (
           <div className="max-w-7xl mx-auto bg-white px-4 md:px-[79px] py-2">
             <AnimatePresence>
               {filteredJobs.map((job, index) => (
-                <JobRow key={job.id} job={job} isFirst={index === 0} index={index} />
+                <JobRow
+                  key={job.id}
+                  job={job}
+                  isFirst={index === 0}
+                  index={index}
+                />
               ))}
             </AnimatePresence>
           </div>
@@ -216,17 +339,21 @@ export default function CareersClient() {
             className="text-center py-12 mx-4 md:mx-[79px] bg-white rounded-2xl border border-gray-100"
           >
             <p className="text-sm text-gray-400 mb-2">No positions found</p>
-            <button onClick={() => { setSearchQuery(''); setSelectedState('All States') }}
-              className="text-xs text-[#822C89] underline underline-offset-2">
+            <button
+              onClick={() => {
+                setSearchQuery("");
+                setSelectedState("All States");
+              }}
+              className="text-xs text-[#822C89] underline underline-offset-2"
+            >
               Clear filters
             </button>
           </motion.div>
         )}
       </section>
 
-    
       <DriverCoreValues />
       <DriverForm />
     </main>
-  )
+  );
 }
