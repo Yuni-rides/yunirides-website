@@ -5,7 +5,8 @@
       "namespace": "android_app",
       "package_name": "com.smartbird.yuniridedriver",
       "sha256_cert_fingerprints": [
-        "35:CC:45:62:8C:8D:BE:E4:16:85:E6:EC:DB:1E:86:AE:28:54:0C:B9:F2:16:8A:C9:E9:FC:FE:B8:A2:1F:28:4B"
+        "35:CC:45:62:8C:8D:BE:E4:16:85:E6:EC:DB:1E:86:AE:28:54:0C:B9:F2:16:8A:C9:E9:FC:FE:B8:A2:1F:28:4B",
+        "1D:49:51:C0:57:87:C7:EE:E1:53:0D:FB:9D:0F:B6:FA:96:3B:2F:78:32:6A:8B:32:81:31:59:12:5D:F7:53:14"
       ]
     }
   }
