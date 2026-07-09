@@ -9,33 +9,34 @@ export const metadata: Metadata = {
   title: 'About Yunirides — Our Story, Mission & Team',
   description:
     'Learn about Yunirides — founded on safety and compassion. We began in Texas, California, Washington, Illinois, and Arizona and continue expanding trusted transportation nationwide.',
-  alternates: { canonical: 'https://yunirides.com/about' },
+  alternates: { canonical: 'https://www.yunirides.com/about' },
   openGraph: {
     title: 'About Yunirides — Driven by Care, Growing with Purpose',
     description:
       'Founded on safety and compassion, Yuni Rides began in Texas, California, Washington, Illinois, and Arizona — and continues expanding trusted transportation nationwide.',
-    url: 'https://yunirides.com/about',
-    images: [{ url: '/og-image.png', width: 1200, height: 630, alt: 'About Yunirides' }],
+    url: 'https://www.yunirides.com/about',
+    images: [{ url: 'https://www.yunirides.com/images/og-image.png', width: 1200, height: 630, alt: 'About Yunirides' }],
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Yunirides — Our Story & Mission',
     description: 'Driven by Care. Growing with Purpose.',
+    images: ['https://www.yunirides.com/images/og-image.png'],
   },
 }
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'AboutPage',
-  name: 'About Yunirides',
+  name: 'About Yuni Rides',
   description: 'Founded on safety and compassion, Yuni Rides provides trusted transportation nationwide.',
-  url: 'https://yunirides.com/about',
+  url: 'https://www.yunirides.com/about',
   publisher: {
     '@type': 'Organization',
-    name: 'Yunirides',
-    url: 'https://yunirides.com',
-    logo: 'https://yunirides.com/logo.svg',
+    name: 'Yuni Rides',
+    url: 'https://www.yunirides.com',
+    logo: 'https://www.yunirides.com/images/logo.png',
   },
 }
 

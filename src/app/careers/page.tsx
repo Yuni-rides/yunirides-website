@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Yuni Rides",
     images: [
       {
-        url: "https://www.yunirides.com/og-image.png",
+        url: "https://www.yunirides.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Yuni Rides Driver Careers — Earn $35/Hour",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "School Driver Jobs | Yuni Rides Careers",
     description:
       "Part-time school driver. $35/hour. Weekends off. Hiring in WA, CA, AZ, TX, IL.",
-    images: ["https://www.yunirides.com/og-image.png"],
+    images: ["https://www.yunirides.com/images/og-image.png"],
   },
 };
 

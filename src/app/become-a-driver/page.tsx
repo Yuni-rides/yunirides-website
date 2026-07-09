@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: "Yuni Rides",
     images: [
       {
-        url: "https://www.yunirides.com/og-image.png",
+        url: "https://www.yunirides.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Drive for Yuni Rides — Mileage-Based Pay $30–$40 Per Trip",
@@ -33,6 +33,7 @@ export const metadata: Metadata = {
     title: "Drive for Yuni Rides | Mileage-Based Pay $30–$40+ Per Trip",
     description:
       "Mileage-based pay: $30–$40 per trip + $1/mile over 20 miles. Weekends off. Apply in 2 minutes.",
+    images: ["https://www.yunirides.com/images/og-image.png"],
   },
 };
 

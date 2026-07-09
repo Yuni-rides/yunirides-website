@@ -76,6 +76,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       description: job.overview,
       url: canonical,
       siteName: "Yuni Rides",
+      images: [
+        {
+          url: "https://www.yunirides.com/images/og-image.png", // Added structured standard image asset
+          width: 1200,
+          height: 630,
+          alt: `${job.title} at Yuni Rides`,
+        },
+      ],
       locale: "en_US",
       type: "website",
     },
@@ -83,6 +91,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       title: `${job.title} | Yuni Rides Careers`,
       description: job.overview,
+      images: ["https://www.yunirides.com/images/og-image.png"],
     },
   };
 }

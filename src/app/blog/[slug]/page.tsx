@@ -13,19 +13,34 @@ export async function generateMetadata({
 }: PageProps): Promise<Metadata> {
   const resolvedParams = await params;
   const post = blogPostsData[resolvedParams.slug];
+  const currentUrl = `https://www.yunirides.com/blog/${resolvedParams.slug}`;
 
   return {
-    title: post ? `${post.title} — Yunirides Blog` : "Blog — Yunirides",
-    description: post ? post.excerpt : "Read the latest from Yunirides.",
+    title: post ? `${post.title} — Yunirides Blog` : "Blog — Yuni Rides",
+    description: post ? post.excerpt : "Read the latest from Yuni Rides.",
+    alternates: {
+      canonical: currentUrl,
+    },
     openGraph: {
       title: post?.title,
       description: post?.excerpt,
+      url: currentUrl,
       images: [
-        { url: post?.heroImage || "/og-image.png", width: 1200, height: 630 },
+        {
+          url:
+            post?.heroImage || "https://www.yunirides.com/images/og-image.png",
+          width: 1200,
+          height: 630,
+        },
       ],
       type: "article",
     },
-    twitter: { card: "summary_large_image" },
+    twitter: {
+      card: "summary_large_image",
+      title: post?.title,
+      description: post?.excerpt,
+      images: [post?.heroImage || "https://www.yunirides.com/images/og-image.png"],
+    },
   };
 }
 

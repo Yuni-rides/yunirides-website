@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     url: "https://www.yunirides.com/services",
     images: [
       {
-        url: "https://www.yunirides.com/og-image.png",
+        url: "https://www.yunirides.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Yuni Rides Student Transportation Services",
@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     title: "Student Transportation Services | Yuni Rides",
     description:
       "Safe, technology-driven transportation for school districts across WA, CA, AZ, TX, IL.",
+      images: ["https://www.yunirides.com/images/og-image.png"],
   },
 };
 

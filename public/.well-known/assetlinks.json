@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.smartbird.yuniridedriver",
+      "sha256_cert_fingerprints": [
+        "35:CC:45:62:8C:8D:BE:E4:16:85:E6:EC:DB:1E:86:AE:28:54:0C:B9:F2:16:8A:C9:E9:FC:FE:B8:A2:1F:28:4B"
+      ]
+    }
+  }
+]

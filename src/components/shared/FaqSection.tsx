@@ -7,12 +7,14 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
-    question: "How does Yuni Rides comply with IDEA and IEP transportation requirements?",
+    question:
+      "How does Yuni Rides comply with IDEA and IEP transportation requirements?",
     answer:
       "Yuni Rides provides door-to-door transportation as specified in each student's IEP. Our drivers receive specialized training in behavior management, medical needs, and wheelchair securement. We coordinate directly with district special education directors to ensure full IDEA compliance.",
   },
   {
-    question: "What is McKinney-Vento transportation and how does Yuni Rides support it?",
+    question:
+      "What is McKinney-Vento transportation and how does Yuni Rides support it?",
     answer:
       "The McKinney-Vento Act requires districts to transport homeless students to their school of origin. Yuni Rides partners with district liaisons to provide stable, reliable transportation regardless of housing changes, ensuring compliance with federal mandates.",
   },
@@ -100,9 +102,7 @@ function FAQCard({
         )}
       </AnimatePresence>
 
-      {!isOpen && (
-        <span className="sr-only">{faq.answer}</span>
-      )}
+      {!isOpen && <span className="sr-only">{faq.answer}</span>}
     </motion.div>
   );
 }
@@ -141,11 +141,41 @@ export default function FAQSection() {
             </div>
           </div>
 
-          <FAQCard faq={faqs[0]} index={0} openIndex={openIndex} setOpenIndex={setOpenIndex} className="w-[260px] left-[26%] top-[25px]" />
-          <FAQCard faq={faqs[1]} index={1} openIndex={openIndex} setOpenIndex={setOpenIndex} className="w-[280px] right-[4%] top-[110px]" />
-          <FAQCard faq={faqs[2]} index={2} openIndex={openIndex} setOpenIndex={setOpenIndex} className="w-[340px] left-[34%] top-[165px]" />
-          <FAQCard faq={faqs[3]} index={3} openIndex={openIndex} setOpenIndex={setOpenIndex} className="w-[290px] right-[2%] bottom-[60px]" />
-          <FAQCard faq={faqs[4]} index={4} openIndex={openIndex} setOpenIndex={setOpenIndex} className="w-[310px] left-[32%] bottom-[35px]" />
+          <FAQCard
+            faq={faqs[0]}
+            index={0}
+            openIndex={openIndex}
+            setOpenIndex={setOpenIndex}
+            className="w-[260px] left-[26%] top-[25px]"
+          />
+          <FAQCard
+            faq={faqs[1]}
+            index={1}
+            openIndex={openIndex}
+            setOpenIndex={setOpenIndex}
+            className="w-[280px] right-[4%] top-[110px]"
+          />
+          <FAQCard
+            faq={faqs[2]}
+            index={2}
+            openIndex={openIndex}
+            setOpenIndex={setOpenIndex}
+            className="w-[340px] left-[34%] top-[165px]"
+          />
+          <FAQCard
+            faq={faqs[3]}
+            index={3}
+            openIndex={openIndex}
+            setOpenIndex={setOpenIndex}
+            className="w-[290px] right-[2%] bottom-[60px]"
+          />
+          <FAQCard
+            faq={faqs[4]}
+            index={4}
+            openIndex={openIndex}
+            setOpenIndex={setOpenIndex}
+            className="w-[310px] left-[32%] bottom-[35px]"
+          />
         </div>
 
         <div className="flex md:hidden flex-col gap-4 max-w-md mx-auto">
