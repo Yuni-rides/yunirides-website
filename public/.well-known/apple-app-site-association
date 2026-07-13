@@ -4,7 +4,16 @@
     "details": [
       {
         "appID": "7P7ZX75K43.com.smartbird.yuniridedriver",
-        "paths": [ "*" ]
+        "paths": [ 
+          
+        
+          "NOT /privacy-policy",
+          "NOT /terms-and-conditions",
+          "/trip/*",
+          "/ride/*",
+          "*"      
+      
+      ]
       }
     ]
   }
