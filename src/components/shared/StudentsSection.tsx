@@ -52,10 +52,14 @@ export default function StudentsSection() {
           className="bg-[#E5EAFF] rounded-[16px] px-[40px] py-[20px] text-center md:max-w-7xl md:mx-auto mb-[52px]"
         >
           <h2 className="font-heading font-bold text-[clamp(1.3rem,2.5vw,1.75rem)] text-[#2C3979] m-0 leading-[1.4]">
-            We get all students
-            <br />
-            where they need to go.
+            Which students does Yuni Rides transport?
           </h2>
+          <p className="text-[13px] text-[#4A4A6A] text-center max-w-2xl mx-auto mt-3 font-body leading-[1.7]">
+            Yuni Rides transports McKinney-Vento and foster youth, students with
+            special needs, continuing technical education students, and general
+            education students. Every ride is IEP-compliant, GPS-tracked, and
+            handled by background-checked drivers.
+          </p>
         </motion.div>
 
         {/* DESKTOP VIEW */}

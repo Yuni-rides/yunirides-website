@@ -23,12 +23,11 @@ const dmSans = DM_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.yunirides.com"),
   title: {
-    default:
-      "Yuni Rides | Safe Student Transportation for Special Needs & School Districts",
+    default: "Yuni Rides | School District Transportation",
     template: "%s | Yuni Rides",
   },
   description:
-    "Trusted student transportation for school districts. Safe, reliable rides for special needs students, McKinney-Vento youth, and general education. Serving WA, CA, AZ, TX, IL. Call 415-535-2155.",
+    "Safe, reliable student transportation for school districts across WA, CA, AZ, TX, IL, NY & DC. IEP, McKinney-Vento & general ed. Call 415-535-2155.",
   applicationName: "Yuni Rides",
   keywords: [
     "school transportation",
@@ -48,7 +47,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://www.yunirides.com/images/logo.png",
+        url: "https://www.yunirides.com/images/og-image.png",
         width: 1200,
         height: 630,
         alt: "Yuni Rides - Safe Student Transportation for School Districts",
@@ -71,60 +70,6 @@ export const metadata: Metadata = {
   other: {
     "apple-itunes-app": "app-id=6759739662",
   },
-};
-
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: "Yuni Rides",
-  description:
-    "Safe, technology-driven student transportation for school districts specializing in special needs, McKinney-Vento, and IEP-aligned services across Washington, California, Arizona, Texas, and Illinois.",
-  url: "https://www.yunirides.com",
-  logo: {
-    "@type": "ImageObject",
-    url: "https://www.yunirides.com/images/logo.png",
-  },
-  foundingDate: "2023",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "2261 Market St, Suite 2012",
-    addressLocality: "San Francisco",
-    addressRegion: "CA",
-    postalCode: "94114",
-    addressCountry: "US",
-  },
-  geo: {
-    "@type": "GeoCoordinates",
-    latitude: 37.7646,
-    longitude: -122.433,
-  },
-  areaServed: [
-    { "@type": "State", name: "Washington" },
-    { "@type": "State", name: "California" },
-    { "@type": "State", name: "Arizona" },
-    { "@type": "State", name: "Texas" },
-    { "@type": "State", name: "Illinois" },
-  ],
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: "+1-415-535-2155",
-      contactType: "customer service",
-      areaServed: "US",
-      availableLanguage: ["English", "Spanish"],
-    },
-    {
-      "@type": "ContactPoint",
-      email: "info@yunirides.com",
-      contactType: "customer support",
-    },
-  ],
-  sameAs: [
-    "https://www.linkedin.com/company/yunirides",
-    "https://www.facebook.com/yunirides",
-    "https://www.instagram.com/yunirides",
-    "https://www.crunchbase.com/organization/yunirides",
-  ],
 };
 
 export default function RootLayout({
@@ -158,12 +103,6 @@ export default function RootLayout({
             fbq('track', 'PageView');
           `}
         </Script>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationSchema),
-          }}
-        />
       </head>
       <body className="bg-yuni-page antialiased overflow-x-hidden">
         <noscript>

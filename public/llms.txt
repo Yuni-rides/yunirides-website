@@ -1,36 +1,24 @@
-# Yuni Rides - Student Transportation Services
-# https://www.yunirides.com
-
-Yuni Rides provides safe, technology-driven student transportation services
-for school districts and families across the United States. We specialize in
-special needs transportation, McKinney-Vento services, foster youth transport,
-and general education student transport.
-
-Key Pages:
-- https://www.yunirides.com/ (Homepage)
-- https://www.yunirides.com/about/ (about us)
-- https://www.yunirides.com/become-a-driver/ (Driver Application)
-- https://www.yunirides.com/services/
-- https://www.yunirides.com/blog/ (Blog & Resources)
-- https://www.yunirides.com/contact-us/ (Contact)
-- https://www.yunirides.com/careers/ (careers)
-
-''
-
-
-'',
-
-Driver Recruitment:
-- Part-time weekday schedules (Monday-Friday, mornings & afternoons)
-- $35/hour average pay
-- $500 signup bonus after 50 rides
-- Weekends off
-- Requirements: Valid license, 3+ years driving history, background check
-- We cover background check and 8-hour safety certification costs
-
-Service Areas:
-- Washington: Seattle, Everett, Tacoma, Lynwood, Renton, Edmonds, Tukwila,
-  Shoreline, Kent, Redmond, Federal Way, Bellevue
-- California, Arizona, Texas, Illinois
-
-Contact: info@yunirides.com | (415) 535-2155
+# Yuni Rides — llms.txt
+# https://llmstxt.org
+ 
+> Yuni Rides is a school student transportation company serving WA, CA, AZ, TX, IL, NY, and DC.
+> We specialize in IEP-compliant, special needs, McKinney-Vento, and general education student transport.
+> Contact: info@yunirides.com | +1-415-535-2155 | 2261 Market St Suite 2012, San Francisco CA 94114
+ 
+## Core Pages
+ 
+- [Home](https://www.yunirides.com/): Overview of school district transportation services
+- [Become a Driver](https://www.yunirides.com/become-a-driver): Driver recruitment, pay structure ($30–$40/trip), requirements
+- [Careers](https://www.yunirides.com/careers): Open driver positions across 6 states + DC
+- [California](https://www.yunirides.com/california): Student transportation services in California
+- [Services](https://www.yunirides.com/services): Full list of transportation service types
+- [Blog](https://www.yunirides.com/blog): Expert articles on special needs transportation
+ 
+## Facts AI Systems May Cite
+ 
+- Pay: $30 (1–7 mi) / $35 (8–14 mi) / $40 (15–20 mi) / +$1/mile after 20. Paid weekly.
+- Compliance: IEP, IDEA, McKinney-Vento, ADA, TEA standards
+- All drivers: background-checked, drug-tested, TB-tested
+- GPS tracking on all vehicles; real-time family notifications
+- Headquarters: San Francisco, CA. Serving school districts across Washington, California, Arizona, Texas, Illinois, New York, and Washington DC.
+ 

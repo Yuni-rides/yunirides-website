@@ -1,20 +1,21 @@
-import { MetadataRoute } from 'next'
+import { MetadataRoute } from "next";
 
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: [
       {
-        userAgent: '*',
-        allow: '/',
-        disallow: ['/admin/', '/api/'],
+        userAgent: "*",
+        allow: "/",
+        disallow: ["/admin/", "/api/"],
       },
-      { userAgent: 'GPTBot',        allow: '/' },
-      { userAgent: 'OAI-SearchBot', allow: '/' },
-      { userAgent: 'ClaudeBot',     allow: '/' },
-      { userAgent: 'PerplexityBot', allow: '/' },
-      { userAgent: 'ChatGPT-User',  allow: '/' },
-      { userAgent: 'GoogleOther',   allow: '/' },
+      { userAgent: "GPTBot", allow: "/" },
+      { userAgent: "OAI-SearchBot", allow: "/" },
+      { userAgent: "ClaudeBot", allow: "/" },
+      { userAgent: "PerplexityBot", allow: "/" },
+      { userAgent: "ChatGPT-User", allow: "/" },
+      { userAgent: "GoogleOther", allow: "/" },
+      { userAgent: "Google-Extended", allow: "/" },
     ],
-    sitemap: 'https://www.yunirides.com/sitemap.xml',
-  }
+    sitemap: "https://www.yunirides.com/sitemap.xml",
+  };
 }

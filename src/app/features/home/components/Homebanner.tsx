@@ -90,7 +90,8 @@ export default function HomeBanner() {
               }`}
             >
               <h1 className="sr-only">
-                School District Transportation Services — Special Needs, IEP & McKinney-Vento Across 5 States
+                School District Transportation Services — Special Needs, IEP &
+                McKinney-Vento Across 6 States + DC
               </h1>
 
               <h2 className="text-[36px] lg:text-[40px] font-bold text-yuni-navy leading-[1.2] tracking-tight mb-5 font-heading">
@@ -166,9 +167,9 @@ export default function HomeBanner() {
                 : "opacity-100 translate-y-0"
             }`}
           >
-            <h1 className="text-[26px] font-bold text-[#2A377A] leading-tight mb-3 font-heading">
+            <h2 className="text-[26px] font-bold text-[#2A377A] leading-tight mb-3 font-heading">
               {current.heading}
-            </h1>
+            </h2>
             <p className="text-[14px] text-[#555555] leading-[1.5] mb-6 font-body">
               {current.subtext}
             </p>
@@ -203,8 +204,3 @@ export default function HomeBanner() {
     </div>
   );
 }
-
-
-
-
-

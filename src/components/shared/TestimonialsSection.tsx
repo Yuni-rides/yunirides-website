@@ -1,57 +1,56 @@
-'use client'
+"use client";
 
-import Image from 'next/image'
-import { useState, useEffect } from 'react'
-import { Star } from 'lucide-react'
-import { motion, AnimatePresence } from 'framer-motion'
+import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Star } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
   {
-    name: 'Adam',
+    name: "Adam",
     rating: 4.5,
-    text: 'Yuni Rides has been incredibly reliable and caring. Knowing my family member is always safe and on time gives me complete peace of mind.',
-    image: '/images/adam.png',
+    text: "My daughter has special needs, and Yuni Rides drivers always treat her with patience and genuine care. That means everything to our family.",
+    image: "/images/adam.png",
   },
   {
-    name: 'Jessica',
+    name: "Jessica",
     rating: 4.5,
-    text: '"Always on time with caring drivers. I trust Yuni Rides completely."',
-    image: '/images/jessica.png',
+    text: "Always on time with caring drivers. I trust Yuni Rides completely.",
+    image: "/images/jessica.png",
   },
   {
-    name: 'Brenda',
+    name: "Brenda",
     rating: 4.5,
-    text: 'Yuni Rides has been incredibly reliable and caring. Knowing my family member is always safe and on time gives me complete peace of mind.',
-    image: '/images/brenda.png',
+    text: "From the first pickup, I could tell the driver was properly trained. Reliable, respectful, and my son actually looks forward to the ride now.",
+    image: "/images/brenda.png",
   },
-]
+];
 
 export default function TestimonialsSection() {
-  const [active, setActive] = useState(1)
-  const [paused, setPaused] = useState(false)
+  const [active, setActive] = useState(1);
+  const [paused, setPaused] = useState(false);
 
-  const prev = (active - 1 + testimonials.length) % testimonials.length
-  const next = (active + 1) % testimonials.length
+  const prev = (active - 1 + testimonials.length) % testimonials.length;
+  const next = (active + 1) % testimonials.length;
 
   // Auto-play every 2 seconds
   useEffect(() => {
-    if (paused) return
+    if (paused) return;
     const timer = setInterval(() => {
-      setActive((prev) => (prev + 1) % testimonials.length)
-    }, 2000)
-    return () => clearInterval(timer)
-  }, [paused, active])
+      setActive((prev) => (prev + 1) % testimonials.length);
+    }, 2000);
+    return () => clearInterval(timer);
+  }, [paused, active]);
 
   return (
     <section className="w-full bg-[#FAF8F0] pt-[60px] pb-[80px]">
-
       {/* Header */}
-      <div className="text-center mb-10 px-4">
+      <div className="text-center mb-10 px-4 md:max-w-4xl mx-auto">
         <span className="inline-block bg-[#E5EAFF] text-[#4A4A6A] py-[7px] px-6 rounded-full text-[14px] font-medium font-body mb-[14px]">
           Feedback
         </span>
         <h2 className="font-heading font-bold text-[clamp(1.5rem,3vw,2rem)] text-[#2C3979] m-0">
-          Hear from our customers
+          What do families say about Yuni Rides school transportation?
         </h2>
       </div>
 
@@ -62,10 +61,8 @@ export default function TestimonialsSection() {
           onMouseEnter={() => setPaused(true)}
           onMouseLeave={() => setPaused(false)}
         >
-
           {/* DESKTOP — 3 cards */}
           <div className="hidden md:grid md:grid-cols-[1fr_516px_1fr] gap-4 items-center px-6">
-
             {/* LEFT card — fades left */}
             <motion.div
               key={`prev-${prev}`}
@@ -75,24 +72,38 @@ export default function TestimonialsSection() {
               onClick={() => setActive(prev)}
               className="cursor-pointer h-[280px] rounded-[20px] p-6 box-border flex flex-col gap-[14px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_16px_40px_rgba(130,44,137,0.25)] md:-ml-[60px]"
               style={{
-                background: 'linear-gradient(135deg, rgba(178,100,190,0.7) 0%, rgba(130,44,137,0.55) 100%)',
-                maskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
-                WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%, black 100%)',
+                background:
+                  "linear-gradient(135deg, rgba(178,100,190,0.7) 0%, rgba(130,44,137,0.55) 100%)",
+                maskImage:
+                  "linear-gradient(to right, transparent 0%, black 30%, black 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to right, transparent 0%, black 30%, black 100%)",
               }}
             >
               <div className="flex items-start gap-[14px]">
                 <div className="w-[72px] h-[72px] rounded-full overflow-hidden shrink-0 relative border-[3px] border-white/40">
-                  <Image src={testimonials[prev].image} alt={testimonials[prev].name} fill className="object-cover" />
+                  <Image
+                    src={testimonials[prev].image}
+                    alt={testimonials[prev].name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="pt-[6px]">
-                  <p className="font-heading font-bold text-[20px] text-white m-0 mb-[6px]">{testimonials[prev].name}</p>
+                  <p className="font-heading font-bold text-[20px] text-white m-0 mb-[6px]">
+                    {testimonials[prev].name}
+                  </p>
                   <div className="flex items-center gap-[5px]">
                     <Star size={15} fill="#F4B942" color="#F4B942" />
-                    <span className="text-[13px] text-white/90 font-body">{testimonials[prev].rating}</span>
+                    <span className="text-[13px] text-white/90 font-body">
+                      {testimonials[prev].rating}
+                    </span>
                   </div>
                 </div>
               </div>
-              <p className="text-[12.5px] text-white/90 leading-[1.75] font-body m-0">{testimonials[prev].text}</p>
+              <p className="text-[12.5px] text-white/90 leading-[1.75] font-body m-0">
+                {testimonials[prev].text}
+              </p>
             </motion.div>
 
             {/* CENTER card — active */}
@@ -107,17 +118,28 @@ export default function TestimonialsSection() {
               >
                 <div className="flex items-start gap-[18px]">
                   <div className="w-[170px] h-[160px] rounded-[31px] overflow-hidden shrink-0 relative">
-                    <Image src={testimonials[active].image} alt={testimonials[active].name} fill className="object-cover" />
+                    <Image
+                      src={testimonials[active].image}
+                      alt={testimonials[active].name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="pt-[10px]">
-                    <p className="font-heading font-bold text-[26px] text-white m-0 mb-[8px]">{testimonials[active].name}</p>
+                    <p className="font-heading font-bold text-[26px] text-white m-0 mb-[8px]">
+                      {testimonials[active].name}
+                    </p>
                     <div className="flex items-center gap-[6px]">
                       <Star size={18} fill="#F4B942" color="#F4B942" />
-                      <span className="text-[15px] text-white/90 font-body font-medium">{testimonials[active].rating}</span>
+                      <span className="text-[15px] text-white/90 font-body font-medium">
+                        {testimonials[active].rating}
+                      </span>
                     </div>
                   </div>
                 </div>
-                <p className="text-[14px] text-white/[0.92] leading-[1.8] font-body m-0">{testimonials[active].text}</p>
+                <p className="text-[14px] text-white/[0.92] leading-[1.8] font-body m-0">
+                  {testimonials[active].text}
+                </p>
               </motion.div>
             </AnimatePresence>
 
@@ -130,26 +152,39 @@ export default function TestimonialsSection() {
               onClick={() => setActive(next)}
               className="cursor-pointer h-[280px] rounded-[20px] p-6 box-border flex flex-col gap-[14px] transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_16px_40px_rgba(130,44,137,0.25)] md:-mr-[60px]"
               style={{
-                background: 'linear-gradient(135deg, rgba(130,44,137,0.55) 0%, rgba(178,100,190,0.7) 100%)',
-                maskImage: 'linear-gradient(to left, transparent 0%, black 30%, black 100%)',
-                WebkitMaskImage: 'linear-gradient(to left, transparent 0%, black 30%, black 100%)',
+                background:
+                  "linear-gradient(135deg, rgba(130,44,137,0.55) 0%, rgba(178,100,190,0.7) 100%)",
+                maskImage:
+                  "linear-gradient(to left, transparent 0%, black 30%, black 100%)",
+                WebkitMaskImage:
+                  "linear-gradient(to left, transparent 0%, black 30%, black 100%)",
               }}
             >
               <div className="flex items-start gap-[14px]">
                 <div className="w-[72px] h-[72px] rounded-full overflow-hidden shrink-0 relative border-[3px] border-white/40">
-                  <Image src={testimonials[next].image} alt={testimonials[next].name} fill className="object-cover" />
+                  <Image
+                    src={testimonials[next].image}
+                    alt={testimonials[next].name}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="pt-[6px]">
-                  <p className="font-heading font-bold text-[20px] text-white m-0 mb-[6px]">{testimonials[next].name}</p>
+                  <p className="font-heading font-bold text-[20px] text-white m-0 mb-[6px]">
+                    {testimonials[next].name}
+                  </p>
                   <div className="flex items-center gap-[5px]">
                     <Star size={15} fill="#F4B942" color="#F4B942" />
-                    <span className="text-[13px] text-white/90 font-body">{testimonials[next].rating}</span>
+                    <span className="text-[13px] text-white/90 font-body">
+                      {testimonials[next].rating}
+                    </span>
                   </div>
                 </div>
               </div>
-              <p className="text-[12.5px] text-white/90 leading-[1.75] font-body m-0">{testimonials[next].text}</p>
+              <p className="text-[12.5px] text-white/90 leading-[1.75] font-body m-0">
+                {testimonials[next].text}
+              </p>
             </motion.div>
-
           </div>
 
           {/* MOBILE */}
@@ -165,22 +200,31 @@ export default function TestimonialsSection() {
               >
                 <div className="flex items-start gap-4">
                   <div className="w-[72px] h-[72px] rounded-full overflow-hidden shrink-0 relative border-[3px] border-white/25">
-                    <Image src={testimonials[active].image} alt={testimonials[active].name} fill className="object-cover" />
+                    <Image
+                      src={testimonials[active].image}
+                      alt={testimonials[active].name}
+                      fill
+                      className="object-cover"
+                    />
                   </div>
                   <div className="pt-[6px]">
-                    <p className="font-heading font-bold text-[20px] text-white m-0 mb-[6px]">{testimonials[active].name}</p>
+                    <p className="font-heading font-bold text-[20px] text-white m-0 mb-[6px]">
+                      {testimonials[active].name}
+                    </p>
                     <div className="flex items-center gap-[5px]">
                       <Star size={18} fill="#F4B942" color="#F4B942" />
-                      <span className="text-[15px] text-white/90 font-body font-medium">{testimonials[active].rating}</span>
+                      <span className="text-[15px] text-white/90 font-body font-medium">
+                        {testimonials[active].rating}
+                      </span>
                     </div>
                   </div>
                 </div>
-                <p className="text-[13px] text-white/[0.92] leading-[1.8] font-body m-0">{testimonials[active].text}</p>
+                <p className="text-[13px] text-white/[0.92] leading-[1.8] font-body m-0">
+                  {testimonials[active].text}
+                </p>
               </motion.div>
             </AnimatePresence>
-        
           </div>
-
         </div>
       </div>
 
@@ -190,11 +234,10 @@ export default function TestimonialsSection() {
           <button
             key={i}
             onClick={() => setActive(i)}
-            className={`h-2 rounded-full border-none cursor-pointer p-0 transition-all duration-300 ${i === active ? 'w-6 bg-[#822C89]' : 'w-2 bg-[#C8C8E0]'}`}
+            className={`h-2 rounded-full border-none cursor-pointer p-0 transition-all duration-300 ${i === active ? "w-6 bg-[#822C89]" : "w-2 bg-[#C8C8E0]"}`}
           />
         ))}
       </div>
-
     </section>
-  )
+  );
 }

@@ -201,6 +201,17 @@ export default function Footer() {
             </p>
 
             <div className="flex flex-col gap-4 mb-8">
+              <address
+                itemScope
+                itemType="https://schema.org/PostalAddress"
+                className="not-italic text-white text-[14px] font-body leading-relaxed"
+              >
+                <span itemProp="streetAddress">2261 Market St, Suite 2012</span>
+                <br />
+                <span itemProp="addressLocality">San Francisco</span>,{" "}
+                <span itemProp="addressRegion">CA</span>{" "}
+                <span itemProp="postalCode">94114</span>
+              </address>
               <a
                 href="https://wa.me/14155352155"
                 target="_blank"

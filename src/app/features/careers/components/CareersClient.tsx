@@ -266,7 +266,7 @@ export default function CareersClient() {
       </div>
 
       {/* ── JOB LISTINGS ── */}
-      <section id="job-listings" className="w-full bg-yuni-cream pt-4 pb-10">
+      <section id="job-listings" className="w-full bg-yuni-cream pY">
         <div className="max-w-7xl mx-auto flex items-center justify-between gap-2 mb-3 px-4 md:px-[79px] flex-wrap">
           <p className="font-heading font-bold text-[30px] leading-[53px] text-[#2C3979]">
             SHOWING 1–{filteredJobs.length} OUT TOTAL {ALL_JOBS.length} JOBS
@@ -352,8 +352,10 @@ export default function CareersClient() {
         )}
       </section>
 
-      <DriverCoreValues />
       <DriverForm />
+      <div className="mb-12">
+        <DriverCoreValues />
+      </div>
     </main>
   );
 }

@@ -48,12 +48,27 @@ export default function WhyChoosing() {
         transition={{ duration: 0.5 }}
         className="text-center mb-[36px] md:mb-[48px] px-4"
       >
-        <h2 className="font-heading text-[26px] md:text-[28px] font-bold text-[#2D0F54] m-0">
+        {/* <h2 className="font-heading text-[26px] md:text-[28px] font-bold text-[#2D0F54] m-0">
           Why choosing{" "}
           <span className="border-b-2 border-[#6B2FA0] pb-[2px] text-[#2D0F54]">
             Yuni Rides
           </span>
-        </h2>
+        </h2> */}
+        <div className="max-w-4xl mx-auto">
+          <h2 className="font-heading text-[26px] md:text-[28px] font-bold text-[#2D0F54] m-0">
+            Why do school districts choose{" "}
+            <span className="border-b-2 border-[#6B2FA0] pb-[2px] text-[#2D0F54]">
+              Yuni Rides
+            </span>{" "}
+            for special needs transportation?
+          </h2>
+          <p className="text-[14px] text-[#353637] leading-[1.75] max-w-3xl mx-auto text-center mt-3 font-body">
+            School districts choose Yuni Rides because every driver is
+            background-checked, IEP-trained, and supported by real-time GPS
+            tracking. We serve districts, hospitals, and families with the same
+            commitment to safety, consistency, and compassionate care.
+          </p>
+        </div>
       </motion.div>
 
       {/* ---------------------------------------------------------------- */}

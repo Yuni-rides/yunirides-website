@@ -135,12 +135,7 @@ function TextLeftRow({ item }: { item: CoreValueItem }) {
           transition-transform duration-300 hover:scale-[1.02]
         "
       >
-        <Image
-          src={item.image}
-          alt={item.alt}
-          fill
-          className="object-cover"
-        />
+        <Image src={item.image} alt={item.alt} fill className="object-cover" />
       </div>
     </div>
   );
@@ -173,12 +168,7 @@ function ImageLeftRow({ item }: { item: CoreValueItem }) {
           top: "0px",
         }}
       >
-        <Image
-          src={item.image}
-          alt={item.alt}
-          fill
-          className="object-cover"
-        />
+        <Image src={item.image} alt={item.alt} fill className="object-cover" />
       </div>
 
       <div
@@ -239,11 +229,14 @@ export default function CoreValues() {
             About Us
           </span>
           <h2 className="font-heading font-bold text-[clamp(1.5rem,2.8vw,2rem)] text-yuni-navy mb-[10px] block">
-            About Our Core Values
+            What makes Yuni Rides different from other student transportation
+            providers?
           </h2>
-          <p className="text-yuni-text-mid text-[13px] max-w-[400px] mx-auto leading-[1.7] font-body">
-            The principles that guide every journey, every child, and every
-            family we serve.
+          <p className="text-yuni-text-mid text-[13px] max-w-3xl mx-auto leading-[1.7] font-body">
+            Yuni Rides combines background-checked drivers, GPS tracking, and
+            IEP-aligned training with genuine compassion for every child. Unlike
+            standard transport services, our core values of safety, trust, and
+            care guide every single journey we take.
           </p>
         </div>
 
