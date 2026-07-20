@@ -75,7 +75,7 @@ const sections = [
           "Provide live ride updates to authorized users",
         ],
         footer:
-          "Location tracking is only used as necessary to provide transportation services.",
+          "Background Location Collection: The Yuni Rides Driver application may collect precise location data in the background — including when the app is closed or not actively in use — during active transportation trips. This background location collection is necessary to continuously track the vehicle's route, verify student pickups and drop-offs, and provide real-time trip status updates to parents, schools, and administrators, even if the driver's device screen is off or the app is minimized. Background location collection only occurs while a trip is active and stops once the trip is completed.",
       },
       {
         subtitle: "Video and Ride Monitoring Information",
@@ -270,6 +270,31 @@ const sections = [
       "These third parties may process information according to their own privacy policies.",
   },
   {
+    title: "Delete Your Account",
+    content:
+      "If you wish to delete your Yuni Rides Driver account and associated data, you can do so using either of the following methods:",
+    subsections: [
+      {
+        subtitle: "Option 1: Delete via the App",
+        content: null,
+        bullets: [
+          "Open the Yuni Rides Driver app",
+          "Go to Settings",
+          "Tap Delete Account",
+          "Confirm your request",
+        ],
+      },
+      {
+        subtitle: "Option 2: Delete via Email",
+        content:
+          "Email us at info@yunirides.com with your registered email or phone number to request account deletion.",
+        bullets: [],
+      },
+    ],
+    footer:
+      "What Gets Deleted: Your profile information, contact details, and location data will be permanently deleted. Trip records may be retained for a limited period as required for legal and safety compliance.",
+  },
+  {
     title: "Changes to This Privacy Policy",
     content:
       'We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. Continued use of our services after updates indicates acceptance of the revised Privacy Policy.',
@@ -338,8 +363,8 @@ export default function PrivacyClient() {
         <hr className="border-gray-200 mb-8 md:mb-10" />
 
         <div className="space-y-8 md:space-y-10">
-          {sections.map((section) => (
-            <div>
+          {sections.map((section, idx) => (
+            <div key={idx}>
               <h3 className="text-base md:text-xl font-bold text-[#2C3979] mb-2 md:mb-3 font-heading">
                 {section.title}
               </h3>
