@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import Image from "next/image";
@@ -54,6 +52,43 @@ function InputField({
   );
 }
 
+function SelectField({
+  label,
+  name,
+  value,
+  onChange,
+  options,
+  required = true,
+}: {
+  label: string;
+  name: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  options: { label: string; value: string }[];
+  required?: boolean;
+}) {
+  return (
+    <fieldset className="border border-[#DDE2FF] rounded-lg px-3 pb-1.5 pt-0 bg-white w-full transition-all duration-200 focus-within:border-[#822C89] focus-within:ring-1 focus-within:ring-[#822C89]/10">
+      <legend className="px-1 text-[12px] font-medium font-body text-[#4A4A6A] leading-none select-none">
+        {label}
+      </legend>
+      <select
+        name={name}
+        value={value}
+        onChange={onChange}
+        required={required}
+        className="w-full h-[36px] bg-transparent text-[13px] text-[#1A1A2E] font-body p-0 m-0 border-none outline-none ring-0 shadow-none focus:outline-none focus:ring-0 focus:border-none focus:shadow-none focus:outline-transparent cursor-pointer [-webkit-appearance:none] [appearance:none] bg-[url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%231A1A2E%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E')] bg-[length:9px_9px] bg-[right_4px_center] bg-no-repeat pr-5"
+      >
+        {options.map((opt) => (
+          <option key={opt.value} value={opt.value}>
+            {opt.label}
+          </option>
+        ))}
+      </select>
+    </fieldset>
+  );
+}
+
 function CheckBox({
   label,
   checked,
@@ -98,7 +133,9 @@ function CheckBox({
   );
 }
 
-export default function DriverForm({ source = "General Website" }: DriverFormProps) {
+export default function DriverForm({
+  source = "General Website",
+}: DriverFormProps) {
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState<{
     message: string;
@@ -110,6 +147,7 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
     email: "",
     contactNumber: "",
     city: "",
+    state: "California",
     vehicleType: "",
     yearsExperience: "",
     hasSSN: true,
@@ -127,7 +165,9 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
     }
   }, [notification]);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>,
+  ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
 
@@ -140,7 +180,6 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
       const response = await fetch("/api/driver-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        // body: JSON.stringify(form),
         body: JSON.stringify({ ...form, source }),
       });
 
@@ -148,7 +187,8 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
 
       if (response.ok && data.success) {
         setNotification({
-          message: "Thank you! Your application has been dispatched successfully.",
+          message:
+            "Thank you! Your application has been dispatched successfully.",
           type: "success",
         });
         setForm({
@@ -156,6 +196,7 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
           email: "",
           contactNumber: "",
           city: "",
+          state: "California",
           vehicleType: "",
           yearsExperience: "",
           hasSSN: true,
@@ -279,13 +320,25 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
                     onChange={handleChange}
                     placeholder="+1 (555) 000-0000"
                   />
-                  <InputField
-                    label="Enter your city or town name."
-                    name="city"
-                    value={form.city}
-                    onChange={handleChange}
-                    placeholder="Search city..."
-                  />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <InputField
+                      label="City / Town Name"
+                      name="city"
+                      value={form.city}
+                      onChange={handleChange}
+                      placeholder="Search city..."
+                    />
+                    <SelectField
+                      label="State"
+                      name="state"
+                      value={form.state}
+                      onChange={handleChange}
+                      options={[
+                        { label: "California", value: "California" },
+                        { label: "Illinois", value: "Illinois" },
+                      ]}
+                    />
+                  </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -309,11 +362,11 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 bg-[#FAF8F0]/50 p-5 rounded-xl border border-[#EFF2FF]">
                   <div className="flex flex-col gap-2">
                     <p className="text-[12px] font-semibold text-[#4A4A6A] font-body m-0">
-                      Do you have SSN or ITN?
+                      Do you have SSN?
                     </p>
                     <div className="flex flex-col gap-1.5 mt-1">
                       <CheckBox
-                        label="Yes, I have an SSN/ITN"
+                        label="Yes, I have an SSN"
                         checked={form.hasSSN === true}
                         onChange={() => setForm({ ...form, hasSSN: true })}
                       />
@@ -399,7 +452,9 @@ export default function DriverForm({ source = "General Website" }: DriverFormPro
                           <span className="mr-2 text-[14px]">
                             {notification.type === "success" ? "✓" : "✕"}
                           </span>
-                          <span className="truncate">{notification.message}</span>
+                          <span className="truncate">
+                            {notification.message}
+                          </span>
                         </motion.div>
                       )}
                     </AnimatePresence>

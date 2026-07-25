@@ -571,3 +571,20 @@ textarea:focus {
   outline: none !important;
   box-shadow: none !important;
 }
+
+select:focus,
+select:focus-visible,
+input:focus,
+input:focus-visible,
+textarea:focus,
+textarea:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  ring: 0 !important;
+  -webkit-appearance: none;
+}
+
+
+select::-ms-expand {
+  display: none;
+}

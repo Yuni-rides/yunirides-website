@@ -11,6 +11,7 @@ export async function POST(request: Request) {
       email,
       contactNumber,
       city,
+      state,
       vehicleType,
       yearsExperience,
       hasSSN,
@@ -51,6 +52,7 @@ export async function POST(request: Request) {
             <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">Email:</td><td style="color: #1A1A2E;">${email}</td></tr>
             <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">Contact Number:</td><td style="color: #1A1A2E;">${contactNumber}</td></tr>
             <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">City / Town:</td><td style="color: #1A1A2E;">${city}</td></tr>
+            <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">State:</td><td style="color: #1A1A2E;">${state}</td></tr>
           </table>
           <h3 style="color: #822C89; margin-top: 20px;">Professional & Vehicle Assets</h3>
           <table style="width: 100%; border-collapse: collapse;">
@@ -59,7 +61,7 @@ export async function POST(request: Request) {
           </table>
           <h3 style="color: #822C89; margin-top: 20px;">Legal & Background Evaluation</h3>
           <table style="width: 100%; border-collapse: collapse;">
-            <tr><td style="padding: 6px 0; font-weight: bold; width: 40%; color: #4A4A6A;">Has SSN/ITN:</td><td style="color: #1A1A2E;">${hasSSN ? "✅ Yes" : "❌ No"}</td></tr>
+            <tr><td style="padding: 6px 0; font-weight: bold; width: 40%; color: #4A4A6A;">Has SSN:</td><td style="color: #1A1A2E;">${hasSSN ? "✅ Yes" : "❌ No"}</td></tr>
             <tr><td style="padding: 6px 0; font-weight: bold; width: 40%; color: #4A4A6A;">Has Driving License:</td><td style="color: #1A1A2E;">${hasDrivingLicense ? "✅ Yes" : "❌ No"}</td></tr>
             <tr><td style="padding: 6px 0; font-weight: bold; width: 40%; color: #4A4A6A;">Recreational Drug Use:</td><td style="color: #1A1A2E;">${usedDrugs ? "⚠️ Yes" : "✅ No, never"}</td></tr>
           </table>

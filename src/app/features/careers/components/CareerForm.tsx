@@ -255,11 +255,11 @@ export default function CareerForm({
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8 bg-[#FAF8F0]/50 p-5 rounded-xl border border-[#EFF2FF]">
                   <div className="flex flex-col gap-2">
                     <p className="text-[12px] font-semibold text-[#4A4A6A] font-body m-0">
-                      Do you have SSN or ITN?
+                      Do you have SSN?
                     </p>
                     <div className="flex flex-col gap-1.5 mt-1">
                       <CheckBox
-                        label="Yes, I have an SSN/ITN"
+                        label="Yes, I have an SSN"
                         checked={form.hasSSN === true}
                         onChange={() => setForm({ ...form, hasSSN: true })}
                       />
@@ -327,7 +327,6 @@ export default function CareerForm({
                     width="w-full sm:w-[220px] h-[50px] text-[14px] font-medium font-body rounded-xl justify-center"
                   />
 
-                  {/* Inline Framer Motion Feedback Status Alert */}
                   <div className="w-full sm:w-[400px] h-[40px] relative">
                     <AnimatePresence mode="wait">
                       {notification && (
@@ -361,3 +360,5 @@ export default function CareerForm({
     </section>
   );
 }
+
+
