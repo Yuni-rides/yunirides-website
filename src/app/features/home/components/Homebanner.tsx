@@ -142,6 +142,7 @@ export default function HomeBanner() {
               animating ? "opacity-0" : "opacity-100"
             }`}
             priority
+            fetchPriority="high"
           />
         </div>
       </div>
@@ -159,6 +160,7 @@ export default function HomeBanner() {
               animating ? "opacity-0" : "opacity-100"
             }`}
             priority
+            fetchPriority="high"
           />
         </div>
         <div className="bg-[#EDEBF7] rounded-[24px] p-6 flex flex-col">
