@@ -121,7 +121,7 @@ function TextLeftRow({ item }: { item: CoreValueItem }) {
         <p className="font-body font-light text-[15px] leading-[24px] text-justify text-yuni-text-mid mb-[20px]">
           {item.description}
         </p>
-        <Link href={"/about"}>
+        <Link href={"/about"} aria-label={`Learn more about ${item.title}`}>
           <button className="btn-primary">See More</button>
         </Link>
       </div>
@@ -191,7 +191,7 @@ function ImageLeftRow({ item }: { item: CoreValueItem }) {
           {item.description}
         </p>
         <div className="flex justify-end">
-          <Link href={"/about"}>
+          <Link href={"/about"} aria-label={`Learn more about ${item.title}`}>
             <button
               className={item.purple ? "btn-card-outline" : "btn-primary"}
             >
@@ -288,7 +288,7 @@ export default function CoreValues() {
                   <div
                     className={`mt-[18px] ${item.purple ? "flex justify-end" : "block"}`}
                   >
-                    <Link href={"/about"}>
+                    <Link href={"/about"} aria-label={`Learn more about ${item.title}`}>
                       <button
                         className={
                           item.purple ? "btn-card-outline" : "btn-primary"
