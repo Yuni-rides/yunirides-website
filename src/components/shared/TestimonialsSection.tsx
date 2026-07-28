@@ -234,8 +234,15 @@ export default function TestimonialsSection() {
           <button
             key={i}
             onClick={() => setActive(i)}
-            className={`h-2 rounded-full border-none cursor-pointer p-0 transition-all duration-300 ${i === active ? "w-6 bg-[#822C89]" : "w-2 bg-[#C8C8E0]"}`}
-          />
+            aria-label={`Testimonial ${i + 1}`}
+            className={`p-2 -m-2`}
+          >
+            <span
+              className={`block h-2 rounded-full transition-all duration-300 ${
+                i === active ? "w-6 bg-[#822C89]" : "w-2 bg-[#C8C8E0]"
+              }`}
+            />
+          </button>
         ))}
       </div>
     </section>

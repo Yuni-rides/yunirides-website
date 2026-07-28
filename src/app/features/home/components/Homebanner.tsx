@@ -137,6 +137,7 @@ export default function HomeBanner() {
             src={current.image}
             alt={current.alt}
             fill
+            sizes="55vw"
             className={`object-cover object-center transition-opacity duration-500 ${
               animating ? "opacity-0" : "opacity-100"
             }`}
@@ -153,6 +154,7 @@ export default function HomeBanner() {
             src={current.image}
             alt={current.alt}
             fill
+            sizes="100vw"
             className={`object-cover object-center transition-opacity duration-300 ${
               animating ? "opacity-0" : "opacity-100"
             }`}
@@ -192,6 +194,7 @@ export default function HomeBanner() {
               <button
                 key={i}
                 onClick={() => goToSlide(i)}
+                aria-label={`Slide ${i + 1}`}
                 className={`h-1.5 rounded-full transition-all duration-300 ${
                   i === active ? "w-6 bg-[#2A377A]" : "w-1.5 bg-[#2A377A]/20"
                 }`}

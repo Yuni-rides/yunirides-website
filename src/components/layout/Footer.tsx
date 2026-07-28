@@ -304,7 +304,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/20 pt-6 text-center">
-          <p className="text-white/50 text-[12px] m-0 font-body">
+          <p className="text-white/80 text-[12px] m-0 font-body">
             Yunirides® is a registered trademark | © 2026 Yunirides | All rights
             reserved
           </p>
