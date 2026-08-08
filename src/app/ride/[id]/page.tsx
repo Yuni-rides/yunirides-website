@@ -93,7 +93,6 @@ export default async function RidePage() {
           your registration and set up your password.
         </p>
 
-        {/* Store Badge Buttons */}
         <div
           style={{
             display: "flex",
@@ -103,7 +102,6 @@ export default async function RidePage() {
             flexWrap: "wrap",
           }}
         >
-          {/* Google Play Store Badge */}
           <a
             href="https://play.google.com/store/apps/details?id=com.smartbird.yuniridedriver&hl=en"
             target="_blank"
@@ -164,7 +162,6 @@ export default async function RidePage() {
             </div>
           </a>
 
-          {/* Apple App Store Badge */}
           <a
             href="https://apps.apple.com/us/app/yuni-rides-driver/id6759739662"
             target="_blank"
