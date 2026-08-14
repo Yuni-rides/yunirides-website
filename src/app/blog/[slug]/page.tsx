@@ -66,7 +66,6 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
   return (
     <div className="bg-[#FAF8F0] min-h-screen">
-      {/* Banner Area */}
       <div className="relative w-full h-[320px] sm:h-[320px] md:h-[550px] overflow-hidden">
         <Image
           src={post.heroImage}
@@ -75,9 +74,11 @@ export default async function BlogDetailPage({ params }: PageProps) {
           className="object-cover object-top"
           priority
         />
-        <div className="absolute inset-x-0 bottom-0 h-1/2 bg-gradient-to-top from-[#2C3979]/85 to-transparent" />
+
+        <div className="absolute inset-x-0 bottom-0 h-3/4 bg-gradient-to-t from-black/90 via-[#2C3979]/75 to-transparent z-0" />
+
         <div className="absolute bottom-6 left-6 right-6 md:left-12 md:right-12 z-10">
-          <h1 className="font-heading font-extrabold text-[clamp(1.2rem,2.5vw,1.8rem)] text-white m-0 Regal leading-snug max-w-4xl">
+          <h1 className="font-heading font-extrabold text-[clamp(1.2rem,2.5vw,1.8rem)] text-white m-0 Regal leading-snug max-w-4xl drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
             {post.title}
           </h1>
         </div>
@@ -174,6 +175,52 @@ export default async function BlogDetailPage({ params }: PageProps) {
                         </div>
                       )}
                       <div className="absolute inset-0 bg-gradient-to-top from-black/50 via-transparent to-transparent" />
+                    </div>
+                  );
+
+                case "table":
+                  return (
+                    <div
+                      key={index}
+                      className="my-6 overflow-x-auto rounded-xl border border-[#DDE2FF] shadow-sm bg-white"
+                    >
+                      <table className="w-full text-left border-collapse text-[13px] font-body">
+                        {block.headers && (
+                          <thead>
+                            <tr className="bg-[#2C3979] text-white">
+                              {block.headers.map(
+                                (header: string, hIdx: number) => (
+                                  <th
+                                    key={hIdx}
+                                    className="px-4 py-3 font-semibold text-[13px] border-b border-[#DDE2FF]"
+                                  >
+                                    {header}
+                                  </th>
+                                ),
+                              )}
+                            </tr>
+                          </thead>
+                        )}
+                        <tbody>
+                          {block.rows?.map((row: string[], rIdx: number) => (
+                            <tr
+                              key={rIdx}
+                              className={
+                                rIdx % 2 === 0 ? "bg-white" : "bg-[#EFF2FF]/40"
+                              }
+                            >
+                              {row.map((cell: string, cIdx: number) => (
+                                <td
+                                  key={cIdx}
+                                  className="px-4 py-3 text-[#4A4A6A] border-b border-[#DDE2FF]/60 leading-relaxed"
+                                >
+                                  {cell}
+                                </td>
+                              ))}
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
                   );
 

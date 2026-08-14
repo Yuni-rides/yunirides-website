@@ -1,10 +1,9 @@
-export interface BlogBlock {
-  type: "paragraph" | "heading" | "bullet-list" | "image";
-  text?: string;
-  items?: string[];
-  src?: string;
-  caption?: string;
-}
+export type BlogBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "heading"; text: string }
+  | { type: "bullet-list"; items: string[] }
+  | { type: "image"; src: string; caption?: string }
+  | { type: "table"; headers?: string[]; rows: string[][] };
 
 export interface BlogPost {
   slug: string;
@@ -206,7 +205,7 @@ export const blogPostsData: Record<string, BlogPost> = {
     contentBlocks: [
       {
         type: "paragraph",
-        text: "Teaching remains one of the most rewarding careers, but many educators are looking for practical ways to supplement their income without sacrificing evenings, weekends, or time with family. While tutoring and coaching continue to be popular options, scheduled school transportation has become another flexible opportunity that fits naturally around the academic calendar.",
+        text: "Teaching remains one of the most rewarding careers, but many educators are looking for practical ways to supplement their income without sacrificing evenings, weekends, or time with family. While tutoring and coaching continue to be popular options, scheduled school transportation has become another flexible opportunity that fits naturally around the academic calendar. This guide explains why more teachers are exploring school transportation, how it compares with other side hustles, and how it can complement an existing teaching career.",
       },
       {
         type: "heading",
@@ -224,10 +223,12 @@ export const blogPostsData: Record<string, BlogPost> = {
         type: "bullet-list",
         items: [
           "Teachers are increasingly looking for flexible side hustles to supplement their income.",
-          "Tutoring remains popular, but it isn't the only option available.",
-          "Scheduled school transportation follows predictable weekday routes aligned with school start and dismissal times.",
-          "Teachers already possess key skills—such as child management, patience, and safety protocols—needed to transport students.",
-          "Structured transportation offers a consistent alternative to late-night rideshare or food delivery work.",
+          "Tutoring remains popular, but it isn't the only option.",
+          "Scheduled school transportation follows predictable weekday routes.",
+          "Most transportation schedules align with the academic calendar.",
+          "Teachers already possess many of the skills needed to safely transport students.",
+          "Structured transportation offers an alternative to late-night rideshare or food delivery work.",
+          "Yuni Rides partners with FirstAlt and participating school districts to help provide transportation for eligible students in California, Illinois, Washington, and other service areas.",
         ],
       },
       {
@@ -236,15 +237,66 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Despite their dedication, rising housing costs, grocery prices, fuel expenses, and inflation have encouraged many educators to explore flexible side hustles. After spending an entire day in the classroom, most educators don't want another job that requires working until midnight or sacrificing every weekend. Instead, they're looking for opportunities that provide flexibility, predictable hours, and meaningful community impact.",
-      },
-      {
-        type: "heading",
-        text: "Popular Side Hustles Teachers Are Using",
+        text: "Teaching changes lives every day. From preparing lesson plans and grading assignments to mentoring students and communicating with parents, educators invest far more than the hours listed on their contracts. Yet despite their dedication, many teachers continue searching for additional sources of income.",
       },
       {
         type: "paragraph",
-        text: "Common side hustles for educators include private tutoring, online teaching, selling educational resources online, educational content creation, athletic coaching, and freelance writing. However, for those seeking predictable schedules without additional computer or grading time, driving offers a refreshing, hands-on option.",
+        text: "Across the United States, rising housing costs, grocery prices, fuel expenses, childcare costs, healthcare premiums, and inflation have encouraged many educators to explore second jobs or flexible side hustles.",
+      },
+      {
+        type: "paragraph",
+        text: "For some, the goal is simple: Build an emergency fund, pay off student loans, cover childcare expenses, save for retirement, afford family vacations, reduce financial stress, or pay monthly bills more comfortably. For others, earning an additional few hundred dollars each month simply creates greater financial security.",
+      },
+      {
+        type: "paragraph",
+        text: "The challenge isn't finding a second job. The challenge is finding one that fits around a teacher's demanding schedule. After spending an entire day in the classroom, most educators don't want another job that requires working until midnight or sacrificing every weekend. Instead, they're looking for opportunities that provide flexibility, predictable hours, and meaningful work.",
+      },
+      {
+        type: "heading",
+        text: "Teachers Need Side Hustles—Not More Burnout",
+      },
+      {
+        type: "paragraph",
+        text: "When teachers discuss side hustles online, a common theme appears again and again: they're not necessarily searching for the highest-paying job—they're searching for balance.",
+      },
+      {
+        type: "paragraph",
+        text: "Many educators say they're looking for work that allows them to keep evenings free for lesson planning, spend weekends with family, avoid working until late at night, earn predictable supplemental income, continue helping people, and reduce financial pressure without adding burnout.",
+      },
+      {
+        type: "paragraph",
+        text: "In online communities, teachers frequently recommend tutoring, online teaching, coaching sports, curriculum design, educational blogging, freelance writing, and seasonal work. Others mention rideshare driving or food delivery, but many also point out that late-night shifts and unpredictable earnings don't always fit well with a teacher's lifestyle. That has led more educators to consider structured opportunities that work alongside the school day rather than after it.",
+      },
+      {
+        type: "heading",
+        text: "Popular Side Hustles Teachers Are Using in 2026",
+      },
+      {
+        type: "paragraph",
+        text: "There is no single 'best' side hustle for every teacher. The right opportunity depends on your schedule, interests, financial goals, and family responsibilities. Some of the most common teacher side hustles include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Private Tutoring: One of the most natural choices for educators. Teachers already have subject expertise, classroom experience, and communication skills. Many tutors set their own schedules and hourly rates.",
+          "Online Teaching: Virtual learning continues to grow. Platforms allow teachers to instruct students from anywhere in subjects like English, Mathematics, Science, Test preparation, and Foreign languages.",
+          "Selling Educational Resources: Many educators create lesson plans, worksheets, PowerPoint presentations, and classroom management templates to sell on educational marketplaces.",
+          "Educational Content Creation: Teachers share expertise via YouTube, blogs, podcasts, social media, or online courses to build passive income streams over time.",
+          "Coaching and Mentoring: Coaching sports, mentoring students, leading clubs, or providing college admissions guidance outside the classroom.",
+          "Freelance Work: Remote roles like editing, proofreading, curriculum consulting, grant writing, educational research, and virtual assistance.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Why More Teachers Are Considering School Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Although tutoring and online teaching remain popular, another opportunity has quietly become more common among educators: Scheduled school transportation. Unlike rideshare platforms or food delivery apps that depend on customer demand, school transportation generally follows established weekday schedules assigned around school start and dismissal times.",
+      },
+      {
+        type: "paragraph",
+        text: "For many teachers, that predictability is one of the biggest advantages. Rather than waiting for ride requests or working late evenings, scheduled transportation allows drivers to plan their workdays in advance. Many educators appreciate morning routes before school, afternoon routes after dismissal, weekends generally free, most school holidays off, predictable schedules, and consistent routines.",
       },
       {
         type: "image",
@@ -254,11 +306,51 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "heading",
-        text: "Why More Teachers Are Considering School Transportation",
+        text: "Why Predictable Schedules Matter",
       },
       {
         type: "paragraph",
-        text: "Unlike rideshare platforms or food delivery apps that depend on unpredictable customer demand, school transportation follows established weekday schedules. Routes are typically assigned around school start and dismissal times, allowing teachers to work morning routes before school or afternoon routes after dismissal while keeping weekends and school holidays completely free.",
+        text: "Many gig economy jobs offer flexibility, but flexibility doesn't always mean predictability. A rideshare driver may earn well one evening and significantly less the next. Weather, local events, fuel costs, and customer demand can all influence earnings.",
+      },
+      {
+        type: "paragraph",
+        text: "School transportation is different. Because routes are generally assigned in advance, drivers often know when they'll work, where they'll drive, which students they'll transport, and how transportation fits into their weekly schedule. Knowing work schedules ahead of time makes balancing responsibilities much easier.",
+      },
+      {
+        type: "heading",
+        text: "Illustrative Example: How Siya Found a Flexible Side Hustle",
+      },
+      {
+        type: "paragraph",
+        text: "The following example is illustrative but reflects situations many educators experience: Siya has been an elementary school teacher in the Naperville area for several years. She loves teaching, but like many educators, her family's monthly expenses kept increasing for her household of five.",
+      },
+      {
+        type: "paragraph",
+        text: "Her husband drove for rideshare platforms, but late-night trips, changing fuel prices, vehicle maintenance, and unpredictable demand made budgeting difficult. One afternoon, Siya noticed a flyer advertising flexible part-time school transportation with morning and afternoon routes: 'Earn extra income around your existing job.'",
+      },
+      {
+        type: "paragraph",
+        text: "Her husband applied and was soon driving scheduled school routes that fit comfortably around their routine. Seeing how well the schedule worked, Siya joined too. Because routes aligned with school hours, she could continue teaching while earning additional income before and after school without giving up weekends or family time.",
+      },
+      {
+        type: "heading",
+        text: "Why Teachers Are a Great Fit for Student Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Teaching is about much more than delivering lessons. Every day, educators manage classrooms, communicate with parents, support students with different learning needs, and create safe environments. These same qualities make teachers well suited for student transportation roles.",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Patience and empathy when working with children",
+          "Strong communication and problem-solving skills",
+          "Experience supporting students with diverse learning needs",
+          "Familiarity with routines and structured schedules",
+          "A calm approach to unexpected situations",
+          "A commitment to student safety and well-being",
+          "Professionalism and reliability",
+        ],
       },
       {
         type: "heading",
@@ -266,7 +358,61 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Yuni Rides partners with FirstAlt and participating school districts in California, Illinois, Washington, and other service areas to help provide safe, reliable transportation for eligible students. Drivers complete required background checks, MVR reviews, vehicle inspections, and safety education before transporting students, ensuring a structured and supportive environment for everyone.",
+        text: "Yuni Rides works alongside FirstAlt and participating school districts to help provide safe, reliable transportation for eligible students. Rather than operating as a traditional rideshare company, Yuni Rides helps connect trained drivers with approved transportation assignments.",
+      },
+      {
+        type: "paragraph",
+        text: "Through these partnerships, Yuni Rides supports transportation for students with disabilities, IEPs, autism, students experiencing homelessness, children in foster care, early childhood education students, and specialized program attendees. When approved through a participating district, families generally do not pay directly for the service.",
+      },
+      {
+        type: "heading",
+        text: "Safety Comes First",
+      },
+      {
+        type: "paragraph",
+        text: "Every trip involves responsibility, professionalism, and following established safety procedures. Depending on district and state requirements, driver onboarding includes criminal background screening, fingerprinting, Motor Vehicle Record (MVR) review, drug testing, vehicle inspections, proof of insurance, driver orientation, student safety training, child passenger safety education, CPR/First Aid certification, and specialized transportation education.",
+      },
+      {
+        type: "heading",
+        text: "What Makes Scheduled School Transportation Different?",
+      },
+      {
+        type: "table",
+        headers: ["Feature", "School Transportation", "Uber", "DoorDash"],
+        rows: [
+          [
+            "Predictable Schedule",
+            "Yes",
+            "Depends on demand",
+            "Depends on demand",
+          ],
+          ["Morning Routes", "Yes", "Optional", "Limited"],
+          ["Afternoon Routes", "Yes", "Optional", "Limited"],
+          ["Late-Night Driving", "Usually No", "Often", "Often"],
+          [
+            "Weekends Required",
+            "Usually No",
+            "Peak earning times",
+            "Peak earning times",
+          ],
+          ["School Holidays Off", "Generally Yes", "No", "No"],
+          [
+            "Community Impact",
+            "Transporting students",
+            "General passengers",
+            "Food delivery",
+          ],
+          ["Consistent Routes", "Often", "No", "No"],
+          ["Weekly Planning", "Easier", "Variable", "Variable"],
+        ],
+      },
+      {
+        type: "heading",
+        text: "Is School Transportation Right for You?",
+      },
+      {
+        type: "paragraph",
+        text: "Scheduled student transportation may be worth considering if you want to earn extra income without changing careers, prefer structured schedules over on-demand gig work, want evenings available for family or lesson planning, prefer weekdays instead of weekend shifts, enjoy working with children, want meaningful work that supports your local community, and appreciate predictable routines.",
       },
       {
         type: "heading",
@@ -277,9 +423,41 @@ export const blogPostsData: Record<string, BlogPost> = {
         items: [
           "Can teachers work as student transportation drivers? Yes. Many teachers choose flexible transportation opportunities that work around their existing school schedules.",
           "Do teachers need previous transportation experience? Not necessarily. Qualified applicants typically complete required onboarding and safety training before transporting students.",
-          "Are weekends required? Regular weekday student transportation generally does not require weekend work.",
-          "Do families pay directly for transportation? No. When transportation is approved through participating school districts and authorized programs, eligible families do not pay directly for the service.",
+          "Can substitute teachers also become transportation drivers? Yes. Substitute teachers often appreciate transportation opportunities because they can complement variable teaching schedules.",
+          "Do transportation schedules usually match the school calendar? In many cases, yes. Most scheduled student transportation follows the academic calendar.",
+          "Are weekends usually required? Regular weekday student transportation generally does not require weekend work.",
+          "Why do many teachers choose scheduled transportation instead of rideshare driving? Many educators prefer predictable schedules that align with school hours instead of relying on changing customer demand.",
+          "Can retired teachers become transportation drivers? Many retired educators enjoy remaining connected to students and their communities while earning supplemental income.",
+          "Do drivers transport students with disabilities? Some assignments involve students with disabilities or IEPs, supported by additional safety requirements or transportation monitors when needed.",
+          "Are transportation monitors available? Yes. When required by the student's transportation plan, trained transportation monitors may accompany the ride.",
+          "Do families pay directly for transportation? No. When approved through participating school districts, eligible families generally do not pay directly for the service.",
+          "How long does the onboarding process take? The timeline varies depending on background checks, documentation, district requirements, and state regulations.",
+          "Is school transportation a full-time job? Many drivers choose part-time morning routes, afternoon routes, or both.",
         ],
+      },
+      {
+        type: "heading",
+        text: "Continue Exploring",
+      },
+      {
+        type: "paragraph",
+        text: "If you're researching flexible income opportunities, explore these related resources:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Driving Opportunities: Become a School Transportation Driver, Flexible Driving Jobs in California & Illinois, Driver Jobs in Oakland, Fairfield, Chicago, and Naperville.",
+          "Student Transportation: Special Needs Student Transportation in California, Illinois, and Washington; School Transportation Solutions for Every Student.",
+          "Side Hustle Guides: Best Illinois Side Hustles That Fit Around a Full-Time Job, Flexible Side Hustles in Dublin CA, How Scheduled Driving Helps You Plan Your Income, Balancing College & Work, and Driving in Retirement.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Final Thoughts",
+      },
+      {
+        type: "paragraph",
+        text: "There is no single 'best' side hustle for every teacher. The right choice depends on your schedule, financial goals, family commitments, and the type of work you enjoy. For teachers who prefer predictable routines over on-demand gig work, scheduled student transportation offers another option worth considering. Morning and afternoon routes can fit naturally around the school day, allowing educators to earn supplemental income while keeping evenings and most weekends available.",
       },
     ],
   },
@@ -338,7 +516,23 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Because of these rising costs, many professionals are choosing to diversify their income rather than depend on a single source of earnings. A side hustle can help you pay monthly bills, build an emergency fund, reduce credit card debt, save for retirement, and create additional financial security.",
+        text: "Because of these rising costs, many professionals are choosing to diversify their income rather than depend on a single source of earnings. A side hustle can help you:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Pay monthly bills",
+          "Build an emergency fund",
+          "Reduce credit card debt",
+          "Save for retirement",
+          "Cover unexpected expenses",
+          "Reach financial goals faster",
+          "Create additional financial security",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Even earning an extra few hundred dollars each month can make a meaningful difference for many households.",
       },
       {
         type: "heading",
@@ -362,6 +556,42 @@ export const blogPostsData: Record<string, BlogPost> = {
         type: "paragraph",
         text: "The best side hustle isn't always the one with the highest hourly pay. Instead, it's the opportunity you can realistically maintain without burning yourself out.",
       },
+
+      /* ⬇️ ADDED MISSING COMPARISON TABLE FROM PDF ⬇️ */
+      {
+        type: "heading",
+        text: "Comparison: Popular Illinois Side Hustles",
+      },
+      {
+        type: "table",
+        headers: [
+          "Side Hustle",
+          "Weekly Earnings",
+          "Flexible Schedule",
+          "Beginner Friendly",
+          "Vehicle Required",
+        ],
+        rows: [
+          ["Food Delivery", "Yes", "Excellent", "Yes", "Yes"],
+          ["Amazon Flex", "Yes", "Excellent", "Yes", "Yes"],
+          ["Freelancing", "Varies", "Excellent", "Yes", "No"],
+          ["Online Selling", "Varies", "Excellent", "Yes", "No"],
+          ["Tutoring", "Varies", "Good", "Yes", "No"],
+          ["Pet Sitting", "Yes", "Good", "Yes", "No"],
+          [
+            "Scheduled School Transportation",
+            "Yes",
+            "Excellent",
+            "Yes",
+            "Usually",
+          ],
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "While every option has advantages, choosing the right side hustle depends on your schedule, preferred work style, and long-term goals.",
+      },
+
       {
         type: "image",
         src: "/images/Best-Illinois-Side-Hustles-That-Fit-Around-a-Full-Time-Job.png",
@@ -374,16 +604,50 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Traditional employment has changed significantly. Rather than relying on one income source, many workers now combine a full-time job with part-time work to improve financial stability. Flexible side hustles allow people to work before or after their primary job, earn additional income without changing careers, and build financial resilience.",
+        text: "Traditional employment has changed significantly over the past decade. Rather than relying on one income source, many workers now combine a full-time job with part-time work to improve financial stability.",
       },
+      {
+        type: "paragraph",
+        text: "Flexible side hustles are attractive because they allow people to:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Work before or after their primary job",
+          "Choose opportunities that fit their lifestyle",
+          "Earn additional income without changing careers",
+          "Build financial resilience during uncertain economic conditions",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Some people prefer remote freelance work, while others enjoy hands-on opportunities like delivery driving or student transportation. The key is selecting work that matches your availability and personal preferences.",
+      },
+
+      /* ⬇️ ADDED EXPERT TIP ⬇️ */
+      {
+        type: "heading",
+        text: "Expert Tip",
+      },
+      {
+        type: "paragraph",
+        text: "When choosing a side hustle, focus on consistency instead of chasing the highest hourly rate. A predictable opportunity that fits your weekly schedule is often easier to maintain over the long term than work with fluctuating demand. Reliable schedules can also help you balance your career, family commitments, and personal well-being.",
+      },
+
       {
         type: "heading",
         text: "Scheduled School Transportation: A Predictable Earning Option",
       },
       {
         type: "paragraph",
-        text: "Unlike on-demand driving platforms, scheduled student transportation generally follows assigned weekday routes, allowing drivers to plan around their existing commitments. Yuni Rides partners with FirstAlt and participating school districts to help provide transportation for eligible students in California and Illinois. Drivers complete required onboarding, safety education, and qualification requirements before transporting students, making scheduled transportation another option for people seeking structured supplemental income.",
+        text: "Unlike on-demand driving platforms, scheduled student transportation generally follows assigned weekday routes, allowing drivers to plan around their existing commitments.",
       },
+      {
+        type: "paragraph",
+        text: "Yuni Rides partners with FirstAlt and participating school districts to help provide transportation for eligible students in California and Illinois. Drivers complete required onboarding, safety education, and qualification requirements before transporting students, making scheduled transportation another option for people seeking structured supplemental income.",
+      },
+
+      /* ⬇️ ALL 11 FAQs INCLUDED NOW ⬇️ */
       {
         type: "heading",
         text: "Frequently Asked Questions",
@@ -394,7 +658,30 @@ export const blogPostsData: Record<string, BlogPost> = {
           "What are the best Illinois side hustles in 2026? Popular options include food delivery, Amazon Flex, freelancing, tutoring, pet sitting, selling online, seasonal work, virtual assistant roles, and scheduled school transportation.",
           "Which side hustles pay weekly? Many delivery platforms, Amazon Flex, event staffing positions, seasonal jobs, and some school transportation companies offer weekly payments.",
           "Can I work a side hustle while keeping my full-time job? Yes. Many side hustles are designed around flexible schedules that allow you to work before work, after work, or on weekends.",
+          "What are the best side hustles for beginners? Food delivery, pet sitting, selling online, seasonal work, and virtual assistant positions are all beginner-friendly options.",
+          "Which side hustle has the most flexible schedule? Freelancing, virtual assistance, online selling, and pet sitting typically allow the greatest scheduling flexibility.",
+          "Are driving side hustles still profitable? They can be, but profitability depends on fuel costs, vehicle maintenance, demand, and the type of driving work you choose.",
+          "What side hustles require a vehicle? Food delivery, Amazon Flex, rideshare driving, newspaper delivery, and many student transportation opportunities require access to a qualifying vehicle.",
+          "What are alternatives to rideshare driving? Many workers also consider tutoring, freelancing, pet sitting, virtual assistance, seasonal work, and scheduled student transportation.",
           "How do scheduled transportation jobs work? Unlike on-demand driving platforms, scheduled transportation generally follows assigned weekday routes, allowing drivers to plan around their existing commitments.",
+          "Can retirees start a side hustle? Absolutely. Many retirees choose flexible opportunities such as tutoring, pet sitting, virtual assistance, and school transportation because they offer structure without requiring full-time hours.",
+          "Can college students work part-time transportation jobs? Depending on eligibility requirements and local opportunities, some college students choose flexible transportation work that fits around their class schedules.",
+        ],
+      },
+
+      /* ⬇️ ADDED OUTRO & RELATED ARTICLES ⬇️ */
+      {
+        type: "paragraph",
+        text: "If you're exploring delivery apps, tutoring, freelancing, pet sitting, seasonal work, and other ways to earn extra income, our complete guide '9 Flexible Side Hustles (2026 Guide)' explains the advantages, earning potential, and flexibility of each option to help you choose the best fit for your schedule.",
+      },
+      {
+        type: "heading",
+        text: "Related Articles",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "9 Flexible Side Hustles in Dublin, CA to Earn Extra Income Without Quitting Your Job",
         ],
       },
     ],
@@ -419,11 +706,35 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Living in Dublin, California, offers many advantages: excellent schools, growing neighborhoods, and convenient access to the Bay Area. However, it also comes with a higher cost of living than many other parts of the country. Many households are dealing with rising expenses, including housing, groceries, gasoline, car insurance, childcare, student loans, and utility bills.",
+        text: "Living in Dublin, California, offers many advantages: excellent schools, growing neighborhoods, and convenient access to the Bay Area. However, it also comes with a higher cost of living than many other parts of the country.",
       },
       {
         type: "paragraph",
-        text: "Because of these costs, many professionals, parents, college students, and retirees are searching for ways to earn extra income without sacrificing their primary careers. The good news is that not every second job requires working nights or every weekend. Many flexible side hustles allow you to earn additional income while maintaining a healthy work-life balance.",
+        text: "Many households are dealing with rising expenses, including the following:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Housing and rent",
+          "Groceries",
+          "Gasoline",
+          "Car insurance",
+          "Childcare",
+          "Student loans",
+          "Utility bills",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Because of these costs, many professionals, parents, college students, and retirees are searching for ways to earn extra income without sacrificing their primary careers.",
+      },
+      {
+        type: "paragraph",
+        text: "The good news is that not every second job requires working nights or every weekend. Many flexible side hustles allow you to earn additional income while maintaining a healthy work-life balance.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're searching for side hustles in Dublin, CA, the following opportunities can help you supplement your income while fitting around your current schedule.",
       },
       {
         type: "heading",
@@ -431,117 +742,518 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Before choosing a second job, ask yourself these crucial questions:",
+        text: "Before choosing a second job, ask yourself these questions:",
       },
       {
         type: "bullet-list",
         items: [
           "Can I work around my current schedule?",
-          "Does it require special qualifications or heavy investments?",
-          "Will I spend a lot on fuel or vehicle maintenance equipment?",
-          "Is the income predictable week over week?",
-          "Can I continue doing it long-term without burning out?",
+          "Does it require special qualifications?",
+          "Will I spend a lot on fuel or equipment?",
+          "Is the income predictable?",
+          "Can I continue doing it long-term?",
           "Does it provide flexibility for family or personal commitments?",
         ],
       },
       {
         type: "paragraph",
-        text: "The best side hustle isn't always the one with the highest hourly rate—it's the one that fits your lifestyle smoothly.",
+        text: "The best side hustle isn't always the one with the highest hourly rate—it's the one that fits your lifestyle.",
       },
+
+      /* 1. EAZE */
       {
         type: "heading",
         text: "1. Deliver with Eaze",
       },
       {
         type: "paragraph",
-        text: "Average Earnings: Approximately $18–$25 per hour. If you live in California, Eaze offers an opportunity to earn extra income delivering cannabis and CBD products where permitted by law. Many drivers appreciate the flexibility because they can accept deliveries around their personal schedule.",
+        text: "Average Earnings: Approximately $18–$25 per hour",
+      },
+      {
+        type: "paragraph",
+        text: "If you live in California, Eaze offers an opportunity to earn extra income delivering cannabis and CBD products where permitted by law.",
+      },
+      {
+        type: "paragraph",
+        text: "Many drivers appreciate the flexibility because they can accept deliveries around their personal schedule.",
+      },
+      {
+        type: "heading",
+        text: "Pros",
       },
       {
         type: "bullet-list",
         items: [
-          "Pros: Flexible working hours, competitive hourly earnings, independent work, and full schedule control.",
-          "Considerations: Must be at least 21 years old, pass a background check, have a reliable vehicle, and live in an active service location.",
+          "Flexible working hours",
+          "Competitive hourly earnings",
+          "Independent work",
+          "Choose when you work",
         ],
       },
+      {
+        type: "heading",
+        text: "Consider Before Joining",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Must be at least 21 years old",
+          "Background check required",
+          "Reliable vehicle required",
+          "Availability depends on your location",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Like many gig apps, income depends on customer demand. Busy days can be profitable, while slower periods may result in fewer deliveries.",
+      },
+      {
+        type: "heading",
+        text: "Another Option for Predictable Income",
+      },
+      {
+        type: "paragraph",
+        text: "Some California drivers combine delivery platforms with scheduled weekday student transportation to create a more balanced weekly income.",
+      },
+      {
+        type: "paragraph",
+        text: "Unlike on-demand delivery work, scheduled transportation follows assigned morning and afternoon routes during school days, making it easier to plan around another job.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're interested in learning how scheduled routes work, you may also enjoy:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Driver Jobs in Dublin, CA",
+          "How Scheduled Driving Can Help You Plan Your Income",
+          "Best Side Hustles for California Drivers",
+        ],
+      },
+
+      /* 2. RESTAURANT & GROCERY */
       {
         type: "heading",
         text: "2. Restaurant and Grocery Delivery Apps",
       },
       {
         type: "paragraph",
-        text: "Popular platforms include Uber Eats, DoorDash, Instacart, and Shipt. Food and grocery delivery continues to be one of the most common side hustles in California because almost anyone with a qualifying vehicle can get started quickly without fixed commitments.",
+        text: "Popular platforms include Uber Eats, DoorDash, Instacart, and Shipt.",
       },
+      {
+        type: "paragraph",
+        text: "Food delivery continues to be one of the most common side hustles in California because almost anyone with a qualifying vehicle can get started.",
+      },
+      {
+        type: "heading",
+        text: "Benefits",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Flexible schedule",
+          "No fixed hours",
+          "Choose when to work",
+          "Opportunities during lunch and dinner rushes",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Challenges",
+      },
+      {
+        type: "paragraph",
+        text: "Many drivers mention common challenges, including:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Higher fuel costs",
+          "Vehicle maintenance",
+          "Waiting between orders",
+          "Traffic congestion",
+          "Variable daily earnings",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Because most demand happens during evenings and weekends, delivery work can sometimes conflict with family time or another job.",
+      },
+      {
+        type: "heading",
+        text: "Building a More Predictable Schedule",
+      },
+      {
+        type: "paragraph",
+        text: "Many experienced drivers combine delivery work with scheduled weekday opportunities. For example, completing a morning school transportation route before a regular job and using delivery apps during weekends allows drivers to diversify their income instead of relying on one platform alone.",
+      },
+
+      /* 3. NEWSPAPER & FLYER */
       {
         type: "heading",
         text: "3. Newspaper and Flyer Delivery",
       },
       {
         type: "paragraph",
-        text: "Delivery routes usually operate early in the morning, allowing drivers to finish before the typical workday begins. Local companies hire drivers to distribute community newspapers, advertising materials, real estate flyers, and regional publications.",
+        text: "Although many people assume newspaper delivery has disappeared, there are still opportunities in many California communities.",
       },
+      {
+        type: "paragraph",
+        text: "Delivery routes usually operate early in the morning, allowing drivers to finish before the typical workday begins.",
+      },
+      {
+        type: "paragraph",
+        text: "Some companies also hire drivers to distribute community newspapers, advertising materials, real estate flyers, and local publications.",
+      },
+      {
+        type: "heading",
+        text: "Why It's Popular",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Predictable routes",
+          "Early morning schedule",
+          "Consistent workload",
+          "Can fit around another job",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Drivers who enjoy structured schedules often combine these opportunities with other flexible work during the rest of the day. Some also choose scheduled school transportation because morning and afternoon routes naturally fit between other daily commitments.",
+      },
+
       {
         type: "image",
         src: "/images/Flexible-Side-Hustles-in-Dublin-CA.png",
       },
+
+      /* 4. FREELANCING */
       {
         type: "heading",
         text: "4. Freelancing Online",
       },
       {
         type: "paragraph",
-        text: "If you have professional skills, freelancing can become one of the highest-paying side hustles available. Popular categories include graphic design, writing, marketing, video editing, programming, virtual assistance, and bookkeeping through platforms like Upwork and Fiverr.",
+        text: "If you have professional skills, freelancing can become one of the highest-paying side hustles available.",
       },
+      {
+        type: "paragraph",
+        text: "Popular freelance categories include graphic design, writing, marketing, video editing, programming, virtual assistance, bookkeeping, and social media management.",
+      },
+      {
+        type: "paragraph",
+        text: "Platforms such as Upwork, Fiverr, and FlexJobs connect freelancers with clients around the world.",
+      },
+      {
+        type: "heading",
+        text: "Advantages",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Work from home",
+          "Set your own rates",
+          "Flexible schedule",
+          "Unlimited income potential",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Challenges",
+      },
+      {
+        type: "paragraph",
+        text: "Freelancing requires self-discipline, client communication, and finding consistent projects. Some freelancers prefer combining remote work with a local part-time opportunity that gets them out of the house and provides more structured income.",
+      },
+
+      /* 5. TUTORING */
       {
         type: "heading",
         text: "5. Tutoring and Online Teaching",
       },
       {
         type: "paragraph",
-        text: "If you have experience in mathematics, science, languages, or test preparation, tutoring offers high hourly rates and flexible evening scheduling through platforms like TutorMe, Wyzant, and Preply.",
-      },
-      {
-        type: "heading",
-        text: "6. House Sitting",
+        text: "Tutoring continues to grow as one of the most rewarding flexible jobs. If you have experience in mathematics, science, English, languages, music, or test preparation, there are many opportunities to teach students online or in person.",
       },
       {
         type: "paragraph",
-        text: "A low-stress option for Dublin residents where you collect mail, water plants, and look after properties while homeowners travel. It pairs nicely with remote work or other structured jobs.",
+        text: "Popular tutoring platforms include TutorMe, Preply, Wyzant, and Varsity Tutors.",
       },
       {
         type: "heading",
-        text: "7. Seasonal Jobs & Event Staffing",
+        text: "Why Tutoring Works Well",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Flexible scheduling",
+          "High hourly rates",
+          "Work from home",
+          "Meaningful impact on students",
+        ],
       },
       {
         type: "paragraph",
-        text: "Holiday retail, event staffing, tax season assistance, and summer recreation programs provide immediate supplemental income, though they are temporary in nature.",
+        text: "Many tutors schedule lessons in the evenings after school, leaving mornings available for other flexible opportunities. For people who enjoy working with children, combining tutoring with scheduled student transportation creates a balanced routine that includes both educational support and community involvement.",
       },
+
+      /* 6. HOUSE SITTING */
+      {
+        type: "heading",
+        text: "6. House Sitting: Earn Money While Looking After Someone's Home",
+      },
+      {
+        type: "paragraph",
+        text: "If you're searching for a low-stress side hustle in Dublin, CA, house sitting can be a great option. Many homeowners travel for work, vacations, or extended stays and need someone trustworthy to watch their property while they're away.",
+      },
+      {
+        type: "paragraph",
+        text: "Depending on the arrangement, you may be responsible for collecting mail, watering plants, taking care of pets, maintaining the property, or being present for deliveries or maintenance visits.",
+      },
+      {
+        type: "heading",
+        text: "Benefits",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Flexible schedule",
+          "Low physical effort",
+          "Can sometimes include free accommodation",
+          "Great for remote workers or freelancers",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "House sitting usually doesn't provide consistent year-round income, but it can work well alongside other flexible side jobs. Many people combine occasional house-sitting opportunities with more predictable weekday work to create a steady monthly income.",
+      },
+
+      /* 7. SEASONAL JOBS */
+      {
+        type: "heading",
+        text: "7. Seasonal Jobs",
+      },
+      {
+        type: "paragraph",
+        text: "Seasonal work remains one of the fastest ways to earn additional income throughout California.",
+      },
+      {
+        type: "paragraph",
+        text: "Common seasonal opportunities include holiday retail, tax season assistance, event staffing, warehouse work, summer recreation, school programs, and agricultural work.",
+      },
+      {
+        type: "heading",
+        text: "Benefits",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Temporary commitment",
+          "Immediate hiring",
+          "Good supplemental income",
+          "Opportunity to build experience",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The downside is that seasonal jobs eventually end. Many workers look for a second flexible income source that continues throughout the year. Scheduled school transportation is one example because routes generally operate during the academic calendar, giving drivers a consistent weekday schedule while still allowing time for seasonal work when opportunities arise.",
+      },
+
+      /* 8. DOG WALKING */
       {
         type: "heading",
         text: "8. Dog Walking and Pet Sitting",
       },
       {
         type: "paragraph",
-        text: "Platforms like Rover and Wag! allow animal lovers to turn mid-day walks and overnight pet care into a steady income stream with repeat local clients.",
+        text: "Animal lovers can turn their passion into extra income through dog walking and pet sitting. Popular platforms include Rover, Wag!, and PetSitter.",
+      },
+      {
+        type: "paragraph",
+        text: "Services often include daily dog walking, overnight pet sitting, feeding, exercise, and drop-in visits.",
       },
       {
         type: "heading",
-        text: "9. Scheduled School Transportation (The Predictable Alternative)",
+        text: "Why People Like It",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Flexible hours",
+          "Outdoor activity",
+          "Low startup costs",
+          "Repeat customers",
+        ],
       },
       {
         type: "paragraph",
-        text: "Over the past few years, many California drivers have started looking beyond traditional gig apps. Rather than relying entirely on unpredictable ride requests, food deliveries, or surge pricing, drivers prefer opportunities that provide assigned routes, consistent weekday schedules, morning/afternoon trips, and weekends off.",
+        text: "Many walkers schedule appointments during the middle of the day, making it possible to work around other commitments. Because scheduled student transportation typically takes place during morning and afternoon school hours, some people find the two schedules complement one another well.",
+      },
+
+      /* 9. CHILDCARE & BABYSITTING */
+      {
+        type: "heading",
+        text: "9. Childcare and Babysitting",
       },
       {
         type: "paragraph",
-        text: "Yuni Rides partners with FirstAlt and participating school districts to help provide transportation for eligible students throughout California and Illinois. Drivers complete required onboarding, background screening, vehicle inspections, and safety education before transporting students. For many drivers, these weekday routes fit naturally around existing commitments and provide another option for earning reliable supplemental income.",
+        text: "Families throughout Dublin continue looking for reliable childcare providers. Whether you're helping after school, during evenings, or on weekends, childcare can become a dependable source of supplemental income.",
       },
+      {
+        type: "heading",
+        text: "Responsibilities",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Supervising children",
+          "Homework assistance",
+          "Preparing meals",
+          "Transportation",
+          "Indoor and outdoor activities",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Many childcare providers also enjoy working with children in other settings. For individuals interested in supporting students beyond the classroom, scheduled school transportation offers another meaningful opportunity to help families while earning additional income.",
+      },
+      {
+        type: "paragraph",
+        text: "Unlike many gig platforms, student transportation often follows predictable weekday schedules that make planning easier.",
+      },
+
+      /* COMPARISON TABLE */
+      {
+        type: "heading",
+        text: "Which Side Hustle Is Right for You?",
+      },
+      {
+        type: "paragraph",
+        text: "Every side hustle offers different advantages depending on your schedule, financial goals, and lifestyle.",
+      },
+      {
+        type: "table",
+        headers: [
+          "Side Hustle",
+          "Flexibility",
+          "Income Potential",
+          "Vehicle Required",
+          "Best For",
+        ],
+        rows: [
+          ["Eaze Delivery", "High", "$$", "Yes", "California drivers"],
+          [
+            "Uber Eats / DoorDash",
+            "High",
+            "$$",
+            "Yes",
+            "Evening & weekend work",
+          ],
+          ["Newspaper Delivery", "Medium", "$$", "Yes", "Early risers"],
+          ["Freelancing", "High", "$$$", "No", "Professionals"],
+          ["Tutoring", "Medium", "$$$", "No", "Teachers & students"],
+          ["House Sitting", "High", "$$", "No", "Remote workers"],
+          ["Seasonal Jobs", "Medium", "$$", "Usually No", "Temporary income"],
+          ["Dog Walking", "High", "$$", "No", "Animal lovers"],
+          [
+            "Scheduled School Transportation",
+            "Medium",
+            "$$$",
+            "Yes",
+            "Drivers seeking predictable weekday income",
+          ],
+        ],
+      },
+
+      /* SCHEDULED SCHOOL TRANSPORTATION SUMMARY */
+      {
+        type: "heading",
+        text: "Why More Drivers Are Choosing Scheduled School Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Over the past few years, many California drivers have started looking beyond traditional gig apps. Rather than relying entirely on unpredictable ride requests or food deliveries, some drivers prefer opportunities that provide:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Assigned routes",
+          "Consistent weekday schedules",
+          "Morning and afternoon trips",
+          "Weekends and most school holidays off",
+          "More predictable planning",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "For drivers balancing another job, college classes, freelancing, or family responsibilities, scheduled transportation can complement other income sources rather than replace them.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides partners with FirstAlt and participating school districts to help provide transportation for eligible students throughout California and Illinois. Drivers complete required onboarding, background screening, vehicle inspections, safety education, and other qualification requirements before transporting students.",
+      },
+      {
+        type: "paragraph",
+        text: "For many drivers, these weekday routes fit naturally around existing commitments and provide another option for earning supplemental income.",
+      },
+
+      /* FAQS */
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What are the best side hustles in Dublin, CA? Popular options include delivery driving, freelancing, tutoring, seasonal work, dog walking, childcare, and scheduled student transportation.",
+          "Which side hustle offers the most flexibility? Freelancing, delivery apps, and dog walking generally allow you to choose your own schedule.",
+          "What side jobs work around a full-time job? Morning delivery routes, tutoring, freelancing, seasonal work, and scheduled school transportation can often fit around another job.",
+          "How can I earn extra income without working nights? Many people choose tutoring, freelancing, newspaper delivery, or weekday school transportation because they typically operate during daytime hours.",
+          "Are delivery apps still worth it? Delivery platforms can provide flexible income, but earnings often vary based on customer demand, fuel costs, traffic, and vehicle expenses.",
+          "What driving jobs offer predictable schedules? Scheduled student transportation, courier routes, and newspaper delivery generally provide more predictable schedules than on-demand gig work.",
+          "Can retirees work flexible part-time jobs? Yes. Many retirees enjoy tutoring, house sitting, dog walking, and part-time transportation opportunities that fit around their retirement lifestyle.",
+          "Can college students work flexible driving jobs? Depending on eligibility requirements and availability, some students choose flexible transportation work that fits around their class schedules.",
+          "What are alternatives to Uber for earning extra income? Alternatives include tutoring, freelancing, newspaper delivery, seasonal work, childcare, pet sitting, and scheduled student transportation.",
+          "How do I choose the right side hustle? Consider your availability, transportation, skills, earning goals, and whether you prefer predictable schedules or complete flexibility.",
+        ],
+      },
+
+      /* RELATED ARTICLES */
+      {
+        type: "heading",
+        text: "Related Articles You May Find Helpful",
+      },
+      {
+        type: "paragraph",
+        text: "Continue exploring flexible income opportunities with these guides:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "The Ultimate Guide to Special Needs Student Transportation (2026)",
+          "McKinney-Vento Transportation Rights: What Schools Must Provide in 2026",
+          "What Is IEP Transportation? A Complete Parent's Guide (2026)",
+        ],
+      },
+
+      /* FINAL THOUGHTS */
       {
         type: "heading",
         text: "Final Thoughts",
       },
       {
         type: "paragraph",
-        text: "There is no single 'best' side hustle for everyone. Some people value complete flexibility through freelancing or delivery apps, while others prefer structured weekday work with more predictable routines. If you are exploring different ways to earn extra income in Dublin, California, understanding how each option fits your lifestyle will help you build a sustainable income strategy. Reach out to Yuni Rides at 415-535-2155 or info@yunirides.com to learn more about scheduled student transportation opportunities.",
+        text: "There is no single 'best' side hustle for everyone. The right opportunity depends on your schedule, financial goals, and preferred way of working.",
+      },
+      {
+        type: "paragraph",
+        text: "Some people value complete flexibility through freelancing or delivery apps, while others prefer structured weekday work with more predictable routines. Many workers combine multiple income sources to create greater financial stability rather than relying on a single platform.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're exploring different ways to earn extra income in Dublin, California, it's worth comparing a variety of opportunities—from tutoring and seasonal jobs to delivery services and scheduled school transportation. Understanding how each option fits your lifestyle can help you build a sustainable income strategy while maintaining the work-life balance that matters most.",
       },
     ],
   },
