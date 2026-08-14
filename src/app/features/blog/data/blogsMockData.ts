@@ -17,6 +17,182 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "texas-school-transportation-growing-gap": {
+    slug: "texas-school-transportation-growing-gap",
+    title:
+      "Texas School Transportation: The Growing Gap Between Need and Capacity",
+    excerpt:
+      "An in-depth look at how Texas school districts are managing funding shortfalls, CDL driver shortages, and the rapidly growing demand for specialized IEP and McKinney-Vento student transportation.",
+    heroImage:
+      "/images/Texas-School-Transportation-The-Growing-Gap-Between-Need-and-Capacity.png",
+    date: "Aug 15, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Getting students to school in Texas is becoming difficult day by day. School transportation has become harder to fund, harder to staff, and harder to standardize. Most people outside a transportation department don't realize this, and the pressure is showing up in every district, from major metros to rural ISDs.",
+      },
+      {
+        type: "heading",
+        text: "The Funding Gap Is Real and Widening",
+      },
+      {
+        type: "paragraph",
+        text: "Under the Foundation School Program, Texas allocates transportation funding to school districts, but the allotment rarely covers the actual costs of transportation. Northwest ISD's CFO told CBS News that the district received $3.5 million in state transportation funding last year but spent more than four times that amount. Other Texas districts have reported that state funding covers only about 12% of their transportation costs. Lawmakers have repeatedly attempted to increase funding but have not succeeded, leaving districts with no option but to cover the difference through local budgets that are already strained by inflation and rising vehicle costs.",
+      },
+      {
+        type: "heading",
+        text: "The Driver Shortage Hasn't Gone Away",
+      },
+      {
+        type: "paragraph",
+        text: "Nationally, school bus driver employment remains about 9.5% below 2019 levels, even after modest recent gains. The underlying issue is structural: an average hourly wage of $22.45 cannot compete with warehouse, delivery, and retail jobs that do not require a commercial driver's license (CDL). Earning a school bus endorsement typically requires obtaining a CDL and completing approximately 12 weeks of training. Many candidates do not remain in the process long enough to complete the required training.",
+      },
+      {
+        type: "image",
+        src: "/images/Texas-School-Transportation-The-Growing-Gap-Between-Need-and-Capacity.png",
+        caption:
+          "Addressing the growing capacity and funding challenges in Texas school transportation.",
+      },
+      {
+        type: "heading",
+        text: "Specialized Transportation Is Growing Faster Than General Ridership",
+      },
+      {
+        type: "paragraph",
+        text: "Even districts that are not facing severe budget crises are seeing a clear trend: rising demand for specialized student transportation. Under IDEA, transportation is considered a related service when a student's Individualized Education Program (IEP) requires it. Districts cannot charge families for this service, and when an IEP requires a monitor, specialized seating, or behavioral support during transportation, the district must provide it.",
+      },
+      {
+        type: "paragraph",
+        text: "As student transportation needs become increasingly complex, transportation for students experiencing homelessness under the McKinney-Vento Act has also increased significantly in many regions. As a result, specialized transportation is consuming a larger share of already strained transportation budgets, staffing resources, and operational planning.",
+      },
+      {
+        type: "heading",
+        text: "Districts Are Looking Beyond the Traditional Yellow Bus",
+      },
+      {
+        type: "paragraph",
+        text: "As Texas faces growing cost and staffing pressures, districts are increasingly exploring multimodal transportation approaches, including smaller vehicles, supplemental transportation services, and routing software that enables greater coverage with a limited driver pool. National survey data shows that most school administrators continue to report driver shortages and budget shortfalls as ongoing challenges. Because transportation access has a direct impact on chronic absenteeism, many districts are investing in centralized pick-up locations, improved routing technology, and supplemental transportation solutions to maintain reliable service.",
+      },
+      {
+        type: "heading",
+        text: "What This Means for Districts and Families",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "For Transportation Directors: The common thread across funding shortages, staffing challenges, and growing demand for specialized transportation is clear—the traditional model is being asked to accomplish more with proportionally fewer resources.",
+          "For Families of Students with Disabilities: If a child's transportation needs are not already addressed in their IEP, the ARD committee is responsible for determining the appropriate transportation services, regardless of the district's broader transportation budget or staffing challenges.",
+        ],
+      },
+    ],
+  },
+  "special-needs-transportation-chicago-school-districts": {
+    slug: "special-needs-transportation-chicago-school-districts",
+    title:
+      "Special Needs Transportation for Chicago School Districts: Choosing the Right Transportation Partner",
+    excerpt:
+      "A complete guide for Chicago-area school districts on choosing the right special needs transportation partner. Learn about compliance, trained drivers, and flexible route coverage across Cook, DuPage, and surrounding counties.",
+    heroImage:
+      "/images/Special-Needs-Transportation-for-Chicago-School-Districts.png",
+    date: "Aug 15, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Special needs transportation is more than getting students from home to school—it's an essential service that supports safety, attendance, and compliance with each student's transportation requirements. For Chicago-area school districts, choosing the right transportation partner means finding a provider that prioritizes trained drivers, reliable communication, and dependable service.",
+      },
+      {
+        type: "paragraph",
+        text: "It's 6:45 a.m. A transportation director checks their phone before arriving at the office. A driver has called in sick, a parent has requested a route change, and a special education coordinator needs confirmation that a student requiring specialized transportation will arrive on time. For many Chicago-area school districts, this is a familiar start to the day.",
+      },
+      {
+        type: "paragraph",
+        text: "School transportation is much more than logistics. It has a direct impact on students' daily attendance, family confidence, operational efficiency, and effective compliance with transportation services outlined in eligible students' Individualized Education Programs (IEPs).",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides provides specialized and supplemental student transportation and is expanding services throughout the Chicago metropolitan area, including Cook, DuPage, Kane, Lake, and Will Counties.",
+      },
+      {
+        type: "heading",
+        text: "Why Specialized Transportation is Important",
+      },
+      {
+        type: "paragraph",
+        text: "Students with special transportation needs often require services that go beyond a traditional home-to-school route. The transportation service vendor may include individualized routing, wheelchair-accessible vehicles, Child Safety Restraint Systems (CSRS), transportation monitors, or other specialized supports as per respective district requirements.",
+      },
+      {
+        type: "heading",
+        text: "What School Districts Should Look For",
+      },
+      {
+        type: "paragraph",
+        text: "Choosing a suitable transportation provider should involve more than just comparing pricing. Key non-negotiable qualities include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Professionally screened and trained drivers",
+          "On-time reliable performance with GPS-supported route monitoring",
+          "Clear and proactive communication maintained with district staff",
+          "Flexible routing for changing student needs",
+          "Safety inspections and preventive vehicle maintenance",
+          "Capability to support every student with diverse transportation requirements",
+        ],
+      },
+      {
+        type: "image",
+        src: "/images/Special-Needs-Transportation-for-Chicago-School-Districts.png",
+        caption:
+          "Specialized student transportation services tailored for Chicago-area school districts.",
+      },
+      {
+        type: "heading",
+        text: "Why Districts Choose Yuni Rides",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Comprehensive driver screening protocols",
+          "All trips monitored via GPS",
+          "Wheelchair-accessible transportation available on demand",
+          "Supplemental route coverage for sudden shortages",
+          "Student-focused service driven by an efficient & responsive operations team",
+          "Flexible transportation solutions tailored to district needs",
+        ],
+      },
+      {
+        type: "heading",
+        text: "A Partnership, Not Just a Contract",
+      },
+      {
+        type: "paragraph",
+        text: "Many districts look for additional transportation support due to sudden driver shortages, expanding special education programs, new student placements, or changing transportation needs. At Yuni Rides, we believe transportation works best when providers cooperate tightly with transportation departments, special education teams, and school administrators.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What is special needs transportation? It is a specialized student transportation service designed for students whose IEP includes specific transportation accommodations, such as individualized routing or wheelchair-accessible vehicles.",
+          "Can school districts outsource specialized transportation? Yes. Many school districts partner with qualified transportation providers to supplement existing services, increase capacity, or support specialized transportation needs while maintaining district oversight.",
+          "Do you provide wheelchair-accessible transportation? Yes. Yuni Rides provides wheelchair-accessible vehicles based on district requirements and individual student transportation plans.",
+          "Which areas do you serve? We currently operate in the San Francisco Bay Area and are expanding throughout the Chicago metropolitan area, serving communities across Cook, DuPage, Kane, Lake, and Will Counties.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Partner With Yuni Rides",
+      },
+      {
+        type: "paragraph",
+        text: "At Yuni Rides, we understand that transportation needs can change quickly. Our operations team works closely with district transportation departments to respond quickly while maintaining service continuity. Contact us to learn more about our supplemental route coverage and to request our capabilities statement and proof of insurance.",
+      },
+    ],
+  },
   "teachers-earning-extra-income-school-transportation": {
     slug: "teachers-earning-extra-income-school-transportation",
     title:
