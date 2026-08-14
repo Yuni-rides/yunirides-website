@@ -17,10 +17,364 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "teachers-earning-extra-income-school-transportation": {
+    slug: "teachers-earning-extra-income-school-transportation",
+    title:
+      "How Teachers Can Earn Extra Income Without Working Nights or Weekends (2026 Guide)",
+    excerpt:
+      "Discover why teachers are choosing flexible school transportation jobs to earn extra income. Learn how predictable morning and afternoon routes fit around a teaching career.",
+    heroImage:
+      "/images/How-Teachers-Can-Earn-Extra-Income-Without-Working-Nights-or-Weekends.png",
+    date: "Aug 14, 2026",
+    readTime: "9 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Teaching remains one of the most rewarding careers, but many educators are looking for practical ways to supplement their income without sacrificing evenings, weekends, or time with family. While tutoring and coaching continue to be popular options, scheduled school transportation has become another flexible opportunity that fits naturally around the academic calendar.",
+      },
+      {
+        type: "heading",
+        text: "Quick Answer: Can teachers earn extra income without working nights or weekends?",
+      },
+      {
+        type: "paragraph",
+        text: "Yes. Many teachers earn supplemental income through tutoring, curriculum creation, coaching, online teaching, and scheduled school transportation. Unlike many gig economy jobs, school transportation typically follows weekday morning and afternoon schedules, allowing educators to earn additional income while keeping evenings, weekends, and most school holidays available for family, lesson planning, or personal time.",
+      },
+      {
+        type: "heading",
+        text: "Key Takeaways",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Teachers are increasingly looking for flexible side hustles to supplement their income.",
+          "Tutoring remains popular, but it isn't the only option available.",
+          "Scheduled school transportation follows predictable weekday routes aligned with school start and dismissal times.",
+          "Teachers already possess key skills—such as child management, patience, and safety protocols—needed to transport students.",
+          "Structured transportation offers a consistent alternative to late-night rideshare or food delivery work.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Why More Teachers Are Looking for Extra Income in 2026",
+      },
+      {
+        type: "paragraph",
+        text: "Despite their dedication, rising housing costs, grocery prices, fuel expenses, and inflation have encouraged many educators to explore flexible side hustles. After spending an entire day in the classroom, most educators don't want another job that requires working until midnight or sacrificing every weekend. Instead, they're looking for opportunities that provide flexibility, predictable hours, and meaningful community impact.",
+      },
+      {
+        type: "heading",
+        text: "Popular Side Hustles Teachers Are Using",
+      },
+      {
+        type: "paragraph",
+        text: "Common side hustles for educators include private tutoring, online teaching, selling educational resources online, educational content creation, athletic coaching, and freelance writing. However, for those seeking predictable schedules without additional computer or grading time, driving offers a refreshing, hands-on option.",
+      },
+      {
+        type: "image",
+        src: "/images/How-Teachers-Can-Earn-Extra-Income-Without-Working-Nights-or-Weekends.png",
+        caption:
+          "Explore flexible student transportation routes designed to fit a teacher's schedule.",
+      },
+      {
+        type: "heading",
+        text: "Why More Teachers Are Considering School Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Unlike rideshare platforms or food delivery apps that depend on unpredictable customer demand, school transportation follows established weekday schedules. Routes are typically assigned around school start and dismissal times, allowing teachers to work morning routes before school or afternoon routes after dismissal while keeping weekends and school holidays completely free.",
+      },
+      {
+        type: "heading",
+        text: "How Yuni Rides Supports Student Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides partners with FirstAlt and participating school districts in California, Illinois, Washington, and other service areas to help provide safe, reliable transportation for eligible students. Drivers complete required background checks, MVR reviews, vehicle inspections, and safety education before transporting students, ensuring a structured and supportive environment for everyone.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Can teachers work as student transportation drivers? Yes. Many teachers choose flexible transportation opportunities that work around their existing school schedules.",
+          "Do teachers need previous transportation experience? Not necessarily. Qualified applicants typically complete required onboarding and safety training before transporting students.",
+          "Are weekends required? Regular weekday student transportation generally does not require weekend work.",
+          "Do families pay directly for transportation? No. When transportation is approved through participating school districts and authorized programs, eligible families do not pay directly for the service.",
+        ],
+      },
+    ],
+  },
+  "illinois-side-hustles": {
+    slug: "illinois-side-hustles",
+    title:
+      "Best Illinois Side Hustles That Fit Around a Full-Time Job (2026 Guide)",
+    excerpt:
+      "Discover the best Illinois side hustles in 2026. Compare flexible jobs, weekly-paying opportunities, and scheduled school transportation to earn extra income while keeping your full-time job.",
+    heroImage:
+      "/images/Best-Illinois-Side-Hustles-That-Fit-Around-a-Full-Time-Job.png",
+    date: "Aug 14, 2026",
+    readTime: "8 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Living in Illinois has become more expensive over the past few years. Rising housing costs, higher grocery prices, increased fuel expenses, and everyday bills have made it difficult for many families to rely on a single paycheck. As a result, more people are searching for flexible ways to earn extra income without leaving their primary jobs.",
+      },
+      {
+        type: "paragraph",
+        text: "The good news is that there are more side hustle opportunities available today than ever before. Whether you have a few hours before work, evenings after your shift, or weekends free, there are flexible income opportunities that can fit around your schedule.",
+      },
+      {
+        type: "paragraph",
+        text: "This guide explains the best Illinois side hustles in 2026, compares their advantages, discusses who they're best suited for, and highlights one option that many drivers overlook: scheduled school transportation.",
+      },
+      {
+        type: "heading",
+        text: "Quick Answer",
+      },
+      {
+        type: "paragraph",
+        text: "If you're looking for a flexible side hustle in Illinois, some of the best options include food delivery, Amazon Flex, freelancing, online selling, tutoring, pet sitting, and scheduled school transportation. The ideal side hustle depends on your availability, skills, income goals, and whether you prefer a predictable schedule or on-demand work.",
+      },
+      {
+        type: "heading",
+        text: "Key Takeaways",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Flexible side hustles can help supplement your income without leaving your full-time job.",
+          "Many side hustles offer weekly or consistent earning opportunities.",
+          "Predictable schedules are often easier to manage than on-demand gig work.",
+          "School transportation provides structured weekday routes with weekends and most school holidays off.",
+          "The best side hustle is one that fits your lifestyle, financial goals, and long-term availability.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Why More Illinois Workers Are Looking for Side Hustles",
+      },
+      {
+        type: "paragraph",
+        text: "For many Illinois residents, a full-time paycheck no longer stretches as far as it once did. Everyday expenses such as rent, groceries, transportation, childcare, insurance, and utilities continue to take up a larger share of household budgets.",
+      },
+      {
+        type: "paragraph",
+        text: "Because of these rising costs, many professionals are choosing to diversify their income rather than depend on a single source of earnings. A side hustle can help you pay monthly bills, build an emergency fund, reduce credit card debt, save for retirement, and create additional financial security.",
+      },
+      {
+        type: "heading",
+        text: "What Makes a Good Side Hustle?",
+      },
+      {
+        type: "paragraph",
+        text: "Not every second job is worth your time. Before committing to a side hustle, ask yourself the following questions:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Does it fit around my full-time work schedule?",
+          "Can I earn consistently each week?",
+          "Does it require a large upfront investment?",
+          "Can I continue doing it long term?",
+          "Does it leave enough time for my family and personal life?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The best side hustle isn't always the one with the highest hourly pay. Instead, it's the opportunity you can realistically maintain without burning yourself out.",
+      },
+      {
+        type: "image",
+        src: "/images/Best-Illinois-Side-Hustles-That-Fit-Around-a-Full-Time-Job.png",
+        caption:
+          "Explore top flexible side hustles and scheduled transportation opportunities in Illinois.",
+      },
+      {
+        type: "heading",
+        text: "Why Flexible Side Hustles Are More Popular Than Ever",
+      },
+      {
+        type: "paragraph",
+        text: "Traditional employment has changed significantly. Rather than relying on one income source, many workers now combine a full-time job with part-time work to improve financial stability. Flexible side hustles allow people to work before or after their primary job, earn additional income without changing careers, and build financial resilience.",
+      },
+      {
+        type: "heading",
+        text: "Scheduled School Transportation: A Predictable Earning Option",
+      },
+      {
+        type: "paragraph",
+        text: "Unlike on-demand driving platforms, scheduled student transportation generally follows assigned weekday routes, allowing drivers to plan around their existing commitments. Yuni Rides partners with FirstAlt and participating school districts to help provide transportation for eligible students in California and Illinois. Drivers complete required onboarding, safety education, and qualification requirements before transporting students, making scheduled transportation another option for people seeking structured supplemental income.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What are the best Illinois side hustles in 2026? Popular options include food delivery, Amazon Flex, freelancing, tutoring, pet sitting, selling online, seasonal work, virtual assistant roles, and scheduled school transportation.",
+          "Which side hustles pay weekly? Many delivery platforms, Amazon Flex, event staffing positions, seasonal jobs, and some school transportation companies offer weekly payments.",
+          "Can I work a side hustle while keeping my full-time job? Yes. Many side hustles are designed around flexible schedules that allow you to work before work, after work, or on weekends.",
+          "How do scheduled transportation jobs work? Unlike on-demand driving platforms, scheduled transportation generally follows assigned weekday routes, allowing drivers to plan around their existing commitments.",
+        ],
+      },
+    ],
+  },
+  "flexible-side-hustles-in-dublin-ca": {
+    slug: "flexible-side-hustles-in-dublin-ca",
+    title:
+      "9 Flexible Side Hustles in Dublin, CA to Earn Extra Income Without Quitting Your Job (2026 Guide)",
+    excerpt:
+      "Looking for side hustles in Dublin, CA? Explore 9 flexible opportunities—from delivery apps and freelancing to scheduled school transportation—that fit around your schedule.",
+    heroImage: "/images/Flexible-Side-Hustles-in-Dublin-CA.png",
+    date: "Jul 15, 2026",
+    readTime: "9 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "If you are looking for side hustles in Dublin, California, there are more opportunities than ever to earn extra income without leaving your current job. From delivery apps and freelancing to tutoring and scheduled school transportation, many flexible jobs can fit around your existing work schedule. This guide explores nine practical side hustles, their earning potential, and how to choose the one that best matches your lifestyle and financial goals.",
+      },
+      {
+        type: "heading",
+        text: "Why More Dublin Residents Are Looking for Side Hustles",
+      },
+      {
+        type: "paragraph",
+        text: "Living in Dublin, California, offers many advantages: excellent schools, growing neighborhoods, and convenient access to the Bay Area. However, it also comes with a higher cost of living than many other parts of the country. Many households are dealing with rising expenses, including housing, groceries, gasoline, car insurance, childcare, student loans, and utility bills.",
+      },
+      {
+        type: "paragraph",
+        text: "Because of these costs, many professionals, parents, college students, and retirees are searching for ways to earn extra income without sacrificing their primary careers. The good news is that not every second job requires working nights or every weekend. Many flexible side hustles allow you to earn additional income while maintaining a healthy work-life balance.",
+      },
+      {
+        type: "heading",
+        text: "What Makes a Good Side Hustle?",
+      },
+      {
+        type: "paragraph",
+        text: "Before choosing a second job, ask yourself these crucial questions:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Can I work around my current schedule?",
+          "Does it require special qualifications or heavy investments?",
+          "Will I spend a lot on fuel or vehicle maintenance equipment?",
+          "Is the income predictable week over week?",
+          "Can I continue doing it long-term without burning out?",
+          "Does it provide flexibility for family or personal commitments?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The best side hustle isn't always the one with the highest hourly rate—it's the one that fits your lifestyle smoothly.",
+      },
+      {
+        type: "heading",
+        text: "1. Deliver with Eaze",
+      },
+      {
+        type: "paragraph",
+        text: "Average Earnings: Approximately $18–$25 per hour. If you live in California, Eaze offers an opportunity to earn extra income delivering cannabis and CBD products where permitted by law. Many drivers appreciate the flexibility because they can accept deliveries around their personal schedule.",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Pros: Flexible working hours, competitive hourly earnings, independent work, and full schedule control.",
+          "Considerations: Must be at least 21 years old, pass a background check, have a reliable vehicle, and live in an active service location.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "2. Restaurant and Grocery Delivery Apps",
+      },
+      {
+        type: "paragraph",
+        text: "Popular platforms include Uber Eats, DoorDash, Instacart, and Shipt. Food and grocery delivery continues to be one of the most common side hustles in California because almost anyone with a qualifying vehicle can get started quickly without fixed commitments.",
+      },
+      {
+        type: "heading",
+        text: "3. Newspaper and Flyer Delivery",
+      },
+      {
+        type: "paragraph",
+        text: "Delivery routes usually operate early in the morning, allowing drivers to finish before the typical workday begins. Local companies hire drivers to distribute community newspapers, advertising materials, real estate flyers, and regional publications.",
+      },
+      {
+        type: "image",
+        src: "/images/Flexible-Side-Hustles-in-Dublin-CA.png",
+      },
+      {
+        type: "heading",
+        text: "4. Freelancing Online",
+      },
+      {
+        type: "paragraph",
+        text: "If you have professional skills, freelancing can become one of the highest-paying side hustles available. Popular categories include graphic design, writing, marketing, video editing, programming, virtual assistance, and bookkeeping through platforms like Upwork and Fiverr.",
+      },
+      {
+        type: "heading",
+        text: "5. Tutoring and Online Teaching",
+      },
+      {
+        type: "paragraph",
+        text: "If you have experience in mathematics, science, languages, or test preparation, tutoring offers high hourly rates and flexible evening scheduling through platforms like TutorMe, Wyzant, and Preply.",
+      },
+      {
+        type: "heading",
+        text: "6. House Sitting",
+      },
+      {
+        type: "paragraph",
+        text: "A low-stress option for Dublin residents where you collect mail, water plants, and look after properties while homeowners travel. It pairs nicely with remote work or other structured jobs.",
+      },
+      {
+        type: "heading",
+        text: "7. Seasonal Jobs & Event Staffing",
+      },
+      {
+        type: "paragraph",
+        text: "Holiday retail, event staffing, tax season assistance, and summer recreation programs provide immediate supplemental income, though they are temporary in nature.",
+      },
+      {
+        type: "heading",
+        text: "8. Dog Walking and Pet Sitting",
+      },
+      {
+        type: "paragraph",
+        text: "Platforms like Rover and Wag! allow animal lovers to turn mid-day walks and overnight pet care into a steady income stream with repeat local clients.",
+      },
+      {
+        type: "heading",
+        text: "9. Scheduled School Transportation (The Predictable Alternative)",
+      },
+      {
+        type: "paragraph",
+        text: "Over the past few years, many California drivers have started looking beyond traditional gig apps. Rather than relying entirely on unpredictable ride requests, food deliveries, or surge pricing, drivers prefer opportunities that provide assigned routes, consistent weekday schedules, morning/afternoon trips, and weekends off.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides partners with FirstAlt and participating school districts to help provide transportation for eligible students throughout California and Illinois. Drivers complete required onboarding, background screening, vehicle inspections, and safety education before transporting students. For many drivers, these weekday routes fit naturally around existing commitments and provide another option for earning reliable supplemental income.",
+      },
+      {
+        type: "heading",
+        text: "Final Thoughts",
+      },
+      {
+        type: "paragraph",
+        text: "There is no single 'best' side hustle for everyone. Some people value complete flexibility through freelancing or delivery apps, while others prefer structured weekday work with more predictable routines. If you are exploring different ways to earn extra income in Dublin, California, understanding how each option fits your lifestyle will help you build a sustainable income strategy. Reach out to Yuni Rides at 415-535-2155 or info@yunirides.com to learn more about scheduled student transportation opportunities.",
+      },
+    ],
+  },
   "why-safe-student-transportation-changes-everything": {
     slug: "why-safe-student-transportation-changes-everything",
-    title: "Why Safe Student Transportation Changes Everything for Families of Children With Special Needs",
-    excerpt: "Safe, reliable transportation is not just a logistic for families of special needs students — it is the foundation of their child's daily wellbeing. Yuni Rides shares why we exist and how we are different.",
+    title:
+      "Why Safe Student Transportation Changes Everything for Families of Children With Special Needs",
+    excerpt:
+      "Safe, reliable transportation is not just a logistic for families of special needs students — it is the foundation of their child's daily wellbeing. Yuni Rides shares why we exist and how we are different.",
     heroImage: "/images/Brand-Storytelling.jpg",
     date: "Jun 30, 2026",
     readTime: "7 mins read",
@@ -106,8 +460,10 @@ export const blogPostsData: Record<string, BlogPost> = {
   },
   "school-district-transportation-contractor-guide": {
     slug: "school-district-transportation-contractor-guide",
-    title: "How School Districts Choose Special Needs Transportation Contractors: A District Administrator's Complete Guide",
-    excerpt: "A practical guide for school district transportation directors on evaluating, selecting, and contracting with special needs transportation providers. Compliance, cost, and quality benchmarks.",
+    title:
+      "How School Districts Choose Special Needs Transportation Contractors: A District Administrator's Complete Guide",
+    excerpt:
+      "A practical guide for school district transportation directors on evaluating, selecting, and contracting with special needs transportation providers. Compliance, cost, and quality benchmarks.",
     heroImage: "/images/District-Administrator-Guide.jpg",
     date: "Jun 30, 2026",
     readTime: "8 mins read",
@@ -213,7 +569,8 @@ export const blogPostsData: Record<string, BlogPost> = {
   "ultimate-guide-special-needs-student-transportation": {
     slug: "ultimate-guide-special-needs-student-transportation",
     title: "The Ultimate Guide to Special Needs Student Transportation (2026)",
-    excerpt: "The complete guide to special needs student transportation: IEP rights, McKinney-Vento, vehicle standards, choosing a provider, and what parents and districts need to know in 2026.",
+    excerpt:
+      "The complete guide to special needs student transportation: IEP rights, McKinney-Vento, vehicle standards, choosing a provider, and what parents and districts need to know in 2026.",
     heroImage: "/images/Ultimate-Transportation-Guide.jpg",
     date: "Jun 30, 2026",
     readTime: "10 mins read",
@@ -430,9 +787,12 @@ export const blogPostsData: Record<string, BlogPost> = {
   },
   "special-needs-transportation-texas": {
     slug: "special-needs-transportation-texas",
-    title: "Special Needs Transportation in Texas: A Complete Guide for Houston, Dallas, and Beyond",
-    excerpt: "Expert IEP and special needs student transportation in Houston, Dallas, and across Texas. Yuni Rides meets TEA standards, IDEA requirements, and provides door-to-door service for students with disabilities.",
-    heroImage: "/images/Special-Needs-Transportation-in-Texas-Houston- Dallas-&-Beyond.jpg",
+    title:
+      "Special Needs Transportation in Texas: A Complete Guide for Houston, Dallas, and Beyond",
+    excerpt:
+      "Expert IEP and special needs student transportation in Houston, Dallas, and across Texas. Yuni Rides meets TEA standards, IDEA requirements, and provides door-to-door service for students with disabilities.",
+    heroImage:
+      "/images/Special-Needs-Transportation-in-Texas-Houston- Dallas-&-Beyond.jpg",
     date: "Jun 30, 2026",
     readTime: "7 mins read",
     contentBlocks: [
@@ -580,8 +940,10 @@ export const blogPostsData: Record<string, BlogPost> = {
   },
   "special-needs-transportation-washington-state": {
     slug: "special-needs-transportation-washington-state",
-    title: "Special Needs Transportation in Washington State: A Complete 2026 Guide",
-    excerpt: "Comprehensive guide to special needs and IEP student transportation in Washington State. Serving Seattle, Everett, Tacoma and surrounding districts. Yuni Rides — licensed WA provider.",
+    title:
+      "Special Needs Transportation in Washington State: A Complete 2026 Guide",
+    excerpt:
+      "Comprehensive guide to special needs and IEP student transportation in Washington State. Serving Seattle, Everett, Tacoma and surrounding districts. Yuni Rides — licensed WA provider.",
     heroImage: "/images/Special-Needs-Transportation-in-Washington-State.jpg",
     date: "Jun 30, 2026",
     readTime: "7 mins read",
@@ -725,8 +1087,10 @@ export const blogPostsData: Record<string, BlogPost> = {
   },
   "how-to-choose-special-needs-transportation-provider": {
     slug: "how-to-choose-special-needs-transportation-provider",
-    title: "How to Choose a Special Needs Student Transportation Provider: 12 Questions Every District and Parent Must Ask",
-    excerpt: "Choosing the right transportation for your child with special needs is a critical safety decision. Here are 12 essential questions every parent and school district administrator should ask before signing a contract.",
+    title:
+      "How to Choose a Special Needs Student Transportation Provider: 12 Questions Every District and Parent Must Ask",
+    excerpt:
+      "Choosing the right transportation for your child with special needs is a critical safety decision. Here are 12 essential questions every parent and school district administrator should ask before signing a contract.",
     heroImage: "/images/How-to-Choose-a-Provider.jpg",
     date: "Jun 30, 2026",
     readTime: "8 mins read",
@@ -908,8 +1272,10 @@ export const blogPostsData: Record<string, BlogPost> = {
   },
   "mckinney-vento-transportation-rights": {
     slug: "mckinney-vento-transportation-rights",
-    title: "McKinney-Vento Transportation Rights: What Schools Must Provide in 2026",
-    excerpt: "Understand the McKinney-Vento Act's transportation requirements for homeless and housing-insecure students. Learn what school districts must provide, who qualifies, and how Yuni Rides helps.",
+    title:
+      "McKinney-Vento Transportation Rights: What Schools Must Provide in 2026",
+    excerpt:
+      "Understand the McKinney-Vento Act's transportation requirements for homeless and housing-insecure students. Learn what school districts must provide, who qualifies, and how Yuni Rides helps.",
     heroImage: "/images/McKinney-Vento-Rights.jpg",
     date: "Jun 30, 2026",
     readTime: "8 mins read",
@@ -1026,7 +1392,8 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "image",
-        src: "/images/McKinney-Vento-Rights.jpg",      },
+        src: "/images/McKinney-Vento-Rights.jpg",
+      },
       {
         type: "heading",
         text: "What Happens When a Student Moves to a Different School District?",
@@ -1091,7 +1458,8 @@ export const blogPostsData: Record<string, BlogPost> = {
   "what-is-iep-transportation": {
     slug: "what-is-iep-transportation",
     title: "What Is IEP Transportation? A Complete Parent's Guide (2026)",
-    excerpt: "Learn exactly what IEP transportation means, what your child is entitled to under IDEA, and how to request it. Expert guide from Yuni Rides — specialists in special needs student transportation.",
+    excerpt:
+      "Learn exactly what IEP transportation means, what your child is entitled to under IDEA, and how to request it. Expert guide from Yuni Rides — specialists in special needs student transportation.",
     heroImage: "/images/IEP-Transportation-Guide.jpg",
     date: "Jun 30, 2026",
     readTime: "8 mins read",

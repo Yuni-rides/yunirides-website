@@ -39,7 +39,9 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: post?.title,
       description: post?.excerpt,
-      images: [post?.heroImage || "https://www.yunirides.com/images/og-image.png"],
+      images: [
+        post?.heroImage || "https://www.yunirides.com/images/og-image.png",
+      ],
     },
   };
 }
@@ -65,7 +67,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
   return (
     <div className="bg-[#FAF8F0] min-h-screen">
       {/* Banner Area */}
-      <div className="relative w-full h-[320px] sm:h-[320px] md:h-[450px] overflow-hidden">
+      <div className="relative w-full h-[320px] sm:h-[320px] md:h-[550px] overflow-hidden">
         <Image
           src={post.heroImage}
           alt={post.title}
