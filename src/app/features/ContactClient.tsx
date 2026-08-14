@@ -41,9 +41,49 @@ function InputField({
         onChange={onChange}
         placeholder={placeholder}
         required={required}
-        autoComplete="one-time-code"
+        autoComplete="off"
         className="w-full h-[36px] bg-transparent text-[13px] text-[#1A1A2E] placeholder-[#8888AA]/60 font-body p-0 m-0 border-none outline-none ring-0 shadow-none outline-transparent focus:outline-none focus:ring-0 focus:border-none focus:outline-transparent focus:shadow-none shadow-transparent [-webkit-appearance:none] [appearance:none] [&:-webkit-autofill]:[box-shadow:0_0_0_1000px_white_inset_!important] [&:-webkit-autofill]:[text-fill-color:#1A1A2E_!important]"
       />
+    </fieldset>
+  );
+}
+
+function SelectField({
+  label,
+  name,
+  value,
+  onChange,
+  options,
+  required = true,
+}: {
+  label: string;
+  name: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLSelectElement>) => void;
+  options: { label: string; value: string }[];
+  required?: boolean;
+}) {
+  return (
+    <fieldset className="border border-[#DDE2FF] rounded-lg px-3 pb-1.5 pt-0 bg-white w-full transition-all duration-200 focus-within:border-[#822C89] focus-within:ring-1 focus-within:ring-[#822C89]/10">
+      <legend className="px-1 text-[12px] font-medium font-body text-[#4A4A6A] leading-none select-none">
+        {label}
+      </legend>
+      <select
+        name={name}
+        value={value}
+        onChange={onChange}
+        required={required}
+        className="w-full h-[36px] bg-transparent text-[13px] text-[#1A1A2E] font-body p-0 m-0 border-none outline-none ring-0 shadow-none focus:outline-none focus:ring-0 focus:border-none cursor-pointer"
+      >
+        <option value="" disabled>
+          Select State
+        </option>
+        {options.map((opt) => (
+          <option key={opt.value} value={opt.value}>
+            {opt.label}
+          </option>
+        ))}
+      </select>
     </fieldset>
   );
 }
@@ -60,6 +100,8 @@ export default function ContactClient() {
     lastName: "",
     contactNumber: "",
     email: "",
+    city: "",
+    state: "",
     message: "",
   });
 
@@ -73,7 +115,9 @@ export default function ContactClient() {
   }, [notification]);
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
@@ -102,6 +146,8 @@ export default function ContactClient() {
           lastName: "",
           contactNumber: "",
           email: "",
+          city: "",
+          state: "",
           message: "",
         });
       } else {
@@ -120,6 +166,11 @@ export default function ContactClient() {
       setLoading(false);
     }
   };
+
+  const stateOptions = [
+    { label: "California", value: "California" },
+    { label: "Illinois", value: "Illinois" },
+  ];
 
   return (
     <main className="w-full min-h-screen bg-yuni-cream overflow-x-hidden font-body mt-26">
@@ -254,8 +305,6 @@ export default function ContactClient() {
                   value={form.contactNumber}
                   onChange={handleChange}
                   placeholder="+1 (555) 000-0000"
-                  required={false}
-                  optionalText="(Optional)"
                 />
                 <InputField
                   label="Email"
@@ -264,6 +313,23 @@ export default function ContactClient() {
                   value={form.email}
                   onChange={handleChange}
                   placeholder="example@email.com"
+                />
+              </div>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
+                <InputField
+                  label="City / Town Name"
+                  name="city"
+                  value={form.city}
+                  onChange={handleChange}
+                  placeholder="Search city..."
+                />
+                <SelectField
+                  label="State"
+                  name="state"
+                  value={form.state}
+                  onChange={handleChange}
+                  options={stateOptions}
                 />
               </div>
 

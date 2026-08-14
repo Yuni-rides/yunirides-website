@@ -5,13 +5,21 @@ export const dynamic = "force-dynamic";
 
 export async function POST(request: Request) {
   try {
-    const { firstName, lastName, contactNumber, email, message } =
+    const { firstName, lastName, contactNumber, email, city, state, message } =
       await request.json();
 
-    if (!firstName || !lastName || !email || !message) {
+    if (
+      !firstName ||
+      !lastName ||
+      !contactNumber ||
+      !email ||
+      !city ||
+      !state ||
+      !message
+    ) {
       return NextResponse.json(
         { success: false, error: "Required fields are missing." },
-        { status: 400 },
+        { status: 400 }
       );
     }
 
@@ -44,7 +52,9 @@ export async function POST(request: Request) {
           <table style="width: 100%; border-collapse: collapse;">
             <tr><td style="padding: 6px 0; font-weight: bold; width: 35%; color: #4A4A6A;">Full Name:</td><td style="color: #1A1A2E;">${firstName} ${lastName}</td></tr>
             <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">Email:</td><td style="color: #1A1A2E;">${email}</td></tr>
-            <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">Contact Number:</td><td style="color: #1A1A2E;">${contactNumber || "Not provided"}</td></tr>
+            <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">Contact Number:</td><td style="color: #1A1A2E;">${contactNumber}</td></tr>
+            <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">City / Town:</td><td style="color: #1A1A2E;">${city}</td></tr>
+            <tr><td style="padding: 6px 0; font-weight: bold; color: #4A4A6A;">State:</td><td style="color: #1A1A2E;">${state}</td></tr>
           </table>
           <h3 style="color: #822C89; margin-top: 20px;">Message / Query</h3>
           <div style="background-color: #FAF8F0; padding: 15px; border-radius: 8px; border: 1px solid #DDE2FF; color: #1A1A2E; font-size: 13px; line-height: 1.6; white-space: pre-line;">
@@ -57,7 +67,7 @@ export async function POST(request: Request) {
     await transporter.sendMail(mailOptions);
     return NextResponse.json(
       { success: true, message: "Email sent successfully!" },
-      { status: 200 },
+      { status: 200 }
     );
   } catch (error: any) {
     console.error("Contact SMTP Error: ", error);
@@ -66,7 +76,7 @@ export async function POST(request: Request) {
         success: false,
         error: error.message || "Failed to process form dispatch",
       },
-      { status: 500 },
+      { status: 500 }
     );
   }
 }
