@@ -16,6 +16,261 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "special-needs-student-transportation-for-washington-school-districts": {
+    slug: "special-needs-student-transportation-for-washington-school-districts",
+    title:
+      "Special Needs Student Transportation for Washington School Districts: A Vendor Evaluation Guide",
+    excerpt:
+      "How Washington school districts evaluate special needs transportation vendors — OSPI requirements, IEP-driven transport, staffing, and fleet standards.",
+    heroImage:
+      "/images/Special-Needs-Student-Transportation-for-Washington-School-Districts.png",
+    date: "Aug 16, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "How Washington school districts evaluate special needs transportation vendors — OSPI requirements, IEP-driven transport, staffing, and fleet standards.",
+      },
+      {
+        type: "paragraph",
+        text: "For school districts, student transportation is more than moving students between home and school. It directly supports attendance, student safety, family confidence, and educational access.",
+      },
+      {
+        type: "paragraph",
+        text: "As districts continue facing driver shortages, rising transportation costs, and increasing demand for specialized transportation services, selecting the right transportation partner has become a strategic operational decision.",
+      },
+      {
+        type: "paragraph",
+        text: "Washington school districts contracting special needs transportation carry the same compliance weight whether the vehicle is district-owned or vendor-operated. Under state special education rules, transportation is a 'related service' required to help a student benefit from special education, and eligibility runs through the IEP process, not a blanket policy.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides provides ride-share-based special needs and supplementary student transportation, built on years of Bay Area operations and expanding to serve Washington districts. Here's what districts should verify in any vendor they're evaluating — including us.",
+      },
+      {
+        type: "heading",
+        text: "Why Student Transportation Matters",
+      },
+      {
+        type: "paragraph",
+        text: "Reliable transportation influences nearly every aspect of a student's educational experience.",
+      },
+      {
+        type: "paragraph",
+        text: "A dependable transportation program helps districts:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Improve student attendance",
+          "Reduce transportation disruptions",
+          "Support students with specialized transportation needs",
+          "Increase parent confidence",
+          "Maintain consistent daily operations",
+          "Reduce administrative burden on transportation staff",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "For students receiving transportation as part of their educational services, consistency is especially important.",
+      },
+      {
+        type: "heading",
+        text: "The Regulatory Baseline in Washington",
+      },
+      {
+        type: "paragraph",
+        text: "Washington's special education rules (WAC 392-172A) define related services as transportation and other supportive services required to help a student benefit from special education.",
+      },
+      {
+        type: "paragraph",
+        text: "State rule also determines a practical limit on ride time: wherever reasonably possible, a student should not be required to ride more than sixty minutes one way. For districts evaluating a vendor's routing capability, this is a concrete, checkable standard, not a vague service-quality claim.",
+      },
+      {
+        type: "paragraph",
+        text: "Washington law also requires that transportation be provided for a disabled student under RCW 28A.155.020 who is not ambulatory or not capable of protecting their own welfare while traveling to school or to the location where special education services are provided — meaning the transportation obligation is explicitly tied to the student's functional needs, not just their eligibility category.",
+      },
+      {
+        type: "paragraph",
+        text: "As of the 2025–26 school year, pupil transportation contracts entered, renewed, or extended must provide health benefits and pension contributions equivalent to those of school district classified employees. This is a compliance point specific to Washington that a vendor operating on a gig or ride-share driver model needs to be able to speak directly.",
+      },
+      {
+        type: "heading",
+        text: "What District Vendor Vetting Should Cover",
+      },
+      {
+        type: "table",
+        headers: [
+          "What Districts Should Verify",
+          "What Generic Vendor Marketing Offers",
+        ],
+        rows: [
+          [
+            "Documented one-way ride time under 60 minutes per WAC standard",
+            'General claims of "efficient routing"',
+          ],
+          [
+            "Driver classification and benefits compliant with 2025–26 contract requirements",
+            "No mention of driver employment structure",
+          ],
+          [
+            "IEP-specific pickup and functional-needs accommodation",
+            "One-size-fits-all accessible vehicle claim",
+          ],
+          [
+            "Named staff training: de-escalation, seizure response, restraint/harness certification with dates",
+            '"Trained and caring staff"',
+          ],
+          [
+            "Incident reporting protocol: timing, format, notification chain",
+            "No defined protocol",
+          ],
+          [
+            "Backup vehicle plan for mechanical failure mid-route",
+            "Not addressed",
+          ],
+        ],
+      },
+      {
+        type: "heading",
+        text: "Fleet and Equipment Standards to Verify",
+      },
+      {
+        type: "paragraph",
+        text: "Washington requires special equipment on vehicles transporting students with disabilities to meet OSPI school bus specifications. Districts should ask any vendor, including us, to confirm:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Compliance with current OSPI special equipment specifications",
+          "Accessible vehicles count relative to total fleet serving the district",
+          "Inspection and maintenance cadence, and coordination with Washington State Patrol inspection requirements",
+          "Backup vehicle protocol for mid-route mechanical failure",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Bay Area Track Record, Washington Expansion",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides is operating special needs and supplementary transportation in the Bay Area for a while. As we expand into Washington, districts can request our capabilities statement, insurance and bonding documentation, and Bay Area district references directly.",
+      },
+      {
+        type: "heading",
+        text: "Conclusion",
+      },
+      {
+        type: "paragraph",
+        text: "School transportation continues evolving as districts balance staffing challenges, budget constraints, and growing student transportation needs.",
+      },
+      {
+        type: "paragraph",
+        text: "Choosing the right transportation partner involves more than comparing vehicles or pricing. Districts should evaluate safety practices, driver training, communication, operational reliability, and experience supporting students with diverse transportation needs.",
+      },
+      {
+        type: "paragraph",
+        text: "A dependable transportation partner can help districts maintain continuity, strengthen family confidence, and ensure students arrive safely and ready to learn.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What is special transportation needed for Washington school districts? Special needs transportation is a service designed for students whose IEP requires transportation as a related service. Under WAC 392-172A, this can include wheelchair-accessible vehicles, individualized routing, and trained staff, based on the student's documented functional needs.",
+          "Can Washington school districts outsource special education transportation? Yes. Districts routinely contract with outside vendors to supplement fleet capacity or address driver shortages. The district retains compliance responsibility even when a vendor operates the vehicle.",
+          "Is there a maximum ride time for special education transportation in Washington? State rule specifies that, wherever reasonably possible, a student should not be required to ride more than sixty minutes one way.",
+          "Do new transportation contracts in Washington have specific driver employment requirements? Yes. Beginning with the 2025–26 school year, pupil transportation contracts entered, renewed, or extended must provide health benefits and pension contributions equivalent to those of school district classified employees.",
+          "How can our district request a transportation consultation? Contact our team to discuss transportation goals, current challenges, and service requirements. Districts can request our capabilities statement, proof of insurance, and district references by contacting us.",
+        ],
+      },
+    ],
+  },
+  "school-district-transportation": {
+    slug: "school-district-transportation",
+    title: "School District Transportation: An Overview",
+    excerpt:
+      "Explore how school district transportation works in 2026—from state funding and driver shortage challenges to special education IEP needs and modern alternative transport models.",
+    heroImage: "/images/School-District-Transportation.png",
+    date: "Aug 16, 2026",
+    readTime: "6 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Yellow school buses are one of the most recognizable parts of American public education, and one of its most strained.",
+      },
+      {
+        type: "paragraph",
+        text: "Every school day, districts across the country move millions of students to class — a system that appears simple but runs on a fragile combination of funding, staffing, and route logistics that's under more pressure than most families realize.",
+      },
+      {
+        type: "heading",
+        text: "How school transportation is funded",
+      },
+      {
+        type: "paragraph",
+        text: "Student transportation funding in the U.S. comes primarily through state formulas and local district budgets, not a single federal program. It varies from state to state how much of the actual cost is covered — some districts report that state transportation allotments cover only a fraction of what they spend, forcing local budgets to absorb the rest.",
+      },
+      {
+        type: "paragraph",
+        text: "Rising fuel, vehicle, and insurance costs have made this gap harder to close in recent years, even as ridership needs grow. For many districts, transportation has quietly become one of the least predictable line items in the annual budget, since a single spike in fuel prices or an unexpected round of vehicle repairs can outpace what was planned for months earlier.",
+      },
+      {
+        type: "heading",
+        text: "The driver shortage is a national problem",
+      },
+      {
+        type: "paragraph",
+        text: "School bus driver employment nationally remains below pre-pandemic levels, even after modest recent gains. The core issue is structural, not seasonal. School bus driving requires a commercial driver's license along with a school bus endorsement, training that can take around 12 weeks, while competing for candidates against warehouse, delivery, and retail jobs that pay comparably without that barrier to entry.",
+      },
+      {
+        type: "paragraph",
+        text: "Split shifts are another impediment — most driving jobs offer a predictable eight-hour day, while school bus driving typically means a morning route, a long midday gap, and another shift in the afternoon. Districts nationwide are reporting ongoing difficulty maintaining full route coverage as a result, with most administrators citing driver shortages as an active operational challenge that shapes everything from route planning to how late a school day can start.",
+      },
+
+      /* LINKED TO STUDENT OUTCOMES */
+      {
+        type: "heading",
+        text: "Transportation and student outcomes are linked",
+      },
+      {
+        type: "paragraph",
+        text: "In the modern era, transportation access should be treated as more than a logistics issue. Most school administrators have reported that transportation access has a direct effect on chronic absenteeism. When a student can't get to school on time, everything else related to it gets affected.",
+      },
+      {
+        type: "paragraph",
+        text: "This has pushed transportation departments from a purely operational function toward a role schools now consider part of the broader strategy for keeping students engaged and in class. Some districts have started tracking transportation reliability alongside attendance data specifically to see where the two are interconnected.",
+      },
+
+      {
+        type: "heading",
+        text: "Special education transportation adds another layer",
+      },
+      {
+        type: "paragraph",
+        text: "Under the Individuals with Disabilities Education Act, transportation is classified as a 'related service' when a student's Individualized Education Program requires it — meaning eligibility is determined case by case, not automatically granted to every student with a disability.",
+      },
+      {
+        type: "paragraph",
+        text: "Districts cannot charge families for this service when it's part of an IEP, and if a student's plan calls for a monitor, specific seating, or behavioral support during the ride, the district is responsible for providing it, not just the transportation itself. This is a growing share of transportation demand even in districts that aren't facing broader staffing or budget crises, and it requires a level of individualized planning that a standard fixed bus route wasn't designed to handle.",
+      },
+
+      {
+        type: "heading",
+        text: "Districts are exploring alternatives to the traditional bus model",
+      },
+      {
+        type: "paragraph",
+        text: "Faced with funding gaps and driver shortages at once, many districts are supplementing traditional fixed bus routes with other approaches — smaller vehicles, ride-share-style services for students with specific needs, centralized pickup points, and routing software designed to make limited driver pools cover more ground efficiently.",
+      },
+      {
+        type: "paragraph",
+        text: "These aren't replacements for the yellow bus system, which remains statistically one of the safest ways for children to travel to school, but they're increasingly used to fill gaps traditional routes can't reach, particularly for students whose needs don't fit a standard route or who live in areas where a full-size bus isn't practical.",
+      },
+    ],
+  },
   "texas-school-transportation-growing-gap": {
     slug: "texas-school-transportation-growing-gap",
     title:
