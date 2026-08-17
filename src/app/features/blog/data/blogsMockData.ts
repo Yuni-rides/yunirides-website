@@ -16,6 +16,348 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "what-makes-special-needs-student-transportation-truly-different": {
+    slug: "what-makes-special-needs-student-transportation-truly-different",
+    title: "What Makes Special Needs Student Transportation Truly Different",
+    excerpt:
+      "Special needs student transportation takes more than a bus and a route. Here's what actually sets it apart — and why it matters.",
+    heroImage:
+      "/images/What-Makes-Special-Needs-Student-Transportation-Truly-Different.png",
+    date: "Aug 18, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Ask parents what school transportation means to them, and you'll get the same answer from most of them: a bus stop, a set time, maybe a wave goodbye. It's not something they think about once it's working.",
+      },
+      {
+        type: "paragraph",
+        text: "Ask the same question from the parent of a child with special needs, and the answer looks completely different. There's a wheelchair lift to think about. A driver who needs to know not to touch an overstimulated child. A pickup window that can't be moved by more than a few minutes without throwing off the rest of the day. It's a different service altogether. Not a smaller version of the general yellow bus. It's a whole system that's entirely shaped by medical needs, behavioral support, legal requirements, and most importantly, a level of trust most transportation providers never have to earn.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're a parent working through an IEP for the first time, or a district administrator trying to figure out what to look for in a vendor, here's what separates this kind of transportation from a standard school ride.",
+      },
+
+      {
+        type: "heading",
+        text: "It's a legal right, not a courtesy",
+      },
+      {
+        type: "paragraph",
+        text: "A lot of parents don't realize that transportation isn't just a favor the district does for you; it's your legal right. Under IDEA, if transportation is written into your child's Individualized Education Program as a related service, the district must provide it — wheelchair-accessible vehicles, door-to-door pickup, a shorter ride time, whatever the plan calls for. We've written a full guide on what IEP transportation means and how to request it, if you're at that stage.",
+      },
+
+      {
+        type: "heading",
+        text: "The training is a different animal",
+      },
+      {
+        type: "paragraph",
+        text: "A good general ed driver needs to be safe, punctual, licensed, and patient. But drivers and attendants working with special needs students need something beyond that. They need to know how to secure a wheelchair correctly. Recognize the early signs of a seizure. De-escalate a meltdown without making it worse. Communicate with a student who's non-verbal or uses an assistive device. And they need to actually follow each child's individualized care plan. They can't rely on a generic plan for every student.",
+      },
+
+      {
+        type: "heading",
+        text: "The vehicles aren't just buses with ramps",
+      },
+      {
+        type: "paragraph",
+        text: "General education buses are built to move a lot of students efficiently. Special needs vehicles are built around accessibility and safety: wheelchair lifts, proper securement systems, harnesses for kids who can't safely use a standard seatbelt, sometimes even climate considerations for students with medical sensitivities. And the daily inspection isn't a box to check.",
+      },
+
+      {
+        type: "heading",
+        text: "Consistency Is Part of the Accommodation",
+      },
+      {
+        type: "paragraph",
+        text: "For a lot of students with autism, sensory processing differences, or anxiety, a new driver or an unfamiliar route isn't a minor inconvenience. It can trigger real, visible distress. So, the same driver, the same vehicle, the same pickup window every day isn't Yuni Rides being sentimental about it; it's part of the accommodation. It's a big reason families gravitate toward providers who keep things predictable rather than rotating drivers or shuffling routes around.",
+      },
+
+      {
+        type: "heading",
+        text: "Parents need to hear from someone",
+      },
+      {
+        type: "paragraph",
+        text: "Families managing a child with special needs are usually juggling therapy appointments, medical visits, and school-based services on top of everything else. A transportation provider that goes dark — no updates, no tracking, no one to call — adds another thing to worry about. Real-time GPS, a dispatch team you can reach, and honest reporting to both parents and districts aren't bonus features; they are basic requirements for these parents.",
+      },
+
+      {
+        type: "heading",
+        text: "It often overlaps with McKinney-Vento",
+      },
+      {
+        type: "paragraph",
+        text: "Special needs transportation rarely exists in a vacuum. Plenty of districts are coordinating rides for students protected under the McKinney-Vento Act too, which guarantees transportation for kids experiencing homelessness — and sometimes a student qualifies under both categories at once. Knowing how McKinney-Vento requirements intersect with IEP-based transportation is turning into a basic expectation districts have of their transportation partners, not some edge case.",
+      },
+
+      {
+        type: "heading",
+        text: "For districts, it comes down to proof",
+      },
+      {
+        type: "paragraph",
+        text: "If you're a district administrator, the stakes look a little different, but they're just as real. Choosing a contractor for special needs transportation means reviewing background checks, insurance, vehicle maintenance records, driver training documentation, and incident reporting. Miss one, and you risk a compliance issue, angry parents, or worse, an actual safety incident. Our guide on how districts evaluate and select special needs transportation contractors goes into the specific benchmarks worth asking about before you sign anything.",
+      },
+
+      {
+        type: "heading",
+        text: "Why does any of this matter?",
+      },
+      {
+        type: "paragraph",
+        text: "None of this is meant to make special needs transportation sound more complicated than it needs to be. A child with a disability isn't just catching a ride to school. That ride is one piece of their everyday support system. This piece must fit in correctly every single day for the rest of the system to hold together. When transportation is handled well, it's one less thing a family has to worry about. When it isn't, it becomes one more thing they must manage on top of everything else.",
+      },
+      {
+        type: "paragraph",
+        text: "That's the bar Yuni Rides tries to clear every day. Our drivers are trained specifically for special needs and IEP-related care; our reporting is transparent enough for the districts to rely on, and parents get real visibility into where their child is. Take a look at our services page or about page to see how we put that into practice.",
+      },
+      {
+        type: "paragraph",
+        text: "Want to go deeper? Our Ultimate Guide to Special Needs Student Transportation covers IEP rights, vehicle standards, and provider selection from start to finish, and our piece on choosing a special needs transportation provider walks through the 12 questions worth asking before you sign a contract.",
+      },
+
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Is special transportation free for families? If it's written into your child's IEP as a related service, yes — the district must provide it at no cost, whether that means door-to-door pickup, a specialized vehicle, or a shorter ride time.",
+          "Who decides if my child qualifies for specialized transportation? The IEP team makes that call, based on your child's disability and needs. You can ask to have transportation added or reviewed at any IEP meeting — our guide to IEP transportation walks through how to make that request.",
+          "What training do special transportation drivers actually go through? On top of standard licensing, drivers and attendants should be trained on securement systems, recognizing medical distress, de-escalating behavioral episodes, and following each student's individual care plan. This varies a lot by provider, so it's worth asking directly before you commit to one.",
+          "Can a student qualify for both IEP and McKinney-Vento transportation? Yes, a student experiencing homelessness who also has a disability can be covered under both at the same time, and it's on the district to coordinate both sets of rights. Our McKinney-Vento transportation guide explains how that overlap works.",
+          "What should districts actually look for in a transportation contractor? Background-checked and properly trained drivers, documented vehicle maintenance, insurance coverage, honest incident reporting, and real-time tracking. Our contractor selection guide covers the full checklist.",
+          "How is Yuni Rides different from a standard school bus service? Our drivers are trained specifically for special needs and IEP-related care; our vehicles are properly equipped, and both parents and districts get real-time tracking and transparent reporting. More detail on our services page.",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Ready to talk through your family's or district's needs?",
+      },
+      {
+        type: "paragraph",
+        text: "Every student is different, and the right transportation plan should actually reflect that.",
+      },
+      {
+        type: "paragraph",
+        text: "Whether you're a parent setting up IEP transportation for the first time or a district administrator comparing vendors, we're happy to walk through what you need.",
+      },
+      {
+        type: "paragraph",
+        text: "Book a consultation with Yuni Rides today and see how safe, trained, consistent transportation can support your student.",
+      },
+    ],
+  },
+  "back-to-school-safety-checklist-that-every-parent-should-follow-in-2026": {
+    slug: "back-to-school-safety-checklist-that-every-parent-should-follow-in-2026",
+    title:
+      "Back-to-School Safety Checklist That Every Parent Should Follow in 2026",
+    excerpt:
+      "A practical back-to-school safety checklist for parents — bus stop safety, IEP transportation, emergency contacts, and provider questions.",
+    heroImage:
+      "/images/Back-to-School-Safety-Checklist-That-Every-Parent-Should-Follow-in-2026.png",
+    date: "Aug 18, 2026",
+    readTime: "8 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "When school reopens, the first week brings a whole mix of excitement and chaos — new schedules, new routines, new classrooms, and many families have to figure out a new transportation routine as well. Regardless of whether your child uses a district bus, a specialized transport service, or you drop them off, a few simple checks before the first bell rings can prevent a lot of first-week stress.",
+      },
+      {
+        type: "paragraph",
+        text: "Here's a practical back-to-school safety checklist to work through before the school year starts.",
+      },
+
+      {
+        type: "heading",
+        text: "1. Confirm Transportation Details in Writing",
+      },
+      {
+        type: "paragraph",
+        text: "Before the first day, confirm the transportation arrangements in writing; don't depend on memory or an impromptu meeting with another parent. Make sure the following points are clear and sorted before school restarts:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Exact pickup and drop-off times and locations",
+          "The name of the transportation provider, if it isn't operated by the school district",
+          "Who to contact if a pickup is missed or delayed",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "If your child has an IEP that includes transportation as a related service, this confirmation matters even more — transportation details tied to an IEP should already be documented, and it's worth double-checking that the plan on file matches what will actually happen at the bus stop. To learn more about what IEP transportation includes see our complete parent's guide to IEP transportation.",
+      },
+
+      {
+        type: "heading",
+        text: "2. Walk the Route Before Day One",
+      },
+      {
+        type: "paragraph",
+        text: "Before school starts, walk with your child to the bus stop or pickup location at least once ideally at the same time the route will be used (the time they will go to school) so that they can look for:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Sidewalk gaps or missing crosswalks",
+          "Traffic patterns at that specific time of day",
+          "Visibility issues (blind corners, poor lighting for early pickups)",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "This step is especially important for parents of younger children or children who need extra time to process instructions.",
+      },
+
+      {
+        type: "heading",
+        text: "3. Review School Bus Safety Basics with Your Child",
+      },
+      {
+        type: "paragraph",
+        text: "No matter if it's a yellow bus or a specialized transport vehicle, these are nonnegotiable basics:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "The vehicle should come to a complete stop before approaching it",
+          "While boarding and exiting, use handrails",
+          "Stay seated and keep your seat belt fastened throughout the ride",
+          "Know which stop is theirs, and what to do if they're unsure",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "For children who use wheelchair-accessible transportation or require specific seating, it's worth confirming directly with the provider how tie-downs and restraints are checked before each trip, not just assuming it happens.",
+      },
+
+      {
+        type: "heading",
+        text: "4. Update Emergency Contacts and Medical Information",
+      },
+      {
+        type: "paragraph",
+        text: "Every school year, medical information tends to change — a new allergy, a new medication, a new emergency contact. Parents need to update this with:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "The school administration department",
+          "The transportation provider directly, if it's separate from the district",
+          "Any after-school program or caregiver who might need to know",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "This might look like a small task that's easy to skip, but it genuinely matters if something goes wrong mid-route.",
+      },
+
+      {
+        type: "heading",
+        text: '5. Talk Through "What If" Scenarios',
+      },
+      {
+        type: "paragraph",
+        text: "Kids tend to handle unexpected situations better when they've thought about them in advance, rather than trying to react in the moment. A few worth covering:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What to do if the bus or ride doesn't show up",
+          "Who to call if they miss their stop",
+          "What to do if a stranger approaches at the bus stop",
+          "Who they can talk to if something happens on the ride that makes them uncomfortable",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "For families of children with special needs, this conversation may need to be more specific and repeated more than once — our guide to what changes for families of special needs students covers why consistency and repetition matter here.",
+      },
+
+      {
+        type: "heading",
+        text: "6. Ask Transportation Providers the Right Questions",
+      },
+      {
+        type: "paragraph",
+        text: "If there's a need to use a transportation service outside the district's own fleet, be it for special needs transportation, McKinney-Vento eligibility, or general supplemental transport, don't assume \"safe\" means the same thing to every provider. Ask directly:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Are drivers background-checked, and how often are checks renewed?",
+          "Is there real-time GPS tracking you can access?",
+          "What's the protocol if a vehicle breaks down mid-route?",
+          "How are last-minute schedule changes communicated?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "We put together a full list of these questions in 12 questions every parent should ask before signing a transportation contract — worth reading in full if you're evaluating a new provider this year.",
+      },
+
+      {
+        type: "heading",
+        text: "7. Set Up Communication Channels Before You Need Them",
+      },
+      {
+        type: "paragraph",
+        text: "Don't wait for the first delay or issue to figure out how to reach your transportation provider. Before school starts:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Save the provider's direct contact number in your phone",
+          "Confirm whether they use text, app notifications, or phone calls for updates",
+          "Ask how far in advance you'll be notified of route or schedule changes",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "8. Revisit the Plan Mid-Year, Not Just in August",
+      },
+      {
+        type: "paragraph",
+        text: "A safety checklist isn't a once-a-year task. Routes change, staff change, and a child's needs can change too, especially for students with an IEP or evolving medical needs. Building in a quick check-in each semester, rather than assuming August's plan still holds in January, catches problems before they become daily stress.",
+      },
+
+      /* FAQS */
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What should be on a back-to-school safety checklist? A solid checklist covers confirming transportation details in writing, walking the bus stop or pickup route in advance, reviewing boarding and seatbelt safety with your child, updating emergency contacts and medical information, and discussing what to do if a ride is late or doesn't show.",
+          "How do I prepare my child for the school bus for the first time? Practice the basics before day one: waiting for the bus to fully stop, using handrails, staying seated, and knowing their stop. Walking the route together beforehand also helps reduce first-day anxiety.",
+          "What questions should I ask about a school transportation provider? Ask about driver background-check frequency, whether GPS tracking is available to parents, the protocol for vehicle breakdowns, and how schedule changes are communicated. For special needs transportation, also ask how tie-downs and restraints are checked before each ride.",
+          "Does my child's IEP guarantee transportation safety accommodations? If transportation is written into your child's IEP as a related service, the district is responsible for delivering it as documented, including any required accommodations like a monitor or specific seating. It's worth confirming the plan on file matches what actually happens at pickup.",
+          "How often should families update transportation safety information? At least once per semester, not just once a year. Medical needs, emergency contacts, and even routes can change mid-year, especially for students with evolving IEP requirements.",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "The Bottom Line",
+      },
+      {
+        type: "paragraph",
+        text: "None of this checklist requires special expertise, just a few deliberate steps before the routine sets in. For families relying on specialized or district-contracted transportation, the same principle applies at a larger scale: the providers worth trusting are the ones who can answer these same questions clearly, not the ones who just say safety is a priority without backing it up.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're evaluating transportation options for your child this year, especially special needs or IEP-related transportation, book a consultation with Yuni Rides to talk through your child's specific needs before the first day of school.",
+      },
+    ],
+  },
   "special-needs-student-transportation-for-washington-school-districts": {
     slug: "special-needs-student-transportation-for-washington-school-districts",
     title:

@@ -3,19 +3,28 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { Menu, X, ChevronDown, MapPin } from "lucide-react";
 import Button from "@/components/shared/Button";
+import { statesData } from "@/app/features/data/statesData";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },
-  { label: "Services", href: "/services" },
   { label: "About", href: "/about" },
   { label: "Become A Driver", href: "/become-a-driver" },
   { label: "Careers", href: "/careers" },
   { label: "Blog", href: "/blog" },
   { label: "Contact Us", href: "/contact-us" },
 ];
+
+const STATE_MAPS: Record<string, string> = {
+  washington: "/images/Washington.png",
+  california: "/images/California.png",
+  arizona: "/images/Arizona.png",
+  illinois: "/images/Illinois.png",
+  texas: "/images/texas.png",
+  oregon: "/images/Oregon.png",
+};
 
 function WhatsAppIcon() {
   return (
@@ -29,6 +38,9 @@ export default function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
     const onScroll = () => {
@@ -42,6 +54,17 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  const handleEnter = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setServicesOpen(true);
+  };
+
+  const handleLeave = () => {
+    closeTimer.current = setTimeout(() => setServicesOpen(false), 150);
+  };
+
+  const isServiceActive = statesData.some((s) => pathname === `/${s.slug}`);
+
   return (
     <header
       className={`left-0 right-0 z-60 w-full transition-all duration-300 ease-in-out ${
@@ -50,10 +73,6 @@ export default function Navbar() {
           : "fixed top-0 md:absolute md:pt-0 md:px-0"
       }`}
     >
-      {/* Main Container: 
-        Mobile (`max-md:`) par full container solid white background (`bg-white`) ke saath screen se chipka rahega 
-        aur scroll tracking background overlays ko safe rakhega.
-      */}
       <div
         className={`flex items-center justify-between mx-auto w-full max-w-[1600px] transition-all duration-300 ease-in-out ${
           scrolled
@@ -75,39 +94,129 @@ export default function Navbar() {
           />
         </Link>
 
-        {/* Desktop Links Component */}
+        {/* Desktop Links */}
         <nav
-          className={`hidden lg:flex items-center h-[52px] px-[10px] gap-[2px] transition-all duration-500 ${
+          className={`hidden lg:flex items-center h-[52px] px-[10px] gap-[2px] relative transition-all duration-500 ${
             scrolled
               ? "bg-transparent shadow-none"
               : "bg-white/85 border backdrop-blur-sm border-[#6B2FA0]/15 shadow-[0_2px_12px_rgba(107,47,160,0.08)] rounded-full"
           }`}
         >
-          {NAV_LINKS.map((link) => {
+          {/* Home Link */}
+          <Link
+            href="/"
+            className={`flex items-center h-[36px] px-[14px] rounded-full text-[13.5px] whitespace-nowrap no-underline transition-all duration-200 font-body hover:bg-[#6B2FA0]/[0.06] hover:!text-[#6B2FA0] ${
+              pathname === "/"
+                ? "font-semibold !text-[#6B2FA0] bg-[#6B2FA0]/10"
+                : "font-normal !text-[#444444] bg-transparent"
+            }`}
+          >
+            Home
+          </Link>
+
+          {/* Services Dropdown Trigger */}
+          <div onMouseEnter={handleEnter} onMouseLeave={handleLeave}>
+            <Link
+              href="/services"
+              className={`flex items-center gap-1 h-[36px] px-[14px] rounded-full text-[13.5px] whitespace-nowrap no-underline transition-all duration-200 font-body hover:bg-[#6B2FA0]/[0.06] hover:!text-[#6B2FA0] ${
+                pathname === "/services" || isServiceActive
+                  ? "font-semibold !text-[#6B2FA0] bg-[#6B2FA0]/10"
+                  : "font-normal !text-[#444444] bg-transparent"
+              }`}
+            >
+              Services
+              <ChevronDown
+                size={13}
+                className={`transition-transform duration-200 ${
+                  servicesOpen ? "rotate-180" : ""
+                }`}
+              />
+            </Link>
+          </div>
+
+          {/* Dynamic Nav Links */}
+          {NAV_LINKS.slice(1).map((link) => {
             const isActive = pathname === link.href;
             return (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`
-                  flex items-center h-[36px] px-[14px] rounded-full
-                  text-[13.5px] whitespace-nowrap no-underline
-                  transition-all duration-200 font-body
-                  hover:bg-[#6B2FA0]/[0.06] hover:!text-[#6B2FA0]
-                  ${
-                    isActive
-                      ? "font-semibold !text-[#6B2FA0] bg-[#6B2FA0]/10"
-                      : "font-normal !text-[#444444] bg-transparent"
-                  }
-                `}
+                className={`flex items-center h-[36px] px-[14px] rounded-full text-[13.5px] whitespace-nowrap no-underline transition-all duration-200 font-body hover:bg-[#6B2FA0]/[0.06] hover:!text-[#6B2FA0] ${
+                  isActive
+                    ? "font-semibold !text-[#6B2FA0] bg-[#6B2FA0]/10"
+                    : "font-normal !text-[#444444] bg-transparent"
+                }`}
               >
                 {link.label}
               </Link>
             );
           })}
+
+          {/* Services Mega Dropdown */}
+          {servicesOpen && (
+            <div
+              onMouseEnter={handleEnter}
+              onMouseLeave={handleLeave}
+              className="absolute top-[calc(100%+12px)] left-0 right-0 bg-white/95 backdrop-blur-lg rounded-[20px] shadow-[0_20px_50px_rgba(0,0,0,0.14)] border border-[#6B2FA0]/10 p-5 z-50"
+            >
+              <p className="text-[11px] uppercase tracking-wide font-body font-semibold text-[#6B2FA0]/60 mb-3 px-1">
+                Special Needs Transportation By State
+              </p>
+              <div className="grid grid-cols-5 gap-2">
+                {statesData.map((s) => {
+                  const isSelected = pathname === `/${s.slug}`;
+                  const mapImgSrc = STATE_MAPS[s.slug];
+
+                  return (
+                    <Link
+                      key={s.slug}
+                      href={`/${s.slug}`}
+                      onClick={() => setServicesOpen(false)}
+                      className={`group flex flex-col items-start gap-2 rounded-[14px] px-4 py-3 no-underline transition-colors duration-150 hover:bg-[#6B2FA0]/[0.06] ${
+                        isSelected ? "bg-[#6B2FA0]/[0.07]" : ""
+                      }`}
+                    >
+                      <div className="relative w-6 h-6 flex items-center justify-center shrink-0">
+                        {mapImgSrc ? (
+                          <Image
+                            src={mapImgSrc}
+                            alt={`${s.stateName} map`}
+                            width={24}
+                            height={24}
+                            className={`object-contain transition-all duration-150 ${
+                              isSelected
+                                ? "opacity-100 [filter:invert(22%)_sepia(85%)_saturate(2800%)_hue-rotate(265deg)_brightness(90%)_contrast(95%)]"
+                                : "opacity-60 group-hover:opacity-100 grayscale"
+                            }`}
+                          />
+                        ) : (
+                          <MapPin
+                            size={16}
+                            className={`transition-colors duration-150 ${
+                              isSelected
+                                ? "!text-[#6B2FA0]"
+                                : "text-[#6B2FA0]/50 group-hover:!text-[#6B2FA0]"
+                            }`}
+                          />
+                        )}
+                      </div>
+                      <span
+                        className={`text-[13.5px] font-body no-underline ${
+                          isSelected
+                            ? "font-semibold !text-[#6B2FA0]"
+                            : "font-normal !text-[#333333] group-hover:!text-[#6B2FA0]"
+                        }`}
+                      >
+                        {s.stateName}
+                      </span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+          )}
         </nav>
 
-        {/* Action Button layout */}
         <div className="flex items-center gap-3 flex-shrink-0">
           <div className="hidden sm:block">
             <Button
@@ -135,28 +244,78 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Dropdown Panel Drawer */}
+      {/* Mobile Dropdown Panel */}
       {mobileOpen && (
         <div className="lg:hidden bg-white px-5 pt-[4px] pb-6 shadow-[0_15px_30px_rgba(0,0,0,0.1)] border-b border-[#6B2FA0]/10 max-h-[calc(100vh-80px)] overflow-y-auto">
           <nav className="flex flex-col gap-1">
-            {NAV_LINKS.map((link) => {
+            <Link
+              href="/"
+              onClick={() => setMobileOpen(false)}
+              className={`px-4 py-[12px] rounded-[10px] text-[15px] no-underline font-body transition-colors duration-150 hover:bg-[#6B2FA0]/[0.06] ${
+                pathname === "/"
+                  ? "font-semibold !text-white bg-[#6B2FA0]"
+                  : "font-normal !text-[#333333]"
+              }`}
+            >
+              Home
+            </Link>
+
+            {/* Services accordion (mobile) */}
+            <div>
+              <div
+                className="flex items-center justify-between px-4 py-[12px] rounded-[10px] cursor-pointer"
+                onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
+              >
+                <Link
+                  href="/services"
+                  onClick={(e) => e.stopPropagation()}
+                  className={`text-[15px] no-underline font-body ${
+                    pathname === "/services" || isServiceActive
+                      ? "font-semibold !text-[#6B2FA0]"
+                      : "font-normal !text-[#333333]"
+                  }`}
+                >
+                  Services
+                </Link>
+                <ChevronDown
+                  size={16}
+                  className={`text-[#6B2FA0] transition-transform duration-200 ${
+                    mobileServicesOpen ? "rotate-180" : ""
+                  }`}
+                />
+              </div>
+              {mobileServicesOpen && (
+                <div className="flex flex-col gap-1 pl-6 pb-1">
+                  {statesData.map((s) => (
+                    <Link
+                      key={s.slug}
+                      href={`/${s.slug}`}
+                      onClick={() => setMobileOpen(false)}
+                      className={`px-4 py-[10px] rounded-[10px] text-[14px] no-underline font-body transition-colors duration-150 hover:bg-[#6B2FA0]/[0.06] ${
+                        pathname === `/${s.slug}`
+                          ? "font-semibold !text-[#6B2FA0]"
+                          : "font-normal !text-[#555555]"
+                      }`}
+                    >
+                      {s.stateName}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {NAV_LINKS.slice(1).map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className={`
-                    px-4 py-[12px] rounded-[10px]
-                    text-[15px] no-underline font-body
-                    transition-colors duration-150
-                    hover:bg-[#6B2FA0]/[0.06]
-                    ${
-                      isActive
-                        ? "font-semibold !text-white bg-[#6B2FA0]"
-                        : "font-normal !text-[#333333]"
-                    }
-                  `}
+                  className={`px-4 py-[12px] rounded-[10px] text-[15px] no-underline font-body transition-colors duration-150 hover:bg-[#6B2FA0]/[0.06] ${
+                    isActive
+                      ? "font-semibold !text-white bg-[#6B2FA0]"
+                      : "font-normal !text-[#333333]"
+                  }`}
                 >
                   {link.label}
                 </Link>
