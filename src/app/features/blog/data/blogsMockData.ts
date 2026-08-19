@@ -16,6 +16,269 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "careers-spotlight-a-day-in-the-life-of-a-yuni-rides-driver": {
+    slug: "careers-spotlight-a-day-in-the-life-of-a-yuni-rides-driver",
+    title: "Careers Spotlight: A Day in the Life of a Yuni Rides Driver",
+    excerpt:
+      "An honest, hour-by-hour look at what driving a special needs school route with Yuni Rides actually looks like — pre-trip checks, morning routes, split shifts, and building real relationships.",
+    heroImage:
+      "/images/Careers-Spotlight-A-Day-in-the-Life-of-a-Yuni-Rides-Driver.png",
+    date: "Aug 19, 2026",
+    readTime: "6 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Job postings tell you about the basic requirements, but they don't tell you what the actual job is like. So, here's an honest look at what driving for Yuni Rides looks like, hour by hour, for a typical driver on a special needs route.",
+      },
+
+      {
+        type: "heading",
+        text: "6:15 a.m. — Pre-Trip Checks, Not a Formality",
+      },
+      {
+        type: "paragraph",
+        text: "Our driver's day starts before any student is picked up. The first thing you will have to do at the start of the day is run a pre-trip vehicle inspection. Check the tires, mirrors, and, if the route includes a wheelchair, inspect the securement equipment. Everything gets a thorough inspection. It's the kind of habit that feels tedious for about two weeks and then becomes second nature. It can be the difference between a safe route and a risky one.",
+      },
+
+      {
+        type: "heading",
+        text: "6:45 a.m. — Every Day: The First Pickup, and Why It's the Same",
+      },
+      {
+        type: "paragraph",
+        text: "Here's something that surprises people who haven't done this work before: the first stop, the pickup order, the driver, and the vehicle are all the same, day after day. That's not habit for habit's sake. For a lot of students on special needs routes, especially kids with autism or sensory processing differences, that consistency is the most important part of the ride. Consistency helps make the ride manageable. A driver who's been on the same route for a few months usually knows the small things before a parent even mentions them: which student needs an extra minute to settle in, who prefers to stay quiet, who wants to talk the whole ride.",
+      },
+      {
+        type: "paragraph",
+        text: "We've written more about why this kind of consistency matters so much in our piece on what makes special needs transportation genuinely different.",
+      },
+
+      {
+        type: "heading",
+        text: "7:00–8:15 a.m. — The Route",
+      },
+      {
+        type: "paragraph",
+        text: "This is the part that looks simplest from the outside and is actually the most skill-dependent part of the job. It's not just driving. It's watching for a student who's a little more anxious than usual today, knowing how to redirect a rough moment before it becomes a bigger one, communicating with a nonverbal student in whatever way actually works for them. None of that is learned on day one. It comes from undergoing extensive training before being assigned to a special needs route.",
+      },
+
+      {
+        type: "heading",
+        text: "Midday — The Part Nobody Talks About in Job Postings",
+      },
+      {
+        type: "paragraph",
+        text: "Between the morning and afternoon routes, there's a gap. This is the honest part: it's real, and it's worth knowing about upfront rather than discovering it after taking the job. Some drivers use it for a second part-time commitment, some use it as genuine downtime, some pick up additional short routes if they're available.",
+      },
+
+      {
+        type: "heading",
+        text: "2:30 p.m. — The Afternoon Route",
+      },
+      {
+        type: "paragraph",
+        text: "The afternoon run tends to have a different rhythm than the morning. Kids are tired, sometimes more emotionally worn down from a full school day, and a good driver reads that and adds a little more patience, a little less chatter, whatever that specific group of students needs on that specific day. It's the same route, same stops, same students as the morning, but it rarely feels like the exact same drive twice.",
+      },
+
+      {
+        type: "heading",
+        text: "3:45 p.m. — The End of the Route, Not the End of the Job",
+      },
+      {
+        type: "paragraph",
+        text: "Dropping off the last student isn't quite the finish line. There's a quick note to parents if anything happened worth flagging, a report if anything needs to go to the district or to dispatch, and the same care with securement equipment on the way back that started the day.",
+      },
+
+      {
+        type: "heading",
+        text: "Why Drivers Actually Stick With This Job",
+      },
+      {
+        type: "paragraph",
+        text: "Talk to drivers who've been doing this for a while, and the same theme comes up more than pay does, even though pay matters too. It's watching a kid who was anxious about the ride back in September be completely at ease by November. It's a parent who trusts you enough to mention something going on at home because they know you'll handle it right. It's the fact that this isn't a different rider every twenty minutes — it's the same kids, the same families, building into something that actually feels like it matters.",
+      },
+      {
+        type: "paragraph",
+        text: "Drivers coming from rideshare work in particular tend to point to this as the biggest shift. Instead of algorithm-driven unpredictability and a stranger every trip, there's a real schedule and real relationships. We wrote more about that comparison in why Chicago drivers are choosing predictable school routes over rideshare income.",
+      },
+
+      {
+        type: "heading",
+        text: "What the Job Actually Asks of You",
+      },
+      {
+        type: "paragraph",
+        text: "To be straightforward about it: this isn't a very easy job. It requires patience on days that test it, real attentiveness to kids who communicate differently than most passengers, and a genuine willingness to stick with a route long enough for the consistency to matter. In exchange, it offers something a lot of driving jobs don't — a schedule you can actually plan around, and work that means something more specific than just moving people from one point to another.",
+      },
+      {
+        type: "paragraph",
+        text: "If that sounds like the kind of driving work you're looking for, explore open driving positions with Yuni Rides and see what routes are available near you.",
+      },
+
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What does a typical day look like for a Yuni Rides driver? It starts with a pre-trip vehicle inspection, followed by a morning route with the same students, stops, and vehicle every day. There's a midday gap between morning and afternoon routes, then an afternoon route covering the same students on the way home.",
+          "Do Yuni Rides drivers work split shifts? Yes, similar to most school transportation roles: a morning route, a gap in the middle of the day, and an afternoon route.",
+          "What training happens before I'm assigned to a special needs route? Training covers securement systems, recognizing medical distress, de-escalating behavioral episodes, and working from each student's individual care plan, in addition to standard licensing.",
+          "Will I drive the same route every day? Generally, yes. Route and driver consistency is treated as important for many students, especially those with autism or sensory processing differences, so drivers are typically kept on the same route rather than rotated.",
+          "How do I apply to become a Yuni Rides driver? Visit our careers page to see current openings and requirements.",
+        ],
+      },
+    ],
+  },
+  "iep-transportation-rights-what-every-parent-needs-to-know": {
+    slug: "iep-transportation-rights-what-every-parent-needs-to-know",
+    title: "IEP Transportation Rights: What Every Parent Needs to Know",
+    excerpt:
+      "Know your child's IEP transportation rights under IDEA — what districts must provide, how to request it, and what to do if they don't comply.",
+    heroImage:
+      "/images/IEP-Transportation-Rights-What-Every-Parent-Needs-to-Know.png",
+    date: "Aug 19, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Many parents view school transportation as a convenience that the district provides. For a child with an IEP, it can be something else entirely: a legal entitlement, backed by federal law, that the district must provide.",
+      },
+      {
+        type: "paragraph",
+        text: "If your child's IEP includes transportation, or you think it should, here's what you're entitled to and what to do if IEP transportation is denied by the district.",
+      },
+
+      {
+        type: "heading",
+        text: "Transportation Is a Legal Right, Not a Favor",
+      },
+      {
+        type: "paragraph",
+        text: 'Under the Individuals with Disabilities Education Act (IDEA), transportation is classified as a "related service" support is required to help a student benefit from special education. When transportation is written into a student\'s IEP, the district is legally obligated to provide it, at no cost to the family. That can mean door-to-door pickup, a wheelchair-accessible vehicle, a shorter ride time, or a trained aide on board, depending on what the IEP specifies.',
+      },
+      {
+        type: "paragraph",
+        text: "This is worth repeating because so many parents don't realize it: this isn't a courtesy the district extends. It's a legal requirement and treating it as optional is a compliance failure on the district's part. For a full breakdown of what IEP transportation covers, see our complete parent's guide to IEP transportation.",
+      },
+
+      {
+        type: "heading",
+        text: "Who Decides If Your Child Qualifies",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation eligibility isn't automatic just because a child has a disability. If your child's IEP doesn't currently include transportation and you believe it should, you can request that it be added or reviewed at any IEP meeting, not just the annual one. To strengthen the request at the meeting, you will have to present documentation from a doctor, therapist, or behavioral specialist explaining why your child needs IEP transportation.",
+      },
+
+      {
+        type: "heading",
+        text: "If Transportation on the IEP Is Denied",
+      },
+      {
+        type: "paragraph",
+        text: "Sometimes the IEP team declines to add transportation as a related service, even when a parent has requested it. If your child's IEP transportation is denied, you're not without options:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Ask for the denial in writing with a stated reason. The district is required to explain why transportation on the IEP was denied, not just say no verbally in the meeting.",
+          "Request updated documentation. If the denial was based on insufficient medical or behavioral evidence, ask what specific documentation would change the outcome, and get an updated evaluation if needed.",
+          "You can disagree in writing. Parents have the right to file a written objection to any part of the IEP, including a transportation denial, and that objection becomes part of the record.",
+          "Use the same escalation path as non-compliance. A wrongful denial can be challenged through your state's IDEA complaint process, mediation, or due process, the same avenues available when a district fails to deliver transportation it already agreed to.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A denial isn't necessarily final. It's the starting point for a documented response, not a dead end.",
+      },
+
+      {
+        type: "heading",
+        text: "What the District Is Actually Required to Provide",
+      },
+      {
+        type: "paragraph",
+        text: "Once transportation is written into the IEP, the district must provide the services specified, which may include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Door-to-door pickup, not just a curb stop",
+          "A wheelchair-accessible or otherwise adapted vehicle",
+          "A trained aide or monitor riding along",
+          "A capped ride time",
+          "Coordination with therapy or medical appointments tied to the school day",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "What to Do When a District Isn't Complying",
+      },
+      {
+        type: "paragraph",
+        text: "If transportation in the IEP isn't being provided as written, or was denied without adequate explanation, you have options:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Put it in writing. Document the specific gap (a missed pickup, a wrong vehicle, an aide who wasn't present) with dates. Email creates a paper trail that a phone call doesn't.",
+          "Request an IEP team meeting. You don't have to wait for the annual review. Persistent non-compliance is grounds to reconvene the team.",
+          "Contact your state's special education office. Every state has a formal complaint process for IDEA violations, separate from the district itself.",
+          "Consider mediation or due process. For unresolved disputes, IDEA provides for mediation and, if needed, a formal due process hearing.",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "When IEP Transportation Overlaps With Other Protections",
+      },
+      {
+        type: "paragraph",
+        text: "A student experiencing homelessness who also has a disability can be covered under both an IEP and the McKinney-Vento Act simultaneously, and the district is responsible for coordinating both sets of obligations rather than treating them as competing claims. If this might apply to your family, our guide to McKinney-Vento transportation rights breaks down what schools are required to provide.",
+      },
+
+      {
+        type: "heading",
+        text: "What to Ask Before Choosing a Transportation Provider",
+      },
+      {
+        type: "paragraph",
+        text: "If your district contracts out special needs transportation rather than running it in-house, the same rights still apply. Before you sign off on a provider, or push your district to change one, it's worth asking about driver training on securement systems and behavioral support, real-time tracking, and how incidents get reported. We cover the full list in 12 questions every parent should ask before signing a transportation contract.",
+      },
+
+      {
+        type: "heading",
+        text: "The Bottom Line",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation tied to your child's IEP isn't a favor. It's a legal right, and understanding exactly what it covers is the first step to making sure your child actually receives it. If your district isn't delivering what's written in the plan, you have real, documented paths to fix that — starting with putting the gap in writing.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're setting up IEP transportation for the first time, or you're not confident your current provider can actually deliver on what's required, book a consultation with Yuni Rides to talk through your child's specific needs.",
+      },
+
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Is IEP transportation free for families? Yes. If transportation is written into your child's IEP as a related service, the district must provide it at no cost.",
+          "Can I request transportation be added to my child's IEP? Yes. You can request that transportation be added or reviewed at any IEP meeting, not just the annual review. Supporting documentation from a doctor or therapist can strengthen the request.",
+          "What can I do if the district isn't following the transportation plan in my child's IEP? Document the specific gap in writing, request an IEP team meeting, and if it continues, file a formal complaint with your state's special education office. Mediation and due process are also available under IDEA for unresolved disputes.",
+          "Can a student qualify for both IEP transportation and McKinney-Vento protections? Yes. A student experiencing homelessness who also has a disability can be covered under both at the same time, and the district is responsible for coordinating both.",
+          "Does IEP transportation cover more than the ride to school? It can. Depending on what's written in the IEP, this may include coordination with therapy or medical appointments tied to the school day, not just the standard commute.",
+          "What can I do if my child's IEP transportation is denied? Ask for the denial in writing with a specific reason, request guidance on what documentation would change the decision, and file a written objection if you disagree. If the denial seems unjustified, the same complaint, mediation, and due process options used for non-compliance apply here too.",
+        ],
+      },
+    ],
+  },
   "what-makes-special-needs-student-transportation-truly-different": {
     slug: "what-makes-special-needs-student-transportation-truly-different",
     title: "What Makes Special Needs Student Transportation Truly Different",
