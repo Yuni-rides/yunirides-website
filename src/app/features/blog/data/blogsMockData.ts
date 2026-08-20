@@ -16,6 +16,268 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "a-parents-guide-to-transporting-kids-to-medical-appointments": {
+    slug: "a-parents-guide-to-transporting-kids-to-medical-appointments",
+    title: "A Parent's Guide to Transporting Kids to Medical Appointments",
+    excerpt:
+      "Managing school, work, and recurring medical or therapy appointments for your child isn't easy. Here is a practical guide to calendar management, school coordination, backup plans, and vetting providers.",
+    heroImage:
+      "/images/A-Parent's-Guide-to-Transporting-Kids-to-Medical-Appointments.png",
+    date: "Aug 20, 2026",
+    readTime: "6 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "If you've ever tried to get a kid out of school early for a specialist appointment, then back in time for the last period, then home, then somehow also picked up a sibling from soccer, you already know the real challenge here isn't the appointment. It's everything around it.",
+      },
+      {
+        type: "paragraph",
+        text: "For families managing ongoing therapy, specialist visits, or regular medical care for a child, transportation isn't a side detail. It's often the thing that determines whether the appointment happens at all.",
+      },
+
+      {
+        type: "heading",
+        text: "Why This Gets Harder Than It Should",
+      },
+      {
+        type: "paragraph",
+        text: "A single appointment occasionally is manageable, but weekly or biweekly sessions with a specialist aren't easy to fit in with a full-time job. A recurring specialist appointment that conflicts with your work schedule three weeks out of four is where managing appointments starts to feel like a second job.",
+      },
+      {
+        type: "paragraph",
+        text: "And if you are unable to manage a certain session, it can become a big deal. Missed therapy sessions can mean losing continuity in a treatment plan that took months to establish. A missed specialist appointment can mean another multi-week wait to get back on the calendar. For families already managing a lot, transportation shouldn't be the reason care gets interrupted, but for a lot of families, it quietly is.",
+      },
+      {
+        type: "heading",
+        text: "Start With a Real Calendar, Not a Mental One",
+      },
+      {
+        type: "paragraph",
+        text: "The first practical step is simple but still often skipped: get every recurring appointment onto one shared calendar, not scattered across texts, sticky notes, and memory. Include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "The appointment time and the actual time you need to leave, not just the appointment time",
+          "Which parent, caregiver, or provider is responsible for that specific trip",
+          "Whether the appointment overlaps with school and what the pickup process looks like for that specific day",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "This sounds obvious. It's also the single biggest source of last-minute scrambling, because most families default to figuring it out week by week instead of setting the pattern once.",
+      },
+
+      /* COORDINATE WITH SCHOOL */
+      {
+        type: "heading",
+        text: "Coordinate With the School Ahead of Time, Not the Morning Of",
+      },
+      {
+        type: "paragraph",
+        text: "If your child needs to leave school early or arrive late for an appointment, most schools have a process for this, and it works far better when it's set up in advance rather than negotiated the morning of. Ask specifically:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What documentation the school needs for a recurring early release or late arrival",
+          "Who to notify if the pattern changes week to week",
+          "Whether attendance gets marked differently for documented medical appointments, since this can matter for how absences are counted",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "If your child has an IEP, medical appointments tied to services in that plan may already have some transportation coordination built in — it's worth confirming with the school directly rather than assuming. Our guide on IEP transportation rights every parent should know covers what districts are actually required to provide.",
+      },
+
+      /* BACKUP PLAN */
+      {
+        type: "heading",
+        text: "Build a Backup Plan Before You Need One",
+      },
+      {
+        type: "paragraph",
+        text: "The appointment that goes sideways is never the one you planned for. It's the day a driver is sick, a car won't start, or two appointments end up overlapping because a provider rescheduled without much notice. Having a real backup, not just a vague 'I'll figure it out,' matters more than most families realize until the day they actually need it. A few things worth having in place ahead of time:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "A second person who could realistically make a pickup or drop-off on short notice",
+          "A transportation service you've already vetted, rather than one you're researching for the first time in a panic",
+          "A clear sense of which appointments are truly non-negotiable versus ones that can be rescheduled if the day falls apart",
+        ],
+      },
+
+      /* OUTSIDE HELP */
+      {
+        type: "heading",
+        text: "When It Makes Sense to Bring in Outside Help",
+      },
+      {
+        type: "paragraph",
+        text: "For families managing multiple recurring appointments, especially alongside a full school schedule, it's worth being honest about whether you're the only realistic option for every single trip. A dedicated transportation service, particularly one experienced with kids who have specific medical or behavioral needs, can take some of these trips off your plate entirely, not as a luxury, but as a genuine capacity fix.",
+      },
+      {
+        type: "paragraph",
+        text: "This matters even more for families already navigating special needs transportation for school. If a provider is already trained on your child's specific needs, whether that's securement equipment, communication style, or behavioral support, extending that same trusted relationship to medical appointment transport can be simpler and more consistent than pulling in a different service for every kind of trip.",
+      },
+
+      /* WHAT TO ASK */
+      {
+        type: "heading",
+        text: "What to Ask Before You Trust Someone with This",
+      },
+      {
+        type: "paragraph",
+        text: "If you're bringing in outside help for medical appointment transportation, don't assume 'safe' means the same thing to every provider. Ask directly:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Are drivers trained specifically for kids with medical or behavioral needs, or just general passenger transport?",
+          "Is there real-time tracking so you know where your child is during the trip?",
+          "How are delays or schedule changes communicated, and how far in advance?",
+          "What happens if an appointment runs long and the return trip needs to shift?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The same questions that matter for school transportation apply here, arguably more, since a missed medical appointment often has a real cost beyond a rescheduled ride. Our guide on 12 questions every parent should ask before signing a transportation contract walks through the full list.",
+      },
+
+      /* BOTTOM LINE */
+      {
+        type: "heading",
+        text: "The Bottom Line",
+      },
+      {
+        type: "paragraph",
+        text: "Getting a child to a recurring appointment shouldn't require reinventing the logistics every single week. A shared calendar, a school coordination plan set up in advance, and a real backup plan cover most of what goes wrong. For families managing more trips than they can realistically cover solo, bringing in a trusted, trained provider isn't giving something up, it's making room for the parts of parenting that need your full attention.",
+      },
+      {
+        type: "paragraph",
+        text: "If juggling school and medical appointment transportation has started to feel like more than you can reasonably manage alone, book a consultation with Yuni Rides to talk through what consistent, trained transportation could look like for your family.",
+      },
+
+      /* FAQS */
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "How do I coordinate school pickup for a recurring medical appointment? Set this up with the school in advance rather than the morning of. Ask what documentation is needed, how attendance is recorded for medical appointments, and who to notify if the schedule changes week to week.",
+          "What should I do if I can't personally get my child to every appointment? Build a backup plan before you need one: a second person who can realistically help on short notice, and a vetted transportation provider you've already researched rather than one you're scrambling to find in a crisis.",
+          "Can a transportation service help with medical appointments, not just school? Yes. Providers experienced with special needs or medical transportation can often extend the same trained, consistent service to appointment transport, which can be more reliable than switching providers for different kinds of trips.",
+          "What should I ask a provider before trusting them with medical appointment transportation? Ask about specific training for medical or behavioral needs, real-time tracking, how delays are communicated, and how they handle appointments that run longer than scheduled.",
+          "Does my child's IEP cover transportation to medical appointments? It can, if the appointment is tied to a related service in the IEP. It's worth confirming directly with the school rather than assuming, since this varies by what's specifically written into the plan.",
+        ],
+      },
+    ],
+  },
+  "school-bus-driver-shortages-how-districts-are-adapting-in-2026": {
+    slug: "school-bus-driver-shortages-how-districts-are-adapting-in-2026",
+    title: "School Bus Driver Shortages: How Districts Are Adapting in 2026",
+    excerpt:
+      "National school bus driver employment is still 9.5% below 2019 levels. Here is how school districts are using supplemental transport, smarter routing, and specialized providers to adapt in 2026.",
+    heroImage:
+      "/images/School-Bus-Driver-Shortages-How-Districts-Are-Adapting-in-2026.png",
+    date: "Aug 20, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Talk to any transportation director about what's keeping them up at night, and the first thing they mention is driver staffing. This is not a new problem but halfway through 2026, it isn't going away either — and the districts handling it best aren't sitting around waiting for it to fix itself.",
+      },
+
+      {
+        type: "heading",
+        text: "The Numbers Behind the Headlines",
+      },
+      {
+        type: "paragraph",
+        text: "Here's the blunt version: national school bus driver employment is still about 9.5% below where it was in 2019, even after some modest recovery. Why? Mostly wage math doesn't work. Median pay is around $22.45 per hour while warehouse, delivery, and retail jobs often pay more and don't even require a commercial driver's license or roughly 12 weeks of training to get one.",
+      },
+      {
+        type: "paragraph",
+        text: "Recent survey data backs up what most transportation directors already know from experience: 80% of school administrators say driver shortages are an active, ongoing headache, and 73% are dealing with budget shortfalls at the same time. This is no longer a temporary challenge. It has become close to the norm now, and it's changing how transportation departments plan, not just how they scramble in August.",
+      },
+
+      {
+        type: "heading",
+        text: "Why the Job Itself Is a Hard Sell",
+      },
+      {
+        type: "paragraph",
+        text: "Pay isn't even the whole story. The workday schedule is its own deterrent. Most jobs offer a predictable eight-hour shift. School bus driving usually means a tight morning route, a long unpaid gap in the middle of the day, then another shift in the afternoon. The biggest challenge is the schedule; with such a routine, it's difficult to build a second job or reliable childcare around. A lot of people who'd be great candidates never consider applying in the first place.",
+      },
+      {
+        type: "paragraph",
+        text: "The training requirements make the problem even worse. Getting a CDL with a school bus endorsement takes a lot of time and upfront money without any guarantee the person will stick around long enough for the district to see any return. Districts that don't help candidates through that process — subsidizing it, streamlining it — tend to lose people to jobs with a much lower bar to clear, even when the pay would've ended up comparable.",
+      },
+
+      {
+        type: "heading",
+        text: "Route Coverage Gets Harder Before It Gets Easier",
+      },
+      {
+        type: "paragraph",
+        text: "When a district can't fully staff its routes, it shows up in specific, frustrating ways: combined or longer routes, later start times just to stretch a thin driver pool across more coverage, or last-minute cancellations that hit hardest for families without a backup plan. Once that happens more than once or twice a semester, parents stop trusting the schedule.",
+      },
+      {
+        type: "paragraph",
+        text: "For students with an IEP that requires transportation as a related service, an unfilled route isn't just annoying. It's a compliance problem the district owns. A district doesn't get to quietly deprioritize a special needs route just because it's harder to staff. We go deeper into what districts are on the hook for under IDEA in our guide for school district administrators evaluating transportation contractors.",
+      },
+
+      {
+        type: "heading",
+        text: "How Districts Are Actually Adapting",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Supplementing fixed routes with smaller vehicles or ride-share-style services. Instead of insisting every route needs a full-size bus and a CDL holder, some districts are contracting supplemental transportation for lower-density routes or specialized needs, which opens the driver pool considerably since not every vehicle needs the same licensing tier.",
+          "Centralize pickup points. Fewer, smarter stops mean existing drivers can cover more students without adding route time, so you need fewer drivers to hit the same coverage. It does mean more walking for some families, so the districts doing this well pair it with clear communication well ahead of time.",
+          "Fixing pay and schedule structure where the budget allows. Some districts are restructuring shifts to shrink that unpaid midday gap or adding split-shift stipends, addressing the structural problem instead of just bumping the posted wage for a dollar or two. A modest raise alone rarely moves the needle the way fixing the schedule does.",
+          "Investing in routing software. Smarter routing gets more coverage out of the same driver pool without hiring anyone new — which matters a lot when the labor market itself is the bottleneck, not the budget. It's often the fastest lever a district has.",
+          "Contracting with specialized providers for special needs and supplemental routes. This frees up in-house drivers to focus on general education routes, while trained specialists handle the routes with the toughest compliance and training requirements. We cover what to look for in that kind of partner in our piece on why driver consistency matters so much for special needs students.",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "What This Means for the Year Ahead",
+      },
+      {
+        type: "paragraph",
+        text: "None of this can fix the underlying labor market problem. Wages and schedule structure are the root cause, and no amount of clever routing software changes that on its own. But districts stacking a few of these approaches together tend to get through the year with less scrambling and fewer last-minute gaps than districts hoping the problem sorts itself out.",
+      },
+      {
+        type: "paragraph",
+        text: "If your district is weighing whether supplemental or specialized transportation could take some pressure off your current routes — especially the special needs or lower-density routes that are hardest to staff in-house — book a consultation with Yuni Rides and let's talk through what that could look like.",
+      },
+      {
+        type: "paragraph",
+        text: "And if you're a driver reading this instead of an administrator: districts and providers that have actually fixed the split-shift problem are worth a look. See open driving positions with Yuni Rides.",
+      },
+
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "How bad is the school bus driver shortage in 2026? National school bus driver employment remains roughly 9.5% below 2019 levels, and 80% of school administrators report ongoing driver shortages as an active operational challenge.",
+          "Why is it hard to recruit school bus drivers? Pay is part of it, but the schedule is the bigger deterrent for a lot of people — a split shift with a long unpaid gap in the middle of the day doesn't fit well around other work or childcare. The CDL training requirement adds another hurdle before pay even enters the conversation.",
+          "How are districts covering routes they can't fully staff? Combining or lengthening routes, centralizing pickup points, contracting supplemental or specialized transportation providers, restructuring schedules to cut unpaid gaps, and using routing software to squeeze more coverage out of fewer drivers.",
+          "Does the driver shortage affect special needs transportation specifically? Yes, often worse — special needs routes need extra training and consistency that not every driver can offer. Some districts are handling this by contracting specialized providers for those routes specifically.",
+          "What can districts do if a shortage is affecting IEP-required transportation? The obligation to deliver IEP-specified transportation doesn't go away because staffing is tight. Contracting supplemental or specialized providers is one way districts stay compliant while working through the broader shortage.",
+        ],
+      },
+    ],
+  },
   "careers-spotlight-a-day-in-the-life-of-a-yuni-rides-driver": {
     slug: "careers-spotlight-a-day-in-the-life-of-a-yuni-rides-driver",
     title: "Careers Spotlight: A Day in the Life of a Yuni Rides Driver",
