@@ -16,6 +16,287 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "transport-for-schools": {
+    slug: "transport-for-schools",
+    title: "Transport for Schools | Safe Student Pickup & Drop-off",
+    excerpt:
+      "Reliable school transportation for families across 5 states. GPS tracking, background-checked drivers, IEP-friendly. Book your child's safe ride today.",
+    heroImage: "/images/Transport for Schools  Safe-Student-Pickup-&-Drop-off.png",
+    date: "Aug 23, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Choosing a transportation service provider for your child's daily school runs isn't a small decision, even if it starts to feel routine after the first few weeks[cite: 13]. Whether you're arranging school transportation for the first time, switching from an unreliable provider, or navigating an IEP that requires more than a standard district bus, this page answers the questions that matter most before you make a decision[cite: 13].",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides provides safe, consistent school transportation for families across 5 states — Washington, California, Arizona, Texas, and Illinois — with background-checked drivers, real-time GPS tracking, and route consistency built around your child's specific needs[cite: 13].",
+      },
+      {
+        type: "heading",
+        text: "What Is Transport for Schools?",
+      },
+      {
+        type: "paragraph",
+        text: "Student transportation is any transportation service that safely and reliably gets your child to and from school[cite: 13]. This includes standard district buses, private transportation providers, and other transportation solutions[cite: 13]. For most families, the district bus works fine, but for others, it doesn't — whether because of a longer commute than a standard route allows, a child with an IEP that requires specific accommodations, a family schedule that doesn't align with district pickup times, or simply wanting more visibility and consistency than a large fixed-route system can offer[cite: 13].",
+      },
+      {
+        type: "paragraph",
+        text: "Private school transportation came into existence to fill that gap, whether as a family's primary transportation solution or as a supplement to what the district already provides[cite: 13].",
+      },
+      {
+        type: "heading",
+        text: "How Do I Arrange School Transportation for My Child?",
+      },
+      {
+        type: "paragraph",
+        text: "The process looks a little different depending on your situation[cite: 13]:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "If your child has an IEP that should include transportation: Start with the IEP team. Transportation can be requested or reviewed at any IEP meeting. Eligibility is determined based on your child's documented needs. It's not automatically granted based on diagnosis alone. You may need supporting documentation from a doctor, therapist, or behavioral specialist if you're requesting a specific accommodation. Our guide on IEP transportation rights walks through this process in more detail.[cite: 13]",
+          "If you're arranging supplemental or private transportation directly: Generally, this starts with sharing your child's specific needs, including any medical, behavioral, or mobility considerations, so a route and driver can be matched appropriately.[cite: 13]",
+          "If you qualify for McKinney-Vento transportation: Students experiencing homelessness are entitled to transportation under federal law, irrespective of where they're currently staying, in some cases across district lines to maintain school stability. Our McKinney-Vento transportation rights guide covers what schools are required to provide.[cite: 13]",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Is Private School Transport Safe?",
+      },
+      {
+        type: "paragraph",
+        text: "Before everything else, most parents want to know one thing: Is private school transportation safe? This point deserves a direct answer rather than general reassurance[cite: 13]. Safety comes down to specifics, not marketing language[cite: 13]. A safe provider should be able to speak concretely to:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Driver background checks at hiring[cite: 13]",
+          "Training beyond a standard license, particularly for special needs routes: securement systems, recognizing medical distress, and behavioral de-escalation[cite: 13]",
+          "Vehicle safety standards, inspection schedules, and equipment appropriate for your child's needs[cite: 13]",
+          "Real-time tracking, so you know where your child is, not just a promise that the vehicle is GPS-equipped[cite: 13]",
+          "A responsive dispatch team, not just an app support ticket, if something needs a real answer quickly[cite: 13]",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "If a potential provider can't answer these questions specifically, that's something to consider before making a decision[cite: 13]. Our full breakdown of what to ask any provider is in 12 questions every parent should ask before signing a transportation contract[cite: 13].",
+      },
+      {
+        type: "heading",
+        text: "What Are the Benefits of Private School Transportation?",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Consistency you can count on: The same driver, same route, same timing every day, rather than the variability that can come with a large fixed-route system[cite: 13]. This predictability and consistency aren't just convenient; they're especially valuable for kids with autism, sensory processing differences, or anxiety[cite: 13].",
+          "Flexibility standard bus routes can't offer: Individualized pickup windows, accommodation for a schedule that doesn't fit a standard route, and routing that can adjust as your family's needs change[cite: 13].",
+          "Real visibility into the ride: Knowing there's a delay means you can make required adjustments to your routine instead of standing outside wondering if something's wrong[cite: 13]. For families managing multiple kids, different schedules, and a full day ahead, those small everyday improvements can make busy mornings much less stressful[cite: 13].",
+          "Specialized support for special needs and IEP transportation: Trained drivers, appropriately equipped vehicles, and a provider who understands what's required under IDEA and your state's specific special education transportation laws, not a general transportation company treating accessibility as an afterthought[cite: 13].",
+          "A direct line when something needs an answer: Rather than navigating a large district transportation department or a general customer service line, a dedicated provider typically offers a more direct way to reach someone who really knows your child's route[cite: 13].",
+        ],
+      },
+      {
+        type: "heading",
+        text: "How Much Does School Transport Cost?",
+      },
+      {
+        type: "paragraph",
+        text: "It depends on what you're arranging[cite: 13]. If transportation is written into your child's IEP as a related service, it must be provided by the district at no cost to your family[cite: 13]. If you're arranging private or supplemental transportation independently, outside of what the district provides, costs will vary depending on your child's transportation needs and service area[cite: 13].",
+      },
+      {
+        type: "paragraph",
+        text: "Cost shouldn't be the only driving factor in this decision[cite: 13]. A cheaper option that's inconsistent or hard to reach when something goes wrong often ends up costing more in missed work hours, missed appointments, and stress than a slightly higher-priced, more reliable service would have[cite: 13].",
+      },
+      {
+        type: "heading",
+        text: "Can I Track My Child's School Transport?",
+      },
+      {
+        type: "paragraph",
+        text: "Yes, and this should be a standard expectation, not a premium feature you have to ask about specifically[cite: 13].",
+      },
+      {
+        type: "paragraph",
+        text: "Real-time tracking matters for practical, everyday reasons, not only for emergencies[cite: 13]. Knowing the ride is five minutes out means you can actually time walking to the door instead of guessing[cite: 13]. For families managing a child with medical or behavioral needs, that visibility can matter even more[cite: 13].",
+      },
+
+      /* WHAT MAKES YUNI RIDES DIFFERENT */
+      {
+        type: "heading",
+        text: "What Makes Yuni Rides Different",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Coverage across 5 states, with route consistency and safety standards that don't vary based on location[cite: 13].",
+          "Background-checked, specially trained drivers, including additional certification for special needs and IEP-related routes[cite: 13].",
+          "Real-time GPS tracking, giving you actual visibility, not just a claim of GPS-equipped vehicles[cite: 13].",
+          "The same driver and route every day, treated as a genuine part of the service, not an inconsistent perk[cite: 13].",
+          "A responsive team you can actually reach, not a support ticket queue[cite: 13].",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Learn more about our approach and why we do this work on our About page[cite: 13].",
+      },
+
+      /* FOR FAMILIES NAVIGATING AN IEP */
+      {
+        type: "heading",
+        text: "For Families Navigating an IEP or Specific Need",
+      },
+      {
+        type: "paragraph",
+        text: "If your child's needs go beyond what a standard bus route can accommodate, our state-specific pages cover the exact regulations and requirements that apply where you live: Washington, Texas, and Illinois[cite: 13].",
+      },
+
+      /* STILL HAVE QUESTIONS & READY TO GET STARTED */
+      {
+        type: "heading",
+        text: "Ready to Get Started?",
+      },
+      {
+        type: "paragraph",
+        text: "Most of the hesitation parents feel before switching or setting up transportation comes down to not having specific answers yet, not a lack of trust[cite: 13]. Our website covers the most common questions we hear, and if you don't find what you're looking for there, we're happy to walk through it directly[cite: 13].",
+      },
+      {
+        type: "paragraph",
+        text: "Your child's daily commute shouldn't be something you have to worry about[cite: 13]. Book a consultation with Yuni Rides and let's talk through what safe, consistent transportation should look like for your family[cite: 13].",
+      },
+
+      /* FAQS */
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What is transport for schools? Any transportation service that gets a child safely to and from school, whether that's a standard district bus, a private provider, or supplemental transportation filling a specific gap in what the district offers.[cite: 13]",
+          "How do I arrange school transportation for my child? It depends on your situation. For IEP-related transportation, start with your child's IEP team. For McKinney-Vento eligibility, your school's homeless liaison can help confirm eligibility. For private or supplemental transportation, you can reach out directly to arrange service based on your child's specific needs.[cite: 13]",
+          "Is private school transport safe? It depends on the provider. Look for specifics: documented background checks, training beyond standard licensing, real-time tracking, and a responsive team, not just general safety claims.[cite: 13]",
+          "What are the benefits of private school transportation? Consistency (the same driver and route daily), flexibility standard routes can't offer, real-time visibility into the ride, specialized support for special needs and IEP transportation, and a more direct line of communication than a large district system typically provides.[cite: 13]",
+          "How much does school transport cost? IEP-required transportation is always free to the family. Private or supplemental transportation arranged independently varies based on the specific service.[cite: 13]",
+          "Can I track my child's school transport? Yes. Real-time tracking should be a standard part of any transportation service, giving parents actual visibility into the ride rather than just a scheduled ETA.[cite: 13]",
+        ],
+      },
+    ],
+  },
+  "winter-weather-safety-tips-for-student-transportation": {
+    slug: "winter-weather-safety-tips-for-student-transportation",
+    title: "Winter Weather Safety Tips for Student Transportation",
+    excerpt:
+      "Winter weather brings icy roads, reduced visibility, and unpredictable delays. Learn how proactive providers manage winter safety, clear delay thresholds, and special needs transportation.",
+    heroImage:
+      "/images/Winter-Weather-Safety-Tips-for-Student-Transportation.png",
+    date: "Aug 23, 2026",
+    readTime: "6 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "The first snow of the season has an immediate effect on pickup times: visibility drops, roads that were part of routine till October can suddenly become hazardous, and for families managing special needs children, winter can add more complication to the routine.",
+      },
+      {
+        type: "paragraph",
+        text: "Here's what really matters when winter weather affects student transportation, for parents deciding what to expect and providers deciding how to handle it.",
+      },
+      {
+        type: "heading",
+        text: 'Why Winter Isn\'t Just "The Same Route, Slower"',
+      },
+      {
+        type: "paragraph",
+        text: "Winter changes time management in ways that aren't always obvious. Stopping distances increase significantly on icy or snow-covered roads, visibility drops during storms or even just early, dark mornings, and a route that takes twenty minutes in good conditions can easily take twice as long when conditions turn. A provider that drives the usual route more carefully without adjusting for changing conditions may be taking unnecessary risks.",
+      },
+      {
+        type: "heading",
+        text: "What a Good Provider Actually Does Differently in Winter",
+      },
+      {
+        type: "paragraph",
+        text: "If you're evaluating whether your transportation provider is prepared for winter, you need to look for specifics rather than a general reassurance that they're 'prepared.' A provider handling winter well typically has:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "A clear threshold for delaying or adjusting routes. This shouldn't be a judgment call made fresh every storm. Providers with real winter protocols have pre-set criteria, road condition thresholds, visibility minimums, that trigger a delay or route change automatically, rather than waiting to see how bad things get.",
+          "Proactive communication before you'd otherwise wonder. The provider should inform you beforehand if a route is delayed or adjusted, before you're standing outside in the cold wondering where the ride is.",
+          "Drivers trained specifically for winter conditions, not just general safe driving. Winter driving is a distinct skill — recognizing black ice, managing a skid, knowing when a route genuinely isn't safe to run rather than just uncomfortable.",
+          "Vehicle readiness that's actually checked, not assumed. Tires that are recommended for winter conditions, defrosters and heaters that are in working condition, cold-weather-related pre-trip inspections, a battery that's more likely to fail, and fluid levels that behave differently in freezing temperatures.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "What This Looks Like for Special Needs Transportation Specifically",
+      },
+      {
+        type: "paragraph",
+        text: "Winter adds real complexity for students with medical or behavioral needs. A longer wait at a stop is a bigger deal for a child who's sensitive to cold or has a medical condition affected by temperature. A delayed pickup can throw off a schedule built around therapy or medical appointments that don't have much flexibility to move. And for students who rely on route and driver consistency as part of their accommodation, winter disruptions, if they happen without warning or communication, can be more destabilizing than the weather itself.",
+      },
+      {
+        type: "paragraph",
+        text: "This is where a provider's winter protocol should go further than 'we'll be extra careful.' It should account for these specific needs directly: shorter outdoor wait times where possible, proactive communication with families managing appointment schedules, and a driver who knows this particular route and these particular students well enough to make good judgment calls in a genuinely difficult moment.",
+      },
+      {
+        type: "heading",
+        text: "What Parents Can Do on Their End",
+      },
+      {
+        type: "paragraph",
+        text: "Providers carry most of the responsibility here, but a few things on the family side make winter mornings smoother:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Dress your child for the actual wait time outside, not just the ride itself, since a delay can mean more time at the stop than usual",
+          "Build in extra buffer time on days with a winter weather advisory, even if the provider hasn't announced a delay yet",
+          "Know your provider's communication method for delays before the first storm hits, not during it",
+          "If your child has a medical condition affected by cold, make sure that's documented with your provider ahead of the season, not something you're explaining for the first time mid-storm",
+        ],
+      },
+      {
+        type: "heading",
+        text: "When a Delay or Cancellation Is the Right Call",
+      },
+      {
+        type: "paragraph",
+        text: "Sometimes the safest decision is not running the route at all. A provider willing to make that call, even when it's inconvenient, is doing their job correctly. A provider who pushes through genuinely unsafe conditions to avoid a difficult phone call with parents or a district is prioritizing convenience over safety, and that's a red flag worth noticing, not a sign of reliability.",
+      },
+      {
+        type: "heading",
+        text: "The Bottom Line",
+      },
+      {
+        type: "paragraph",
+        text: "Winter doesn't have to mean chaos for student transportation, but it does require a provider who treats it as a distinct set of conditions rather than the same routine with extra caution layered on top. Clear thresholds for delays, proactive communication, trained drivers, and genuine attention to what winter means specifically for students with additional needs — that's the difference between a provider who's actually ready for the season and one who's just hoping it goes fine.",
+      },
+      {
+        type: "paragraph",
+        text: "If you're heading into winter without confidence that your current transportation setup can handle it well, book a consultation with Yuni Rides to talk through what a real winter protocol should look like for your family.",
+      },
+      {
+        type: "paragraph",
+        text: "And if you're a driver who takes winter conditions seriously and wants steady, well-supported routes rather than being sent out in conditions that aren't safe, see open driving positions with Yuni Rides.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "How does snow affect school transportation? Snow and icy conditions increase stopping distances, reduce visibility, and may require longer travel times. Transportation providers may delay, reroute, or cancel services when road conditions become unsafe.",
+          "Will I be notified if my child's ride is delayed? A reliable transportation provider should communicate delays or route changes as early as possible through its established communication channels so families can plan accordingly.",
+          "Is it safe for children with special needs to travel during winter weather? Yes, provided the transportation provider follows appropriate winter safety procedures, maintains its vehicles, trains drivers for winter conditions, and communicates effectively with families when weather affects service.",
+          "What should my child wear while waiting for transportation? Children should be dressed for outdoor winter conditions, including warm coats, hats, gloves, waterproof footwear, and layers that help them stay comfortable if pickup is delayed.",
+          "When will student transportation be cancelled because of the weather? Each transportation provider and school district has its own weather policies. Decisions are typically based on road conditions, visibility, local weather advisories, and overall safety rather than snowfall alone.",
+          "How can parents prepare for winter transportation? Parents can prepare by monitoring weather forecasts, keeping emergency contacts updated, understanding their provider's communication process, allowing extra travel time, and notifying the provider about any weather-related medical concerns.",
+        ],
+      },
+    ],
+  },
   "how-real-time-ride-tracking-gives-parents-peace-of-mind": {
     slug: "how-real-time-ride-tracking-gives-parents-peace-of-mind",
     title: "How Real-Time Ride Tracking Gives Parents Peace of Mind",
