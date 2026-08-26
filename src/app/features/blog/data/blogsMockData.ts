@@ -16,12 +16,287 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "special-needs-transportation-illinois-iep-transport-chicago": {
+    slug: "special-needs-transportation-illinois-iep-transport-chicago",
+    title:
+      "Special Needs Transportation Illinois | IEP Transport Chicago | Yuni Rides",
+    excerpt:
+      "IEP & special needs student transportation in Illinois. Serving Chicago & surrounding districts. IDEA-compliant, GPS-tracked, background-checked drivers. Book a call.",
+    heroImage:
+      "/images/Special-Needs-Transportation-Illinois-IEP-Transport-Chicago-Yuni-Rides.jpg",
+    date: "Aug 26, 2026",
+    readTime: "6 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Getting a child with an IEP safely to school in Illinois isn't just about finding a ride — it's about a provider who understands IDEA and Illinois law and delivers service that actually complies with them. Yuni Rides provides tailored IEP-compliant special needs and McKinney-Vento transportation across Illinois districts, serving Chicago and the surrounding suburbs with background-checked drivers, real-time GPS tracking, and route consistency.",
+      },
+      {
+        type: "paragraph",
+        text: "Most families don't go looking for this kind of provider until they're already navigating an IEP process that feels unfamiliar and high-stakes. The goal of this page is to make the practical side of that process clearer: what Illinois actually requires, what Chicago-area districts are on the hook for, and what to expect from a provider that's built specifically around this kind of transportation.",
+      },
+      {
+        type: "heading",
+        text: "Areas We Serve in Illinois",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides currently provides special needs student transportation across Chicago and the surrounding suburbs, including: Naperville, Aurora, Wheaton, Oak Park, Carol Stream, Lombard, St. Charles, Wheeling, West Chicago, Glen Ellyn, Schaumburg, Arlington Heights, Skokie, Palatine, Glenview, Buffalo Grove, Vernon Hills, and Northbrook.",
+      },
+      {
+        type: "paragraph",
+        text: "This coverage spans DuPage, Cook, Lake, and Will County districts, from the western suburbs through the northwest and north suburban corridor. If your district isn't listed above, contact us directly to check current availability in your area — service areas are actively expanding.",
+      },
+      {
+        type: "heading",
+        text: "How Do I Request IEP Transportation in Illinois?",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation eligibility is determined through the IEP team, which includes you as a parent, and can be requested or reviewed at any IEP meeting, not just the annual one. In Illinois, transportation staff are required to be included in the IEP process to address safety and feasibility when transportation is being considered as a related service, with an Individual Transportation Plan (ITP) functioning as a sub-part of the IEP itself. This is worth knowing specifically, because it means transportation isn't decided in isolation from the rest of the IEP team; it's meant to be a coordinated part of the same planning process.",
+      },
+      {
+        type: "paragraph",
+        text: "To request it:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Ask for transportation to be added or reviewed at an IEP meeting",
+          "Bring documentation from a doctor, therapist, or behavioral specialist explaining why standard transportation isn't safe or appropriate for your child",
+          "Be specific about what's needed: door-to-door pickup, a wheelchair-accessible vehicle, a shorter ride time, rather than a general request for help",
+          "Get the outcome of the request in writing, whether it's approved or denied, so there's a clear record if you need to follow up",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "For a full breakdown of what parents are entitled to under federal law and how to request it, see our What Is IEP Transportation? A Complete Parent's Guide (2026).",
+      },
+      {
+        type: "heading",
+        text: "Does Chicago Public Schools Provide Special Needs Transport?",
+      },
+      {
+        type: "paragraph",
+        text: "Yes. Chicago Public Schools, like every Illinois district, is legally required to provide transportation when it's written into a student's IEP as a related service, at no cost to the family. This obligation applies whether the district uses its own fleet or contracts with an outside provider; the responsibility doesn't transfer away from the district just because a private partner is driving.",
+      },
+      {
+        type: "paragraph",
+        text: "Families in CPS or any surrounding district working through this process for the first time should expect the district's transportation staff to be part of the IEP conversation, not brought in only after the plan is finalized. If that isn't happening in practice, it's worth raising directly at the IEP meeting rather than assuming it'll be addressed later.",
+      },
+      {
+        type: "heading",
+        text: "What Are Illinois Special Education Transportation Laws?",
+      },
+      {
+        type: "paragraph",
+        text: "Illinois transportation requirements run through Article 29 of the Illinois School Code and Illinois State Board of Education (ISBE) guidance. A few specifics matter most for special needs transportation:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Door-to-door pickup is required only when a student's IEP specifically calls for it. It isn't a default service level applied to every student with a disability, so it's worth confirming exactly what's written into your child's plan rather than assuming a standard level of service.",
+          "Transportation staff must be included in the IEP process when transportation is being considered as a related service, with the ITP addressing safety and feasibility specific to that student.",
+          "ISBE guidance references a 1-to-5 staff-to-student ratio in certain IEP-related transport settings, a useful benchmark for evaluating whether a provider's staffing is adequate, and a specific number worth asking any provider to confirm against their own ratios.",
+          "Districts remain responsible for compliance even when transportation is outsourced to a private vendor, meaning the district can't point to a contractor as the reason a requirement wasn't met.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Who Qualifies for Special Needs Transport in IL?",
+      },
+      {
+        type: "paragraph",
+        text: "Qualification isn't automatic based on disability status alone. The IEP team determines eligibility individually, based on whether transportation is necessary for a specific student to safely access their education. This can include students who require wheelchair-accessible vehicles, students with medical conditions that make standard transportation unsafe, and students whose behavioral or sensory needs require a trained aide or a more controlled ride environment.",
+      },
+      {
+        type: "paragraph",
+        text: "This individualized approach means two students with similar diagnoses can have very different transportation plans: one might need a specialized vehicle and aide, while another manages a standard bus route with a peer nearby. The determining factor is documented need, not category of disability.",
+      },
+      {
+        type: "heading",
+        text: "How Much Does IEP Transportation Cost in Chicago?",
+      },
+      {
+        type: "paragraph",
+        text: "Nothing, if it's written into the IEP as a related service. Districts cannot charge families for transportation that's part of an approved IEP; it's funded and provided the same way any other special education service is. Families should be cautious of any arrangement that asks for direct payment for IEP-designated transportation — that's a sign something in the process isn't being handled correctly, and worth raising with the district or your state's special education office directly.",
+      },
+      {
+        type: "heading",
+        text: "Why Districts and Families Choose Yuni Rides in Illinois",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "ISBE-aligned process participation: Our transportation staff engage at the ITP level, not just route assignment after the fact.",
+          "Background-checked, specially trained drivers: Training on securement systems, recognizing medical distress, and behavioral de-escalation beyond standard licensing.",
+          "Route and driver consistency: The same driver and route daily, which functions as part of the accommodation for many students, not just an operational preference.",
+          "Real-time GPS tracking, so parents and district staff always know where a vehicle is.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Learn more about our approach on our About page.",
+      },
+      {
+        type: "heading",
+        text: "Serving Districts Across Illinois",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides serves districts across Chicago and the surrounding suburbs, providing IEP-compliant and McKinney-Vento eligible transportation. Districts evaluating a transportation partner can request our capabilities statement, insurance and bonding documentation, and references directly by contacting us.",
+      },
+      {
+        type: "paragraph",
+        text: "Driving for us in Illinois: If you're an Illinois-based driver interested in consistent, trained, purpose-driven transportation work, see our current openings.",
+      },
+      {
+        type: "paragraph",
+        text: "Book a consultation with Yuni Rides to talk through your district's or family's specific transportation needs.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "How do I request IEP transportation in Illinois? Request that it be added or reviewed at any IEP meeting. Illinois requires transportation staff to participate in this process when transportation is considered as a related service.",
+          "Does Chicago Public Schools provide special needs transport? Yes. CPS and every Illinois district are legally required to provide transportation written into a student's IEP as a related service, at no cost to the family.",
+          "What are Illinois special education transportation laws? Illinois requirements run through Article 29 of the Illinois School Code and ISBE guidance, including IEP-specific door-to-door eligibility, mandatory transportation staff involvement in the IEP process, and referenced staffing ratios for certain IEP transport settings.",
+          "Who qualifies for special needs transport in IL? Eligibility is determined individually by the IEP team based on a student's specific needs, not automatically granted based on disability status alone.",
+          "How much does IEP transportation cost in Chicago? Nothing, if it's written into the student's IEP as a related service. Districts cannot charge families for transportation that's part of an approved IEP.",
+        ],
+      },
+    ],
+  },
+  "special-needs-transportation-washington-iep-and-mckinney-vento": {
+    slug: "special-needs-transportation-washington-iep-and-mckinney-vento",
+    title:
+      "Special Needs Transportation Washington | IEP & McKinney-Vento | Yuni Rides",
+    excerpt:
+      "Yuni Rides provides IEP-compliant special needs transportation across Washington. Serving Seattle, Everett, Tacoma & more with background-checked drivers and GPS tracking.",
+    heroImage:
+      "/images/Special-Needs-Transportation-Washington-IEP-&-McKinney-Vento-Yuni-Rides.jpg",
+    date: "Aug 26, 2026",
+    readTime: "6 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Getting a child with an IEP or documented medical need to school safely isn't just about finding a ride — it's about finding a provider who understands what Washington law actually requires and can deliver on it consistently. Yuni Rides provides IEP-compliant special needs transportation across the Puget Sound region, serving 9 districts with background-checked drivers, real-time GPS tracking, and route consistency built around each student's specific needs.",
+      },
+      {
+        type: "heading",
+        text: "Cities We Serve in Washington",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides currently provides special needs student transportation across: Seattle, Everett, Lynnwood, Renton, Edmonds, Tukwila, Shoreline, Kent, Redmond, Federal Way, Bellevue, and Tacoma.",
+      },
+      {
+        type: "paragraph",
+        text: "If your district or family is located in the greater Puget Sound area and you don't see your specific city listed, contact us directly — our service areas are expanding.",
+      },
+      {
+        type: "heading",
+        text: "What Is IEP Transportation in Washington State?",
+      },
+      {
+        type: "paragraph",
+        text: "Under Washington's special education rules (WAC 392-172A), transportation is classified as a related service — a support required to help a student benefit from special education, alongside services like speech therapy or occupational therapy. This service isn't for every student with a disability; eligibility is determined individually through the IEP process based on each student's actual needs to access their education safely.",
+      },
+      {
+        type: "paragraph",
+        text: "Washington law is also specific about what transportation has to look like. State rules require that, wherever possible, a ride shouldn't be more than sixty minutes one way. And under RCW 28A.155.020, transportation must be provided for a student with a disability who is unable to protect their own welfare while traveling to school or to the location where special education services are provided.",
+      },
+      {
+        type: "heading",
+        text: "Does Washington Require Special Needs Transportation?",
+      },
+      {
+        type: "paragraph",
+        text: "Yes, when it's written into a student's IEP as a related service. The district is legally obligated to provide it at no cost to the family, whether that means a wheelchair-accessible vehicle, door-to-door pickup, a trained aide, or a capped ride time. This obligation holds whether the district runs its own fleet or contracts with an outside provider like Yuni Rides; the responsibility doesn't transfer away from the district just because a private partner is driving.",
+      },
+      {
+        type: "paragraph",
+        text: "Washington has also recently strengthened requirements around who provides this transportation. Beginning with the 2025-26 school year, pupil transportation contracts entered into, renewed, or extended must provide health benefits and pension contributions equivalent to those of school district classified employees, a compliance point that matters directly for how Yuni Rides structures its Washington operations.",
+      },
+      {
+        type: "heading",
+        text: "How Do I Request IEP Transportation in Seattle (or Elsewhere in WA)?",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation can be requested or reviewed at any IEP meeting, not only at the annual one. A few things that help with the request:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Documentation from a doctor, therapist, or behavioral specialist explaining why standard transportation isn't safe or appropriate for your child",
+          "Specificity about what's needed: door-to-door pickup, a wheelchair-accessible vehicle, a shorter ride time, rather than a general request for 'help with transportation'",
+          "A clear record of the request in writing, so there's documentation if the district's response needs to be followed up on",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "For a deeper walkthrough of this process and what parents are entitled to under federal law, see our complete guide to IEP transportation rights.",
+      },
+      {
+        type: "heading",
+        text: "Is McKinney-Vento Transportation Required in Washington?",
+      },
+      {
+        type: "paragraph",
+        text: "Yes. The McKinney-Vento Homeless Assistance Act requires districts to provide transportation to students experiencing homelessness, regardless of where they're currently staying within the district or, in some cases, across district lines to maintain school stability. This is a separate protection from IEP-based transportation, though a student can qualify under both at the same time, and districts are responsible for coordinating both obligations rather than treating them as competing requirements.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides provides McKinney-Vento eligible transportation across Everett, Seattle, Tacoma, and our other Washington service areas. Our full breakdown of what schools are required to provide is available in our McKinney-Vento transportation rights guide.",
+      },
+      {
+        type: "heading",
+        text: "Why Districts and Families Choose Yuni Rides in Washington",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Background-checked, trained drivers: Beyond standard licensing, drivers on special needs routes are trained on securement systems, recognizing medical distress, and de-escalation — not general passenger transport training extended to a harder use case.",
+          "Route and driver consistency: For many students, especially those with autism or sensory processing differences, the same driver and route every day isn't a courtesy; it functions as part of the accommodation itself.",
+          "Real-time GPS tracking: Parents and district staff can see where a vehicle is, rather than relying on a scheduled ETA that doesn't reflect actual conditions.",
+          "Compliance built into how we operate: From WAC-aligned ride time standards to the 2025-26 driver benefits requirement, Washington-specific compliance shapes how our Washington operations are structured.",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Serving Districts Across the Puget Sound Region",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides serves 9 districts across Puget Sound, providing IEP-compliant special needs transportation and McKinney-Vento eligible service across Seattle, Everett, Tacoma, Bellevue, and the surrounding areas listed above. Districts evaluating a transportation partner can request our capabilities statement, insurance and bonding documentation, and references directly.",
+      },
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "What is IEP transportation in Washington State? IEP transportation is a related service under Washington's special education rules (WAC 392-172A), provided when a student's IEP specifies transportation as necessary to help them benefit from special education. It's determined individually, not automatically granted to every student with a disability.",
+          "Does Washington require special needs transportation? Yes, when transportation is written into a student's IEP. The district must provide it at no cost, and this obligation doesn't transfer even when a private provider handles the driving.",
+          "How do I request IEP transportation in Seattle? You can request that transportation be added or reviewed at any IEP meeting. Supporting documentation from a doctor or therapist and specific details about what accommodation is needed strengthen the request.",
+          "What cities in Washington have special needs student transport through Yuni Rides? Yuni Rides serves Seattle, Everett, Lynnwood, Renton, Edmonds, Tukwila, Shoreline, Kent, Redmond, Federal Way, Bellevue, and Tacoma.",
+          "Is McKinney-Vento transportation required in WA? Yes. Districts must provide transportation to students experiencing homelessness under the McKinney-Vento Act, a separate requirement from IEP-based transportation, though a student can qualify under both.",
+        ],
+      },
+    ],
+  },
   "transport-for-schools": {
     slug: "transport-for-schools",
     title: "Transport for Schools | Safe Student Pickup & Drop-off",
     excerpt:
       "Reliable school transportation for families across 5 states. GPS tracking, background-checked drivers, IEP-friendly. Book your child's safe ride today.",
-    heroImage: "/images/Transport for Schools  Safe-Student-Pickup-&-Drop-off.png",
+    heroImage:
+      "/images/Transport for Schools  Safe-Student-Pickup-&-Drop-off.png",
     date: "Aug 23, 2026",
     readTime: "7 mins read",
     contentBlocks: [
