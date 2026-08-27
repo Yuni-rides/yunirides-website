@@ -16,6 +16,281 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "special-needs-and-iep-transportation-in-arizona": {
+    slug: "special-needs-and-iep-transportation-in-arizona",
+    title:
+      "Special Needs & IEP Transportation in Arizona: A Complete 2026 Guide | Yuni Rides",
+    excerpt:
+      "Learn how special needs and IEP transportation works in Arizona under IDEA and state law. Understand eligibility, climate control, equipment, and parent rights.",
+    heroImage: "/images/Special-Needs-&-IEP-Transportation-in-Arizona.png",
+    date: "Aug 27, 2026",
+    readTime: "7 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "For Arizona families raising a child with a disability, getting to school can involve much more than the ride itself. Mobility, medical needs, communication differences, behavioral needs, and sensory sensitivities can all affect whether a standard school transportation arrangement works for a particular child.",
+      },
+      {
+        type: "paragraph",
+        text: "Under the Individuals with Disabilities Education Act (IDEA), transportation can be provided as a related service when it is necessary for a student to benefit from special education. The IEP team makes that determination on a case-by-case basis. This means that not every student with an IEP automatically qualifies for specialized transportation; the decision depends on the individual student's needs.",
+      },
+      {
+        type: "paragraph",
+        text: "This guide explains how special needs and IEP transportation works in Arizona, when transportation may be included in an IEP, what it can include, how parents can raise transportation concerns, and what families and districts should consider when evaluating a transportation arrangement.",
+      },
+      {
+        type: "heading",
+        text: "Does Arizona Require Special Needs Transportation for Students with IEPs?",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation must be provided as a related service when the IEP team determines whether it is necessary for the student to benefit from special education and receive a free appropriate public education (FAPE). But having an IEP, or a disability, doesn't automatically mean a student needs specialized transportation; it's an individual determination.",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Transportation is recognized under IDEA as a related service, but only when an individual student needs it",
+          "Not every Arizona student with an IEP automatically qualifies for specialized transportation",
+          "The IEP team makes this determination student by student",
+          "Transportation can cover travel to and from school, between schools, and specialized equipment when it's required",
+          "Students with disabilities don't automatically need a separate special education bus",
+          "Climate-controlled transportation can be included if an IEP team decides it's necessary for that student",
+          "Arizona has additional rules for certain open-enrollment students with disabilities",
+        ],
+      },
+      {
+        type: "heading",
+        text: "Why 'Does My Child Have an IEP?' Isn't the Right Question",
+      },
+      {
+        type: "paragraph",
+        text: "Federal IDEA regulations list transportation as one of the related services that may be necessary to help a child with a disability benefit from special education. Arizona follows this same individualized approach. The Arizona Department of Education (ADE) is clear that not every child with a disability needs transportation — it's the student's IEP team that decides whether it's necessary for that specific child.",
+      },
+      {
+        type: "paragraph",
+        text: "This distinction matters a lot in practice. Two students with the exact same diagnosis can have completely different transportation needs. One student may be able to use the same transportation available to other students without additional support. Another might have mobility, medical, behavioral, sensory, or communication needs that call for something different entirely.",
+      },
+      {
+        type: "paragraph",
+        text: "So the real question isn't 'Does my child have an IEP?' It's 'Does my child's disability create a transportation need that's affecting their access to their education?'",
+      },
+      {
+        type: "heading",
+        text: "What Can IEP Transportation Include?",
+      },
+      {
+        type: "paragraph",
+        text: "IDEA's definition of transportation covers:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Travel to and from school, and between schools",
+          "Travel in and around school buildings",
+          "Specialized equipment, such as adapted buses, lifts, and ramps, when required to provide transportation for a child with a disability",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "It's worth being clear that this isn't a standard package everyone with IEP transportation automatically gets. A student's plan might also touch on pickup and drop-off procedures, mobility support, communication needs, medical considerations, or behavioral supports, depending entirely on what that student needs and what the IEP team decides.",
+      },
+
+      /* HOW DOES THE IEP TEAM DECIDE */
+      {
+        type: "heading",
+        text: "How Does the IEP Team Decide?",
+      },
+      {
+        type: "paragraph",
+        text: "The team weighs whether transportation is necessary for the student to access their education and benefit from special education. Depending on the child, that can mean looking at:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Whether they can safely use the transportation already available",
+          "Mobility limitations",
+          "Medical or health needs",
+          "Communication needs",
+          "Behavioral or safety concerns",
+          "Sensory considerations",
+          "Specialized equipment needs",
+          "Educational placement",
+          "Any transportation barriers affecting school access",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Think of these as possible considerations, not a universal Arizona checklist every family should expect to walk through the same way. The point is that transportation needs are considered in relation to the student's disability and educational needs, rather than being approved or denied based on a diagnosis alone.",
+      },
+
+      /* HOW TO BRING IT UP */
+      {
+        type: "heading",
+        text: "How Do I Bring This Up With My Child's IEP Team?",
+      },
+      {
+        type: "paragraph",
+        text: "If transportation is creating a real problem for your child, raise it directly with the IEP team, and be specific. 'My child needs special transportation' is a lot harder for a team to act on than something concrete: your child can't safely board the available vehicle, has a medical concern that comes up during transport, needs specific equipment, struggles significantly with sensory input on the ride, or has communication or behavioral needs that affect safety.",
+      },
+      {
+        type: "paragraph",
+        text: "You can bring in supporting information from a doctor, therapist, or other professional if it helps explain your child's needs, but that kind of documentation isn't automatically required in every case — don't assume you need it before you can even raise the issue.",
+      },
+      {
+        type: "paragraph",
+        text: "If the team decides transportation, or a specific transportation support, is necessary, it should be clearly written into your child's IEP.",
+      },
+      {
+        type: "paragraph",
+        text: "For a broader look at how this process works, see Yuni Rides' guide to IEP transportation.",
+      },
+
+      /* COST */
+      {
+        type: "heading",
+        text: "Is IEP Transportation Free?",
+      },
+      {
+        type: "paragraph",
+        text: "Yes, when it's required as a related service for a student to receive FAPE, it's part of their special education services and comes at no cost to the family.",
+      },
+      {
+        type: "paragraph",
+        text: "This is different from private transportation that a family chooses to arrange independently outside the district's special education responsibilities. IEP-required transportation and independently purchased private transportation aren't automatically the same arrangement; who's paying and who's arranging it depends on the specifics of the situation.",
+      },
+
+      /* SEPARATE BUS */
+      {
+        type: "heading",
+        text: "Does My Child Need a Separate Special Ed Bus?",
+      },
+      {
+        type: "paragraph",
+        text: "No. A disability or an IEP doesn't automatically mean a student rides separately. ADE is direct about this: IDEA doesn't require children with disabilities to be transported apart from children without disabilities.",
+      },
+      {
+        type: "paragraph",
+        text: "Some students do fine on regular transportation. Others manage it with some support or equipment. And some genuinely need a more individualized setup. What's right depends entirely on the student in front of you, not a category.",
+      },
+
+      /* WHEELCHAIR & CLIMATE CONTROL */
+      {
+        type: "heading",
+        text: "What About Wheelchair Lifts or Climate Control?",
+      },
+      {
+        type: "paragraph",
+        text: "Specialized equipment, yes, when the individual student needs it. IDEA specifically covers adapted buses, lifts, and ramps when necessary.",
+      },
+      {
+        type: "paragraph",
+        text: "Climate control is a little different. IDEA doesn't establish it as a universal requirement, but ADE notes that an IEP team can still decide it's necessary for a specific student. Given how hot Arizona gets, that distinction can genuinely matter for a student whose medical or disability-related needs are affected by temperature. It's not something every student with an IEP automatically receives; it depends on the individual case and what the team decides.",
+      },
+
+      /* OPEN ENROLLMENT */
+      {
+        type: "heading",
+        text: "Arizona's Open Enrollment Rules for Students With Disabilities",
+      },
+      {
+        type: "paragraph",
+        text: "Arizona also has some state-specific considerations for certain students attending school through open enrollment. ADE's guidance references A.R.S. § 15-816.01(C), which relates to certain nonresident students with disabilities whose IEP specifies transportation and who live in an adjacent district.",
+      },
+      {
+        type: "paragraph",
+        text: "Because this provision has specific conditions attached, families should not assume that this provision applies to every open-enrollment situation. If your child attends school outside your resident district, ask the district directly how residence, enrollment, disability, and IEP transportation provisions intersect for your specific situation.",
+      },
+
+      /* WHAT TO ASK A PROVIDER */
+      {
+        type: "heading",
+        text: "What Should You Ask a Transportation Provider?",
+      },
+      {
+        type: "paragraph",
+        text: "Whether you're a parent or a district evaluating a provider, these are the questions worth asking:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "How are drivers screened and prepared before they're transporting students?",
+          "How do student-specific instructions get communicated to the driver?",
+          "What do pickup, drop-off, and handoff look like in practice?",
+          "How are delays communicated?",
+          "What's the plan if a driver or vehicle becomes unavailable?",
+          "How are incidents reported and escalated?",
+          "How does anyone confirm the vehicle actually has the right equipment?",
+          "How are medical, mobility, communication, or behavioral instructions handled?",
+          "Can driver and route consistency be maintained when it's appropriate and operationally realistic?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "These are questions worth asking any provider, not a checklist of services Arizona or federal law automatically requires. ADE also stresses communication between schools and transportation providers while protecting student confidentiality — transportation staff should get the information they need to support a student, not more than that.",
+      },
+
+      /* OUTSIDE PROVIDERS */
+      {
+        type: "heading",
+        text: "Can Districts Use Outside Transportation Providers?",
+      },
+      {
+        type: "paragraph",
+        text: "Yes. Districts can structure transportation in different ways, including contracting with outside providers, subject to the usual procurement, insurance, licensing, and regulatory requirements that apply.",
+      },
+      {
+        type: "paragraph",
+        text: "For a student whose IEP includes transportation, bringing in an outside provider doesn't erase the district's responsibility. Districts still need to evaluate providers, vehicle availability, driver preparation, communication, student-specific procedures, incident response, backup coverage, and real operational oversight. All these things matter when you're transporting students with individualized needs.",
+      },
+
+      /* HOW YUNI RIDES CAN SUPPORT */
+      {
+        type: "heading",
+        text: "How Yuni Rides Can Support Arizona Student Transportation",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides works with families and school districts across Arizona on student transportation needs that call for individualized planning. If you're trying to figure out what your family or district needs, contact us to talk through your specific situation and confirm current service availability.",
+      },
+
+      /* FAQS */
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Does every student with an IEP qualify for transportation in Arizona? No. Transportation is provided as an IDEA-related service only when the IEP team determines the individual student needs it to benefit from special education.",
+          "Is IEP transportation free to families? Yes, when it's required as part of FAPE and included as a necessary related service, it's provided at no cost to the parent.",
+          "Can students with disabilities ride regular school buses? Yes. A separate vehicle isn't automatically required; the arrangement should be based on the student's individual needs.",
+          "Can wheelchair lifts or specialized equipment be included? Yes, when required for the student. IDEA specifically recognizes adapted buses, lifts, ramps, and other specialized equipment.",
+          "Is climate-controlled transportation required in Arizona? Not automatically. An IEP team can determine if it's necessary for a specific student based on their needs.",
+          "How can parents request IEP transportation? Raise the concern with the IEP team, explain the specific disability-related barrier, provide supporting information if you have it, and ask the team to consider whether transportation services are necessary.",
+          "What happens if my child's transportation needs change? You can ask the school and IEP team to review it. The arrangement can be reconsidered whenever circumstances affecting your child's needs change.",
+          "Does Arizona have special rules for open-enrollment transportation? Yes. Certain nonresident students with disabilities whose IEP specifies transportation have specific provisions that apply. Confirm your individual situation with the district since conditions vary.",
+        ],
+      },
+
+      /* FINAL THOUGHTS */
+      {
+        type: "heading",
+        text: "Final Thoughts",
+      },
+      {
+        type: "paragraph",
+        text: "Special needs transportation in Arizona isn't a single service that gets automatically assigned to every student with an IEP. The real question is always what that individual student needs to access and benefit from their education.",
+      },
+      {
+        type: "paragraph",
+        text: "For parents, that means bringing specific transportation barriers to the IEP team and making sure whatever gets approved is clearly written down. For districts, it means building transportation that can deliver on those individualized requirements reliably, not just on paper.",
+      },
+      {
+        type: "paragraph",
+        text: "Have questions about your Arizona student's transportation needs? Contact Yuni Rides to talk through your family's or district's requirements and confirm current availability.",
+      },
+    ],
+  },
   "special-needs-transportation-illinois-iep-transport-chicago": {
     slug: "special-needs-transportation-illinois-iep-transport-chicago",
     title:
