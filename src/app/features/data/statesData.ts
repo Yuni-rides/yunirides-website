@@ -2,6 +2,7 @@ export interface KnowledgeCard {
   title: string;
   description: string;
   image: string;
+  link?: string;
 }
 
 export interface WhyTrustUsCard {
@@ -61,24 +62,28 @@ export const statesData: StateService[] = [
         description:
           "Under the California Education Code, transportation is mandated as a related service if specified in a student's IEP to ensure equal access to education.",
         image: "/images/w1.png",
+        link: "/blog/what-is-iep-transportation",
       },
       {
         title: "Are Specialized Vehicles Provided?",
         description:
           "California districts partner with qualified transport providers to offer wheelchair-accessible vans, door-to-door service, and dedicated route monitors as needed.",
         image: "/images/w2.png",
+        link: "/blog/ultimate-guide-special-needs-student-transportation",
       },
       {
         title: "How to Advocate for Transport at an IEP Meeting?",
         description:
           "Request an IEP assessment focused on physical, behavioral, or distance challenges. Ensure exact transportation needs are explicitly written into the IEP goals.",
         image: "/images/w3.png",
+        link: "/blog/iep-transportation-rights-what-every-parent-needs-to-know",
       },
       {
         title: "McKinney-Vento & Foster Youth Protections",
         description:
           "California law guarantees transportation stability for students in foster care or experiencing housing insecurity, matching school of origin requirements.",
         image: "/images/w4.png",
+        link: "/blog/mckinney-vento-transportation-rights",
       },
     ],
     whyTrustUsTitle: "Districts & Families Choose Yuni Rides",

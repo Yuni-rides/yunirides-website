@@ -243,33 +243,47 @@ export default function StateServicePage({ data }: { data: StateService }) {
             viewport={{ once: true, margin: "-40px" }}
             className="grid grid-cols-1 md:grid-cols-2 gap-5 text-left"
           >
-            {data.knowledgeCards.map((card) => (
-              <motion.div
-                key={card.title}
-                variants={cardVariants}
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.2 }}
-                className="bg-[#EEF1FF]/80 hover:bg-[#EEF1FF] rounded-[22px] p-3.5 sm:p-4 flex flex-row items-center gap-4 border border-[#E1E6FA] transition-all shadow-xs"
-              >
-                <div className="relative w-[120px] sm:w-[155px] h-[120px] sm:h-[185px] shrink-0 rounded-[16px] overflow-hidden bg-slate-200">
-                  <Image
-                    src={card.image}
-                    alt={card.title}
-                    fill
-                    className="object-cover object-center"
-                  />
-                </div>
+            {data.knowledgeCards.map((card) => {
+              const CardContent = (
+                <motion.div
+                  key={card.title}
+                  variants={cardVariants}
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.2 }}
+                  className="bg-[#EEF1FF]/80 hover:bg-[#EEF1FF] rounded-[22px] p-3.5 sm:p-4 flex flex-row items-center gap-4 border border-[#E1E6FA] transition-all shadow-xs"
+                >
+                  <div className="relative w-[120px] sm:w-[155px] h-[120px] sm:h-[185px] shrink-0 rounded-[16px] overflow-hidden bg-slate-200">
+                    <Image
+                      src={card.image}
+                      alt={card.title}
+                      fill
+                      className="object-cover object-center"
+                    />
+                  </div>
 
-                <div className="flex-1 pr-1 sm:pr-2">
-                  <h3 className="font-heading font-bold text-[15px] sm:text-[16px] text-[#2C3260] leading-[1.25] mb-2">
-                    {card.title}
-                  </h3>
-                  <p className="text-[11.5px] sm:text-[12px] text-[#52577A] font-body leading-[1.55]">
-                    {card.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+                  <div className="flex-1 pr-1 sm:pr-2">
+                    <h3 className="font-heading font-bold text-[15px] sm:text-[16px] text-[#2C3260] leading-[1.25] mb-2">
+                      {card.title}
+                    </h3>
+                    <p className="text-[11.5px] sm:text-[12px] text-[#52577A] font-body leading-[1.55]">
+                      {card.description}
+                    </p>
+                  </div>
+                </motion.div>
+              );
+
+              return card.link ? (
+                <Link
+                  key={card.title}
+                  href={card.link}
+                  className="block cursor-pointer"
+                >
+                  {CardContent}
+                </Link>
+              ) : (
+                CardContent
+              );
+            })}
           </motion.div>
         </div>
       </section>
