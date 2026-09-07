@@ -577,11 +577,11 @@ export const blogPostsData: Record<string, BlogPost> = {
     contentBlocks: [
       {
         type: "paragraph",
-        text: "Choosing a transportation service provider for your child's daily school runs isn't a small decision, even if it starts to feel routine after the first few weeks[cite: 13]. Whether you're arranging school transportation for the first time, switching from an unreliable provider, or navigating an IEP that requires more than a standard district bus, this page answers the questions that matter most before you make a decision[cite: 13].",
+        text: "Choosing a transportation service provider for your child's daily school runs isn't a small decision, even if it starts to feel routine after the first few weeks. Whether you're arranging school transportation for the first time, switching from an unreliable provider, or navigating an IEP that requires more than a standard district bus, this page answers the questions that matter most before you make a decision.",
       },
       {
         type: "paragraph",
-        text: "Yuni Rides provides safe, consistent school transportation for families across 5 states — Washington, California, Arizona, Texas, and Illinois — with background-checked drivers, real-time GPS tracking, and route consistency built around your child's specific needs[cite: 13].",
+        text: "Yuni Rides provides safe, consistent school transportation for families across 5 states Washington, California, Arizona, Texas, and Illinois  with background-checked drivers, real-time GPS tracking, and route consistency built around your child's specific needs.",
       },
       {
         type: "heading",
@@ -589,11 +589,11 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Student transportation is any transportation service that safely and reliably gets your child to and from school[cite: 13]. This includes standard district buses, private transportation providers, and other transportation solutions[cite: 13]. For most families, the district bus works fine, but for others, it doesn't — whether because of a longer commute than a standard route allows, a child with an IEP that requires specific accommodations, a family schedule that doesn't align with district pickup times, or simply wanting more visibility and consistency than a large fixed-route system can offer[cite: 13].",
+        text: "Student transportation is any transportation service that safely and reliably gets your child to and from school. This includes standard district buses, private transportation providers, and other transportation solutions. For most families, the district bus works fine, but for others, it doesn't — whether because of a longer commute than a standard route allows, a child with an IEP that requires specific accommodations, a family schedule that doesn't align with district pickup times, or simply wanting more visibility and consistency than a large fixed-route system can offer.",
       },
       {
         type: "paragraph",
-        text: "Private school transportation came into existence to fill that gap, whether as a family's primary transportation solution or as a supplement to what the district already provides[cite: 13].",
+        text: "Private school transportation came into existence to fill that gap, whether as a family's primary transportation solution or as a supplement to what the district already provides.",
       },
       {
         type: "heading",
@@ -601,14 +601,14 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "The process looks a little different depending on your situation[cite: 13]:",
+        text: "The process looks a little different depending on your situation:",
       },
       {
         type: "bullet-list",
         items: [
-          "If your child has an IEP that should include transportation: Start with the IEP team. Transportation can be requested or reviewed at any IEP meeting. Eligibility is determined based on your child's documented needs. It's not automatically granted based on diagnosis alone. You may need supporting documentation from a doctor, therapist, or behavioral specialist if you're requesting a specific accommodation. Our guide on IEP transportation rights walks through this process in more detail.[cite: 13]",
-          "If you're arranging supplemental or private transportation directly: Generally, this starts with sharing your child's specific needs, including any medical, behavioral, or mobility considerations, so a route and driver can be matched appropriately.[cite: 13]",
-          "If you qualify for McKinney-Vento transportation: Students experiencing homelessness are entitled to transportation under federal law, irrespective of where they're currently staying, in some cases across district lines to maintain school stability. Our McKinney-Vento transportation rights guide covers what schools are required to provide.[cite: 13]",
+          "If your child has an IEP that should include transportation: Start with the IEP team. Transportation can be requested or reviewed at any IEP meeting. Eligibility is determined based on your child's documented needs. It's not automatically granted based on diagnosis alone. You may need supporting documentation from a doctor, therapist, or behavioral specialist if you're requesting a specific accommodation. Our guide on IEP transportation rights walks through this process in more detail.",
+          "If you're arranging supplemental or private transportation directly: Generally, this starts with sharing your child's specific needs, including any medical, behavioral, or mobility considerations, so a route and driver can be matched appropriately.",
+          "If you qualify for McKinney-Vento transportation: Students experiencing homelessness are entitled to transportation under federal law, irrespective of where they're currently staying, in some cases across district lines to maintain school stability. Our McKinney-Vento transportation rights guide covers what schools are required to provide.",
         ],
       },
       {
@@ -617,21 +617,21 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Before everything else, most parents want to know one thing: Is private school transportation safe? This point deserves a direct answer rather than general reassurance[cite: 13]. Safety comes down to specifics, not marketing language[cite: 13]. A safe provider should be able to speak concretely to:",
+        text: "Before everything else, most parents want to know one thing: Is private school transportation safe? This point deserves a direct answer rather than general reassurance. Safety comes down to specifics, not marketing language. A safe provider should be able to speak concretely to:",
       },
       {
         type: "bullet-list",
         items: [
-          "Driver background checks at hiring[cite: 13]",
-          "Training beyond a standard license, particularly for special needs routes: securement systems, recognizing medical distress, and behavioral de-escalation[cite: 13]",
-          "Vehicle safety standards, inspection schedules, and equipment appropriate for your child's needs[cite: 13]",
-          "Real-time tracking, so you know where your child is, not just a promise that the vehicle is GPS-equipped[cite: 13]",
-          "A responsive dispatch team, not just an app support ticket, if something needs a real answer quickly[cite: 13]",
+          "Driver background checks at hiring",
+          "Training beyond a standard license, particularly for special needs routes: securement systems, recognizing medical distress, and behavioral de-escalation",
+          "Vehicle safety standards, inspection schedules, and equipment appropriate for your child's needs",
+          "Real-time tracking, so you know where your child is, not just a promise that the vehicle is GPS-equipped",
+          "A responsive dispatch team, not just an app support ticket, if something needs a real answer quickly",
         ],
       },
       {
         type: "paragraph",
-        text: "If a potential provider can't answer these questions specifically, that's something to consider before making a decision[cite: 13]. Our full breakdown of what to ask any provider is in 12 questions every parent should ask before signing a transportation contract[cite: 13].",
+        text: "If a potential provider can't answer these questions specifically, that's something to consider before making a decision. Our full breakdown of what to ask any provider is in 12 questions every parent should ask before signing a transportation contract.",
       },
       {
         type: "heading",
@@ -640,11 +640,11 @@ export const blogPostsData: Record<string, BlogPost> = {
       {
         type: "bullet-list",
         items: [
-          "Consistency you can count on: The same driver, same route, same timing every day, rather than the variability that can come with a large fixed-route system[cite: 13]. This predictability and consistency aren't just convenient; they're especially valuable for kids with autism, sensory processing differences, or anxiety[cite: 13].",
-          "Flexibility standard bus routes can't offer: Individualized pickup windows, accommodation for a schedule that doesn't fit a standard route, and routing that can adjust as your family's needs change[cite: 13].",
-          "Real visibility into the ride: Knowing there's a delay means you can make required adjustments to your routine instead of standing outside wondering if something's wrong[cite: 13]. For families managing multiple kids, different schedules, and a full day ahead, those small everyday improvements can make busy mornings much less stressful[cite: 13].",
-          "Specialized support for special needs and IEP transportation: Trained drivers, appropriately equipped vehicles, and a provider who understands what's required under IDEA and your state's specific special education transportation laws, not a general transportation company treating accessibility as an afterthought[cite: 13].",
-          "A direct line when something needs an answer: Rather than navigating a large district transportation department or a general customer service line, a dedicated provider typically offers a more direct way to reach someone who really knows your child's route[cite: 13].",
+          "Consistency you can count on: The same driver, same route, same timing every day, rather than the variability that can come with a large fixed-route system. This predictability and consistency aren't just convenient; they're especially valuable for kids with autism, sensory processing differences, or anxiety.",
+          "Flexibility standard bus routes can't offer: Individualized pickup windows, accommodation for a schedule that doesn't fit a standard route, and routing that can adjust as your family's needs change.",
+          "Real visibility into the ride: Knowing there's a delay means you can make required adjustments to your routine instead of standing outside wondering if something's wrong. For families managing multiple kids, different schedules, and a full day ahead, those small everyday improvements can make busy mornings much less stressful.",
+          "Specialized support for special needs and IEP transportation: Trained drivers, appropriately equipped vehicles, and a provider who understands what's required under IDEA and your state's specific special education transportation laws, not a general transportation company treating accessibility as an afterthought.",
+          "A direct line when something needs an answer: Rather than navigating a large district transportation department or a general customer service line, a dedicated provider typically offers a more direct way to reach someone who really knows your child's route.",
         ],
       },
       {
@@ -653,11 +653,11 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "It depends on what you're arranging[cite: 13]. If transportation is written into your child's IEP as a related service, it must be provided by the district at no cost to your family[cite: 13]. If you're arranging private or supplemental transportation independently, outside of what the district provides, costs will vary depending on your child's transportation needs and service area[cite: 13].",
+        text: "It depends on what you're arranging. If transportation is written into your child's IEP as a related service, it must be provided by the district at no cost to your family. If you're arranging private or supplemental transportation independently, outside of what the district provides, costs will vary depending on your child's transportation needs and service area.",
       },
       {
         type: "paragraph",
-        text: "Cost shouldn't be the only driving factor in this decision[cite: 13]. A cheaper option that's inconsistent or hard to reach when something goes wrong often ends up costing more in missed work hours, missed appointments, and stress than a slightly higher-priced, more reliable service would have[cite: 13].",
+        text: "Cost shouldn't be the only driving factor in this decision. A cheaper option that's inconsistent or hard to reach when something goes wrong often ends up costing more in missed work hours, missed appointments, and stress than a slightly higher-priced, more reliable service would have.",
       },
       {
         type: "heading",
@@ -665,11 +665,11 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Yes, and this should be a standard expectation, not a premium feature you have to ask about specifically[cite: 13].",
+        text: "Yes, and this should be a standard expectation, not a premium feature you have to ask about specifically.",
       },
       {
         type: "paragraph",
-        text: "Real-time tracking matters for practical, everyday reasons, not only for emergencies[cite: 13]. Knowing the ride is five minutes out means you can actually time walking to the door instead of guessing[cite: 13]. For families managing a child with medical or behavioral needs, that visibility can matter even more[cite: 13].",
+        text: "Real-time tracking matters for practical, everyday reasons, not only for emergencies. Knowing the ride is five minutes out means you can actually time walking to the door instead of guessing. For families managing a child with medical or behavioral needs, that visibility can matter even more.",
       },
 
       /* WHAT MAKES YUNI RIDES DIFFERENT */
@@ -680,16 +680,16 @@ export const blogPostsData: Record<string, BlogPost> = {
       {
         type: "bullet-list",
         items: [
-          "Coverage across 5 states, with route consistency and safety standards that don't vary based on location[cite: 13].",
-          "Background-checked, specially trained drivers, including additional certification for special needs and IEP-related routes[cite: 13].",
-          "Real-time GPS tracking, giving you actual visibility, not just a claim of GPS-equipped vehicles[cite: 13].",
-          "The same driver and route every day, treated as a genuine part of the service, not an inconsistent perk[cite: 13].",
-          "A responsive team you can actually reach, not a support ticket queue[cite: 13].",
+          "Coverage across 5 states, with route consistency and safety standards that don't vary based on location.",
+          "Background-checked, specially trained drivers, including additional certification for special needs and IEP-related routes.",
+          "Real-time GPS tracking, giving you actual visibility, not just a claim of GPS-equipped vehicles.",
+          "The same driver and route every day, treated as a genuine part of the service, not an inconsistent perk.",
+          "A responsive team you can actually reach, not a support ticket queue.",
         ],
       },
       {
         type: "paragraph",
-        text: "Learn more about our approach and why we do this work on our About page[cite: 13].",
+        text: "Learn more about our approach and why we do this work on our About page.",
       },
 
       /* FOR FAMILIES NAVIGATING AN IEP */
@@ -699,7 +699,7 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "If your child's needs go beyond what a standard bus route can accommodate, our state-specific pages cover the exact regulations and requirements that apply where you live: Washington, Texas, and Illinois[cite: 13].",
+        text: "If your child's needs go beyond what a standard bus route can accommodate, our state-specific pages cover the exact regulations and requirements that apply where you live: Washington, Texas, and Illinois.",
       },
 
       /* STILL HAVE QUESTIONS & READY TO GET STARTED */
@@ -709,11 +709,11 @@ export const blogPostsData: Record<string, BlogPost> = {
       },
       {
         type: "paragraph",
-        text: "Most of the hesitation parents feel before switching or setting up transportation comes down to not having specific answers yet, not a lack of trust[cite: 13]. Our website covers the most common questions we hear, and if you don't find what you're looking for there, we're happy to walk through it directly[cite: 13].",
+        text: "Most of the hesitation parents feel before switching or setting up transportation comes down to not having specific answers yet, not a lack of trust. Our website covers the most common questions we hear, and if you don't find what you're looking for there, we're happy to walk through it directly.",
       },
       {
         type: "paragraph",
-        text: "Your child's daily commute shouldn't be something you have to worry about[cite: 13]. Book a consultation with Yuni Rides and let's talk through what safe, consistent transportation should look like for your family[cite: 13].",
+        text: "Your child's daily commute shouldn't be something you have to worry about. Book a consultation with Yuni Rides and let's talk through what safe, consistent transportation should look like for your family.",
       },
 
       /* FAQS */
@@ -724,12 +724,12 @@ export const blogPostsData: Record<string, BlogPost> = {
       {
         type: "bullet-list",
         items: [
-          "What is transport for schools? Any transportation service that gets a child safely to and from school, whether that's a standard district bus, a private provider, or supplemental transportation filling a specific gap in what the district offers.[cite: 13]",
-          "How do I arrange school transportation for my child? It depends on your situation. For IEP-related transportation, start with your child's IEP team. For McKinney-Vento eligibility, your school's homeless liaison can help confirm eligibility. For private or supplemental transportation, you can reach out directly to arrange service based on your child's specific needs.[cite: 13]",
-          "Is private school transport safe? It depends on the provider. Look for specifics: documented background checks, training beyond standard licensing, real-time tracking, and a responsive team, not just general safety claims.[cite: 13]",
-          "What are the benefits of private school transportation? Consistency (the same driver and route daily), flexibility standard routes can't offer, real-time visibility into the ride, specialized support for special needs and IEP transportation, and a more direct line of communication than a large district system typically provides.[cite: 13]",
-          "How much does school transport cost? IEP-required transportation is always free to the family. Private or supplemental transportation arranged independently varies based on the specific service.[cite: 13]",
-          "Can I track my child's school transport? Yes. Real-time tracking should be a standard part of any transportation service, giving parents actual visibility into the ride rather than just a scheduled ETA.[cite: 13]",
+          "What is transport for schools? Any transportation service that gets a child safely to and from school, whether that's a standard district bus, a private provider, or supplemental transportation filling a specific gap in what the district offers.",
+          "How do I arrange school transportation for my child? It depends on your situation. For IEP-related transportation, start with your child's IEP team. For McKinney-Vento eligibility, your school's homeless liaison can help confirm eligibility. For private or supplemental transportation, you can reach out directly to arrange service based on your child's specific needs.",
+          "Is private school transport safe? It depends on the provider. Look for specifics: documented background checks, training beyond standard licensing, real-time tracking, and a responsive team, not just general safety claims.",
+          "What are the benefits of private school transportation? Consistency (the same driver and route daily), flexibility standard routes can't offer, real-time visibility into the ride, specialized support for special needs and IEP transportation, and a more direct line of communication than a large district system typically provides.",
+          "How much does school transport cost? IEP-required transportation is always free to the family. Private or supplemental transportation arranged independently varies based on the specific service.",
+          "Can I track my child's school transport? Yes. Real-time tracking should be a standard part of any transportation service, giving parents actual visibility into the ride rather than just a scheduled ETA.",
         ],
       },
     ],

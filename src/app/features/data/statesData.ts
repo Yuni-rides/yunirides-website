@@ -156,24 +156,28 @@ export const statesData: StateService[] = [
         description:
           "Under WAC 392-172A, transportation is a related service required to help a student benefit from special education. Eligibility is determined individually through the IEP process based on student needs.",
         image: "/images/w1.png",
+        link: "/blog/what-is-iep-transportation",
       },
       {
         title: "Does Washington Require Special Needs Transportation?",
         description:
           "Yes, when written into a student's IEP. The district must provide it at no cost—whether wheelchair-accessible, door-to-door, or with a trained aide—even with private partners like Yuni Rides.",
         image: "/images/w2.png",
+        link: "/blog/special-needs-transportation-washington-state",
       },
       {
         title: "How Do I Request IEP Transportation in WA?",
         description:
           "Transportation can be requested or reviewed at any IEP meeting. Bring documentation from a doctor or therapist, specify requirements, and keep written records of your request.",
         image: "/images/w3.png",
+        link: "/blog/what-is-iep-transportation",
       },
       {
         title: "Is McKinney-Vento Transportation Required in Washington?",
         description:
           "Yes. Districts must transport students experiencing homelessness to their school of origin. Students can qualify under McKinney-Vento and IEP transportation simultaneously.",
         image: "/images/w4.png",
+        link: "/blog/mckinney-vento-transportation-rights",
       },
     ],
     whyTrustUsTitle: "Districts & Families Choose Yuni Rides",
