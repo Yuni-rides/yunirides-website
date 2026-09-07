@@ -20,10 +20,14 @@ export async function POST(request: Request) {
       source,
     } = body;
 
-    const host = "smtp.gmail.com";
+    // const host = "smtp.gmail.com";
+    // const port = 465;
+    // const user = "admin@yunirides.com";
+    // const pass = "nfwz vgjc kusi yozj";
+    const host = "smtp.ionos.com";
     const port = 465;
-    const user = "yunirides1@gmail.com";
-    const pass = "szay sxrj ezuc tuyx";
+    const user = "admin@yunirides.com";
+    const pass = "zkpta6hYfcdUuSW3pb9M3nH5zC9uN8Hs";
 
     const transporter = nodemailer.createTransport({
       host: host,
