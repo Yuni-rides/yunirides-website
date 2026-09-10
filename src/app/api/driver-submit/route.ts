@@ -1,7 +1,80 @@
+
+
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
 export const dynamic = "force-dynamic";
+
+async function submitToBitrix(data: any) {
+  const {
+    fullName,
+    email,
+    contactNumber,
+    city,
+    state,
+    vehicleType,
+    yearsExperience,
+    hasSSN,
+    hasDrivingLicense,
+    usedDrugs,
+    source,
+  } = data;
+
+  const webhookUrl = process.env.BITRIX_WEBHOOK_URL;
+  if (!webhookUrl) {
+    throw new Error("BITRIX_WEBHOOK_URL is not set");
+  }
+
+  // Step 1: Create Contact
+  const contactPayload = {
+    fields: {
+      NAME: fullName,
+      EMAIL: [{ VALUE: email, VALUE_TYPE: "OTHER" }],
+      PHONE: [{ VALUE: contactNumber, VALUE_TYPE: "OTHER" }],
+      ADDRESS_CITY: city,
+      SOURCE_ID: "WEBFORM",
+      SOURCE_DESCRIPTION: source || "Website - Become a Driver",
+    },
+  };
+
+  const contactRes = await fetch(`${webhookUrl}crm.contact.add.json`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(contactPayload),
+  });
+  const contactJson = await contactRes.json();
+  if (!contactRes.ok || contactJson.error) {
+    throw new Error(
+      contactJson.error_description || "Bitrix contact creation failed",
+    );
+  }
+  const contactId = contactJson.result;
+
+  // Step 2: Create Deal linked to that Contact
+  const dealPayload = {
+    fields: {
+      TITLE: `Become A Driver: ${fullName}`,
+      CONTACT_ID: contactId,
+      SOURCE_ID: "WEBFORM",
+      SOURCE_DESCRIPTION: source || "Website - Become a Driver",
+      COMMENTS: `State: ${state}\nVehicle Type: ${vehicleType}\nExperience: ${yearsExperience} year(s)\nHas SSN: ${hasSSN ? "Yes" : "No"}\nHas Driving License: ${hasDrivingLicense ? "Yes" : "No"}\nUsed Recreational Drugs: ${usedDrugs ? "Yes" : "No"}`,
+    },
+  };
+
+  const dealRes = await fetch(`${webhookUrl}crm.deal.add.json`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(dealPayload),
+  });
+  const dealJson = await dealRes.json();
+  if (!dealRes.ok || dealJson.error) {
+    throw new Error(
+      dealJson.error_description || "Bitrix deal creation failed",
+    );
+  }
+
+  return { contactId, dealId: dealJson.result };
+}
 
 export async function POST(request: Request) {
   try {
@@ -20,10 +93,6 @@ export async function POST(request: Request) {
       source,
     } = body;
 
-    // const host = "smtp.gmail.com";
-    // const port = 465;
-    // const user = "admin@yunirides.com";
-    // const pass = "nfwz vgjc kusi yozj";
     const host = "smtp.ionos.com";
     const port = 465;
     const user = "admin@yunirides.com";
@@ -73,13 +142,54 @@ export async function POST(request: Request) {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
-    return NextResponse.json(
-      { success: true, message: "Application submitted successfully" },
-      { status: 200 },
-    );
+    const [emailResult, bitrixResult] = await Promise.allSettled([
+      transporter.sendMail(mailOptions),
+      submitToBitrix(body),
+    ]);
+
+    if (emailResult.status === "rejected") {
+      console.error("Email dispatch failed:", emailResult.reason);
+    }
+    if (bitrixResult.status === "rejected") {
+      console.error("Bitrix lead creation failed:", bitrixResult.reason);
+    }
+
+    // if (
+    //   emailResult.status === "fulfilled" ||
+    //   bitrixResult.status === "fulfilled"
+    // ) {
+    //   return NextResponse.json(
+    //     { success: true, message: "Application submitted successfully" },
+    //     { status: 200 },
+    //   );
+    // }
+
+    if (
+      emailResult.status === "fulfilled" ||
+      bitrixResult.status === "fulfilled"
+    ) {
+      return NextResponse.json(
+        {
+          success: true,
+          message: "Application submitted successfully",
+          debug: {
+            emailStatus: emailResult.status,
+            bitrixStatus: bitrixResult.status,
+            bitrixResult:
+              bitrixResult.status === "fulfilled" ? bitrixResult.value : null,
+            bitrixError:
+              bitrixResult.status === "rejected"
+                ? String(bitrixResult.reason)
+                : null,
+          },
+        },
+        { status: 200 },
+      );
+    }
+
+    throw new Error("Both email and Bitrix submission failed");
   } catch (error: any) {
-    console.error("SMTP Mail Error Details: ", error);
+    console.error("Submission Error Details: ", error);
     return NextResponse.json(
       {
         success: false,

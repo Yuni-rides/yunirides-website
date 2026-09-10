@@ -3,6 +3,85 @@ import nodemailer from "nodemailer";
 
 export const dynamic = "force-dynamic";
 
+async function submitToBitrix(data: {
+  fullName: string;
+  email: string;
+  contactNumber: string;
+  city: string;
+  childFirstName?: string;
+  age?: string;
+  numberOfChildren?: string;
+  specialNeeds?: string;
+  source?: string;
+}) {
+  const {
+    fullName,
+    email,
+    contactNumber,
+    city,
+    childFirstName,
+    age,
+    numberOfChildren,
+    specialNeeds,
+    source,
+  } = data;
+
+  const webhookUrl = process.env.BITRIX_WEBHOOK_URL;
+  if (!webhookUrl) {
+    throw new Error("BITRIX_WEBHOOK_URL is not set");
+  }
+
+  // Step 1: Create Contact
+  const contactPayload = {
+    fields: {
+      NAME: fullName,
+      EMAIL: [{ VALUE: email, VALUE_TYPE: "OTHER" }],
+      PHONE: [{ VALUE: contactNumber, VALUE_TYPE: "OTHER" }],
+      ADDRESS_CITY: city,
+      SOURCE_ID: "WEBFORM",
+      SOURCE_DESCRIPTION: source || "Website - Ride Inquiry",
+    },
+  };
+
+  const contactRes = await fetch(`${webhookUrl}crm.contact.add.json`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(contactPayload),
+  });
+  const contactJson = await contactRes.json();
+  if (!contactRes.ok || contactJson.error) {
+    throw new Error(
+      contactJson.error_description || "Bitrix contact creation failed",
+    );
+  }
+  const contactId = contactJson.result;
+
+  // Step 2: Create Deal linked to that Contact
+  const dealPayload = {
+    fields: {
+      TITLE: `Do You Want A Ride (Parent): ${fullName}`,
+      CONTACT_ID: contactId,
+      SOURCE_ID: "WEBFORM",
+      SOURCE_DESCRIPTION: source || "Website - Ride Inquiry",
+      COMMENTS: `Child's First Name: ${childFirstName || "Not Provided"}\nAge: ${age || "N/A"}\nChildren Needing Transport: ${numberOfChildren || "1"}\nSpecial Needs: ${specialNeeds || "None specified"}`,
+    },
+  };
+
+  const dealRes = await fetch(`${webhookUrl}crm.deal.add.json`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(dealPayload),
+  });
+  const dealJson = await dealRes.json();
+  if (!dealRes.ok || dealJson.error) {
+    throw new Error(
+      dealJson.error_description || "Bitrix deal creation failed",
+    );
+  }
+
+  return { contactId, dealId: dealJson.result };
+}
+
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -70,11 +149,29 @@ export async function POST(request: Request) {
       `,
     };
 
-    await transporter.sendMail(mailOptions);
-    return NextResponse.json(
-      { success: true, message: "Inquiry forwarded successfully" },
-      { status: 200 },
-    );
+    const [emailResult, bitrixResult] = await Promise.allSettled([
+      transporter.sendMail(mailOptions),
+      submitToBitrix(body),
+    ]);
+
+    if (emailResult.status === "rejected") {
+      console.error("Email dispatch failed:", emailResult.reason);
+    }
+    if (bitrixResult.status === "rejected") {
+      console.error("Bitrix creation failed:", bitrixResult.reason);
+    }
+
+    if (
+      emailResult.status === "fulfilled" ||
+      bitrixResult.status === "fulfilled"
+    ) {
+      return NextResponse.json(
+        { success: true, message: "Inquiry forwarded successfully" },
+        { status: 200 },
+      );
+    }
+
+    throw new Error("Both email and Bitrix submission failed");
   } catch (error: any) {
     console.error("Customer SMTP Error: ", error);
     return NextResponse.json(
