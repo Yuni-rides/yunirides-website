@@ -237,24 +237,28 @@ export const statesData: StateService[] = [
         description:
           "Arizona law requires school districts to provide free transportation when identified as a necessary related service in a student's IEP program.",
         image: "/images/w1.png",
+        link: "/blog/special-needs-and-iep-transportation-in-arizona",
       },
       {
         title: "Climate-Controlled & Safe Vehicles",
         description:
           "Given local weather conditions, Arizona routes prioritize climate-controlled, safe, and regularly inspected vehicles driven by certified personnel.",
         image: "/images/w2.png",
+        link: "/blog/ultimate-guide-special-needs-student-transportation",
       },
       {
         title: "Requesting Accommodations in Arizona Districts",
         description:
           "Parents can present medical or behavioral evaluations during annual IEP reviews to establish specific door-to-door transportation needs.",
         image: "/images/w3.png",
+        link: "/blog/what-is-iep-transportation",
       },
       {
         title: "Out-of-District & Special Placements",
         description:
           "When students are placed in specialized programs outside their home boundaries, districts coordinate dedicated transport services to bridge the gap.",
         image: "/images/w4.png",
+        link: "/blog/ultimate-guide-special-needs-student-transportation",
       },
     ],
     whyTrustUsTitle: "Districts & Families Choose Yuni Rides",
