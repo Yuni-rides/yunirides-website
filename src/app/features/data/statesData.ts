@@ -325,24 +325,28 @@ export const statesData: StateService[] = [
         description:
           "ISBE regulations mandate door-to-door transportation services for eligible students with disabilities when documented in their active IEP.",
         image: "/images/w1.png",
+        link: "/blog/best-school-kids-transportation-california-illinois",
       },
       {
         title: "Safety Standards & Specialized Equipment",
         description:
           "Vehicles meet strict state inspection standards, offering safety harnesses, wheelchair lifts, and trained aides for high-need routes.",
         image: "/images/w2.png",
+        link: "/blog/special-needs-transportation-chicago-school-districts",
       },
       {
         title: "Initiating IEP Transportation Services",
         description:
           "Coordinate with your school district's SPED team to evaluate transportation requirements during your child's annual or transition IEP meeting.",
         image: "/images/w3.png",
+        link: "/blog/special-needs-transportation-illinois-iep-transport-chicago",
       },
       {
         title: "Extreme Weather & Route Consistency",
         description:
           "Dedicated driver assignments and real-time tracking keep families and schools informed during seasonal winter shifts and delays.",
         image: "/images/w4.png",
+        link: "/blog/how-real-time-ride-tracking-gives-parents-peace-of-mind",
       },
     ],
     whyTrustUsTitle: "Districts & Families Choose Yuni Rides",
