@@ -16,6 +16,235 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "questions-to-ask-student-transportation-provider": {
+    slug: "questions-to-ask-student-transportation-provider",
+    title: "Questions to Ask a Student Transportation Provider | Yuni Rides",
+    excerpt:
+      "Choosing student transportation? Learn what to ask about driver screening, training, insurance, safety, communication, vehicle inspections, and backup coverage.",
+    heroImage:
+      "/images/Student-transportation-driver-preparing-for-a-school-route.jpg",
+    date: "Sep 13, 2026",
+    readTime: "6 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "Choosing a student transportation provider means understanding who will drive your child, how the trip will be managed, and what happens when plans change.",
+      },
+      {
+        type: "paragraph",
+        text: "For parents, these questions help clarify how a child will be supported during the school commute. For school districts, they provide a starting point for reviewing a provider's readiness to handle an assigned route.",
+      },
+      {
+        type: "paragraph",
+        text: "Before arranging service, ask the following questions and request documentation where appropriate.",
+      },
+
+      {
+        type: "heading",
+        text: "Quick Answer",
+      },
+      {
+        type: "paragraph",
+        text: "A good student transportation provider should be able to clearly explain how drivers are screened and trained, how vehicles are maintained, how student-specific needs are handled, how communication works, and what happens when a driver or vehicle becomes unavailable. Ask for relevant documentation where appropriate and confirm your child's or district's transportation arrangements before service begins.",
+      },
+      {
+        type: "heading",
+        text: "Key Takeaways",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Ask how drivers are screened, trained, and kept eligible for student transportation.",
+          "Confirm that the provider can accommodate the student's individual transportation needs.",
+          "Ask how vehicles and required equipment are inspected and maintained.",
+          "Understand how delays, driver absences, and emergencies are handled.",
+          "Confirm pickup, drop-off, communication, and handoff procedures before the first ride.",
+          "Request relevant documentation where appropriate.",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "1. How Do You Screen Your Drivers?",
+      },
+      {
+        type: "paragraph",
+        text: "Ask what checks a driver completes before being assigned student trips. Have the provider explain how it reviews background information, driving history, license validity, and any other screening relevant to the assignment.",
+      },
+      {
+        type: "paragraph",
+        text: "It is also helpful to ask how the provider monitors eligibility after onboarding. How are expiring documents handled? What happens if a driver no longer meets the requirements for an assigned route?",
+      },
+      {
+        type: "paragraph",
+        text: "'Background checked' is a starting point for the conversation. Ask what that process actually includes.",
+      },
+
+      {
+        type: "heading",
+        text: "2. What Training Do Your Drivers Receive?",
+      },
+      {
+        type: "paragraph",
+        text: "Ask how drivers are prepared for transporting children, communicating respectfully, following pickup and drop-off instructions, and responding to emergencies.",
+      },
+      {
+        type: "paragraph",
+        text: "If your child has specific support needs, discuss those directly. Ask how the assigned driver receives and understands relevant communication, sensory, behavioral, mobility, or other transportation instructions.",
+      },
+      {
+        type: "paragraph",
+        text: "Training should relate to the actual assignment. Request confirmation that the driver is prepared to use any equipment or follow any procedures required for your child's trip.",
+      },
+
+      {
+        type: "heading",
+        text: "3. What Insurance Documentation Can You Provide?",
+      },
+      {
+        type: "paragraph",
+        text: "Ask for current insurance documentation and confirmation that the coverage applies to the transportation service being offered.",
+      },
+      {
+        type: "paragraph",
+        text: "Parents can ask who handles insurance questions and how to request clarification. Districts can have their risk management team review the documentation against the proposed service and contract requirements.",
+      },
+      {
+        type: "paragraph",
+        text: "Any uncertainty about coverage should be referred to the provider's insurance representative. Insurance verification is one part of evaluating a provider, alongside its safety and operating procedures.",
+      },
+
+      {
+        type: "heading",
+        text: "4. How Will You Communicate With Us?",
+      },
+      {
+        type: "paragraph",
+        text: "Ask who parents and school staff should contact about a late vehicle, a schedule change, or a concern during a trip.",
+      },
+      {
+        type: "paragraph",
+        text: "Clarify:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "How delays and changes are communicated",
+          "Who is available while routes are operating",
+          "How urgent concerns are escalated",
+          "How updated instructions reach the assigned driver",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Agreeing on these details before service begins helps everyone know what to do when a question or disruption arises.",
+      },
+
+      {
+        type: "heading",
+        text: "5. What Happens if the Driver Cannot Make the Trip?",
+      },
+      {
+        type: "paragraph",
+        text: "Drivers may become unavailable, and vehicles may need unexpected repairs. Ask what process the provider follows when this happens.",
+      },
+      {
+        type: "paragraph",
+        text: "Will a substitute driver be available? How will the family and school be notified? How does a replacement driver receive the student's approved transportation instructions?",
+      },
+      {
+        type: "paragraph",
+        text: "Ask what happens when backup coverage cannot be arranged, too. Clear expectations are more useful than a general promise that every disruption will be handled.",
+      },
+
+      {
+        type: "heading",
+        text: "6. How Do You Support a Student's Individual Needs?",
+      },
+      {
+        type: "paragraph",
+        text: "Explain the support your child needs during transportation and ask the provider to confirm what it can accommodate before service begins.",
+      },
+      {
+        type: "paragraph",
+        text: "This may include communication preferences, sensory sensitivities, mobility equipment, boarding assistance, or specific handoff arrangements.",
+      },
+      {
+        type: "paragraph",
+        text: "Ask how relevant instructions are shared with drivers and substitutes while protecting student privacy. If transportation is addressed in the student's educational or care plan, discuss the applicable instructions with the school and provider before finalizing the arrangement.",
+      },
+
+      {
+        type: "heading",
+        text: "7. How Are Vehicles and Equipment Checked?",
+      },
+      {
+        type: "paragraph",
+        text: "Ask how the provider handles vehicle inspections, routine maintenance, and problems identified before a trip.",
+      },
+      {
+        type: "paragraph",
+        text: "If your child requires particular seating, restraints, or mobility equipment, confirm that the assigned vehicle and equipment are suitable for the planned service.",
+      },
+      {
+        type: "paragraph",
+        text: "You can also ask how vehicle changes are managed. Ask how replacement vehicles are evaluated when a student has specific seating, mobility, or equipment requirements.",
+      },
+
+      {
+        type: "heading",
+        text: "8. What Is Your Process for Safety Incidents or Emergencies?",
+      },
+      {
+        type: "paragraph",
+        text: "Ask how the provider responds if a student becomes ill, a vehicle breaks down, an unexpected safety concern occurs, or a driver cannot safely complete the route.",
+      },
+      {
+        type: "paragraph",
+        text: "Clarify who the driver contacts, how dispatch responds, how the school or family is notified, and how incidents are documented and followed up.",
+      },
+
+      {
+        type: "heading",
+        text: "Why These Questions Matter",
+      },
+      {
+        type: "paragraph",
+        text: "Clear answers help families and districts understand what the provider can deliver and which details still need to be resolved.",
+      },
+      {
+        type: "paragraph",
+        text: "Look for explanations supported by relevant documentation and practical procedures. A provider should be able to discuss its capabilities, acknowledge limitations, and identify who is responsible for answering outstanding questions.",
+      },
+      {
+        type: "paragraph",
+        text: "Before the first ride, confirm the route arrangements, communication process, student instructions, and pickup and drop-off expectations.",
+      },
+
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Will My Child Have the Same Driver Every Day? Ask whether a regular driver is planned for the route and how substitutions are handled. Discuss how much notice families can expect and how a replacement driver receives the student's instructions. Confirm the arrangement before assuming daily driver consistency.",
+          "What Should I Ask About Pickup and Drop-Off? Ask how drivers identify the correct student, confirm approved pickup locations, and verify who may receive the child. Also clarify what happens if the designated adult or school staff member is unavailable.",
+          "How Can I Tell Whether a Provider Is Being Transparent? Look for specific answers, relevant documentation, and clear explanations of any limitations. If a detail is still being confirmed, ask who will follow up and when. You should understand what is agreed upon before service starts.",
+          "What Should I Confirm Before the First Ride? Confirm the pickup window, approved locations, school schedule, contact details, handoff instructions, and any student-specific support. Ask how to report an absence or request a change.",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "Discuss Your Transportation Needs With Yuni Rides",
+      },
+      {
+        type: "paragraph",
+        text: "Have questions about a student's route or support needs? Contact Yuni Rides to discuss the proposed service, availability, and information needed before transportation begins.",
+      },
+    ],
+  },
   "special-needs-and-iep-transportation-in-arizona": {
     slug: "special-needs-and-iep-transportation-in-arizona",
     title:
