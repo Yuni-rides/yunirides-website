@@ -1,5 +1,4 @@
-
-
+import { verifyRecaptcha } from "@/lib/recaptcha";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -91,7 +90,16 @@ export async function POST(request: Request) {
       hasDrivingLicense,
       usedDrugs,
       source,
+      recaptchaToken,
     } = body;
+
+    const isHuman = await verifyRecaptcha(recaptchaToken, "driver_form_submit");
+    if (!isHuman) {
+      return NextResponse.json(
+        { success: false, error: "reCAPTCHA verification failed" },
+        { status: 400 },
+      );
+    }
 
     const host = "smtp.ionos.com";
     const port = 465;

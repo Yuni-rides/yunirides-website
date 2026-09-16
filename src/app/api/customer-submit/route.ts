@@ -1,3 +1,4 @@
+import { verifyRecaptcha } from "@/lib/recaptcha";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -95,11 +96,23 @@ export async function POST(request: Request) {
       numberOfChildren,
       specialNeeds,
       source,
+      recaptchaToken,
     } = body;
 
     if (!fullName || !email || !contactNumber || !city) {
       return NextResponse.json(
         { success: false, error: "Required fields are missing." },
+        { status: 400 },
+      );
+    }
+
+    const isHuman = await verifyRecaptcha(
+      recaptchaToken,
+      "customer_form_submit",
+    );
+    if (!isHuman) {
+      return NextResponse.json(
+        { success: false, error: "reCAPTCHA verification failed" },
         { status: 400 },
       );
     }

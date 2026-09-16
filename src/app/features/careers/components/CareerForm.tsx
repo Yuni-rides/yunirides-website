@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/shared/Button";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 interface DriverFormProps {
   source?: string;
@@ -135,10 +136,11 @@ export default function CareerForm({
     setNotification(null);
 
     try {
+      const recaptchaToken = await getRecaptchaToken("driver_form_submit");
       const response = await fetch("/api/driver-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, source }),
+        body: JSON.stringify({ ...form, source, recaptchaToken }),
       });
 
       const data = await response.json();
@@ -360,5 +362,3 @@ export default function CareerForm({
     </section>
   );
 }
-
-

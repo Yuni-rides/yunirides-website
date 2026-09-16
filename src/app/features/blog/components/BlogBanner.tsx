@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/shared/Button";
 import Link from "next/link";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 const featuredPost = {
   slug: "why-safe-rides-matter-for-kids",
@@ -42,10 +43,11 @@ export default function BlogBanner() {
     setStatus({ type: null, message: "" });
 
     try {
+      const recaptchaToken = await getRecaptchaToken("newsletter_subscribe");
       const response = await fetch("/api/newsletter-subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, recaptchaToken }),
       });
 
       const data = await response.json();

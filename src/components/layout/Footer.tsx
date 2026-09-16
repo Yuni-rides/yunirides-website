@@ -4,6 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import Button from "../shared/Button";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 export default function Footer() {
   const [email, setEmail] = useState("");
@@ -21,10 +22,11 @@ export default function Footer() {
     setStatus({ type: null, message: "" });
 
     try {
+      const recaptchaToken = await getRecaptchaToken("newsletter_subscribe");
       const response = await fetch("/api/newsletter-subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, recaptchaToken }),
       });
 
       const data = await response.json();

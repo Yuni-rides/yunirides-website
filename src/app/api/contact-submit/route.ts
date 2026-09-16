@@ -1,3 +1,4 @@
+import { verifyRecaptcha } from "@/lib/recaptcha";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -74,8 +75,16 @@ async function submitToBitrix(data: {
 
 export async function POST(request: Request) {
   try {
-    const { firstName, lastName, contactNumber, email, city, state, message } =
-      await request.json();
+    const {
+      firstName,
+      lastName,
+      contactNumber,
+      email,
+      city,
+      state,
+      message,
+      recaptchaToken,
+    } = await request.json();
 
     if (
       !firstName ||
@@ -88,6 +97,17 @@ export async function POST(request: Request) {
     ) {
       return NextResponse.json(
         { success: false, error: "Required fields are missing." },
+        { status: 400 },
+      );
+    }
+
+    const isHuman = await verifyRecaptcha(
+      recaptchaToken,
+      "contact_form_submit",
+    );
+    if (!isHuman) {
+      return NextResponse.json(
+        { success: false, error: "reCAPTCHA verification failed" },
         { status: 400 },
       );
     }

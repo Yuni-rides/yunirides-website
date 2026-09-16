@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "./Button";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 function InputField({
   label,
@@ -51,7 +52,9 @@ interface BecomeCustomerProps {
   source?: string;
 }
 
-export default function BecomeCustomer({ source = "General Website" }: BecomeCustomerProps) {
+export default function BecomeCustomer({
+  source = "General Website",
+}: BecomeCustomerProps) {
   const [loading, setLoading] = useState(false);
   const [notification, setNotification] = useState<{
     message: string;
@@ -91,10 +94,11 @@ export default function BecomeCustomer({ source = "General Website" }: BecomeCus
     setNotification(null);
 
     try {
+      const recaptchaToken = await getRecaptchaToken("customer_form_submit");
       const response = await fetch("/api/customer-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, source }),
+        body: JSON.stringify({ ...form, source, recaptchaToken }),
       });
 
       const data = await response.json();

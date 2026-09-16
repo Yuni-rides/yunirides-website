@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Button from "@/components/shared/Button";
+import { getRecaptchaToken } from "@/lib/recaptcha";
 
 function InputField({
   label,
@@ -128,10 +129,11 @@ export default function ContactClient() {
     setNotification(null);
 
     try {
+      const recaptchaToken = await getRecaptchaToken("contact_form_submit");
       const response = await fetch("/api/contact-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(form),
+        body: JSON.stringify({ ...form, recaptchaToken }),
       });
 
       const data = await response.json();

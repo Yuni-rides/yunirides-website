@@ -1,3 +1,4 @@
+import { verifyRecaptcha } from "@/lib/recaptcha";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
@@ -59,11 +60,22 @@ async function submitToBitrix(email: string) {
 
 export async function POST(request: Request) {
   try {
-    const { email } = await request.json();
+    const { email, recaptchaToken } = await request.json();
 
     if (!email) {
       return NextResponse.json(
         { success: false, error: "Email is required." },
+        { status: 400 },
+      );
+    }
+
+    const isHuman = await verifyRecaptcha(
+      recaptchaToken,
+      "newsletter_subscribe",
+    );
+    if (!isHuman) {
+      return NextResponse.json(
+        { success: false, error: "reCAPTCHA verification failed" },
         { status: 400 },
       );
     }

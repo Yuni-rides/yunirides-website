@@ -126,6 +126,10 @@ export default function RootLayout({
         <main>{children}</main>
         <TawkToChat />
         <Footer />
+        <Script
+          src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
