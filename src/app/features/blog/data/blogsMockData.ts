@@ -16,6 +16,605 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "special-needs-student-transportation-guide": {
+    slug: "special-needs-student-transportation-guide",
+    title:
+      "Special Needs Student Transportation: Safety and IEP Planning | Yuni Rides",
+    excerpt:
+      "Learn how special needs student transportation supports school access through individualized planning, eligible drivers, appropriate equipment, monitoring, and IEP-related services.",
+    heroImage: "/images/special-needs-student-transportation.webp",
+    date: "Sep 16, 2026",
+    readTime: "10 mins read",
+    contentBlocks: [
+      {
+        type: "paragraph",
+        text: "For many students with disabilities, transportation is not simply a ride to school. It may be an essential support that helps them attend school consistently, travel safely, and arrive prepared to learn.",
+      },
+      {
+        type: "paragraph",
+        text: "Some students have physical, developmental, cognitive, sensory, emotional, medical, or behavioral needs that require transportation beyond a traditional school-bus arrangement.",
+      },
+      {
+        type: "paragraph",
+        text: "Effective specialized transportation combines individualized planning, appropriate equipment, prepared drivers, predictable routines, responsive dispatch support, and communication among schools, families, and transportation providers.",
+      },
+      {
+        type: "paragraph",
+        text: "This guide explains how special needs student transportation works, how transportation may be addressed under the Individuals with Disabilities Education Act (IDEA), and what school districts should consider when arranging services.",
+      },
+      {
+        type: "heading",
+        text: "Quick Answer: What Is Special Needs Student Transportation?",
+      },
+      {
+        type: "paragraph",
+        text: "Special needs student transportation is planned transportation for children whose disabilities or documented circumstances require additional support while traveling to or from school. The specific arrangements depend on the student's individual needs, the school district's determination, applicable laws, and the student's IEP or other approved transportation plan.",
+      },
+      {
+        type: "heading",
+        text: "Key Takeaways",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Transportation may be included as a related service under IDEA when it is necessary for a child to benefit from special education.",
+          "Not every student with a disability requires specialized transportation.",
+          "Transportation decisions should reflect each student's documented needs.",
+          "Appropriate seating, equipment, supervision, communication, and handoff procedures may be included in a transportation plan.",
+          "Familiar drivers and predictable routines may help students who find transitions or unexpected changes difficult.",
+          "Drivers should follow authorized instructions and contact dispatch when safety concerns or unexpected situations arise.",
+          "State requirements and district procedures may create additional obligations beyond federal IDEA regulations.",
+        ],
+      },
+
+      {
+        type: "heading",
+        text: "What Special Needs Transportation May Include",
+      },
+      {
+        type: "paragraph",
+        text: "Special needs transportation is a student-centered service for children who require additional support during their journey to and from school.",
+      },
+      {
+        type: "paragraph",
+        text: "Depending on the student's approved transportation arrangements, the service may include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Home-to-school and school-to-home transportation",
+          "Approved pickup and drop-off locations",
+          "Smaller-capacity vehicles",
+          "Consistent driver assignments",
+          "Car seats, booster seats, or approved safety equipment when required",
+          "Individual seating instructions",
+          "Behavioral or sensory accommodations",
+          "Transportation monitors when authorized",
+          "Student-specific handoff procedures",
+          "Active trip monitoring",
+          "Communication among dispatchers, drivers, families, and school staff",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "These arrangements should not be based on a diagnosis alone. The appropriate support depends on the individual student, the school district's determination, the student's IEP or other approved plan, and applicable requirements. Readers who want a shorter overview can also explore what makes special needs student transportation different.",
+      },
+
+      /* WHO MAY NEED SPECIALIZED STUDENT TRANSPORTATION */
+      {
+        type: "heading",
+        text: "Who May Need Specialized Student Transportation?",
+      },
+      {
+        type: "paragraph",
+        text: "Specialized transportation may support students with many different needs, including students with:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Autism spectrum disorder",
+          "Attention-deficit/hyperactivity disorder",
+          "Cerebral palsy",
+          "Down syndrome",
+          "Vision or hearing impairments",
+          "Physical disabilities or mobility limitations",
+          "Intellectual or developmental disabilities",
+          "Emotional or behavioral support needs",
+          "Sensory processing differences",
+          "Communication difficulties",
+          "Medically fragile conditions",
+          "Temporary injuries or mobility restrictions",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "This list does not determine eligibility. Not every student with one of these conditions requires specialized transportation, and students with other conditions may need it.",
+      },
+      {
+        type: "paragraph",
+        text: "Some students can safely use a traditional school bus. Others may require a smaller vehicle, specialized equipment, individual supervision, or a more predictable routine. Each student's transportation needs should be considered individually.",
+      },
+
+      /* UNDERSTANDING IEP TRANSPORTATION UNDER IDEA */
+      {
+        type: "heading",
+        text: "Understanding IEP Transportation Under IDEA",
+      },
+      {
+        type: "paragraph",
+        text: "Under the federal Individuals with Disabilities Education Act, transportation is included within the definition of related services. It must be provided as a related service when the student's IEP team determines that it is required to help the child benefit from special education.",
+      },
+      {
+        type: "paragraph",
+        text: "Federal regulations state that transportation may include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Travel to and from school and between schools",
+          "Travel in and around school buildings",
+          "Specialized equipment, such as adapted buses, lifts, or ramps, when required",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Having a disability does not automatically entitle every student to specialized transportation. The IEP team determines whether transportation is required and how that service should be provided.",
+      },
+      {
+        type: "paragraph",
+        text: "When transportation is included as a related service, the IEP must identify the related service and its anticipated frequency, location, and duration. Depending on the student's needs and the district's procedures, additional transportation instructions may address:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Pickup and drop-off arrangements",
+          "Transportation schedule",
+          "Vehicle or equipment needs",
+          "Seating requirements",
+          "Mobility assistance",
+          "Behavioral or sensory accommodations",
+          "Communication procedures",
+          "A transportation monitor or another approved support",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "IDEA establishes federal protections, but state laws and district procedures may create additional requirements involving driver qualifications, training, vehicles, equipment, and daily service delivery.",
+      },
+
+      /* WHAT CAN AN INDIVIDUALIZED TRANSPORTATION PLAN ADDRESS */
+      {
+        type: "heading",
+        text: "What Can an Individualized Transportation Plan Address?",
+      },
+      {
+        type: "paragraph",
+        text: "An effective transportation plan translates documented student needs into clear instructions for the people responsible for the ride. It should help the transportation team understand what must happen before, during, and after transportation.",
+      },
+      {
+        type: "heading",
+        text: "Approved Pickup, Drop-Off, and Handoff Procedures",
+      },
+      {
+        type: "paragraph",
+        text: "Drivers should follow only the locations, schedules, and handoff instructions authorized by the school district or transportation coordinator. Proposed changes should be approved before the driver acts on them.",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation instructions may identify:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "The approved pickup address",
+          "The appropriate school entrance",
+          "The authorized drop-off location",
+          "The parent, guardian, or school employee responsible for receiving the student",
+          "Whether the student must be handed directly to an authorized person",
+          "What the driver should do when an authorized person is unavailable",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides drivers are instructed to contact dispatch when a safe handoff cannot be completed. Drivers must not leave a student unattended or take the student to an unauthorized location.",
+      },
+      {
+        type: "heading",
+        text: "Seating and Safety Equipment",
+      },
+      {
+        type: "paragraph",
+        text: "Students may require different seating arrangements based on their age, size, documented needs, and approved transportation instructions.",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation arrangements may involve:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Standard seat belts",
+          "Age- and size-appropriate car seats",
+          "Booster seats",
+          "Approved safety harnesses or other authorized equipment",
+          "Child safety locks",
+          "Assigned seating",
+          "Space for approved mobility equipment",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Equipment must comply with applicable requirements and the student's approved instructions. Drivers should not add, remove, or substitute specialized equipment without authorization.",
+      },
+      {
+        type: "heading",
+        text: "Behavioral and Sensory Accommodations",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation can be challenging for students who experience sensory overload, anxiety, difficulty with transitions, communication barriers, or behavioral dysregulation.",
+      },
+      {
+        type: "paragraph",
+        text: "Depending on the student's approved plan, helpful accommodations may include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "A consistent seating location",
+          "A calm and predictable routine",
+          "Reduced unnecessary noise",
+          "Clear and simple instructions",
+          "Preparation for approved schedule changes",
+          "Familiar pickup and drop-off procedures",
+          "Authorized behavior-support strategies",
+          "Additional supervision when required",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Drivers should follow the student's authorized plan and contact dispatch when behavior creates an immediate safety concern. Transportation personnel should not create their own behavioral or medical interventions.",
+      },
+
+      /* WHY DRIVER CONSISTENCY MATTERS */
+      {
+        type: "heading",
+        text: "Why Driver Consistency Matters",
+      },
+      {
+        type: "paragraph",
+        text: "A familiar driver may make transportation more predictable for students who have difficulty with unfamiliar people, changes in routine, communication, or transitions.",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides works to assign the same driver to a student's recurring route whenever possible. Over time, a consistent driver may become familiar with:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "The student's usual routine",
+          "Approved pickup and drop-off procedures",
+          "Communication preferences",
+          "Seating and safety requirements",
+          "Signs that the student may be uncomfortable or distressed",
+          "Family and school handoff expectations",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A regular driver may also help the transportation team recognize changes or unusual situations more quickly.",
+      },
+      {
+        type: "paragraph",
+        text: "Unexpected driver absences can still occur. When an eligible rescue driver is available, Yuni Rides may assign that driver to help prevent a missed trip while limiting unnecessary disruption.",
+      },
+      {
+        type: "paragraph",
+        text: "Driver consistency and rescue coverage are operational goals, not guarantees. Availability depends on the route, service agreement, and current driver capacity.",
+      },
+
+      /* THE ROLE OF ELIGIBLE AND PREPARED DRIVERS */
+      {
+        type: "heading",
+        text: "The Role of Eligible and Prepared Drivers",
+      },
+      {
+        type: "paragraph",
+        text: "A suitable vehicle alone does not create safe transportation. Drivers must understand the importance of patience, predictability, careful communication, and consistent compliance with authorized procedures.",
+      },
+      {
+        type: "paragraph",
+        text: "Depending on state and service requirements, driver preparation may include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Background screening and fingerprinting",
+          "Verification of driving credentials",
+          "Vehicle inspection and documentation",
+          "First Aid and CPR certification",
+          "Drug or health-related testing",
+          "Student transportation safety training",
+          "Instruction in using assigned safety equipment",
+          "Emergency and incident-reporting procedures",
+          "Confidentiality and professional conduct",
+          "Behavioral-awareness training",
+          "Student handoff procedures",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Qualifications vary by state, vehicle type, contract, and service arrangement. Yuni Rides reviews applicable onboarding, documentation, training, and eligibility requirements before assigning a driver to a student route.",
+      },
+
+      /* REAL-TIME TRIP MONITORING & DISPATCH */
+      {
+        type: "heading",
+        text: "Real-Time Trip Monitoring and Dispatch Communication",
+      },
+      {
+        type: "paragraph",
+        text: "Technology can improve operational visibility, but it does not replace prepared drivers, professional judgment, or responsive dispatch support.",
+      },
+      {
+        type: "paragraph",
+        text: "A transportation platform may allow authorized personnel to:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Monitor when a trip starts and ends",
+          "View the progress of an active route",
+          "Identify potential delays",
+          "Confirm pickup and drop-off activity",
+          "Communicate approved route updates",
+          "Respond to unexpected events",
+          "Maintain operational records",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides uses trip-monitoring technology and dispatch coordination to oversee transportation operations and respond when assistance is required.",
+      },
+      {
+        type: "paragraph",
+        text: "If a delay, vehicle issue, student absence, behavioral incident, or handoff problem occurs, the driver should contact dispatch. Dispatch can then coordinate the appropriate response with authorized school or transportation personnel.",
+      },
+      {
+        type: "paragraph",
+        text: "Access to student and trip information should be restricted to authorized individuals and managed through appropriate privacy and data-security procedures.",
+      },
+
+      /* ESSENTIAL SAFETY PROCEDURES DURING A RIDE */
+      {
+        type: "heading",
+        text: "Essential Safety Procedures During a Ride",
+      },
+      {
+        type: "paragraph",
+        text: "Consistent procedures help reduce preventable risks. Yuni Rides instructs drivers to:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Complete a vehicle safety check before service",
+          "Have sufficient fuel before beginning the route",
+          "Arrive at the approved location at the scheduled time",
+          "Use only the registered and approved vehicle",
+          "Display required driver identification",
+          "Confirm that each student is properly secured",
+          "Keep students in the appropriate seating location",
+          "Use child safety locks when required",
+          "Follow the approved route",
+          "Make no unauthorized stops",
+          "Carry no unauthorized passengers",
+          "Never leave a student unattended",
+          "Complete the required handoff to an authorized adult or school employee",
+          "Contact dispatch before acting on an unapproved change",
+          "Report incidents, delays, and safety concerns promptly",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Drivers should not stop for fuel, food, or personal errands while transporting students. Preparing the vehicle before the trip helps reduce avoidable delays and disruptions.",
+      },
+
+      /* PREPARING FOR TRANSPORTATION EMERGENCIES */
+      {
+        type: "heading",
+        text: "Preparing for Transportation Emergencies",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation plans and operating procedures should account for foreseeable emergencies and provide clear directions for drivers and dispatchers.",
+      },
+      {
+        type: "paragraph",
+        text: "Possible situations include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Vehicle breakdowns or flat tires",
+          "Traffic delays or unexpected road closures",
+          "Severe weather",
+          "A student becoming distressed",
+          "A student attempting to unbuckle",
+          "A medical concern",
+          "An unavailable parent, guardian, or school employee",
+          "An unexpected driver absence",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The correct response depends on the situation and the applicable emergency plan. A driver's immediate priorities generally include stopping in a safe location when necessary, keeping the student supervised, contacting dispatch, and following authorized procedures.",
+      },
+      {
+        type: "paragraph",
+        text: "When a replacement vehicle or rescue driver is required, dispatch should coordinate the change and notify the appropriate authorized contacts.",
+      },
+
+      /* HOW SCHOOLS, FAMILIES, AND PROVIDERS WORK TOGETHER */
+      {
+        type: "heading",
+        text: "How Schools, Families, and Transportation Providers Work Together",
+      },
+      {
+        type: "paragraph",
+        text: "Successful student transportation depends on accurate information, timely communication, and clearly assigned responsibilities.",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "School Districts and IEP Teams: School districts and IEP teams determine eligible services and document the student's educational and related-service needs.",
+          "Families and Caregivers: Families can share relevant information about communication preferences, routines, known triggers, calming strategies, mobility needs, and changes that could affect transportation.",
+          "Transportation Providers: Transportation providers carry out approved arrangements by assigning eligible drivers, verifying vehicles and required documentation, monitoring trips, responding to incidents, and maintaining authorized communication.",
+          "Drivers and Dispatchers: Drivers follow authorized transportation instructions and report route-level concerns. Dispatchers coordinate responses to delays, absences, safety concerns, driver emergencies, and handoff problems.",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Clear responsibilities help prevent confusion and support consistent service.",
+      },
+
+      /* COMMON SPECIAL NEEDS TRANSPORTATION CHALLENGES */
+      {
+        type: "heading",
+        text: "Common Special Needs Transportation Challenges",
+      },
+      {
+        type: "paragraph",
+        text: "Transportation teams may encounter:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Shortages of qualified drivers",
+          "Frequent changes in student schedules",
+          "Long-distance or out-of-district routes",
+          "A need for individual transportation",
+          "Behavioral incidents during travel",
+          "Limited communication among responsible parties",
+          "Changes in a student's equipment or support needs",
+          "Delayed handoffs at home or school",
+          "Traffic and weather disruptions",
+          "Incomplete or outdated transportation instructions",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "Careful route planning, prepared drivers, consistent assignments, clear escalation procedures, active monitoring, and timely communication can help transportation teams manage these challenges.",
+      },
+
+      /* QUESTIONS TO ASK A PROVIDER */
+      {
+        type: "heading",
+        text: "Questions to Ask a Student Transportation Provider",
+      },
+      {
+        type: "paragraph",
+        text: "Before selecting a provider, a school district should ask:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "How are drivers screened and prepared?",
+          "How are vehicles inspected and approved?",
+          "How does the provider receive and follow authorized transportation instructions?",
+          "What procedures govern student pickup, drop-off, and handoff?",
+          "How are active trips monitored?",
+          "What happens if a regular driver becomes unavailable?",
+          "How are schools and families notified about delays?",
+          "How are behavioral and safety incidents documented?",
+          "What approved safety equipment can the provider accommodate?",
+          "How does the provider protect student information?",
+          "How are unauthorized stops and passengers prevented?",
+          "How does dispatch respond to an emergency during a trip?",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "The provider's answers should be specific, documented, and consistent with the district's requirements.",
+      },
+
+      /* HOW YUNI RIDES SUPPORTS STUDENTS WITH DISABILITIES */
+      {
+        type: "heading",
+        text: "How Yuni Rides Supports Students With Disabilities",
+      },
+      {
+        type: "paragraph",
+        text: "Yuni Rides provides approved home-to-school and school-to-home transportation through coordination with school districts and authorized partners.",
+      },
+      {
+        type: "paragraph",
+        text: "Depending on the student's approved arrangements and service availability, the Yuni Rides service model may include:",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Eligible and properly documented drivers",
+          "Consistent driver assignments whenever possible",
+          "Rescue-driver support when an eligible replacement is available",
+          "Approved pickup, drop-off, and handoff procedures",
+          "Direct routes without unauthorized stops",
+          "Assigned car seats, booster seats, harnesses, or other approved equipment",
+          "Active dispatch support",
+          "Trip monitoring",
+          "Communication about delays and incidents",
+          "Transportation based on documented student needs",
+        ],
+      },
+      {
+        type: "paragraph",
+        text: "A familiar driver, predictable routine, properly prepared vehicle, and clear handoff process can make a meaningful difference in a student's transportation experience. School districts and families can review Yuni Rides transportation services for additional information about available service options.",
+      },
+
+      /* FAQS */
+      {
+        type: "heading",
+        text: "Frequently Asked Questions",
+      },
+      {
+        type: "bullet-list",
+        items: [
+          "Does every student with an IEP receive specialized transportation? No. Transportation is included when the IEP team determines that it is required for the student to benefit from special education. The decision should be based on the student's individual needs.",
+          "Can transportation needs be documented in an IEP? Yes. When transportation is required as a related service, the IEP must identify the service and its anticipated frequency, location, and duration. Additional operational details may be documented according to the student's needs and district procedures.",
+          "Can a driver change a student's pickup or drop-off location? Drivers should follow only the locations authorized by the school district or transportation coordinator. A driver should contact dispatch instead of independently acting on an unapproved request.",
+          "What happens if a regular driver is unavailable? The response depends on provider capacity and the applicable service arrangement. Yuni Rides may assign an eligible rescue driver when one is available and coordinate the change with authorized parties.",
+          "Does real-time monitoring replace communication with dispatch? No. Monitoring technology can improve visibility, but drivers should still contact dispatch about delays, incidents, vehicle problems, absences, unsafe behavior, and handoff concerns.",
+        ],
+      },
+
+      /* FINAL THOUGHTS */
+      {
+        type: "heading",
+        text: "Final Thoughts",
+      },
+      {
+        type: "paragraph",
+        text: "Special needs transportation works best when it reflects the individual student instead of relying on a one-size-fits-all arrangement. Effective service requires documented planning, eligible personnel, suitable equipment, consistent procedures, responsive dispatch support, and clear communication.",
+      },
+      {
+        type: "paragraph",
+        text: "For students whose disabilities affect transportation, these elements can help create a dependable connection between home, school, and educational opportunity.",
+      },
+      {
+        type: "paragraph",
+        text: "This article provides general educational information and is not legal advice. Transportation eligibility and requirements must be determined by the appropriate IEP team or school district under applicable federal, state, and local requirements.",
+      },
+
+      /* CALL TO ACTION */
+      {
+        type: "heading",
+        text: "Request Transportation Information",
+      },
+      {
+        type: "paragraph",
+        text: "Looking for additional transportation support for students with disabilities? Contact Yuni Rides to discuss your district's transportation needs, approved student accommodations, and service availability.",
+      },
+    ],
+  },
   "questions-to-ask-student-transportation-provider": {
     slug: "questions-to-ask-student-transportation-provider",
     title: "Questions to Ask a Student Transportation Provider | Yuni Rides",

@@ -7,6 +7,16 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const faqs = [
   {
+    question: "How safe is private student transportation?",
+    answer:
+      "Private student transportation safety depends on the provider’s daily practices. Parents should evaluate how driver screening, training, vehicle checks, dispatch communication, route procedures, and student handoffs work together. Ask for clear explanations and relevant documentation before arranging service.",
+  },
+  {
+    question: "What safety measures should parents look for?",
+    answer:
+      "Look for documented vehicle checks, suitable seating and restraints, trained drivers, and a reachable dispatch contact. Ask how the provider handles emergencies, delays, substitute drivers, and your child’s individual transportation needs. Confirm these arrangements before the first ride.",
+  },
+  {
     question:
       "How does Yuni Rides comply with IDEA and IEP transportation requirements?",
     answer:
@@ -175,6 +185,20 @@ export default function FAQSection() {
             openIndex={openIndex}
             setOpenIndex={setOpenIndex}
             className="w-[310px] left-[32%] bottom-[35px]"
+          />
+          <FAQCard
+            faq={faqs[5]}
+            index={5}
+            openIndex={openIndex}
+            setOpenIndex={setOpenIndex}
+            className="w-[310px] left-[32%] bottom-[150px]"
+          />
+          <FAQCard
+            faq={faqs[6]}
+            index={6}
+            openIndex={openIndex}
+            setOpenIndex={setOpenIndex}
+            className="w-[310px] right-[2%] bottom-[150px]"
           />
         </div>
 
