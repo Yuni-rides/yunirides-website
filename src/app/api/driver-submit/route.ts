@@ -91,7 +91,25 @@ export async function POST(request: Request) {
       usedDrugs,
       source,
       recaptchaToken,
+      website,
+      renderedAt,
     } = body;
+
+    if (website) {
+      console.warn("🕷️ Honeypot triggered — silently rejecting");
+      return NextResponse.json(
+        { success: true, message: "Application submitted successfully" },
+        { status: 200 },
+      );
+    }
+
+    if (!renderedAt || Date.now() - renderedAt < 2500) {
+      console.warn("⏱️ Submitted too fast — silently rejecting");
+      return NextResponse.json(
+        { success: true, message: "Application submitted successfully" },
+        { status: 200 },
+      );
+    }
 
     const isHuman = await verifyRecaptcha(recaptchaToken, "driver_form_submit");
     if (!isHuman) {

@@ -39,5 +39,16 @@ export async function verifyRecaptcha(
   });
   const data = await res.json();
   console.log("🔍 reCAPTCHA response:", data);
-  return data.success && data.score >= 0.5 && data.action === expectedAction;
+
+  const allowedHostnames = ["yunirides.com", "www.yunirides.com"];
+  if (process.env.NODE_ENV !== "production") {
+    allowedHostnames.push("localhost");
+  }
+
+  return (
+    data.success &&
+    data.score >= 0.5 &&
+    data.action === expectedAction &&
+    allowedHostnames.includes(data.hostname)
+  );
 }

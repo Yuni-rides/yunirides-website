@@ -143,6 +143,8 @@ export default function DriverForm({
     type: "success" | "error";
   } | null>(null);
 
+  const [renderedAt] = useState(() => Date.now());
+
   const [form, setForm] = useState({
     fullName: "",
     email: "",
@@ -154,6 +156,7 @@ export default function DriverForm({
     hasSSN: true,
     hasDrivingLicense: true,
     usedDrugs: false,
+    website: "",
   });
 
   // 5 seconds automatic cleanup hook
@@ -182,7 +185,7 @@ export default function DriverForm({
       const response = await fetch("/api/driver-submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...form, source, recaptchaToken }),
+        body: JSON.stringify({ ...form, source, recaptchaToken, renderedAt }),
       });
 
       const data = await response.json();
@@ -204,6 +207,7 @@ export default function DriverForm({
           hasSSN: true,
           hasDrivingLicense: true,
           usedDrugs: false,
+          website: "",
         });
       } else {
         setNotification({
@@ -295,6 +299,22 @@ export default function DriverForm({
               </p>
 
               <form onSubmit={handleSubmit}>
+                <input
+                  type="text"
+                  name="website"
+                  value={form.website}
+                  onChange={handleChange}
+                  tabIndex={-1}
+                  autoComplete="off"
+                  style={{
+                    position: "absolute",
+                    left: "-9999px",
+                    opacity: 0,
+                    height: 0,
+                    width: 0,
+                  }}
+                  aria-hidden="true"
+                />
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-5">
                   <InputField
                     label="Full Name"
