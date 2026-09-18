@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "What states does Yuni Rides operate in?",
     answer:
-      "Yuni Rides currently provides student transportation services in Washington, California, Arizona, Texas, and Illinois, with plans to expand to additional states.",
+      "Yuni Rides currently provides student transportation services in Washington, California, Arizona, Texas, Oregon and Illinois, with plans to expand to additional states.",
   },
   {
     question: "What vehicle and safety standards does Yuni Rides maintain?",

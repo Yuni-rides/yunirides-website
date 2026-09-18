@@ -22,7 +22,7 @@ const faqData: FaqItem[] = [
   {
     question: "What states does Yuni Rides serve?",
     answer:
-      "Yuni Rides currently operates in Washington, California, Arizona, Texas, and Illinois. Dedicated service pages with local details, including regulatory specifics for each state, are available for Washington, Texas, and Illinois. If your state or city isn't listed on those pages specifically, contact us to check current availability, since service areas are actively expanding and a page not existing yet doesn't necessarily mean we don't serve your area.",
+      "Yuni Rides currently operates in Washington, California, Arizona, Texas, Oregon and Illinois. Dedicated service pages with local details, including regulatory specifics for each state, are available for Washington, Texas, and Illinois. If your state or city isn't listed on those pages specifically, contact us to check current availability, since service areas are actively expanding and a page not existing yet doesn't necessarily mean we don't serve your area.",
   },
   {
     question: "How are Yuni Rides drivers background checked?",
