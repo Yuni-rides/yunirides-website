@@ -16,6 +16,458 @@ export interface BlogPost {
 }
 
 export const blogPostsData: Record<string, BlogPost> = {
+  "wheelchair-transportation-for-students": {
+  slug: "wheelchair-transportation-for-students",
+  title:
+    "Wheelchair Transportation for Students | Yuni Rides",
+  excerpt:
+    "Learn what parents and schools should consider when planning wheelchair transportation for students, including IEPs, accessible vehicles, securement, and communication.",
+  heroImage:
+    "/images/wheelchair-student-boarding.jpg",
+  date: "Sep 17, 2026",
+  readTime: "9 mins read",
+  contentBlocks: [
+    {
+      type: "paragraph",
+      text: "For a student who uses a wheelchair, transportation involves more than traveling between home and school. The vehicle, boarding process, mobility equipment, safety procedures, and student-specific support must all be considered before service begins.",
+    },
+    {
+      type: "paragraph",
+      text: "This guide explains how wheelchair-accessible student transportation may work, what families should communicate, how transportation can relate to an Individualized Education Program (IEP), and what schools should consider when arranging service.",
+    },
+
+    
+    {
+      type: "heading",
+      text: "Quick Answer: What Is Wheelchair Transportation for Students?",
+    },
+    {
+      type: "paragraph",
+      text: "Wheelchair transportation for students is a planned service for children who use wheelchairs or other mobility devices and require specific accommodations while traveling to or from school. The appropriate arrangement depends on the student, mobility device, vehicle, equipment, and approved transportation plan.",
+    },
+    {
+      type: "paragraph",
+      text: "The service may involve:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "A vehicle with an appropriate ramp or wheelchair lift",
+        "Enough space for the student and mobility device",
+        "Appropriate wheelchair-securement equipment",
+        "A separate occupant-restraint system",
+        "Assistance during boarding and unloading",
+        "A trained driver and, when required, a transportation aide",
+        "Student-specific medical, behavioral, sensory, or communication instructions",
+        "Coordinated pickup, drop-off, and handoff procedures",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Not every vehicle can accommodate a student who remains seated in a wheelchair. Accessibility, equipment, and service availability should be confirmed before transportation begins.",
+    },
+    {
+      type: "heading",
+      text: "Key Takeaways",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "Each student's wheelchair transportation needs should be evaluated individually.",
+        "Wheelchair securement and occupant restraint perform different safety functions.",
+        "Transportation may be included as an IEP related service when required for an eligible student to benefit from special education.",
+        "Families should communicate relevant information about the wheelchair, boarding, positioning, medical needs, and handoff procedures.",
+        "Schools should confirm vehicle suitability, personnel preparation, emergency procedures, and substitute coverage before service begins.",
+        "Vehicle requirements and transportation rules may differ by state, district, and vehicle type.",
+        "Service availability should be confirmed directly with the transportation provider.",
+      ],
+    },
+
+    
+    {
+      type: "heading",
+      text: "Why Wheelchair-Accessible Student Transportation Requires Individual Planning",
+    },
+    {
+      type: "paragraph",
+      text: "Students who use wheelchairs do not all have the same transportation needs. One student may transfer safely to a vehicle seat, while another may need to remain in the wheelchair throughout the ride.",
+    },
+    {
+      type: "paragraph",
+      text: "Some students use manual wheelchairs. Others use powered wheelchairs with batteries, positioning systems, communication devices, oxygen holders, or removable trays.",
+    },
+    {
+      type: "paragraph",
+      text: "Planning should account for:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "The wheelchair's type, size, and weight",
+        "Whether the student will remain seated in the wheelchair",
+        "Identified securement points",
+        "Whether a ramp or lift is required",
+        "The student's ability to assist with boarding or an approved transfer",
+        "Positioning and postural-support needs",
+        "Medical equipment traveling with the student",
+        "Sensory, behavioral, and communication needs",
+        "Emergency procedures",
+        "Accessibility at the pickup and drop-off locations",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "These details help the school and transportation provider determine what vehicle, equipment, support, and preparation may be necessary.",
+    },
+
+    /* IEP RELATED SERVICE */
+    {
+      type: "heading",
+      text: "Can Wheelchair Transportation Be Included in an IEP?",
+    },
+    {
+      type: "paragraph",
+      text: "Yes. Under the Individuals with Disabilities Education Act (IDEA), transportation is recognized as a related service when it is required to help an eligible child benefit from special education.",
+    },
+    {
+      type: "paragraph",
+      text: "Federal IDEA regulations state that transportation may include:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "Travel to and from school and between schools",
+        "Travel in and around school buildings",
+        "Specialized equipment, such as adapted buses, lifts, and ramps, when required to provide special transportation for a child with a disability",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Having an IEP does not automatically mean that a student will receive specialized transportation. The IEP team must consider the student's individual needs.",
+    },
+    {
+      type: "paragraph",
+      text: "When wheelchair transportation is necessary, the IEP or associated transportation plan may address:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "Why specialized transportation is required",
+        "The type of accessible vehicle or equipment needed",
+        "Whether the student will remain seated in the wheelchair",
+        "Boarding and unloading assistance",
+        "Wheelchair-securement and occupant-restraint requirements",
+        "Positioning or postural-support instructions",
+        "Transportation-relevant medical and emergency considerations",
+        "Whether a transportation aide is necessary",
+        "Pickup, drop-off, and handoff arrangements",
+        "Driver or aide preparation",
+        "Procedures for schedule changes and emergencies",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Parents are members of the IEP team and can ask for their child's transportation needs to be discussed. Families can also request clarification when transportation instructions are too general to implement consistently.",
+    },
+
+    
+    {
+      type: "heading",
+      text: "What Information Should Parents Share?",
+    },
+    {
+      type: "paragraph",
+      text: "Parents and guardians often have detailed knowledge of how their child communicates, boards a vehicle, and uses their wheelchair. Sharing relevant information before the first ride helps the school and transportation team prepare.",
+    },
+    {
+      type: "heading",
+      text: "The Wheelchair or Mobility Device",
+    },
+    {
+      type: "paragraph",
+      text: "Explain whether the wheelchair is manual or powered, its approximate size and weight, and whether it has identified securement points.",
+    },
+    {
+      type: "paragraph",
+      text: "The transportation team should also be told about:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "Batteries",
+        "Communication devices",
+        "Oxygen holders",
+        "Positioning equipment",
+        "Removable trays",
+        "Bags or other attached items",
+      ],
+    },
+    {
+      type: "heading",
+      text: "Boarding and Unloading",
+    },
+    {
+      type: "paragraph",
+      text: "Explain whether the student can use a ramp or lift independently, needs verbal guidance, or requires physical assistance. Any transfer method should follow the student's approved plan. Drivers and aides should not be expected to improvise an unfamiliar transfer procedure.",
+    },
+    {
+      type: "heading",
+      text: "Positioning Needs",
+    },
+    {
+      type: "paragraph",
+      text: "Describe any head, trunk, leg, or other positioning support the student uses. A positioning belt attached to the wheelchair may help support posture, but it should not automatically be treated as a substitute for the vehicle's occupant-restraint system.",
+    },
+    {
+      type: "heading",
+      text: "Medical and Emergency Information",
+    },
+    {
+      type: "paragraph",
+      text: "Share transportation-relevant information authorized by the school or district. This may include approved protocols for seizures, respiratory needs, allergies, or other conditions that could affect the ride.",
+    },
+    {
+      type: "paragraph",
+      text: "The transportation team should know whom to contact, what approved procedures to follow, and where necessary emergency information is maintained.",
+    },
+    {
+      type: "heading",
+      text: "Communication and Sensory Needs",
+    },
+    {
+      type: "paragraph",
+      text: "Explain how the student communicates and whether they are sensitive to noise, touch, unfamiliar people, or changes in routine. Preferred communication methods and approved calming strategies may help create a more predictable transportation experience.",
+    },
+    {
+      type: "heading",
+      text: "Pickup and Drop-Off Procedures",
+    },
+    {
+      type: "paragraph",
+      text: "Confirm approved pickup and drop-off locations, authorized receiving adults or school staff, handoff expectations, and what personnel should do if no authorized recipient is present. Parents should notify the school or designated transportation contact when the student's wheelchair, equipment, address, schedule, or transportation needs change.",
+    },
+
+    
+    {
+      type: "heading",
+      text: "How Are Wheelchairs Transported Safely?",
+    },
+    {
+      type: "paragraph",
+      text: "When a student remains seated in a wheelchair, transportation involves two separate safety functions: securing the wheelchair to the vehicle with appropriate securement equipment, and protecting the student with an appropriate occupant-restraint system.",
+    },
+    {
+      type: "paragraph",
+      text: "These functions should not be confused. Wheelchair securement limits movement of the mobility device, whereas occupant restraint protects the person seated in it.",
+    },
+    {
+      type: "paragraph",
+      text: "The precise equipment and procedure depend on:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "The vehicle and its installed systems",
+        "The wheelchair's design",
+        "Equipment-manufacturer instructions",
+        "The student's approved transportation plan",
+        "Applicable federal, state, and district requirements",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Federal Motor Vehicle Safety Standard No. 222 establishes passenger-protection requirements for school buses, including wheelchair securement and occupant-restraint anchorages. Because this standard applies specifically to school buses, transportation teams should not assume that identical specifications apply to every passenger vehicle. Each vehicle and service arrangement must be evaluated under the requirements applicable to it.",
+    },
+    {
+      type: "paragraph",
+      text: "Before transportation begins, appropriately trained personnel should confirm that:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "The assigned vehicle and accessibility equipment are ready",
+        "The wheelchair can be accommodated and positioned as intended",
+        "Securement equipment can be connected to appropriate structural points",
+        "Securement straps are not loose, twisted, or attached to removable parts",
+        "The wheelchair and its powered settings can be handled according to instructions",
+        "The occupant restraint can be positioned appropriately",
+        "Trays, bags, and loose equipment can be handled safely",
+        "Necessary route and emergency information is available",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Drivers and aides should follow their training, manufacturer instructions, and the student's approved transportation plan.",
+    },
+
+    
+    {
+      type: "heading",
+      text: "What Should Schools Consider Before Service Begins?",
+    },
+    {
+      type: "paragraph",
+      text: "A transportation plan should be detailed enough to put into practice. A general instruction such as 'wheelchair-accessible transportation' may not tell transportation personnel what equipment, support, or procedures are required.",
+    },
+    {
+      type: "paragraph",
+      text: "Before assigning a route, the school or district should confirm:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "The student's current transportation requirements",
+        "The vehicle features and equipment needed",
+        "Whether the vehicle can accommodate the student's wheelchair",
+        "Accessibility at the pickup and drop-off locations",
+        "Boarding and unloading procedures",
+        "The planned securement and occupant-restraint approach",
+        "Whether an aide or other support is required",
+        "Necessary driver and aide preparation",
+        "Emergency and evacuation procedures",
+        "Substitute vehicle and personnel arrangements",
+        "Procedures for documenting and reporting incidents or equipment concerns",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Schools should also review current state pupil-transportation rules and district policies regarding driver qualifications, training, inspections, documentation, or equipment.",
+    },
+
+    
+    {
+      type: "heading",
+      text: "Driver and Aide Preparation",
+    },
+    {
+      type: "paragraph",
+      text: "Drivers and transportation aides serving students who use wheelchairs should understand both general equipment procedures and the student's approved transportation plan.",
+    },
+    {
+      type: "paragraph",
+      text: "Preparation may need to cover:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "Operation of the assigned ramp or lift",
+        "Use of the vehicle's securement equipment",
+        "Occupant-restraint positioning",
+        "Identification of appropriate wheelchair attachment points",
+        "Manual and powered-wheelchair considerations",
+        "Student-specific positioning instructions",
+        "Handling of trays and additional equipment",
+        "Respectful communication with the student",
+        "Pre-trip equipment checks",
+        "Emergency and evacuation procedures",
+        "Documentation and incident-reporting expectations",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "Preparation should occur before personnel transport the student and should be reviewed whenever the vehicle, wheelchair, equipment, or student's needs change.",
+    },
+
+    
+    {
+      type: "heading",
+      text: "Building a More Consistent Transportation Experience",
+    },
+    {
+      type: "paragraph",
+      text: "Consistency may be particularly helpful for students who experience anxiety, sensory sensitivities, or difficulty adjusting to unexpected changes. When practicable, a familiar driver, predictable schedule, and established pickup routine may make the ride more comfortable.",
+    },
+    {
+      type: "paragraph",
+      text: "Transportation teams can support consistency by:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "Keeping approved instructions current",
+        "Sharing necessary information with authorized personnel",
+        "Informing families about significant delays or changes",
+        "Preparing qualified substitute personnel",
+        "Documenting student-specific transportation requirements",
+        "Reporting safety and equipment concerns promptly",
+        "Reviewing recurring problems rather than treating them as isolated events",
+      ],
+    },
+    {
+      type: "paragraph",
+      text: "The goal is not merely to complete the trip. Transportation should support the student's safety, dignity, comfort, and access to education.",
+    },
+
+    
+    {
+      type: "heading",
+      text: "Questions Parents Can Ask a Transportation Provider",
+    },
+    {
+      type: "paragraph",
+      text: "Before service begins, parents may want to ask:",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "Is an appropriate wheelchair-accessible vehicle available for my child's route?",
+        "Can the vehicle accommodate my child's specific wheelchair?",
+        "What boarding and unloading equipment will be used?",
+        "How will the wheelchair and student be secured?",
+        "What preparation has the assigned driver or aide completed?",
+        "Will personnel receive my child's approved transportation instructions?",
+        "Who should I contact about schedule, equipment, or safety concerns?",
+        "What happens if the regular driver or vehicle is unavailable?",
+        "How are delays, incidents, and emergencies communicated?",
+        "What is the approved pickup and drop-off handoff procedure?",
+      ],
+    },
+
+ 
+    {
+      type: "heading",
+      text: "Frequently Asked Questions",
+    },
+    {
+      type: "bullet-list",
+      items: [
+        "What is wheelchair-accessible student transportation? It is transportation planned for a student who uses a wheelchair or other mobility device and needs an appropriate vehicle, equipment, assistance, or accommodations. The arrangement depends on the student's needs and approved transportation plan.",
+        "Does a student have to remain in the wheelchair during the ride? Not necessarily. A student may transfer to an appropriate vehicle seat or remain seated in the wheelchair, depending on the student's needs and approved plan. The transportation team must confirm that the selected arrangement, vehicle, and equipment are appropriate before service begins.",
+        "Can wheelchair transportation be included in an IEP? Yes. Transportation may be included as an IDEA related service when the IEP team determines that it is necessary for an eligible student to benefit from special education. The required services and accommodations should be documented clearly.",
+        "What should parents tell the transportation team? Parents should share relevant information about the wheelchair, boarding, positioning, medical considerations, communication, sensory or behavioral needs, emergency procedures, and authorized pickup and drop-off arrangements.",
+        "Does every Yuni Rides vehicle accommodate wheelchairs? Not necessarily. Vehicle accessibility and installed equipment may vary. Families and schools should contact Yuni Rides to ask whether an appropriate transportation option is available for the student's wheelchair, route, and required accommodations.",
+      ],
+    },
+
+   
+    {
+      type: "heading",
+      text: "Final Thoughts",
+    },
+    {
+      type: "paragraph",
+      text: "Wheelchair transportation works best when families, schools, and transportation professionals plan the details together. Clear instructions, suitable equipment, prepared personnel, and reliable communication can help create a more organized and comfortable transportation experience.",
+    },
+    {
+      type: "paragraph",
+      text: "Before service begins, families and schools should confirm the student's requirements, the assigned vehicle's suitability, personnel responsibilities, and procedures for changes or emergencies.",
+    },
+    {
+      type: "paragraph",
+      text: "This article provides general educational information. It is not legal, medical, or individualized transportation-safety advice. Requirements may differ by student, vehicle, school district, and state.",
+    },
+
+    
+    {
+      type: "heading",
+      text: "Contact Yuni Rides",
+    },
+    {
+      type: "paragraph",
+      text: "Need more information about wheelchair-accessible student transportation? Contact Yuni Rides to discuss the student's transportation requirements and ask whether an appropriate service option is available.",
+    },
+  ],
+},
   "special-needs-student-transportation-guide": {
     slug: "special-needs-student-transportation-guide",
     title:

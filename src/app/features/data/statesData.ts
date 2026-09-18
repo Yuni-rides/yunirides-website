@@ -412,24 +412,28 @@ export const statesData: StateService[] = [
         description:
           "Under Texas Education Agency (TEA) standards, transportation is a related service required for students whose disabilities require special travel arrangements.",
         image: "/images/w1.png",
+        link: "/blog/special-needs-transportation-texas",
       },
       {
         title: "Specialized Vehicle Accommodations",
         description:
           "Vehicles feature wheelchair lifts, safety restraints, and climate control, ensuring safe and comfortable commutes for students across Texas.",
         image: "/images/w2.png",
+        link: "/blog/what-makes-special-needs-student-transportation-truly-different",
       },
       {
         title: "Requesting Transport in ARD / IEP Meetings",
         description:
           "Parents can request transportation during ARD committee meetings by demonstrating specific physical, medical, or behavioral needs.",
         image: "/images/w3.png",
+        link: "/blog/texas-school-transportation-growing-gap",
       },
       {
         title: "Regional & Long-Distance Route Support",
         description:
           "Serving wide school district boundaries with consistent drivers, route planning, and live status updates for parents and administrators.",
         image: "/images/w4.png",
+        link: "/blog/how-real-time-ride-tracking-gives-parents-peace-of-mind",
       },
     ],
     whyTrustUsTitle: "Districts & Families Choose Yuni Rides",
@@ -488,24 +492,28 @@ export const statesData: StateService[] = [
         description:
           "The Oregon Department of Education ensures transportation is provided as a related service when specified in a student's IEP.",
         image: "/images/w1.png",
+        link: "/blog/iep-transportation-rights-what-every-parent-needs-to-know",
       },
       {
         title: "Safety Standards & Specialized Equipment",
         description:
           "Vehicles are equipped with wheelchair securements, harnesses, and climate controls to handle Oregon's varied weather conditions.",
         image: "/images/w2.png",
+        link: "/blog/what-makes-special-needs-student-transportation-truly-different",
       },
       {
         title: "Initiating IEP Transportation Services",
         description:
           "Discuss transportation requirements during your IEP team meeting to ensure appropriate accommodations are documented.",
         image: "/images/w3.png",
+        link: "/blog/iep-transportation-rights-what-every-parent-needs-to-know",
       },
       {
         title: "Rural & Urban Route Support",
         description:
           "Flexible routing designed to seamlessly serve both urban centers and rural district boundaries across Oregon.",
         image: "/images/w4.png",
+        link: "/blog/school-district-transportation",
       },
     ],
     whyTrustUsTitle: "Districts & Families Choose Yuni Rides",
